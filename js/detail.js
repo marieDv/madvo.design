@@ -14,7 +14,7 @@
                     if( document.getElementsByClassName("wheel-item__content")[i-1]){document.getElementsByClassName("wheel-item__content")[i-1].classList.remove("wheel-item__content--active");}
 
                 document.getElementById("wheel").style.zIndex = "10";
-
+                document.getElementById("wheel").overflowX = "visible";
                     if(document.getElementsByClassName("wheel-item")[i-1]){
                         document.getElementsByClassName("wheel-item")[i-1].classList.remove("wheel-item--active");
                     }
@@ -48,6 +48,7 @@
             document.getElementsByClassName("wheel-item__title")[i].classList.add("wheel-item__title--reversed");
             document.getElementsByClassName("wheel-item__title")[i+1].classList.add("wheel-item__title--reversed");
             document.getElementById("wheel").style.zIndex = "50";
+            document.getElementById("wheel").overflowX = "hidden";
             item[i].classList.add("wheel-item__image--active");
             document.getElementsByClassName("wheel-item")[i].classList.add("wheel-item--active");
 
