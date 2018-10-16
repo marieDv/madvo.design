@@ -31,7 +31,7 @@
                 }
                 document.getElementsByClassName("wheel-item")[i].style.paddingRight = "50%";
                 document.getElementsByClassName("about")[0].style.display = "none";
-
+            //
             });
             }
         }

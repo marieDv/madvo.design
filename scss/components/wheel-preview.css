@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$sm".
-        on line 4 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap 2/scss/components/wheel-preview.scss
+        on line 4 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/wheel-preview.scss
 
 1: .wheel-preview {
 2:   &__text {
@@ -13,7 +13,7 @@ Error: Undefined variable: "$sm".
 9:       margin-top: 4rem !important;
 
 Backtrace:
-/Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap 2/scss/components/wheel-preview.scss:4
+/Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/wheel-preview.scss:4
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
@@ -75,4 +75,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$sm\".\A         on line 4 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap 2/scss/components/wheel-preview.scss\A \A 1: .wheel-preview {\A 2:   &__text {\A 3:     margin-top: 9rem;\A 4:     @media screen and (max-width: $sm) {\A 5:       margin-top: 2rem !important;\A 6:       margin-left: -4rem;\A 7:     }\A 8:     @media screen and (max-width: 786px ) and (orientation:landscape) {\A 9:       margin-top: 4rem !important;"; }
+  content: "Error: Undefined variable: \"$sm\".\A         on line 4 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/wheel-preview.scss\A \A 1: .wheel-preview {\A 2:   &__text {\A 3:     margin-top: 9rem;\A 4:     @media screen and (max-width: $sm) {\A 5:       margin-top: 2rem !important;\A 6:       margin-left: -4rem;\A 7:     }\A 8:     @media screen and (max-width: 786px ) and (orientation:landscape) {\A 9:       margin-top: 4rem !important;"; }

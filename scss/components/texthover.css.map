@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,sBAAc;EACZ,SAAS,EAAE,eAAe;AAG5B,wBAAgB;EACd,SAAS,EAAE,eAAe;AAG5B,aAAK;EACH,OAAO,EAAE,YAAY;EACrB,UAAU,EAAG,mCAAmC",
+"sources": ["texthover.scss"],
+"names": [],
+"file": "texthover.css"
+}

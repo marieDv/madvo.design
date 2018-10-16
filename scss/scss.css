@@ -837,7 +837,8 @@ body {
   width: 100%;
   position: absolute;
   background: radial-gradient(#1f1f25, #070608);
-  background: radial-gradient(#19191c, #000000); }
+  background: radial-gradient(#19191c, #000000);
+  background: tomato; }
   #main:after {
     animation: grain 8s steps(10) infinite;
     background-image: url("../image/grain.jpg");
