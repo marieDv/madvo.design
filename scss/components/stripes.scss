@@ -1,0 +1,57 @@
+
+
+
+.stripe {
+  background-color: #dadada;
+  width: 0.25rem;
+  height: 0.25rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  box-shadow: 0px -1px 18px #dadadad1;
+  margin-right: 25vh;
+  @media screen and (min-width: 1300px) {
+    margin-right: 33vh;
+  }
+  @media screen and (max-width: 400px) {
+    margin-right: 12vh;
+  }
+  @media screen and (max-width: 789px) and (orientation:portrait) {
+    margin-right: 16vh;
+  }
+  &__line {
+    border-top: 1px dotted #222;
+    width: 76vh;
+    @media screen and (min-width: 1300px) {
+      width: 100vh;
+    }
+    @media screen and (max-width: 400px) {
+      width: 38vh;
+    }
+    @media screen and (orientation:landscape) and (max-width: 400px) {
+      width: 76vh;
+    }
+    @media screen and (max-width: 789px) and (orientation:portrait) {
+      width: 49vh;
+    }
+  }
+  &__cont {
+
+    bottom: 5vh;
+
+    @media screen and (max-width: $sm) {
+      bottom: 3vh;
+    }
+    @media screen and (max-width: 400px) {
+      bottom: 3vh;
+    }
+  }
+  &__nav {
+    &:last-child {
+    }
+  }
+  &--active {
+    //width: 0.2rem;
+    box-shadow: 0px -1px 18px $color--accent;
+    background-color: $color--accent;
+  }
+}

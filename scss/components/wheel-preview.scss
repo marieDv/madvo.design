@@ -1,0 +1,23 @@
+.wheel-preview {
+  &__text {
+    margin-top: 9rem;
+    @media screen and (max-width: $sm) {
+      margin-top: 2rem !important;
+      margin-left: -4rem;
+    }
+    @media screen and (max-width: 786px ) and (orientation:landscape) {
+      margin-top: 4rem !important;
+    }
+    @media screen and (max-width: 786px ) and (orientation:portrait) {
+      margin-top: 7rem !important;
+      margin-left: -7rem;
+    }
+    @media screen and (max-width: 400px ) and (orientation:portrait) {
+      margin-top: 4rem !important;
+      margin-left: -5.6rem;
+    }
+    @media screen and (min-width: 1300px) {
+      margin-top: 12rem;
+    }
+  }
+}

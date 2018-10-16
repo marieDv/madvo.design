@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAQ;EACN,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,OAAO;EACd,eAAU;IACR,KAAK,EAAE,MAAM;IACb,gBAAgB,EAAE,OAAO",
+"sources": ["stripes.scss"],
+"names": [],
+"file": "stripes.css"
+}

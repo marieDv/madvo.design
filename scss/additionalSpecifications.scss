@@ -1,0 +1,23 @@
+.pinm {
+  &-r {
+    right:3rem;
+  }
+  &-l {
+    left:3rem;
+  }
+  &-t {
+    top: 3rem;
+  }
+  &-b {
+    bottom: 3rem;
+  }
+}
+
+.column {
+  &-two {
+    column-count: 2;
+    @media screen and (max-width: $sm) {
+      column-count: 1;
+    }
+  }
+}

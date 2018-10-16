@@ -1,0 +1,114 @@
+.ic {
+  &-text {
+    &--sm {
+      font-size: 0.6rem;
+      color: #b8b8b8;
+      letter-spacing: 0.3px;
+
+    }
+    &--lg {
+      font-size: 1rem;
+      text-indent: -2.1rem;
+      font-weight: 800;
+      line-height: 3.3;
+      text-transform: uppercase;
+
+    }
+    &__link {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  }
+  &-headline {
+  &--xl {
+    font-family: "Eczar", sans-serif;
+    font-size: 14rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1;
+    color: $color-text--main;
+    text-shadow: 2px 9px 26px #0909096b;
+    //text-transform: uppercase;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 5rem;
+    }
+    @media screen and (max-width: $lg) {
+      font-size: 4rem;
+    }
+
+
+    @media screen and (max-width: $sm) {
+      font-size: 4rem;
+    }
+
+  }
+    &--lg {
+      font-size: 3.1rem;
+      color: #111111;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      @media screen and (max-width: $sm) {
+        font-size: 2rem;
+      }
+    }
+
+    &-startscreen{
+      font-size: 0.9rem;
+      letter-spacing: 5px;
+    }
+  }
+
+
+
+
+  /* LAYOUT */
+
+  &-s {
+    &-screen {
+      padding: 19vh 15rem 0;
+      padding: 27vh 15rem 0;
+      background-color: #111111;
+      &--white {
+        height:100vh;
+        width: 100%;
+        background: linear-gradient($color--accent, $color--accent-light);
+        left: 0;
+        position: relative;
+        padding-left: 15rem;
+        padding-right: 15rem;
+        background: ghostwhite;
+        color: black !important;
+        padding-top: 6rem;
+        padding-top: 27vh;
+        top:208vh;
+        @media screen and (max-width: $sm) {
+          padding: 19vh 2rem 0;
+        }
+      }
+      &--black {
+
+        width: 100%;
+        left: 0;
+        position: relative;
+        background-color: #111111;
+        //padding-left: 15rem;
+        //padding-right: 15rem;
+        padding: 9vh 15rem 0;
+
+        color: black !important;
+        //padding-top: 6rem;
+
+        @media screen and (max-width: $sm) {
+          padding: 19vh 2rem 0;
+        }
+      }
+
+      @media screen and (max-width: $sm) {
+        padding: 19vh 2rem 0;
+      }
+    }
+  }
+}
