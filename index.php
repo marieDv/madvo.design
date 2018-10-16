@@ -165,7 +165,7 @@
 
 
 <!-- ///////////////////////////////CONTROLS -->
-<div class="w-full controls fixed z-20 cursor-pointer">
+<div class="w-full controls fixed z-30 cursor-pointer">
     <button id="previous" class="h-10 m-auto text--xs  text-left absolute  pin-l pin-t pin-b texthover texthover-side">
         <li>p</li>
         <li>r</li>
