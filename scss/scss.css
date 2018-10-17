@@ -590,7 +590,6 @@ li {
       .stripe__cont {
         bottom: -11vh; } }
   .stripe--active {
-    padding-top: 8.5rem;
     box-shadow: 0px -1px 18px #094AB2;
     background-color: #094AB2;
     width: 0.2rem; }

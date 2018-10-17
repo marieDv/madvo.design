@@ -44,15 +44,17 @@
 toggle(document.getElementsByClassName("wheel-preview__text"));
 toggle(item);
 function toggle(item){
+
     for(let i=0; i<item.length; i++){
 
         item[i].addEventListener("click", function(){
+            console.log("why")
             document.getElementsByClassName("stripe__cont")[0].classList.add("absolute");
             document.getElementsByClassName("wheel-item__title")[i].classList.add("wheel-item__title--reversed");
             document.getElementsByClassName("wheel-item__title")[i+1].classList.add("wheel-item__title--reversed");
             document.getElementById("wheel").style.zIndex = "50";
             document.getElementById("wheel").overflowX = "hidden";
-            item[i].classList.add("wheel-item__image--active");
+            document.getElementsByClassName("wheel-item__image")[i].classList.add("wheel-item__image--active");
             document.getElementsByClassName("wheel-item")[i].classList.add("wheel-item--active");
 
 
