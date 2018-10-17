@@ -2,12 +2,12 @@ var once= false;
 $('.background-title').each(function(){
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
 });
-$('.wheel-item__title').each(function(){
-    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
-$('.wheel-item__title-t').each(function(){
-    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
+// $('.wheel-item__title').each(function(){
+//     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+// });
+// $('.wheel-item__title-t').each(function(){
+//     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+// });
 
 
     // if(!once){
@@ -22,7 +22,7 @@ $('.wheel-item__title-t').each(function(){
 
 clickEvents();
 setTimeout(function() {
-    animateAddInfo();
+    // animateAddInfo();
 }, 7000);
 
 function clickEvents(){
@@ -37,7 +37,7 @@ function clickEvents(){
     for(let j=0; j<back.length; j++){
         back[j].addEventListener("click", function(){
             setTimeout(function() {
-                animateAddInfo();
+                // animateAddInfo();
             }, 1200);
             animateWallTitle();
         });
@@ -87,18 +87,30 @@ anime.timeline({loop: false})
 
 });}
 function animateAddInfo(){
+    let item = document.getElementsByClassName("wheel-item__title");
+    for(let i=0; i<item.length; i++){
+        item[i].classList.remove("wheel-item__title-show");
+        item[i].classList.add("wheel-item__title-hide");
+    }
 
-    anime.timeline({loop: false})
-        .add({
-            targets: '.wheel-item__title .letter',
-            // opacity: [0, 1],
-            opacity: 1,
-            translateY: [-100,0],
-            easing: "easeOutExpo",
-            duration: 1400,
-            delay: function(el, i) {
-                return 30 * i;
-            }
-        })
+    setTimeout(()=>{
+        for(let i=0; i<item.length; i++){
+            item[i].classList.remove("wheel-item__title-hide");
+            item[i].classList.add("wheel-item__title-show");
+        }
+    }, 900)
+
+    // anime.timeline({loop: false})
+    //     .add({
+    //         targets: '.wheel-item__title .letter',
+    //         // opacity: [0, 1],
+    //         opacity: 1,
+    //         translateY: [-100,0],
+    //         easing: "easeOutExpo",
+    //         duration: 1400,
+    //         delay: function(el, i) {
+    //             return 30 * i;
+    //         }
+    //     })
     ;}
 

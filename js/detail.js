@@ -26,8 +26,10 @@
                         document.getElementsByClassName("wheel-item__image")[j].classList.remove("wheel-item__image--show");
                     }, 200);
                 }
+                console.log("TOGGLEBACK")
                 for(let j=0; j<document.getElementsByClassName("wheel-item__title").length; j++){
                     document.getElementsByClassName("wheel-item__title")[j].classList.remove("wheel-item__title--reversed");
+                    document.getElementsByClassName("wheel-item__title")[j].classList.add("wheel-item__title-show");
                 }
                 document.getElementsByClassName("wheel-item")[i].style.paddingRight = "50%";
                 document.getElementsByClassName("about")[0].style.display = "none";

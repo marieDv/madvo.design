@@ -7,6 +7,9 @@
   @media screen and (max-width: $sm) {
     top: -3.5rem;
   }
+  @media screen and (max-width: $sm) and (orientation: landscape) {
+    top: -5.5rem;
+  }
 }
 .navigation-number__box {
   margin-bottom: 1rem;
@@ -86,14 +89,15 @@
       width: 100%;
     }
     &__title {
-      min-width: 380px;
-
-
+      min-width: 398px;
       &-show {
-        animation: 0.9s simple-reveal forwards;
+        //animation: 0.9s simple-reveal forwards;
+        animation: 0.9s push-down forwards;
+
       }
       &-hide {
-        animation: 0.9s simple-hide forwards;
+        //animation: 0.9s simple-hide forwards;
+        animation: 0.9s push-up forwards;
       }
 
       & .letter {
@@ -227,8 +231,8 @@
 @keyframes push-down {
   0% {
 
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 110%, 110% 110%, 110% 110%, 0 110%);
+    clip-path: polygon(0 110%, 110% 110%, 110% 110%, 0 110%);
   }
   20% {
     opacity: 0;
@@ -236,8 +240,8 @@
   }
   100% {
     opacity: 1;
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 110%, 110% 110%, 110% 0, 0 0);
+    clip-path: polygon(0 110%, 110% 110%, 110% 0, 0 0);
 
   }
 }
@@ -246,12 +250,12 @@
 
   0% {
     opacity: 1;
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 110%, 110% 110%, 100% 0, 0 0);
+    clip-path: polygon(0 110%, 110% 110%, 110% 0, 0 0);
   }
   100% {
-    -webkit-clip-path: polygon(0 1%, 100% 0, 100% 0, 0 0);
-    clip-path: polygon(0 1%, 100% 0, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 1%, 110% 0, 110% 0, 0 0);
+    clip-path: polygon(0 1%, 110% 0, 110% 0, 0 0);
   }
 }
 @keyframes push-up--fast {

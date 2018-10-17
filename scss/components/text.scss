@@ -194,14 +194,12 @@ p, h3, h2, h1, li, strong, span {
   }
   &--xl {
     font-family: "Eczar", sans-serif;
-    font-size: $text-xl;
-    letter-spacing: 3px;
     color: $color-headline;
-    line-height: 0;
+
 
     font-weight: 500;
     font-size: 4.7rem;
-    line-height: 0;
+    line-height: 1;
     letter-spacing: 0.2px;
     font-style: italic;
     text-shadow: 0px 5px 19px rgba(69, 69, 69, 0.18);

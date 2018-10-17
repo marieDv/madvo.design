@@ -209,10 +209,10 @@
     <?php
     global $i;
     global $post;
-    $args = array('category' => 25);
+    $args = array('category' => 2);//25
     $work = get_posts( $args );
 
-    $args2 = array('category' => 30);
+    $args2 = array('category' => 30);//30
     $about = get_posts( $args2 );
 
     ?>
