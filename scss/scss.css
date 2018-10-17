@@ -360,11 +360,15 @@ li {
         animation: 0.5s push-up forwards;
         animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
 
+.controls {
+  z-index: 50; }
+
 .controls > button {
   bottom: 102vh;
   color: #aaaaaa;
   cursor: pointer;
-  letter-spacing: -1px; }
+  letter-spacing: -1px;
+  z-index: 40; }
   .controls > button:focus {
     outline: 0;
     cursor: pointer; }
@@ -757,7 +761,7 @@ li {
   @media screen and (min-width: 1300px) {
     .wheel-preview__text {
       margin-top: 12rem; } }
-  @media screen and (min-width: 1300px) {
+  @media screen and (min-width: 1600px) {
     .wheel-preview__text {
       margin-top: 16rem; } }
 

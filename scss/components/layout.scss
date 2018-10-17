@@ -184,11 +184,15 @@
 .controls__position {
 
 }
+.controls {
+  z-index: 50;
+}
 .controls > button {
   bottom: 102vh;
   color: $color-text--main;
   cursor: pointer;
   letter-spacing: -1px;
+  z-index: 40;
   &:hover {
     //color: $color--accent-light;
   }
