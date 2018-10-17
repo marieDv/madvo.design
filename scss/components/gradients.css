@@ -11,6 +11,8 @@ Error: Undefined variable: "$color--accent".
 33:     transition: 0.2s ease-out;
 34:   }
 35: }
+36: 
+37: .progress-line {
 
 Backtrace:
 /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/gradients.scss:32
@@ -71,4 +73,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color--accent\".\A         on line 32 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/gradients.scss\A \A 27:   width: 100%;\A 28:   height: 2px;\A 29:   &-inner {\A 30:     transform-origin: left;\A 31:     height: 5px;\A 32:     background: $color--accent;\A 33:     transition: 0.2s ease-out;\A 34:   }\A 35: }"; }
+  content: "Error: Undefined variable: \"$color--accent\".\A         on line 32 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/gradients.scss\A \A 27:   width: 100%;\A 28:   height: 2px;\A 29:   &-inner {\A 30:     transform-origin: left;\A 31:     height: 5px;\A 32:     background: $color--accent;\A 33:     transition: 0.2s ease-out;\A 34:   }\A 35: }\A 36: \A 37: .progress-line {"; }

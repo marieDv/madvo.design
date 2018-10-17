@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Sintony:400,700");
 @import url("https://fonts.googleapis.com/css?family=Eczar:400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i");
 .lis-expansion {
   z-index: 20; }
   .lis-expansion:hover {
@@ -26,15 +27,15 @@
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #ededed; }
+  color: #aaaaaa; }
   a:hover {
     text-decoration: none; }
 
 .text--xs {
   font-size: 0.7rem;
   font-weight: 400;
-  font-family: 'Sintony', sans-serif;
-  color: #ededed;
+  font-family: 'Merriweather', sans-serif;
+  color: #aaaaaa;
   line-height: 1.2;
   letter-spacing: 0.8px; }
   @media screen and (max-width: 768px) {
@@ -43,7 +44,7 @@ a {
       font-size: 1rem; } }
 .text--sm {
   font-family: 'Sintony', sans-serif;
-  color: #ededed;
+  color: #aaaaaa;
   font-size: 1rem;
   line-height: 1.6;
   color: #535353;
@@ -54,7 +55,7 @@ a {
       font-size: 0.8rem; } }
 .text--md {
   font-family: "Sintony", sans-serif;
-  color: #ededed;
+  color: #aaaaaa;
   font-size: 0.8rem;
   line-height: 1.45;
   letter-spacing: 0.2px;
@@ -64,7 +65,7 @@ a {
       font-size: 2.3rem; } }
 .text--lg {
   font-family: "Eczar", serif;
-  color: #ededed;
+  color: #aaaaaa;
   font-size: 5rem; }
 .text--marked {
   background-color: #ededed;
@@ -132,14 +133,14 @@ a {
   color: #f7f7f7;
   font-size: 1.8rem; }
   .headline--md--low {
-    color: #ededed;
+    color: #aaaaaa;
     letter-spacing: 0.2rem;
     font-size: 0.8rem; }
 .headline--sm {
-  color: #f7f7f7;
-  font-family: 'Eczar', serif;
-  color: #e6e6e6;
+  font-family: 'Merriweather', serif;
+  color: #dadada;
   font-size: 0.6rem;
+  font-style: italic;
   font-weight: 100;
   font-size: 0.67rem;
   letter-spacing: 1.2px; }
@@ -147,9 +148,9 @@ a {
   font-family: "Eczar", sans-serif;
   color: #f7f7f7;
   font-weight: 500;
-  font-size: 4.7rem;
+  font-size: 4rem;
   line-height: 1;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.7px;
   font-style: italic;
   text-shadow: 0px 5px 19px rgba(69, 69, 69, 0.18); }
   @media screen and (min-width: 1300px) {
@@ -168,7 +169,7 @@ a {
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 900;
   font-size: 5rem;
-  color: #ededed;
+  color: #aaaaaa;
   line-height: 1.44;
   letter-spacing: 12px;
   display: inline;
@@ -257,16 +258,15 @@ li {
       animation: 0.9s push-up forwards; }
 
 .navigation-number {
-  font-family: 'Sintony', sans-serif;
+  font-family: 'Eczar', sans-serif;
   color: #363636;
   position: relative;
   top: 33%;
   color: #094AB2;
-  color: #dadada;
   font-size: 0.7rem;
   font-weight: 200; }
   .navigation-number--active {
-    animation: 1.8s push-left forwards;
+    animation: 1.3s push-left forwards;
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .wheel {
@@ -280,8 +280,6 @@ li {
     opacity: 0.1;
     transition: all 1.6s cubic-bezier(0.645, 0.045, 0.355, 1); }
   .wheel-item {
-    padding-right: 50%;
-    padding-left: 27%;
     padding-left: 24%;
     cursor: pointer; }
     .wheel-item--active {
@@ -348,7 +346,7 @@ li {
 
 .controls > button {
   bottom: 102vh;
-  color: #ededed;
+  color: #aaaaaa;
   cursor: pointer;
   letter-spacing: -1px; }
   .controls > button:focus {
@@ -604,7 +602,6 @@ li {
     margin-top: 7px;
     right: 0;
     height: 0.14rem;
-    border-radius: 7px;
     background: #ffffff; }
 
 .loading-slides {
@@ -616,6 +613,29 @@ li {
     background: #094AB2;
     transition: 0.2s ease-out; }
 
+.progress-line {
+  background: white;
+  width: 1rem;
+  transition: 0.5s ease-out; }
+  .progress-line-toRight {
+    animation: 0.2s to-right forwards;
+    transform-origin: left; }
+  .progress-line-toLeft {
+    transform-origin: right;
+    animation: 0.4s to-left forwards;
+    transform-origin: right; }
+
+@keyframes to-right {
+  100% {
+    transform-origin: left;
+    transform: scaleX(9); } }
+@keyframes to-left {
+  0% {
+    transform-origin: left;
+    transform: scaleX(9); }
+  100% {
+    transform-origin: right;
+    transform: scaleX(1); } }
 .ic {
   /* LAYOUT */ }
   .ic-text--sm {
@@ -639,7 +659,7 @@ li {
     font-weight: 500;
     letter-spacing: 2px;
     line-height: 1;
-    color: #ededed;
+    color: #aaaaaa;
     text-shadow: 2px 9px 26px #0909096b; }
     @media screen and (max-width: 1600px) {
       .ic-headline--xl {
@@ -751,7 +771,7 @@ li {
     color: #494949;
     line-height: 2.4; }
     .about-text__resume--emphasized {
-      color: #ededed;
+      color: #aaaaaa;
       font-weight: 600; }
   .about-headline {
     font-size: 14rem;

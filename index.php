@@ -139,10 +139,11 @@
 <div class="fixed pin-r pin-b pin-l m-auto flex  h-16 mb-6 stripe__cont z-30">
     <div class="m-auto pin-b z-40 flex stripe__nav flex-wrap">
         <div class="navigation-number__box -mt-8 absolute flex wrap">
-<!--      <p><span id="nmbrLeft" class="navigation-number inline"><strong>01</strong></span>-->
-<!--          <span id="nmbrRight" class="navigation-number relative  inline"><strong>/04</strong></span></p>-->
-        </div>
+      <p><span id="nmbrLeft" class="navigation-number inline"><strong>01</strong></span>
+          <span id="nmbrRight" class="navigation-number relative  inline"><strong>/04</strong></span></p>
 
+        </div>
+<!--        <span class="progress-line absolute h-1 w-1"></span>-->
         <div class="stripe w-3 h-5 inline mb-10 mr-10  z-10 stripe--active"></div>
         <div class="stripe w-3 h-5 bg-grey inline mb-10 mr-10 z-10 "></div>
         <div class="stripe w-3 h-5 bg-grey inline mb-10 mr-10 z-10 "></div>
@@ -209,7 +210,7 @@
     <?php
     global $i;
     global $post;
-    $args = array('category' => 25);//25 //2 for dev
+    $args = array('category' => 2);//25 //2 for dev
     $work = get_posts( $args );
 
     $args2 = array('category' => 30);//

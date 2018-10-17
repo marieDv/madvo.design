@@ -37,15 +37,12 @@
 }
 .navigation-number {
 
-  font-family: 'Sintony', sans-serif;
-  //-webkit-text-stroke: 1px #626262;
-  //-webkit-text-stroke: 1px #020202;
-  //color: transparent !important;
+  font-family: 'Eczar', sans-serif;
   color: #363636;
   position: relative;
   top:33%;
   color: $color--accent;
-  color: #dadada;
+  //color: #dadada;
   font-size: 0.7rem;
   font-weight: 200;
   &:first-child {
@@ -55,7 +52,7 @@
     //left:3rem;
   }
   &--active {
-    animation: 1.8s push-left forwards;
+    animation: 1.3s push-left forwards;
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
@@ -78,8 +75,8 @@
 
   }
   &-item {
-    padding-right: 50%;
-    padding-left: 27%; //change in detail too!!!!!!
+    //padding-right: 50%;
+    //padding-left: 27%; //change in detail too!!!!!!
 
     padding-left: 24%;
     cursor: pointer;

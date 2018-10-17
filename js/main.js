@@ -37,9 +37,11 @@ function init(){
 
 
 function animStartscreen(){
-    let vid = document.getElementsByClassName("wheel-item__image")[0];
-    vid.classList.remove("wheel-item__image--hide");
-    vid.classList.add("wheel-item__image--show");
+    let vid = document.getElementsByClassName("wheel-item__image");
+    vid[0].classList.remove("wheel-item__image--hide");
+    vid[0].classList.add("wheel-item__image--show");
+    vid[1].classList.remove("wheel-item__image--hide");
+    vid[1].classList.add("wheel-item__image--show");
     setTimeout(()=>{
         vid.classList.remove("wheel-item__image--show");
     },300);
@@ -169,23 +171,23 @@ function scrollNext(direction, next, autoScroll){
 
     function navigationnnumber(mCounter){
 
-        let nmbrL = document.getElementsByClassName("nmbrLeft");
-        let nmbrR = document.getElementsByClassName("nmbrRight");
+        let nmbrL = document.getElementById("nmbrLeft");
+        let nmbrR = document.getElementById("nmbrRight");
         let box = document.getElementsByClassName("navigation-number__box")[0];
 
 
-        for(let i=0; i<nmbrL.length; i++){
-            nmbrL[i].classList.add("navigation-number--active");
-            nmbrR[i].classList.add("navigation-number--active");
+
+            nmbrL.classList.add("navigation-number--active");
+            nmbrR.classList.add("navigation-number--active");
          setTimeout(function(){
-              box.style.left = (20*mCounter) +"px"
-              nmbrL[i].innerHTML = ("0"+(mCounter+1)).toString();
-         }, 300);
+              box.style.marginLeft = 11*mCounter+"rem";
+              nmbrL.innerHTML = ("0"+(mCounter+1)).toString();
+         }, 900);
          setTimeout(function() {
-                nmbrL[i].classList.remove("navigation-number--active");
-                 nmbrR[i].classList.remove("navigation-number--active");
+                nmbrL.classList.remove("navigation-number--active");
+                 nmbrR.classList.remove("navigation-number--active");
          }, 1100);
-        }
+
     }
 
     function currentStripe(counter){

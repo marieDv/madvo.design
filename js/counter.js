@@ -83,12 +83,28 @@ function animateGradientOnHover(left, i){
              duration: 200,
              loop: false,
          });
-     },200);
+     },100);
  }
 }
 
 
 function animateGradientButton(back, prev, imageToggle){
+
+
+let progress = document.getElementsByClassName("progress-line")[0];
+if(progress){
+progress.classList.add("progress-line-toRight");
+    setTimeout(function() {
+        // progress.classList.remove("progress-line-toRight");
+    },700);
+    setTimeout(function() {
+        progress.classList.remove("progress-line-toRight");
+        progress.classList.add("progress-line-toLeft");
+        setTimeout(function() {
+            // progress.classList.remove("progress-line-toLeft");
+        },1200);
+    },1300);
+}
     anime({
         targets: ".headline--gradient",
         scaleX: 0,

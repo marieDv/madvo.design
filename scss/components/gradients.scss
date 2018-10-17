@@ -13,7 +13,7 @@
       margin-top: 7px;
       right: 0;
       height: 0.14rem;
-      border-radius: 7px;
+
       background: #ffffff;
       //background:linear-gradient(to right, #101012, #3F51B5);
       //background:linear-gradient(to right, #a1a1a15c, #10101200);
@@ -31,5 +31,47 @@
     height: 5px;
     background: $color--accent;
     transition: 0.2s ease-out;
+  }
+}
+
+.progress-line {
+  background: white;
+  width: 1rem;
+  transition: 0.5s ease-out;
+
+  &-toRight {
+    animation: 0.2s to-right forwards;
+    transform-origin: left;
+  }
+  &-toLeft {
+    transform-origin: right;
+    animation: 0.4s to-left forwards;
+    transform-origin: right;
+  }
+}
+
+@keyframes to-right {
+
+  100%{
+    transform-origin: left;
+    transform:scaleX(9)
+  }
+  //40%{
+  //  transform:scaleX(9)
+  //}
+  //90%{
+  //  transform-origin: right;
+  //  //transform:scale(1)
+  //}
+}
+
+@keyframes to-left {
+  0%{
+    transform-origin: left;
+    transform:scaleX(9)
+  }
+  100%{
+    transform-origin: right;
+    transform:scaleX(1)
   }
 }
