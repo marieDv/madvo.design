@@ -137,7 +137,7 @@
 <!--</div>-->
 
 <div class="fixed pin-r pin-b pin-l m-auto flex  h-16 mb-6 stripe__cont z-30">
-    <div class="m-auto pin-b z-40 flex stripe__nav flex-wrap">
+    <div class="m-auto pin-b z-40 flex stripe__nav flex-wrap stripe__cont-p">
         <div class="navigation-number__box -mt-8 absolute flex wrap">
       <p><span id="nmbrLeft" class="navigation-number inline"><strong>01</strong></span>
           <span id="nmbrRight" class="navigation-number relative  inline"><strong>/04</strong></span></p>

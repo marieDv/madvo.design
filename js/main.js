@@ -129,13 +129,13 @@ function getCounter(){
 }
 function scrollNext(direction, next, autoScroll){
     let wheel = document.getElementById("wheel");
-
-
     document.getElementsByClassName("wheel__background")[0].style.visibility = "visible";
     document.getElementsByClassName("wheel-item__title")[0].style.visibility = "visible";
     let maxVal = (val*-1)*(document.getElementsByClassName("wheel__background").length-1);
 
-
+    // let nextItem = document.getElementsByClassName("wheel-item");
+    // nextItem[1].style.paddingLeft = "12rem";
+    // nextItem[0].style.paddingRight = "0";
 
 
     direction.addEventListener("click", function(){
@@ -180,7 +180,13 @@ function scrollNext(direction, next, autoScroll){
             nmbrL.classList.add("navigation-number--active");
             nmbrR.classList.add("navigation-number--active");
          setTimeout(function(){
-              box.style.marginLeft = 11*mCounter+"rem";
+             let image = document.getElementsByClassName("wheel-item__image")[0].offsetWidth;
+             box.style.marginLeft = (image/3)*mCounter+"px";
+             window.addEventListener('resize', function () {
+                 image = document.getElementsByClassName("wheel-item__image")[0].offsetWidth;
+                 box.style.marginLeft = (image/3)*mCounter+"px";
+             })
+              // box.style.marginLeft = 11*mCounter+"rem";
               nmbrL.innerHTML = ("0"+(mCounter+1)).toString();
          }, 900);
          setTimeout(function() {
@@ -208,6 +214,7 @@ function scrollNext(direction, next, autoScroll){
         if(next === true && pos > maxVal){
             pos=pos+(val*-1);
             counter++;
+            console.log(counter);
             setTimeout(function() {
                 hideImage(counter);
             });

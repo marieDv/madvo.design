@@ -280,6 +280,7 @@ li {
     opacity: 0.1;
     transition: all 1.6s cubic-bezier(0.645, 0.045, 0.355, 1); }
   .wheel-item {
+    padding-right: 50%;
     padding-left: 24%;
     cursor: pointer; }
     .wheel-item--active {
@@ -587,6 +588,9 @@ li {
     @media screen and (max-width: 768px) and (max-height: 260px) and (orientation: landscape) {
       .stripe__cont {
         bottom: -11vh; } }
+    @media screen and (min-width: 768px) {
+      .stripe__cont-p {
+        padding-left: 3%; } }
   .stripe--active {
     box-shadow: 0px -1px 18px #094AB2;
     background-color: #094AB2;
