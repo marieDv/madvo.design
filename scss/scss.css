@@ -562,7 +562,7 @@ li {
       margin-right: 12vh; } }
   @media screen and (max-width: 789px) and (orientation: portrait) {
     .stripe {
-      margin-right: 16vh; } }
+      margin-right: 13vh; } }
   .stripe__line {
     border-top: 1px dotted #222;
     width: 76vh; }
@@ -577,7 +577,7 @@ li {
         width: 76vh; } }
     @media screen and (max-width: 789px) and (orientation: portrait) {
       .stripe__line {
-        width: 49vh; } }
+        width: 46vh; } }
   .stripe__cont {
     bottom: 5vh; }
     @media screen and (max-width: 768px) {
