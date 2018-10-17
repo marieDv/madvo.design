@@ -42,15 +42,16 @@ p, h3, h2, h1, li, strong, span {
   }
   &--sm {
 
-    font-family: 'Sintony', sans-serif;
+    font-family: 'Merriweather', sans-serif;
     color: $color-text--main;
     font-size: $text-sm;
     line-height: 1.6;
     color: #535353;
     font-weight: 200;
     letter-spacing: 0.2px;
-
-
+    @media screen and (min-width: 1600px) {
+      font-size: 1.2rem;
+    }
     @media screen and (max-width: $sm) {
       font-size: 0.8rem;
     }

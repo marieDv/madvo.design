@@ -46,13 +46,16 @@ a {
     .text--xs {
       font-size: 0.9rem; } }
 .text--sm {
-  font-family: 'Sintony', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   color: #aaaaaa;
   font-size: 1rem;
   line-height: 1.6;
   color: #535353;
   font-weight: 200;
   letter-spacing: 0.2px; }
+  @media screen and (min-width: 1600px) {
+    .text--sm {
+      font-size: 1.2rem; } }
   @media screen and (max-width: 768px) {
     .text--sm {
       font-size: 0.8rem; } }
