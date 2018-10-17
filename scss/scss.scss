@@ -63,19 +63,19 @@ body {
 
 
 &:after {
-
-    animation: grain 8s steps(10) infinite;
-    background-image: url('../image/grain.jpg');
-    content: "";
-    height: 300%;
-    background-size: 15rem;
-    left: -50%;
-    opacity: 0.3;
-    position: fixed;
-    mix-blend-mode: overlay;
-    top: -110%;
-    width: 300%;
-
+    @media screen and (min-width: $md) {
+      animation: grain 8s steps(10) infinite;
+      background-image: url('../image/grain.jpg');
+      content: "";
+      height: 300%;
+      background-size: 15rem;
+      left: -50%;
+      opacity: 0.3;
+      position: fixed;
+      mix-blend-mode: overlay;
+      top: -110%;
+      width: 300%;
+    }
   }
 }
 img {

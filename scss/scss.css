@@ -577,7 +577,7 @@ li {
         width: 76vh; } }
     @media screen and (max-width: 789px) and (orientation: portrait) {
       .stripe__line {
-        width: 46vh; } }
+        width: 40vh; } }
   .stripe__cont {
     bottom: 5vh; }
     @media screen and (max-width: 768px) {
@@ -842,18 +842,19 @@ body {
   position: absolute;
   background: radial-gradient(#1f1f25, #070608);
   background: radial-gradient(#19191c, #000000); }
-  #main:after {
-    animation: grain 8s steps(10) infinite;
-    background-image: url("../image/grain.jpg");
-    content: "";
-    height: 300%;
-    background-size: 15rem;
-    left: -50%;
-    opacity: 0.3;
-    position: fixed;
-    mix-blend-mode: overlay;
-    top: -110%;
-    width: 300%; }
+  @media screen and (min-width: 992px) {
+    #main:after {
+      animation: grain 8s steps(10) infinite;
+      background-image: url("../image/grain.jpg");
+      content: "";
+      height: 300%;
+      background-size: 15rem;
+      left: -50%;
+      opacity: 0.3;
+      position: fixed;
+      mix-blend-mode: overlay;
+      top: -110%;
+      width: 300%; } }
 
 img {
   width: auto;
