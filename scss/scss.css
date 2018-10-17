@@ -144,6 +144,9 @@ a {
   font-weight: 100;
   font-size: 0.67rem;
   letter-spacing: 1.2px; }
+  @media screen and (min-width: 1600px) {
+    .headline--sm {
+      font-size: 2rem; } }
 .headline--xl {
   font-family: "Eczar", sans-serif;
   color: #f7f7f7;
