@@ -42,6 +42,9 @@ a {
     .text--xs {
       font-size: calc(1rem - 1rem);
       font-size: 1rem; } }
+  @media screen and (min-width: 1600px) {
+    .text--xs {
+      font-size: 0.9rem; } }
 .text--sm {
   font-family: 'Sintony', sans-serif;
   color: #aaaaaa;
@@ -227,6 +230,9 @@ li {
   font-size: 0.7rem;
   font-family: "Eczar", serif;
   letter-spacing: 1.6px; }
+  @media screen and (min-width: 1600px) {
+    .text--nav {
+      font-size: 0.9rem; } }
 
 .emphasized {
   color: #094AB2; }
