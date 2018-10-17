@@ -158,7 +158,7 @@ a {
       font-size: 5rem; } }
   @media screen and (min-width: 1600px) {
     .headline--xl {
-      font-size: 8rem; } }
+      font-size: 6rem; } }
   @media screen and (max-width: 680px) {
     .headline--xl {
       font-size: 2.6rem; } }
