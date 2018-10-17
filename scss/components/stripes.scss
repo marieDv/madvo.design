@@ -44,6 +44,10 @@
     @media screen and (max-width: 400px) {
       bottom: 3vh;
     }
+
+    @media screen and (max-width: $sm) and (max-height: 260px) and (orientation: landscape){
+      bottom: -11vh;
+    }
   }
   &__nav {
     &:last-child {

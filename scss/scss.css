@@ -586,6 +586,9 @@ li {
     @media screen and (max-width: 400px) {
       .stripe__cont {
         bottom: 3vh; } }
+    @media screen and (max-width: 768px) and (max-height: 260px) and (orientation: landscape) {
+      .stripe__cont {
+        bottom: -11vh; } }
   .stripe--active {
     box-shadow: 0px -1px 18px #094AB2;
     background-color: #094AB2;
