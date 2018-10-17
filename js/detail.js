@@ -1,4 +1,5 @@
  let item = document.getElementsByClassName("wheel-item__image");
+
     let back = document.getElementsByClassName("wheel-item__content__button");
     if(back){
     toggleBack();
@@ -40,9 +41,9 @@
     }
 
 
-
-
-
+toggle(document.getElementsByClassName("wheel-preview__text"));
+toggle(item);
+function toggle(item){
     for(let i=0; i<item.length; i++){
 
         item[i].addEventListener("click", function(){
@@ -58,9 +59,11 @@
 
             setTimeout(function() {
                 document.getElementsByClassName("wheel-item__content")[i].classList.add("wheel-item__content--active");
-                }, 100);
+            }, 100);
         });
     }
+}
+
 
 
 
