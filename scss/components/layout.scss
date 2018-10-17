@@ -45,6 +45,9 @@
   //color: #dadada;
   font-size: 0.7rem;
   font-weight: 200;
+  @media screen and (min-width: 1600px) {
+    font-size: 0.9rem;
+  }
   &:first-child {
     //left:-6rem;
   }

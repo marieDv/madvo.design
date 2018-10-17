@@ -12,9 +12,10 @@ setTimeout(function() {
 
 
 setTimeout(function() {
+
     anime({
         targets: ".loading-screen",
-        scaleX: 110,
+        scaleX: screen.width,
         easing: "easeOutExpo",
         duration: 4800,
     });
