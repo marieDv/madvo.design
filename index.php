@@ -209,10 +209,10 @@
     <?php
     global $i;
     global $post;
-    $args = array('category' => 2);//25
+    $args = array('category' => 25);
     $work = get_posts( $args );
 
-    $args2 = array('category' => 30);//30
+    $args2 = array('category' => 30);//
     $about = get_posts( $args2 );
 
     ?>
@@ -267,7 +267,7 @@ wp_reset_postdata();?>
         <?php
         global $i;
         global $post;
-        $args = array('category' => 2);
+        $args = array('category' => 25);//25 //2 for dev
         $work = get_posts( $args );
 
         $argse2 = array('category' => 30);
