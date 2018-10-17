@@ -38,6 +38,9 @@
     @media screen and (max-width: $lg) {
       font-size: 4rem;
     }
+    @media screen and (min-width: 1600px) {
+      font-size: 6rem;
+    }
 
 
     @media screen and (max-width: $sm) {

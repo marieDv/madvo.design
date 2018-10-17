@@ -683,6 +683,9 @@ li {
     @media screen and (max-width: 1200px) {
       .ic-headline--xl {
         font-size: 4rem; } }
+    @media screen and (min-width: 1600px) {
+      .ic-headline--xl {
+        font-size: 6rem; } }
     @media screen and (max-width: 768px) {
       .ic-headline--xl {
         font-size: 4rem; } }
@@ -751,6 +754,9 @@ li {
   @media screen and (min-width: 1300px) {
     .wheel-preview__text {
       margin-top: 12rem; } }
+  @media screen and (min-width: 1300px) {
+    .wheel-preview__text {
+      margin-top: 16rem; } }
 
 .texthover-up:hover li {
   transform: rotateX(360deg); }
