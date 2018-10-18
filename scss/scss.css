@@ -229,10 +229,11 @@ li {
   line-height: 1em; }
 
 .text--nav {
-  color: #626262;
-  font-size: 0.7rem;
-  font-family: "Eczar", serif;
-  letter-spacing: 1.6px; }
+  color: #8e8e8e;
+  font-size: 1.25em;
+  font-family: "Merriweather", sans-serif;
+  /* letter-spacing: 1.6px; */
+  font-style: normal; }
   @media screen and (min-width: 1600px) {
     .text--nav {
       font-size: 0.9rem; } }
@@ -686,8 +687,7 @@ li {
     font-weight: 500;
     letter-spacing: 2px;
     line-height: 1;
-    color: #aaaaaa;
-    text-shadow: 2px 9px 26px #0909096b; }
+    color: #aaaaaa; }
     @media screen and (max-width: 1600px) {
       .ic-headline--xl {
         font-size: 5rem; } }

@@ -8,7 +8,7 @@ Error: Undefined variable: "$color-text--main".
 29:     letter-spacing: 2px;
 30:     line-height: 1;
 31:     color: $color-text--main;
-32:     text-shadow: 2px 9px 26px #0909096b;
+32:     //text-shadow: 2px 9px 26px #0909096b;
 33:     //text-transform: uppercase;
 34: 
 35:     @media screen and (max-width: 1600px) {
@@ -84,4 +84,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-text--main\".\A         on line 31 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/item-content.scss\A \A 26:     font-size: 14rem;\A 27:     font-style: normal;\A 28:     font-weight: 500;\A 29:     letter-spacing: 2px;\A 30:     line-height: 1;\A 31:     color: $color-text--main;\A 32:     text-shadow: 2px 9px 26px #0909096b;\A 33:     //text-transform: uppercase;\A 34: \A 35:     @media screen and (max-width: 1600px) {\A 36:       font-size: 5rem;"; }
+  content: "Error: Undefined variable: \"$color-text--main\".\A         on line 31 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/item-content.scss\A \A 26:     font-size: 14rem;\A 27:     font-style: normal;\A 28:     font-weight: 500;\A 29:     letter-spacing: 2px;\A 30:     line-height: 1;\A 31:     color: $color-text--main;\A 32:     //text-shadow: 2px 9px 26px #0909096b;\A 33:     //text-transform: uppercase;\A 34: \A 35:     @media screen and (max-width: 1600px) {\A 36:       font-size: 5rem;"; }

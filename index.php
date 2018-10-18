@@ -210,7 +210,7 @@
     <?php
     global $i;
     global $post;
-    $args = array('category' => 2);//25 //2 for dev
+    $args = array('category' => 25);//25 //2 for dev
     $work = get_posts( $args );
 
     $args2 = array('category' => 30);//
