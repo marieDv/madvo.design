@@ -41,8 +41,8 @@
 <div class=" fixed pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">
         <li class="text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
-            <a class="headline--sm pr-3 text--nav" target="_blank" href="https://www.instagram.com/madvo.design/">madvo<span class="emphasized">.</span>design&#160&#160/</a>
-            <ul id="toggleabout" class="inline toggleabout text--sm text--nav texthover texthover-up" href=""><li>a</li><li>b</li><li>o</li><li>u</li><li>t</li></ul>
+            <a class="text--sm pr-3 text--nav headline--sm texthover-up" target="_blank" href="https://www.instagram.com/madvo.design/">madvo<span class="emphasized">.</span>design&#160&#160/</a>
+            <ul id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href=""><li>a</li><li>b</li><li>o</li><li>u</li><li>t</li></ul>
         </li>
     </ul>
 </div>
@@ -210,7 +210,7 @@
     <?php
     global $i;
     global $post;
-    $args = array('category' => 25);//25 //2 for dev
+    $args = array('category' => 2);//25 //2 for dev
     $work = get_posts( $args );
 
     $args2 = array('category' => 30);//

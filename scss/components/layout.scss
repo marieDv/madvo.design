@@ -20,6 +20,7 @@
 .startscreen {
   overflow-y: hidden;
   background-color: #131313;
+  z-index: 60;
   &--active {
   animation: 0.9s push-up forwards;
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
