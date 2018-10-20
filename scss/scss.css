@@ -58,7 +58,7 @@ a {
       font-size: 1.2rem; } }
   @media screen and (max-width: 768px) {
     .text--sm {
-      font-size: 0.8rem; } }
+      font-size: 0.9rem; } }
 .text--md {
   font-family: "Sintony", sans-serif;
   color: #aaaaaa;
@@ -275,7 +275,7 @@ li {
       animation: 0.9s push-up forwards; }
 
 .navigation-number {
-  font-family: 'Eczar', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   color: #363636;
   position: relative;
   top: 33%;
