@@ -7,8 +7,8 @@
 <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 <!--    <meta name='viewport' content='width=device-width'/>-->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-    <meta name="description" content="">
+    <meta name="description" content="I am a passionate programmer and visual artist based in Vienna,
+    currently specializing in Frontend Development and UI-Design with Vue, React and Three.js">
     <meta name="author" content="Marie Dvorzak">
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
