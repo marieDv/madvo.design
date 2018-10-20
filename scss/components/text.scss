@@ -306,6 +306,9 @@ li {
   @media screen and (min-width: 1600px) {
     font-size: 0.9rem;
   }
+  @media screen and (max-width: $sm) {
+    font-size: 0.7rem;
+  }
 
 }
 .emphasized {

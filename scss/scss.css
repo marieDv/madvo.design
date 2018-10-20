@@ -237,6 +237,9 @@ li {
   @media screen and (min-width: 1600px) {
     .text--nav {
       font-size: 0.9rem; } }
+  @media screen and (max-width: 768px) {
+    .text--nav {
+      font-size: 0.7rem; } }
 
 .emphasized {
   color: #094AB2; }
@@ -245,6 +248,7 @@ li {
   top: 0;
   right: 16.6vw;
   top: 3vh;
+  top: -1vh;
   right: 18.3vw; }
   @media screen and (max-width: 768px) {
     .nav {
@@ -785,7 +789,8 @@ li {
   padding: 27vh 15rem 0;
   position: absolute;
   background-color: #111111;
-  top: 25%; }
+  top: 25%;
+  z-index: 60; }
   @media screen and (max-width: 768px) {
     .about {
       padding: 5vh 3rem 0; } }

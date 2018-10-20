@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$sm".
-        on line 7 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/layout.scss
+        on line 9 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/layout.scss
 
-2:   //top: 4.5rem;
-3:   top: 0;
 4:   right: 16.6vw;
 5:   top: 3vh;
-6:   right: 18.3vw;
-7:   @media screen and (max-width: $sm) {
-8:     top: -3.5rem;
-9:   }
-10:   @media screen and (max-width: $sm) and (orientation: landscape) {
-11:     top: -5.5rem;
-12:   }
+6: 
+7:   top: -1vh;
+8:   right: 18.3vw;
+9:   @media screen and (max-width: $sm) {
+10:     top: -3.5rem;
+11:   }
+12:   @media screen and (max-width: $sm) and (orientation: landscape) {
+13:     top: -5.5rem;
+14:   }
 
 Backtrace:
-/Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/layout.scss:7
+/Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/layout.scss:9
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
@@ -66,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$sm\".\A         on line 7 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/layout.scss\A \A 2:   //top: 4.5rem;\A 3:   top: 0;\A 4:   right: 16.6vw;\A 5:   top: 3vh;\A 6:   right: 18.3vw;\A 7:   @media screen and (max-width: $sm) {\A 8:     top: -3.5rem;\A 9:   }\A 10:   @media screen and (max-width: $sm) and (orientation: landscape) {\A 11:     top: -5.5rem;\A 12:   }"; }
+  content: "Error: Undefined variable: \"$sm\".\A         on line 9 of /Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-content/themes/wp-bootstrap_2/scss/components/layout.scss\A \A 4:   right: 16.6vw;\A 5:   top: 3vh;\A 6: \A 7:   top: -1vh;\A 8:   right: 18.3vw;\A 9:   @media screen and (max-width: $sm) {\A 10:     top: -3.5rem;\A 11:   }\A 12:   @media screen and (max-width: $sm) and (orientation: landscape) {\A 13:     top: -5.5rem;\A 14:   }"; }
