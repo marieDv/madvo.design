@@ -112,14 +112,14 @@ progress.classList.add("progress-line-toRight");
         easing: "easeOutExpo",
         duration: 700,
         loop: false,
-    });me({
-        //     targets: ".headline--more",
-        //     scaleX: 0,
-        //     easing: "easeOutExpo",
-        //     duration: 700,
-        //     loop: false,
-        // });
-    // ani
+    });
+    // anime({
+    //     targets: ".headline--more",
+    //     scaleX: 0,
+    //     easing: "easeOutExpo",
+    //     duration: 700,
+    //     loop: false,
+    // });
     anime({
         targets: ".more-button--sound",
         scaleX: 0,
