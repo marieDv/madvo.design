@@ -9,7 +9,7 @@ function hideVideo(e) {
 }
 
 var image = document.getElementsByClassName("wheel-item__image")[0].offsetWidth;
-console.log(image);
+// console.log(image);
 changeSize();
 window.addEventListener('resize', function () {
     image = document.getElementsByClassName("wheel-item__image")[0].offsetWidth;
