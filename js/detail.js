@@ -47,7 +47,7 @@ function toggle(item){
     for(let i=0; i<item.length; i++){
 
         item[i].addEventListener("click", function(){
-            console.log("why")
+
             document.getElementsByClassName("stripe__cont")[0].classList.add("absolute");
             document.getElementsByClassName("wheel-item__title")[i].classList.add("wheel-item__title--reversed");
             document.getElementsByClassName("wheel-item__title")[i+1].classList.add("wheel-item__title--reversed");

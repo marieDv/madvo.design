@@ -43,7 +43,7 @@ function animStartscreen(){
     vid[1].classList.remove("wheel-item__image--hide");
     vid[1].classList.add("wheel-item__image--show");
     setTimeout(()=>{
-        vid.classList.remove("wheel-item__image--show");
+        vid[1].classList.remove("wheel-item__image--show");
     },300);
     setTimeout(function() {
         document.getElementsByClassName("startscreen__title")[0].classList.add("startscreen__title--active");
@@ -59,8 +59,8 @@ function animStartscreen(){
     function closeStartscreen() {
 
     setTimeout(function () {
-        vid.style.transform = "scale(1)";
-        vid.classList.add("video");
+        // vid.style.transform = "scale(1)";
+        // vid.classList.add("video");
         document.getElementsByClassName("startscreen__title")[0].classList.add("startscreen__title--reversed");
         setTimeout(function () {
             document.getElementsByClassName("startscreen__title")[1].classList.add("startscreen__title--reversed");
@@ -186,7 +186,6 @@ function scrollNext(direction, next, autoScroll){
                  image = document.getElementsByClassName("wheel-item__image")[0].offsetWidth;
                  box.style.marginLeft = (image/3)*mCounter+"px";
              })
-              // box.style.marginLeft = 11*mCounter+"rem";
               nmbrL.innerHTML = ("0"+(mCounter+1)).toString();
          }, 900);
          setTimeout(function() {
@@ -214,7 +213,7 @@ function scrollNext(direction, next, autoScroll){
         if(next === true && pos > maxVal){
             pos=pos+(val*-1);
             counter++;
-            console.log(counter);
+
             setTimeout(function() {
                 hideImage(counter);
             });
