@@ -422,7 +422,8 @@ li {
     -webkit-clip-path: polygon(0 1%, 110% 0, 110% 0, 0 0);
     clip-path: polygon(0 1%, 110% 0, 110% 0, 0 0); }
   100% {
-    opacity: 0; } }
+    opacity: 0;
+    display: none; } }
 @keyframes push-up {
   0% {
     opacity: 1;
