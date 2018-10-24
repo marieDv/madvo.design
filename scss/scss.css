@@ -268,7 +268,7 @@ li {
   background-color: #131313;
   z-index: 60; }
   .startscreen--active {
-    animation: 0.9s push-up forwards;
+    animation: 0.9s push-up--startscreen forwards;
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
   .startscreen__title {
     opacity: 0;
@@ -413,6 +413,16 @@ li {
     opacity: 1;
     -webkit-clip-path: polygon(0 110%, 110% 110%, 110% 0, 0 0);
     clip-path: polygon(0 110%, 110% 110%, 110% 0, 0 0); } }
+@keyframes push-up--startscreen {
+  0% {
+    opacity: 1;
+    -webkit-clip-path: polygon(0 110%, 110% 110%, 100% 0, 0 0);
+    clip-path: polygon(0 110%, 110% 110%, 110% 0, 0 0); }
+  99% {
+    -webkit-clip-path: polygon(0 1%, 110% 0, 110% 0, 0 0);
+    clip-path: polygon(0 1%, 110% 0, 110% 0, 0 0); }
+  100% {
+    opacity: 0; } }
 @keyframes push-up {
   0% {
     opacity: 1;
