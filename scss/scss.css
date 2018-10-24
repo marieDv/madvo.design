@@ -423,7 +423,8 @@ li {
     clip-path: polygon(0 1%, 110% 0, 110% 0, 0 0); }
   100% {
     opacity: 0;
-    display: none; } }
+    display: none;
+    z-index: 0; } }
 @keyframes push-up {
   0% {
     opacity: 1;
