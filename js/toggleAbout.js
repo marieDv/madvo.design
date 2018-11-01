@@ -1,3 +1,7 @@
+/**
+ * toggleAbout
+ * animations for the openeing of the about page
+ */
 let about = document.getElementById("toggleabout");
 if(about){
     about.addEventListener("click", function(){

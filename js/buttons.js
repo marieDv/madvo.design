@@ -1,4 +1,7 @@
-console.log("buttons")
+/**
+ *Buttons
+ *animation of different buttons
+ */
 
 function onClick(){
     let button = document.getElementsByClassName("button--swipe");

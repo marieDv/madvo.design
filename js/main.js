@@ -1,3 +1,8 @@
+/**
+ * Main.js
+ * main logic of the slider - including counter and navigation
+ */
+
 var pos = 0;
 var counter=0;
 var nextCounter=0;
@@ -96,7 +101,6 @@ function initWheelMechaincs(){
     let next = document.getElementById("next");
     let prev = document.getElementById("previous");
 
-    console.log(document.getElementById("wheel").style.backgroundColor);
 
     // if(document.getElementById("wheel").style.transform === "translateX(0%)" ||document.getElementById("wheel").style.transform === ""){
     prev.style.visibility = "hidden";

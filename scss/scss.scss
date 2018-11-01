@@ -41,17 +41,10 @@ body {
   90% { transform:translate(-10%, 10%) }
 }
 #threejs {
-  //filter: saturate(2);
   filter: contrast(1.2) brightness(1.3) saturate(0.1);
   filter: contrast(1.2) brightness(0.7) saturate(0.1);
-  //opacity: 0.5;
 }
-#overlay {
-  //position: absolute;
-  //height:100vh;
-  //width: 100%;
 
-}
 #main {
   overflow-x: hidden;
   height:100vh;

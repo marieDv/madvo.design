@@ -1,3 +1,8 @@
+/**
+ * Texthover effects
+ * in development
+ */
+
 // let text = document.getElementsByClassName("texthover");
 // let textCounter = 0.1;
 // for(let i=0; i<text.length; i++){

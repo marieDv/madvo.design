@@ -1,43 +1,24 @@
+/**
+ * Anime
+ * start animation - using the library anime.js
+ */
 var once= false;
 $('.background-title').each(function(){
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
 });
-// $('.wheel-item__title').each(function(){
-//     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-// });
-// $('.wheel-item__title-t').each(function(){
-//     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-// });
-
-
-    // if(!once){
-    // setTimeout(function() {
-    //     animateBGText();
-    //     setTimeout(function() {
-    //         animateWallTitle();
-    //     }, 300);
-    //  },1200);
-    //
-    // once=true;}
 
 clickEvents();
-setTimeout(function() {
-    // animateAddInfo();
-}, 7000);
-
 function clickEvents(){
     document.getElementById("next").addEventListener("click", function() {
         setTimeout(function() {
             animateAddInfo();
         }, 1200);
     animateWallTitle();
-    // animateBGText(true);
 });
     let back = document.getElementsByClassName("wheel-item__content__button");
     for(let j=0; j<back.length; j++){
         back[j].addEventListener("click", function(){
             setTimeout(function() {
-                // animateAddInfo();
             }, 1200);
             animateWallTitle();
         });
@@ -99,18 +80,4 @@ function animateAddInfo(){
             item[i].classList.add("wheel-item__title-show");
         }
     }, 900)
-
-    // anime.timeline({loop: false})
-    //     .add({
-    //         targets: '.wheel-item__title .letter',
-    //         // opacity: [0, 1],
-    //         opacity: 1,
-    //         translateY: [-100,0],
-    //         easing: "easeOutExpo",
-    //         duration: 1400,
-    //         delay: function(el, i) {
-    //             return 30 * i;
-    //         }
-    //     })
-    ;}
 

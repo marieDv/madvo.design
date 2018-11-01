@@ -1,3 +1,9 @@
+/**
+ * Video.js
+ * handles html5 videos & replaces them with thumbnails on mobile devices
+ */
+
+
 var figure = $(".video").hover( hoverVideo, hideVideo );
 
 function hoverVideo(e) {
@@ -9,7 +15,6 @@ function hideVideo(e) {
 }
 
 var image = document.getElementsByClassName("wheel-item__image")[0].offsetWidth;
-// console.log(image);
 changeSize();
 window.addEventListener('resize', function () {
     image = document.getElementsByClassName("wheel-item__image")[0].offsetWidth;

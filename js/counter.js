@@ -1,3 +1,9 @@
+/**
+ * Counter
+ * count clicks and animates gradient-buttons
+ */
+
+
 var counterSlides = 0;
 setTimeout(function() {
     anime({
@@ -113,13 +119,7 @@ progress.classList.add("progress-line-toRight");
         duration: 700,
         loop: false,
     });
-    // anime({
-    //     targets: ".headline--more",
-    //     scaleX: 0,
-    //     easing: "easeOutExpo",
-    //     duration: 700,
-    //     loop: false,
-    // });
+
     anime({
         targets: ".more-button--sound",
         scaleX: 0,
