@@ -85,7 +85,7 @@
 
         </div>
 <!-- md:ml-32-->
-        <h2 class=" ic-headline--xl mt-32">hi there!</h2>
+        <h2 class=" ic-headline--xl mt-32">hi!</h2>
 <!--        <div class="relative shadow  about-me hidden md:block">-->
 <!--            <img src="http://localhost/wordpress/wp-content/uploads/2018/08/pp.jpg" alt="" class="" />-->
 <!--        </div>-->
