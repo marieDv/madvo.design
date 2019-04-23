@@ -5,8 +5,8 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i");
 @font-face {
   font-family: "CircularStd";
-  src: url("CircularStd-Black.woff");
-  src: url("CircularStd-Black.woff") format("woff");
+  src: url("../font-face/CircularStd-Black.woff");
+  src: url("../font-face/CircularStd-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
