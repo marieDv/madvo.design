@@ -42,18 +42,18 @@ p, h3, h2, h1, li, strong, span {
   }
   &--sm {
 
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'CircularStd', sans-serif;
     color: $color-text--main;
     font-size: $text-sm;
-    line-height: 1.6;
-    color: #535353;
+    line-height: 22px;
+    color: #000000;
     font-weight: 200;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.4px;
     @media screen and (min-width: 1600px) {
-      font-size: 1.2rem;
+      font-size: 12px;
     }
     @media screen and (max-width: $sm) {
-      font-size: 0.9rem;
+      font-size: 9px;
     }
   }
   &--md {
@@ -162,8 +162,8 @@ p, h3, h2, h1, li, strong, span {
     transform-origin: left;
   }
   &--xxl {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-family: "CircularStd", sans-serif;
+    font-weight: 800;
     font-size: 14rem;
     letter-spacing: 20px;
     color: #797979;
@@ -197,15 +197,15 @@ p, h3, h2, h1, li, strong, span {
     }
   }
   &--xl {
-    font-family: "Eczar", sans-serif;
+    font-family: "CircularStd", sans-serif;
     color: $color-headline;
 
 
-    font-weight: 500;
-    font-size: 4rem;
+    font-weight: 800;
+    font-size: 16px;
     line-height: 1;
     letter-spacing: 0.7px;
-    font-style: italic;
+    // font-style: italic;
     text-shadow: 0px 5px 19px rgba(69, 69, 69, 0.18);
     @media screen and (min-width: 1300px) {
       font-size: 5rem;
