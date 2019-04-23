@@ -1,7 +1,7 @@
 @font-face {
   font-family: "CircularStd";
-  src: url("/font-face/CircularStd-Black.woff");
-  src: url("/font-face/CircularStd-Black.woff") format("woff");
+  src: url("/wp-content/themes/madvo.design/font-face/CircularStd-Black.woff");
+  src: url("/wp-content/themes/madvo.design/font-face/CircularStd-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
