@@ -70,7 +70,7 @@
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #aaaaaa;
+  color: #000000;
 }
 
 a:hover {
@@ -81,14 +81,14 @@ a:hover {
   font-size: 0.7rem;
   font-weight: 400;
   font-family: 'Merriweather', sans-serif;
-  color: #aaaaaa;
+  color: #000000;
   line-height: 1.2;
   letter-spacing: 0.8px;
 }
 
 @media screen and (max-width: 768px) {
   .text--xs {
-    font-size: calc(1.15rem - 1rem);
+    font-size: calc(12px - 1rem);
     font-size: 1rem;
   }
 }
@@ -100,30 +100,30 @@ a:hover {
 }
 
 .text--sm {
-  font-family: 'Merriweather Sans', sans-serif;
-  color: #aaaaaa;
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: #535353;
+  font-family: 'CircularStd', sans-serif;
+  color: #000000;
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
   font-weight: 200;
   letter-spacing: 0.2px;
 }
 
 @media screen and (min-width: 1600px) {
   .text--sm {
-    font-size: 1.2rem;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .text--sm {
-    font-size: 0.9rem;
+    font-size: 9px;
   }
 }
 
 .text--md {
   font-family: "Sintony", sans-serif;
-  color: #aaaaaa;
+  color: #000000;
   font-size: 0.8rem;
   line-height: 1.45;
   letter-spacing: 0.2px;
@@ -138,7 +138,7 @@ a:hover {
 
 .text--lg {
   font-family: "Eczar", serif;
-  color: #aaaaaa;
+  color: #000000;
   font-size: 5rem;
 }
 
@@ -240,8 +240,8 @@ a:hover {
 }
 
 .headline--xxl {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-family: "CircularStd", sans-serif;
+  font-weight: 800;
   font-size: 14rem;
   letter-spacing: 20px;
   color: #797979;
@@ -258,7 +258,7 @@ a:hover {
 }
 
 .headline--md--low {
-  color: #aaaaaa;
+  color: #000000;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
 }
@@ -280,13 +280,12 @@ a:hover {
 }
 
 .headline--xl {
-  font-family: "Eczar", sans-serif;
+  font-family: "CircularStd", sans-serif;
   color: #f7f7f7;
-  font-weight: 500;
-  font-size: 4rem;
+  font-weight: 800;
+  font-size: 16px;
   line-height: 1;
   letter-spacing: 0.7px;
-  font-style: italic;
   text-shadow: 0px 5px 19px rgba(69, 69, 69, 0.18);
 }
 
@@ -323,7 +322,7 @@ a:hover {
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 900;
   font-size: 5rem;
-  color: #aaaaaa;
+  color: #000000;
   line-height: 1.44;
   letter-spacing: 12px;
   display: inline;
@@ -649,7 +648,7 @@ li {
 
 .controls > button {
   bottom: 102vh;
-  color: #aaaaaa;
+  color: #000000;
   cursor: pointer;
   letter-spacing: -1px;
   z-index: 40;
@@ -1379,7 +1378,7 @@ li {
   font-weight: 500;
   letter-spacing: 2px;
   line-height: 1;
-  color: #aaaaaa;
+  color: #000000;
 }
 
 @media screen and (max-width: 1600px) {
@@ -1537,7 +1536,7 @@ li {
   display: none;
   margin-right: 0;
   margin-left: 0;
-  padding: 27vh 15rem 0;
+  padding: 28vh 32% 0;
   position: absolute;
   background-color: #ffffff;
   top: 25%;
@@ -1575,7 +1574,7 @@ li {
 }
 
 .about-text__resume--emphasized {
-  color: #aaaaaa;
+  color: #000000;
   font-weight: 600;
 }
 
