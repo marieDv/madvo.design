@@ -1,0 +1,16 @@
+.texthover-up:hover li {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+}
+
+.texthover-side:hover li {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.texthover li {
+  display: inline-block;
+  -webkit-transition: 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+/*# sourceMappingURL=texthover.css.map */
