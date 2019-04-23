@@ -80,14 +80,14 @@ body {
   position: absolute;
 
   background: radial-gradient(#19191c, #000000);
-  background: radial-gradient(#19191c, #1e1e1e);
+  // background: radial-gradient(#19191c, #1e1e1e);
 
 
 
 &:after {
     @media screen and (min-width: $md) {
-      animation: grain 8s steps(10) infinite;
-      background-image: url('../image/grain.jpg');
+      // animation: grain 8s steps(10) infinite;
+      // background-image: url('../image/grain.jpg');
       content: "";
       height: 300%;
       background-size: 15rem;

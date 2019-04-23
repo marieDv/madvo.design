@@ -1766,14 +1766,10 @@ body {
   width: 100%;
   position: absolute;
   background: radial-gradient(#19191c, #000000);
-  background: radial-gradient(#19191c, #1e1e1e);
 }
 
 @media screen and (min-width: 992px) {
   #main:after {
-    -webkit-animation: grain 8s steps(10) infinite;
-            animation: grain 8s steps(10) infinite;
-    background-image: url("../image/grain.jpg");
     content: "";
     height: 300%;
     background-size: 15rem;
