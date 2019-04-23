@@ -99,7 +99,7 @@
                 <p class="inline">contact</p><div class="w-full h-1 bg-white inline about-hr ml-2"></div>
             </div>
             <p class="text--sm text-left mt-16">
-                <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">email</a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a>
+                <a href="mailto:dvorzak.marie@gmx.at?Subject=Hiiii!">email</a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a>
             </p>
 
             <div class="w-full flex mt-16 items-center about-text__section">
