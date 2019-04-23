@@ -1,7 +1,7 @@
 @font-face {
   font-family: "CircularStd";
-  src: url("/wp-content/themes/madvo.design/font-face/CircularStd-Black.woff");
-  src: url("/wp-content/themes/madvo.design/font-face/CircularStd-Black.woff") format("woff");
+  src: url("http://www.mariedvorzak.at/wp-content/themes/madvo.design/fonts/CircularStd-Black.woff");
+  src: url("http://www.mariedvorzak.at/wp-content/themes/madvo.design/fonts/CircularStd-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
