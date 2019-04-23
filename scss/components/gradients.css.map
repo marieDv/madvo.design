@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACE,mBAAS;EACP,UAAU,EAAC,2CAA6D;EACxE,gBAAgB,EAAE,IAAI;;AAI1B,eAAgB;EACd,gBAAgB,EAAE,yBAAyB;EAC3C,MAAM,EAAE,IAAI;EACZ,KAAK,EAAC,IAAI;EACV,qBAAQ;IACN,gBAAgB,EAAE,IAAI;IACtB,UAAU,EAAE,aAAa",
-"sources": ["gradients.scss"],
-"names": [],
-"file": "gradients.css"
-}
