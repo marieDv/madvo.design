@@ -1,31 +1,31 @@
 @font-face {
   font-family: "CircularStd";
-  src: url("/wp-content/themes/madvo.design/css/font-face/CircularStd-Black.woff");
-  src: url("/wp-content/themes/madvo.design/css/font-face/CircularStd-Black.woff") format("woff");
+  src: url("/wp-content/themes/madvo.design/font/CircularStd-Black.woff");
+  src: url("/wp-content/themes/madvo.design/font/CircularStd-Black.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CircularStd";
-  src: url("/wp-content/themes/madvo.design/css/font-face/CircularStd-Bold.woff");
-  src: url("/wp-content/themes/madvo.design/css/font-face/CircularStd-Bold.woff") format("woff");
+  src: url("/wp-content/themes/madvo.design/font/CircularStd-Bold.woff");
+  src: url("/wp-content/themes/madvo.design/font/CircularStd-Bold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CircularStd";
-  src: url("/wp-content/themes/madvo.design/css/font-face/CircularStd-Medium.woff");
-  src: url("/wp-content/themes/madvo.design/css/font-face/CircularStd-Medium.woff") format("woff");
+  src: url("/wp-content/themes/madvo.design/font/CircularStd-Medium.woff");
+  src: url("/wp-content/themes/madvo.design/font/CircularStd-Medium.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CircularStd";
-  src: url("/wp-content/themes/madvo.design/css/font-face/CircularStd-Book.woff");
-  src: url("/wp-content/themes/madvo.design/css/font-face/CircularStd-Book.woff") format("woff");
+  src: url("/wp-content/themes/madvo.design/font/CircularStd-Book.woff");
+  src: url("/wp-content/themes/madvo.design/font/CircularStd-Book.woff") format("woff");
   font-weight: 200;
   font-style: normal;
 }
@@ -1372,24 +1372,24 @@ li {
 }
 
 .ic-headline--xl {
-  font-family: "Eczar", sans-serif;
-  font-size: 14rem;
+  font-family: "CircularStd", sans-serif;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 500;
-  letter-spacing: 2px;
-  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 24px;
   color: #000000;
 }
 
 @media screen and (max-width: 1600px) {
   .ic-headline--xl {
-    font-size: 5rem;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .ic-headline--xl {
-    font-size: 4rem;
+    font-size: 16px;
   }
 }
 
