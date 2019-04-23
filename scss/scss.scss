@@ -1,4 +1,11 @@
-@import "fonts.scss";
+// @import "fonts.scss";
+@font-face {
+  font-family: "CircularStd";
+  src: url("../font-face/CircularStd-Black.woff");
+  src: url("../font-face/CircularStd-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 @import "variables.scss";
 @import "animations.scss";
 @import "additionalSpecifications.scss";
