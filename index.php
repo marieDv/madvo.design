@@ -45,26 +45,26 @@
                     <!--            <a class="text--sm pr-3 text--nav headline--sm texthover-up" target="_blank" href="https://www.instagram.com/madvo.design/">madvo<span class="emphasized">.</span>design&#160&#160|</a>-->
 
                     <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
-                        <li>m</li>
-                        <li>a</li>
-                        <li>d</li>
-                        <li>v</li>
-                        <li>o</li>
+                        m
+                        a
+                        d
+                        v
+                        o
                         <li class="emphasized">.</li>
-                        <li>d</li>
-                        <li>e</li>
-                        <li>s</li>
-                        <li>i</li>
-                        <li>g</li>
-                        <li>n</li>
+                        d
+                        e
+                        s
+                        i
+                        g
+                        n
                         <li>&#160&#160</li>
                     </ul>
                     <ul id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-                        <li>a</li>
-                        <li>b</li>
-                        <li>o</li>
-                        <li>u</li>
-                        <li>t</li>
+                        a
+                        b
+                        o
+                        u
+                        t
                     </ul>
                 </li>
             </ul>
