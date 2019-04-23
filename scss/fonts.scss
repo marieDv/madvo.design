@@ -1,10 +1,9 @@
 @font-face {
-  font-family: CircularStd;
-  src: url("http://www.mariedvorzak.at/wordpress/wp-content/themes/wp-bootstrap_2/font-face/CircularStd-Black.woff") format("woff");
-  // src: url("fonts/CircularStd/CircularStd-Bold.woff") format("woff");
-  // src: url("fonts/CircularStd/CircularStd-Book.woff") format("woff");
-  // src: url("fonts/CircularStd/CircularStd-Medium.woff") format("woff");
-  
+  font-family: "CircularStd";
+  src: url("CircularStd-Black.woff");
+  src: url("CircularStd-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i');
