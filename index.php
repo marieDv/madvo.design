@@ -99,7 +99,7 @@
                 <p class="inline">contact</p><div class="w-full h-1 bg-white inline about-hr ml-2"></div>
             </div>
             <p class="text--sm text-left mt-16">
-                <a href="mailto:dvorzak.marie@gmx.at?Subject=Hiiii!">email</a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a>
+                <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">email</a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a>
             </p>
 
             <div class="w-full flex mt-16 items-center about-text__section">
@@ -109,11 +109,13 @@
 
 
             <ul class="text--sm  about-text__resume mt-4">
-                <li class="about-text__resume--emphasized">> Campaigning Bureau (Frontenddevelopment | UI/UX Design)</li>
-                <li class="about-text__resume--emphasized">> FIV Austria</li>
-                <li>> Mediatechnology and Design (FH Upper Austria)</li>
-                <li>> Courses from Internet Design & Graphic Communication (Plymouth University UK)</li>
-                <li>> Graphische Bundes Lehr- und Versuchsanstalt Wien</li>
+            <li class="about-text__resume--emphasized">Development Intern at Wild in Vienna</li>
+
+                <li class="about-text__resume--emphasized"> Campaigning Bureau (Frontenddevelopment | UI/UX Design)</li>
+                <li class="about-text__resume--emphasized"> FIV Austria</li>
+                <li> Mediatechnology and Design (FH Upper Austria)</li>
+                <li> Courses from Internet Design & Graphic Communication (Plymouth University UK)</li>
+                <li> Graphische Bundes Lehr- und Versuchsanstalt Wien</li>
             </ul>
 
 
