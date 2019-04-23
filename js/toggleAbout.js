@@ -5,7 +5,7 @@
 let about = document.getElementById("toggleabout");
 if(about){
     about.addEventListener("click", function(){
-        document.getElementsByClassName("stripe__cont")[0].classList.add("absolute");
+        // document.getElementsByClassName("stripe__cont")[0].classList.add("absolute");
 
         let title = document.getElementsByClassName("wheel-item__image");
         for(let i=0; i<title.length; i++){
