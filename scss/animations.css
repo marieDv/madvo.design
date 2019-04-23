@@ -1,6 +1,7 @@
 .lis-expansion {
-  z-index: 20; }
-  .lis-expansion:hover {
-    background-color: white; }
+  z-index: 20;
+}
 
-/*# sourceMappingURL=animations.css.map */
+.lis-expansion:hover {
+  background-color: white;
+}

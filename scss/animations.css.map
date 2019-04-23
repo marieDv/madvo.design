@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AACE,cAAY;EACV,OAAO,EAAC,EAAE;EACV,oBAAQ;IACN,gBAAgB,EAAE,KAAK",
-"sources": ["animations.scss"],
-"names": [],
-"file": "animations.css"
+    "version": 3,
+    "mappings": "AACG,AAAD,cAAW,CAAC;EACV,OAAO,EAAC,EAAE;CAKX;;AANA,AAEC,cAFS,AAER,MAAM,CAAC;EACN,gBAAgB,EAAE,KAAK;CAExB",
+    "sources": [
+        "animations.scss"
+    ],
+    "names": [],
+    "file": "animations.css"
 }

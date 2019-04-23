@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AACE,sBAAc;EACZ,SAAS,EAAE,eAAe;AAG5B,wBAAgB;EACd,SAAS,EAAE,eAAe;AAG5B,aAAK;EACH,OAAO,EAAE,YAAY;EACrB,UAAU,EAAG,mCAAmC",
-"sources": ["texthover.scss"],
-"names": [],
-"file": "texthover.css"
+    "version": 3,
+    "mappings": "AACG,AAAD,aAAI,AAAA,MAAM,CAAC,EAAE,CAAC;EACZ,SAAS,EAAE,eAAe;CAE3B;;AACA,AAAD,eAAM,AAAA,MAAM,CAAC,EAAE,CAAC;EACd,SAAS,EAAE,eAAe;CAE3B;;AARH,AASE,UATQ,CASN,EAAE,CAAC;EACH,OAAO,EAAE,YAAY;EACrB,UAAU,EAAG,IAAI,CAAC,8BAA8B;CACjD",
+    "sources": [
+        "texthover.scss"
+    ],
+    "names": [],
+    "file": "texthover.css"
 }
