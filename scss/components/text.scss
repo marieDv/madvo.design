@@ -45,10 +45,10 @@ p, h3, h2, h1, li, strong, span {
     font-family: 'CircularStd', sans-serif;
     color: $color-text--main;
     font-size: $text-sm;
-    line-height: 22px;
+    line-height: 24px;
     color: #000000;
     font-weight: 200;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.2px;
     @media screen and (min-width: 1600px) {
       font-size: 12px;
     }
