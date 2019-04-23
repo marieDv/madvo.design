@@ -11,7 +11,6 @@
     <meta name="author" content="Marie Dvorzak">
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<!--    <script src="http://mrdoob.github.com/three.js/build/three.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
@@ -24,7 +23,7 @@
     function theme_enqueue_styles()
     {
         wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
-        wp_enqueue_style('parent-style', get_template_directory_uri() . '/scss/scss.css');
+        wp_enqueue_style('parent-style', get_template_directory_uri() . '/css/scss.css');
     }
     add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
