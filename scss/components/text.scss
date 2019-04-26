@@ -45,7 +45,7 @@ p, h3, h2, h1, li, strong, span {
     font-family: 'CircularStd', sans-serif;
     color: $color-text--main;
     font-size: $text-sm;
-    line-height: 24px;
+    line-height: 12px;
     color: #000000;
     font-weight: 200;
     letter-spacing: 0.2px;
@@ -53,7 +53,7 @@ p, h3, h2, h1, li, strong, span {
       font-size: 12px;
     }
     @media screen and (max-width: $sm) {
-      font-size: 9px;
+      font-size: 8px;
     }
   }
   &--md {
@@ -191,14 +191,14 @@ p, h3, h2, h1, li, strong, span {
     text-transform: uppercase;
     text-decoration: underline;
     @media screen and (min-width: 1600px) {
-      font-size: 8px;
+      font-size: 12px;
     }
   }
   &--xl {
     font-family: "CircularStd", sans-serif;
     color: $color-headline;
 
-
+    margin-bottom: 40px;
     font-weight: 200;
     font-size: 42px;
     line-height: 1;
@@ -212,7 +212,7 @@ p, h3, h2, h1, li, strong, span {
       font-size: 6rem;
     }
     @media screen and (max-width: 680px) {
-      font-size: 2.6rem;
+      font-size: 24px;
     }
 
     &-large {

@@ -103,7 +103,7 @@ a:hover {
   font-family: 'CircularStd', sans-serif;
   color: #000000;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 12px;
   color: #000000;
   font-weight: 200;
   letter-spacing: 0.2px;
@@ -117,7 +117,7 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .text--sm {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 
@@ -274,13 +274,14 @@ a:hover {
 
 @media screen and (min-width: 1600px) {
   .headline--sm {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 
 .headline--xl {
   font-family: "CircularStd", sans-serif;
   color: #f7f7f7;
+  margin-bottom: 40px;
   font-weight: 200;
   font-size: 42px;
   line-height: 1;
@@ -302,7 +303,7 @@ a:hover {
 
 @media screen and (max-width: 680px) {
   .headline--xl {
-    font-size: 2.6rem;
+    font-size: 24px;
   }
 }
 
