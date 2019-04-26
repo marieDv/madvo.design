@@ -37,11 +37,10 @@
     }
   }
   &-headline {
-    font-size: 14rem;
+    font-size: 16rem;
     font-style: normal;
-    font-weight: 700;
     padding: 2rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.4px;
     width:100%;
     line-height: 1;
     text-shadow: 2px 9px 26px #0909096b;
@@ -52,7 +51,7 @@
       // font-size: 13rem;
     }
     @media screen and (max-width: $lg) {
-      font-size: 7rem;
+      // font-size: 7rem;
     }
 
 

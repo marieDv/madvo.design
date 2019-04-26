@@ -29,22 +29,10 @@
     letter-spacing: 0.5px;
     line-height: 24px;
     color: $color-text--main;
- 
-
-    @media screen and (max-width: 1600px) {
-      // font-size: 16px;
-    }
-    @media screen and (max-width: $lg) {
-      // font-size: 16px;
-    }
-    @media screen and (min-width: 1600px) {
-      // font-size: 6rem;
-    }
-
 
     @media screen and (max-width: $sm) {
-      margin-left: 0;
       font-size: 24px;
+      margin-left: 0;
     }
 
   }

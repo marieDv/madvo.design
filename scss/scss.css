@@ -117,7 +117,7 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .text--sm {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 
@@ -1384,8 +1384,8 @@ li {
 
 @media screen and (max-width: 768px) {
   .ic-headline--xl {
-    margin-left: 0;
     font-size: 24px;
+    margin-left: 0;
   }
 }
 
@@ -1563,23 +1563,16 @@ li {
 }
 
 .about-headline {
-  font-size: 14rem;
+  font-size: 16rem;
   font-style: normal;
-  font-weight: 700;
   padding: 2rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.4px;
   width: 100%;
   line-height: 1;
   text-shadow: 2px 9px 26px #0909096b;
   text-transform: uppercase;
   color: #f7f7f7;
   font-family: "Eczar", sans-serif;
-}
-
-@media screen and (max-width: 1200px) {
-  .about-headline {
-    font-size: 7rem;
-  }
 }
 
 @media screen and (max-width: 768px) {
