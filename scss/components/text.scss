@@ -187,8 +187,9 @@ p, h3, h2, h1, li, strong, span {
     font-family: 'CircularStd', serif;
     color: #000000;
     font-size: 8px;
-    font-weight: 200;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    text-decoration: underline;
     @media screen and (min-width: 1600px) {
       font-size: 8px;
     }
