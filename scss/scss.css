@@ -264,18 +264,16 @@ a:hover {
 }
 
 .headline--sm {
-  font-family: 'Merriweather', serif;
-  color: #dadada;
-  font-size: 0.6rem;
-  font-style: italic;
-  font-weight: 100;
-  font-size: 0.67rem;
+  font-family: 'CircularStd', serif;
+  color: #000000;
+  font-size: 8px;
+  font-weight: 200;
   letter-spacing: 1.2px;
 }
 
 @media screen and (min-width: 1600px) {
   .headline--sm {
-    font-size: 0.9rem;
+    font-size: 8px;
   }
 }
 
@@ -575,6 +573,7 @@ li {
 
 .wheel-item__content__button {
   cursor: pointer;
+  margin-left: -76px;
 }
 
 .wheel-item__content--active {
@@ -1375,22 +1374,10 @@ li {
   font-family: "CircularStd", sans-serif;
   font-size: 46px;
   margin-left: -107px;
-  font-weight: 400;
+  font-weight: 200;
   letter-spacing: 0.5px;
   line-height: 24px;
   color: #000000;
-}
-
-@media screen and (max-width: 1600px) {
-  .ic-headline--xl {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .ic-headline--xl {
-    font-size: 16px;
-  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -1590,12 +1577,6 @@ li {
   text-transform: uppercase;
   color: #f7f7f7;
   font-family: "Eczar", sans-serif;
-}
-
-@media screen and (max-width: 1600px) {
-  .about-headline {
-    font-size: 13rem;
-  }
 }
 
 @media screen and (max-width: 1200px) {
