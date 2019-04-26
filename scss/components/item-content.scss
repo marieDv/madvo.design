@@ -25,17 +25,17 @@
     font-family: "CircularStd", sans-serif;
     font-size: 46px;
     margin-left: -107px;
-    font-weight: 400;
+    font-weight: 200;
     letter-spacing: 0.5px;
     line-height: 24px;
     color: $color-text--main;
  
 
     @media screen and (max-width: 1600px) {
-      font-size: 16px;
+      // font-size: 16px;
     }
     @media screen and (max-width: $lg) {
-      font-size: 16px;
+      // font-size: 16px;
     }
     @media screen and (min-width: 1600px) {
       font-size: 6rem;
