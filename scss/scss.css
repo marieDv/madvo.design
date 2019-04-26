@@ -1381,15 +1381,10 @@ li {
   color: #000000;
 }
 
-@media screen and (min-width: 1600px) {
-  .ic-headline--xl {
-    font-size: 6rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .ic-headline--xl {
-    font-size: 4rem;
+    margin-left: 0;
+    font-size: 24px;
   }
 }
 
