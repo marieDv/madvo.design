@@ -85,19 +85,13 @@
 
         <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about z-50">
 
-            <div class="wheel-item__content__button absolute z-50 headline--sm">
-                <div class="more-button--sound w-16 h-4 inline-block mr-3"></div>
-                close
-
-            </div>
-            <!-- md:ml-32-->
             <h2 class=" ic-headline--xl mt-32">hello stranger!</h2>
-            <!--        <div class="relative shadow  about-me hidden md:block">-->
-            <!--            <img src="http://localhost/wordpress/wp-content/uploads/2018/08/pp.jpg" alt="" class="" />-->
-            <!--        </div>-->
-
             <div class="about-clients  inline text-left">
-                <!--            <span class="text--xs text--strong ic-text--lg">- clients: </span><br>-->
+                <div class="wheel-item__content__button absolute z-50 headline--sm">
+                    <div class="more-button--sound w-16 h-4 inline-block mr-3"></div>
+                    back
+
+                </div>
                 <p class="text--sm text-left">
                     Thank you for stopping by! My name is Marie, I am a passionate programmer and visual artist based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email!
                 </p>
