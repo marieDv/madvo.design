@@ -31,12 +31,12 @@ function toggleBack() {
                 for (let j = 0; j < document.getElementsByClassName("wheel-item__image").length; j++) {
                     document.getElementsByClassName("wheel-item__image")[j].classList.remove("wheel-item__image--active");
                     document.getElementsByClassName("wheel-item__image")[j].classList.add("wheel-item__image--show");
-                    setTimeout(() = > {
+                    setTimeout(function() {
                         document.getElementsByClassName("wheel-item__image")[j].classList.remove("wheel-item__image--show");
-                },
-                    200
-                )
-                    ;
+                    },
+                        200
+                    )
+                        ;
                 }
                 for (let j = 0; j < document.getElementsByClassName("wheel-item__title").length; j++) {
                     document.getElementsByClassName("wheel-item__title")[j].classList.remove("wheel-item__title--reversed");
