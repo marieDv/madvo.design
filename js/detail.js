@@ -13,7 +13,7 @@ function toggleBack() {
     for (let i = 0; i < back.length + 2; i++) {
         if (back[i]) {
             back[i].addEventListener("click", function () {
-                document.getElementsByClassName("stripe__cont")[0].classList.remove("absolute");
+                // document.getElementsByClassName("stripe__cont")[0].classList.remove("absolute");
 
 
                 if (document.getElementsByClassName("wheel-item__content")[i - 1]) {
