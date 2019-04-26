@@ -574,7 +574,7 @@ li {
 
 .wheel-item__content__button {
   cursor: pointer;
-  margin-left: -76px;
+  margin-left: -160px;
 }
 
 .wheel-item__content--active {
