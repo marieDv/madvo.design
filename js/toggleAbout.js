@@ -2,9 +2,12 @@
  * toggleAbout
  * animations for the openeing of the about page
  */
+
 let about = document.getElementById("toggleabout");
-if(about){
+console.log("toggleabout" + about)
+// if(about){
     about.addEventListener("click", function(){
+        console.log("toggleabout")
         // document.getElementsByClassName("stripe__cont")[0].classList.add("absolute");
 
         let title = document.getElementsByClassName("wheel-item__image");
@@ -27,6 +30,6 @@ if(about){
             }
         }
     });
-}
+// }
 
 

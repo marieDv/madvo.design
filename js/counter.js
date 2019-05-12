@@ -17,16 +17,16 @@ setTimeout(function() {
 }, 2000);
 
 
-setTimeout(function() {
+// setTimeout(function() {
 
-    anime({
-        targets: ".loading-screen",
-        scaleX: screen.width,
-        easing: "easeOutExpo",
-        duration: 4800,
-    });
-setTimeout(() => {document.getElementsByClassName("loading-screen")[0].style.top = "-10px"}, 3300)
-}, 2000);
+//     anime({
+//         targets: ".loading-screen",
+//         scaleX: screen.width,
+//         easing: "easeOutExpo",
+//         duration: 4800,
+//     });
+// setTimeout(() => {document.getElementsByClassName("loading-screen")[0].style.top = "-10px"}, 3300)
+// }, 2000);
 
 setTimeout(function() {
     let active = false;

@@ -46,7 +46,7 @@
                         Designer / Coder
                     </ul>
                     <ul class="nav-fast">
-                        <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
+                        <li id="" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
                             work
                         </li>
                         <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">

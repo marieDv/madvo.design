@@ -30,12 +30,12 @@ init()
 
 
 
-    animStartscreen();
+    // animStartscreen();
 
 };
 
 function init(){
-    initWheelMechaincs();
+    // initWheelMechaincs();
 }
 
 
@@ -144,11 +144,11 @@ function scrollNext(direction, next, autoScroll){
 
     direction.addEventListener("click", function(){
         if(!wait && !first){
-            addSliderlogic();
+            // addSliderlogic();
         }else if(!wait && first){
             first = false;
             setTimeout(function(){
-                addSliderlogic();
+                // addSliderlogic();
             }, 800);
 
         }
@@ -170,7 +170,7 @@ function scrollNext(direction, next, autoScroll){
             nextCounter--;
         }
 
-        addSliderlogic();
+        // addSliderlogic();
      }
 
     function navigationnnumber(mCounter){
