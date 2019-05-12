@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "CircularStd";
-  src: url("CircularStd-Black.woff");
-  src: url("CircularStd-Black.woff") format("woff");
+  font-family: "Roboto Condensed";
+  src: url("Roboto Condensed-Black.woff");
+  src: url("Roboto Condensed-Black.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

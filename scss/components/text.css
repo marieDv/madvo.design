@@ -1,0 +1,349 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.text--xs {
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-family: "Merriweather", sans-serif;
+  color: #000000;
+  line-height: 1.2;
+  letter-spacing: 0.8px;
+}
+
+@media screen and (max-width: 768px) {
+  .text--xs {
+    font-size: calc(12px - 1rem);
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .text--xs {
+    font-size: 0.9rem;
+  }
+}
+
+.text--sm {
+  font-family: "Oswald", sans-serif;
+  color: #000000;
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 200;
+  letter-spacing: 0.2px;
+}
+
+@media screen and (max-width: 768px) {
+  .text--sm {
+    font-size: 24px;
+  }
+}
+
+.text--md {
+  font-family: "Sintony", sans-serif;
+  color: #000000;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .text--md {
+    font-size: 2.3rem;
+  }
+}
+
+.text--lg {
+  font-family: "Eczar", serif;
+  color: #000000;
+  font-size: 5rem;
+}
+
+.text--marked {
+  background-color: #ededed;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.text--marked::-moz-selection {
+  background: #ededed;
+}
+
+.text--marked::selection {
+  background: #ededed;
+}
+
+.text--underline {
+  text-decoration: underline;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--lowercase {
+  text-transform: lowercase;
+}
+
+.text--emphasized {
+  color: #fdfdfd;
+}
+
+.text--strong {
+  font-weight: 700;
+}
+
+.text--queer {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.text--reversed {
+  color: #fff9fb;
+}
+
+.text--button {
+  display: inline;
+  color: #1a1a1a;
+  z-index: 90;
+  text-decoration: underline;
+  top: 130px;
+  left: -8px;
+}
+
+.text--proj {
+  color: #fff !important;
+}
+
+.text--thin {
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 0.66rem;
+}
+
+@-webkit-keyframes markText {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes markText {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.headline--gradient {
+  color: #094ab2;
+  font-size: calc(5.6rem - 3.5rem);
+  font-weight: 900;
+  font-family: "Anonymous Pro", monospace;
+  font-family: "Poppins", sans-serif;
+  margin-left: -3.6rem;
+  padding-right: 10px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.headline--more {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.headline--xxl {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 14rem;
+  letter-spacing: 20px;
+  color: #797979;
+  white-space: nowrap;
+  opacity: 0.2;
+  text-transform: lowercase;
+}
+
+.headline--md {
+  font-family: "Eczar", sans-serif;
+  letter-spacing: 1.4rem;
+  color: #f7f7f7;
+  font-size: 1.8rem;
+}
+
+.headline--md--low {
+  color: #000000;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.headline--sm {
+  font-family: "Roboto Condensed", serif;
+  color: #000000;
+  font-size: 8px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1600px) {
+  .headline--sm {
+    font-size: 12px;
+  }
+}
+
+.headline--xl {
+  font-family: "Oswald", sans-serif;
+  color: #161616;
+  margin-bottom: 40px;
+  font-weight: 800;
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1300px) {
+  .headline--xl {
+    font-size: 120px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .headline--xl {
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .headline--xl {
+    font-size: 24px;
+  }
+}
+
+.headline--xl-large {
+  font-size: 5.6rem;
+  line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .headline--xl-large {
+    font-size: 2.6rem;
+  }
+}
+
+.headline--lg {
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  color: #000000;
+  line-height: 1.44;
+  letter-spacing: 12px;
+  display: inline;
+  border-bottom: 15px solid black;
+}
+
+@media screen and (max-width: 1200px) {
+  .headline--lg {
+    font-size: calc(5rem - 2rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .headline--lg {
+    font-size: calc(5rem - 1.5rem);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .headline--lg {
+    font-size: calc(5rem - 0.7rem);
+  }
+}
+
+.headline--lg::-moz-selection {
+  color: #ef646e;
+}
+
+.headline--lg::selection {
+  color: #ef646e;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+.scan-count {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #323232;
+}
+
+.scan-count--percent {
+  color: #323232 !important;
+}
+
+#distortion-text {
+  position: absolute;
+  margin-top: -2rem;
+}
+
+.background-title {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.background-title.letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.wheel-item__title .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.text--nav {
+  color: #161616;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  /* letter-spacing: 1.6px; */
+  font-style: normal;
+}
+
+@media screen and (min-width: 1600px) {
+  .text--nav {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text--nav {
+    font-size: 0.7rem;
+  }
+}
+
+.emphasized {
+  color: #094ab2;
+}
+/*# sourceMappingURL=text.css.map */

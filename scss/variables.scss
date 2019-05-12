@@ -4,8 +4,7 @@ $color-headline: #f7f7f7;
 $color-text--second: #fff9fb;
 $color-text--buttons: #1a1a1a;
 
-
-$color--accent: #094AB2;
+$color--accent: #094ab2;
 $color--accent-light: #3a44f9;
 
 $color-bg-light: #17171b;
@@ -16,16 +15,18 @@ $color-bg--accent: #4c44ed;
 $color-marked: rgb(49, 240, 255);
 $color-marked-fixed: #ededed;
 $color-marked--emph: #ededed;
+
+$beige: #f2efe8;
+$black: #161616;
+$red: #b83939;
 //text
 $text-xl: 5.6rem;
-$text-lg: 5.0rem;
+$text-lg: 5rem;
 $text-sm: 12px;
 $text-md: 0.8rem;
 $text-xs: 0.7rem;
 
-
 //breakpoints
-
 
 // Small devices (landscape phones, 576px and up)
 $xs: 576px;

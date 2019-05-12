@@ -1,11 +1,10 @@
 .nav {
-  //top: 4.5rem;
+  width: 100%;
+  left: 0;
   top: 0;
-  right: 16.6vw;
   top: 3vh;
 
   top: -1vh;
-  right: 18.3vw;
   @media screen and (max-width: $sm) {
     top: -3.5rem;
   }
@@ -13,6 +12,23 @@
     top: -5.5rem;
   }
 }
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-fast {
+  position: absolute;
+  right: 72px;
+  & li {
+    list-style: none;
+  }
+  & li:last-child {
+    margin-left: 48px;
+  }
+}
+
 .navigation-number__box {
   margin-bottom: 1rem;
   @media screen and (max-width: $sm) {
@@ -66,9 +82,10 @@
 
 
 .wheel {
-  //margin-top: 200vh;
+  display: block;
   top: 26vh;
   transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding-top: 80px;
 
   &--active {
     animation: 1.8s wheel-up forwards;
@@ -82,9 +99,8 @@
 
   }
   &-item {
-    padding-right: 50%;
-    //padding-left: 27%; //change in detail too!!!!!!
 
+    margin-bottom: 96px;
     padding-left: 24%;
     cursor: pointer;
     &--active {

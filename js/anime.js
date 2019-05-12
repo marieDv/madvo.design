@@ -80,4 +80,4 @@ function animateAddInfo(){
             item[i].classList.add("wheel-item__title-show");
         }
     }, 900)
-
+}
