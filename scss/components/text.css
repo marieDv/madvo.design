@@ -11,8 +11,8 @@ a:hover {
 .text--xs {
   font-size: 0.7rem;
   font-weight: 400;
-  font-family: "Merriweather", sans-serif;
-  color: #000000;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
   line-height: 1.2;
   letter-spacing: 0.8px;
 }
@@ -189,7 +189,7 @@ a:hover {
 }
 
 .headline--sm {
-  font-family: "Roboto Condensed", serif;
+  font-family: "Roboto", sans-serif;
   color: #000000;
   font-size: 8px;
   letter-spacing: 0.2px;
@@ -203,9 +203,8 @@ a:hover {
 }
 
 .headline--xl {
-  font-family: "Oswald", sans-serif;
+  font-family: "Berthold Akzidenz Grotesk", sans-serif;
   color: #161616;
-  margin-bottom: 40px;
   font-weight: 800;
   font-size: 120px;
   line-height: 1;
@@ -215,7 +214,7 @@ a:hover {
 
 @media screen and (min-width: 1300px) {
   .headline--xl {
-    font-size: 120px;
+    font-size: 80px;
   }
 }
 
@@ -326,8 +325,8 @@ li {
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
-  /* letter-spacing: 1.6px; */
+  font-family: "Roboto", sans-serif;
+  line-height: 15.8px;
   font-style: normal;
 }
 

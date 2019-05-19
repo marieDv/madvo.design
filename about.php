@@ -1,11 +1,5 @@
-<?php
-/*
- * Template Name: Marie Dvorzak'S Portfolio
- * Template Post Type: post
- */
+<?php /* Template Name: about */ ?>
 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,8 +34,7 @@
 
 </head>
 
-<section class="single">
-
+<section class="single about">
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">
       <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
@@ -64,37 +57,48 @@
     </ul>
   </div>
 
+  <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about z-50">
 
-  <!-- <a><?php get_home_url() ?>Back</a>
-  <div class="more-button--sound w-16 h-4 inline-block mr-3"></div>
-  <a href="<?php echo get_home_url() ?>">back</a>
-  </div> -->
-  <?php
-  while (have_posts()) : the_post();
+    <div class="about-clients  inline text-left">
+    <h2 class=" ic-headline--xl mt-32">Hi, I am Marie a Designer that happens to be have a passion for programming</h2>
 
-    $id = $post->ID;
-    $post = get_post($id);
-    $content = apply_filters('the_content', $post->post_content);
-    echo $content;
-  endwhile;
-  ?>
+      <p class="text--sm text-left">
+        Thank you for stopping by! My name is Marie, I am a passionate programmer and visual artist based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email!
+      </p>
+      <div class="w-full flex mt-16 items-center about-text__section">
+        <p class="inline">contact</p>
+        <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
+      </div>
+      <p class="text--sm text-left mt-16">
+        <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">email</a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a>
+      </p>
 
-  <div class="quickOverview">
-    <?php
-    global $i;
-    global $post;
-    $args = array('category' => 2); //25 //2 for dev
-    $work = get_posts($args);
-    ?>
-    <?php foreach ($work as $post) : setup_postdata($post); ?>
+      <div class="w-full flex mt-16 items-center about-text__section">
+        <p class="inline">clients I worked for & resume</p>
+        <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
+      </div>
 
-      <a href="<?php echo get_permalink($post->ID) ?>">
-        <?php the_title(); ?>
-      </a>
-    <?php endforeach;
-  wp_reset_postdata(); ?>
+
+
+      <ul class="text--sm  about-text__resume mt-4">
+        <li class="about-text__resume--emphasized">WILD <span>_2019 Development Intern</span></li>
+
+        <li class="about-text__resume--emphasized"> CAMPAIGNING BUREAU <span>_2017/2018 Development/UI-Design Intern</span></li>
+        <li class="about-text__resume--emphasized"> FIV AUSTRIA<span>_2015/2019 Wordpress</span></li>
+        <li> Mediatechnology and Design<span>_2016/2019 @FH Hagenberg</span></li>
+        <li> Internet Design & Graphic Communication<span>_2018/2019 @Plymouth University UK</span></li>
+        <li> Graphische Bundes Lehr- und Versuchsanstalt <span>_2010/2015</span></li>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/portrait.png">
+      </ul>
+
+
+    </div>
+    <div class="realtive pin-r w-1/2 h-full text-center pin-t mt-32 ml-32 text-left">
+
+
+    </div>
+
   </div>
-
   <?php require(dirname(__FILE__) . '/footer.php'); ?>
 
 </section>

@@ -11,7 +11,7 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -36,49 +36,33 @@
     <div id="overlay"></div>
     <section id="main">
 
-        <div class=" fixed pin-t mt-16 mr-6 w-full z-50">
+        <div class="absolute pin-t mt-16 mr-6 w-full z-50">
             <ul class="pin-r absolute mr-12 nav">
                 <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
-                    <div class="burger-menu"></div>
+                    <div class="burger-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
                     <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
                         Marie Dvorzak
-                        <li class="emphasized">.</li>
-                        Designer / Coder
+                        <li class="text-small">
+                            Designer / Coder
+                        </li>
                     </ul>
                     <ul class="nav-fast">
                         <li id="" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
                             work
                         </li>
                         <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-                            about
+                         <a href="<?php echo get_page_link(186); ?>">about</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <!-- /////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ///////////// STARTSCREEN -->
 
 
-        <!-- <div class="startscreen w-full h-screen relative z-50">
-            <div class="w-full h-2 z-40 absolute pin-t pin-l">
-                <div class="bg-white w-3 h-2 loading-screen absolute"></div>
-            </div>
-
-            <div class="absolute pin m-auto w-full h-32 text-center z-30 ">
-                <h2 class="startscreen__title headline--md text--uppercase ic-headline--xl ic-headline-startscreen">madvo.design</h2>
-                <h3 class="startscreen__title text--sm mt-2 ic-text--sm">Visual Design & Webdevelopment</h3>
-                <h2 class="headline--md startscreen__title headline--md--low mt-6 ic-text--sm scan-count--percent">
-                    <span class="scan-count ml-9 text--md">0</span>
-                    %</h2>
-
-            </div>
-        </div> -->
-
-
-
-
-        <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about z-50">
+        <!-- <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about z-50">
 
             <h2 class=" ic-headline--xl mt-32">hello stranger!</h2>
             <div class="about-clients  inline text-left">
@@ -122,30 +106,11 @@
 
             </div>
 
-        </div>
+        </div> -->
 
 
         <!-- ///////////////////////////////CONTROLS -->
-        <div class="w-full controls fixed z-30 cursor-pointer">
-            <button id="previous" class="h-10 m-auto text--xs  text-left absolute  pin-l pin-t pin-b texthover texthover-side">
-                <li>p</li>
-                <li>r</li>
-                <li>e</li>
-                <li>v</li>
-                <li>i</li>
-                <li>o</li>
-                <li>u</li>
-                <li>s</li>
-            </button>
-            <button id="next" class=" h-10 m-auto text--xs text-right absolute  pin-r pin-t pin-b texthover texthover-side">
 
-                <li>n</li>
-                <li>e</li>
-                <li>x</li>
-                <li>t</li>
-
-            </button>
-        </div>
 
         <div class=" pin-b m-auto flex content-center pr-32 pb-32 w-full fixed z-20 ">
 
@@ -191,7 +156,6 @@
                         <div class="text-right">
                         </div>
                         <h3 class="headline--xl">
-                            <!-- <?php var_dump(get_permalink($post->ID)) ?> -->
                             <a href="<?php echo get_permalink($post->ID) ?>">
                                 <?php the_title(); ?>
                             </a>

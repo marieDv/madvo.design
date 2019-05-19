@@ -41,19 +41,18 @@
 @import "components/gradients.scss";
 @import "components/item-content.scss";
 @import "components/wheel-preview.scss";
-@import "components/texthover.scss";
+// @import "components/texthover .scss" ;
 
 
 /*///////PAGES///////*/
 @import "about.scss";
+@import "single.scss";
 
 //@import "../dragdealer/dragdealer.css";
-html {
-  background: black;
-}
+
 body {
   overflow-x: hidden;
-  height:100vh;
+  // height:100vh;
 
 }
 
@@ -77,9 +76,10 @@ body {
 
 #main {
   overflow-x: hidden;
-  height:100vh;
+  // height:100vh;
   width: 100%;
-  position: absolute;
+  position: relative;
+  // position: absolute;
 
   // background: radial-gradient(#19191c, #000000);
   background-color: $beige;

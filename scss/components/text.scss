@@ -29,8 +29,8 @@ span {
   &--xs {
     font-size: $text-xs;
     font-weight: 400;
-    font-family: "Merriweather", sans-serif;
-    color: $color-text--main;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
     line-height: 1.2;
     letter-spacing: 0.8px;
 
@@ -132,13 +132,7 @@ span {
   0% {
   }
   100% {
-    //height: 300px;
     transform: translateX(100%);
-    //-webkit-transform: scaleY(125);
-    //-moz-transform: scaleY(125);
-    //-ms-transform: scaleY(125);
-    //-o-transform: scaleY(125);
-    //transform: scaleY(125);
   }
 }
 
@@ -180,21 +174,20 @@ span {
     }
   }
   &--sm {
-    font-family: "Roboto Condensed", serif;
+    font-family: "Roboto", sans-serif;
     color: #000000;
     font-size: 8px;
     letter-spacing: 0.2px;
     text-transform: uppercase;
-    // text-decoration: underline;
     @media screen and (min-width: 1600px) {
       font-size: 12px;
     }
   }
   &--xl {
-    font-family: "Oswald", sans-serif;
+    font-family: "Berthold Akzidenz Grotesk", sans-serif;
     color: $black;
 
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
     font-weight: 800;
     font-size: 120px;
     line-height: 1;
@@ -202,7 +195,7 @@ span {
     text-transform: uppercase;
 
     @media screen and (min-width: 1300px) {
-      font-size: 120px;
+      font-size: 80px;
     }
     @media screen and (min-width: 1600px) {
       font-size: 120px;
@@ -295,8 +288,8 @@ li {
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
-  /* letter-spacing: 1.6px; */
+  font-family: "Roboto", sans-serif;
+  line-height: 15.8px;
   font-style: normal;
   @media screen and (min-width: 1600px) {
     font-size: 0.9rem;
