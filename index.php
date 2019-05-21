@@ -54,7 +54,7 @@
                             work
                         </li>
                         <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-                         <a href="<?php echo get_page_link(186); ?>">about</a>
+                            <a href="<?php echo get_page_link(186); ?>">about</a>
                         </li>
                     </ul>
                 </li>
@@ -141,44 +141,44 @@
         $about = get_posts($args2);
 
         ?>
+        <div id="wheel-container" class="wheel-container">
+            <div id="wheel" class="w-full self-center flex wheel z-10 absolute pin-t">
+                <?php global $i;
+                $i = 0; ?>
+                <?php foreach ($work as $post) : setup_postdata($post); ?>
+                    <a class="wheel-item z-30 w-full" href="<?php echo get_permalink($post->ID) ?>">
+                        <!-- <div class="z-30 w-full"></div> -->
+                            <div class="inline self-center w-full z-20">
+                                <div class="img-remove">
+                                </div>
 
-        <div id="wheel" class="w-full self-center flex wheel z-10 absolute pin-t">
-            <?php global $i;
-            $i = 0; ?>
-            <?php foreach ($work as $post) : setup_postdata($post); ?>
 
-                <div class="wheel-item z-30 w-full">
-                    <div class="inline self-center w-full z-20">
-                        <div class="img-remove">
+                                <div class="text-right">
+                                </div>
+                                <h3 class="headline--xl">
+                                    <?php the_title(); ?>
+                                </h3>
+                                <span>
+                                    <span>
+                                        <?php
+                                        $i += 1;
+                                        echo "0" . $i . " "; ?>
+                                    </span>
+                                    <?php $posttags = get_the_tags();
+                                    if ($posttags) {
+                                        foreach ($posttags as $tag) {
+                                            echo $tag->name . ' ';
+                                        }
+                                    }
+                                    ?>
+                                </span>
+                            <!-- </div> -->
                         </div>
+                    </a>
 
-
-                        <div class="text-right">
-                        </div>
-                        <h3 class="headline--xl">
-                            <a href="<?php echo get_permalink($post->ID) ?>">
-                                <?php the_title(); ?>
-                            </a>
-                        </h3>
-                        <span>
-                            <span>
-                                <?php
-                                $i += 1;
-                                echo "0" . $i . " "; ?>
-                            </span>
-                            <?php $posttags = get_the_tags();
-                            if ($posttags) {
-                                foreach ($posttags as $tag) {
-                                    echo $tag->name . ' ';
-                                }
-                            }
-                            ?>
-                        </span>
-                    </div>
-
-                </div>
-            <?php endforeach;
-        wp_reset_postdata(); ?>
+                <?php endforeach;
+            wp_reset_postdata(); ?>
+            </div>
         </div>
         <?php foreach ($work as $post) : setup_postdata($post); ?>
             <div class="fixed z-60  mt-16 pin-b ml-32 mb-4 ">
@@ -227,8 +227,9 @@
 
 
 
-        <?php require(dirname(__FILE__) . '/footer.php'); ?>
     </section>
+    <?php require(dirname(__FILE__) . '/footer.php'); ?>
+
 </body>
 <footer>
     <?php

@@ -10,16 +10,35 @@ function looper() {
                 // section.style.transform += "skewY(" + speed + "deg)";
         }
         //     section.style.transform = "skewY(" + currentPixel + "deg)";
-        console.log(speed)
-
         currentPixel = nPixel;
         requestAnimationFrame(looper);
 }
 looper();
 
-
-
-
+console.log(TweenMax)
+Draggable.create("#overview", {
+	type:"x",
+	bounds: document.getElementById("overview-holder"),
+	throwProps:true,
+	onClick:function() {
+		console.log("clicked");
+	},
+	onDragEnd:function() {
+		console.log("drag ended");
+	}
+});
+Draggable.create("#wheel", {
+	type:"x",
+	bounds: document.getElementById("wheel-container"),
+	throwProps:true,
+	onClick:function() {
+		console.log("clicked");
+	},
+	onDragEnd:function() {
+                console.log(this._gsTransform.x)
+		console.log("drag ended");
+	}
+});
 
 // window.addEventListener("scroll", looper());
 

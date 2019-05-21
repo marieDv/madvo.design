@@ -49,7 +49,9 @@
 @import "single.scss";
 
 //@import "../dragdealer/dragdealer.css";
-
+html {
+  background: #000;
+}
 body {
   overflow-x: hidden;
   // height:100vh;
@@ -82,7 +84,7 @@ body {
   // position: absolute;
 
   // background: radial-gradient(#19191c, #000000);
-  background-color: $beige;
+  background-color: #000;
 
 
 &:after {

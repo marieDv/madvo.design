@@ -24,7 +24,8 @@
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-
+  <link src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"/>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/utils/Draggable.min.js"></script> -->
   <link rel="stylesheet" href="<? bloginfo('stylesheet_url') ?>">
   <?php
   function theme_enqueue_styles()
@@ -57,7 +58,7 @@
             work
           </li>
           <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-            about
+            <a href="<?php echo get_page_link(186); ?>">about</a>
           </li>
         </ul>
       </li>
@@ -78,8 +79,8 @@
     echo $content;
   endwhile;
   ?>
-
-  <div class="quickOverview">
+<div id="overview-holder" class="quickOverview-container"></div>
+  <div id="overview" class="quickOverview">
     <?php
     global $i;
     global $post;
@@ -94,7 +95,6 @@
     <?php endforeach;
   wp_reset_postdata(); ?>
   </div>
-
-  <?php require(dirname(__FILE__) . '/footer.php'); ?>
-
+</div>
 </section>
+<?php require(dirname(__FILE__) . '/footer.php'); ?>

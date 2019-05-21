@@ -57,10 +57,10 @@
     </ul>
   </div>
 
-  <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about z-50">
+  <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about ">
 
     <div class="about-clients  inline text-left">
-    <h2 class=" ic-headline--xl mt-32">Hi, I am Marie a Designer that happens to be have a passion for programming</h2>
+    <h2 class=" ic-headline--xl mt-32">Hi, I am Marie a Designer that happens to have a passion for programming</h2>
 
       <p class="text--sm text-left">
         Thank you for stopping by! My name is Marie, I am a passionate programmer and visual artist based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email!
@@ -99,6 +99,5 @@
     </div>
 
   </div>
-  <?php require(dirname(__FILE__) . '/footer.php'); ?>
-
 </section>
+<?php require(dirname(__FILE__) . '/footer.php'); ?>

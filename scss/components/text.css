@@ -1,11 +1,21 @@
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #000000;
+  color: #ffffff;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+p,
+h3,
+h2,
+h1,
+li,
+strong,
+span {
+  color: #ffffff;
 }
 
 .text--xs {
@@ -32,10 +42,10 @@ a:hover {
 
 .text--sm {
   font-family: "Oswald", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 12px;
   line-height: 24px;
-  color: #000000;
+  color: #ffffff;
   font-weight: 200;
   letter-spacing: 0.2px;
 }
@@ -48,7 +58,7 @@ a:hover {
 
 .text--md {
   font-family: "Sintony", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 0.8rem;
   line-height: 1.45;
   letter-spacing: 0.2px;
@@ -63,7 +73,7 @@ a:hover {
 
 .text--lg {
   font-family: "Eczar", serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 5rem;
 }
 
@@ -183,7 +193,7 @@ a:hover {
 }
 
 .headline--md--low {
-  color: #000000;
+  color: #ffffff;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
 }
@@ -204,12 +214,16 @@ a:hover {
 
 .headline--xl {
   font-family: "Berthold Akzidenz Grotesk", sans-serif;
-  color: #161616;
-  font-weight: 800;
-  font-size: 120px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 96px;
   line-height: 1;
   letter-spacing: 0.7px;
-  text-transform: uppercase;
+}
+
+.headline--xl a {
+  color: #ff5050;
 }
 
 @media screen and (min-width: 1300px) {
@@ -220,7 +234,7 @@ a:hover {
 
 @media screen and (min-width: 1600px) {
   .headline--xl {
-    font-size: 120px;
+    font-size: 80px;
   }
 }
 
@@ -245,7 +259,7 @@ a:hover {
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 900;
   font-size: 5rem;
-  color: #000000;
+  color: #ffffff;
   line-height: 1.44;
   letter-spacing: 12px;
   display: inline;

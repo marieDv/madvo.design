@@ -38,11 +38,21 @@
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #000000;
+  color: #ffffff;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+p,
+h3,
+h2,
+h1,
+li,
+strong,
+span {
+  color: #ffffff;
 }
 
 .text--xs {
@@ -69,10 +79,10 @@ a:hover {
 
 .text--sm {
   font-family: "Oswald", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 12px;
   line-height: 24px;
-  color: #000000;
+  color: #ffffff;
   font-weight: 200;
   letter-spacing: 0.2px;
 }
@@ -85,7 +95,7 @@ a:hover {
 
 .text--md {
   font-family: "Sintony", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 0.8rem;
   line-height: 1.45;
   letter-spacing: 0.2px;
@@ -100,7 +110,7 @@ a:hover {
 
 .text--lg {
   font-family: "Eczar", serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 5rem;
 }
 
@@ -220,7 +230,7 @@ a:hover {
 }
 
 .headline--md--low {
-  color: #000000;
+  color: #ffffff;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
 }
@@ -241,12 +251,16 @@ a:hover {
 
 .headline--xl {
   font-family: "Berthold Akzidenz Grotesk", sans-serif;
-  color: #161616;
-  font-weight: 800;
-  font-size: 120px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 96px;
   line-height: 1;
   letter-spacing: 0.7px;
-  text-transform: uppercase;
+}
+
+.headline--xl a {
+  color: #ff5050;
 }
 
 @media screen and (min-width: 1300px) {
@@ -257,7 +271,7 @@ a:hover {
 
 @media screen and (min-width: 1600px) {
   .headline--xl {
-    font-size: 120px;
+    font-size: 80px;
   }
 }
 
@@ -282,7 +296,7 @@ a:hover {
   font-family: "Archivo Narrow", sans-serif;
   font-weight: 900;
   font-size: 5rem;
-  color: #000000;
+  color: #ffffff;
   line-height: 1.44;
   letter-spacing: 12px;
   display: inline;
@@ -399,6 +413,10 @@ li {
           align-items: center;
 }
 
+.nav-items .toggleabout:first-child {
+  padding-top: 24px;
+}
+
 .nav-items .toggleabout .text-small {
   font-size: 8px;
   letter-spacing: 2%;
@@ -499,14 +517,29 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 150%;
+  -webkit-transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
+  transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
+}
+
+.quickOverview-container {
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 .quickOverview a {
   color: white;
+  width: 300px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
 }
 
 .footer {
   height: 164px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: center;
@@ -522,10 +555,22 @@ li {
   line-height: 1.1;
 }
 
+.footer p, .footer span {
+  color: #ffffff;
+}
+
 .footer div {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2 / 4;
+}
+
+@media screen and (max-width: 768px) {
+  .footer div {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2 / 5;
+  }
 }
 
 .footer div .text-small {
@@ -541,19 +586,43 @@ li {
   grid-column: 4 / 5;
 }
 
+@media screen and (max-width: 768px) {
+  .footer a {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 1;
+    grid-column: 6 / 7;
+  }
+}
+
 .footer a:last-child {
   -ms-grid-column: 5;
   -ms-grid-column-span: 1;
   grid-column: 5 / 6;
 }
 
+@media screen and (max-width: 768px) {
+  .footer a:last-child {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 1;
+    grid-column: 8 / 9;
+  }
+}
+
 .wheel {
-  display: block;
-  -webkit-transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200%;
+  padding-left: 26%;
   position: relative;
   overflow: visible;
   margin-top: 400px;
+}
+
+.wheel-container {
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 .wheel--active {
@@ -570,9 +639,10 @@ li {
 }
 
 .wheel-item {
-  margin-bottom: 150px;
-  padding-left: 24%;
+  margin-left: 5%;
   cursor: pointer;
+  width: 500px;
+  display: block;
 }
 
 .wheel-item--active {
@@ -696,7 +766,7 @@ li {
 
 .controls > button {
   bottom: 102vh;
-  color: #000000;
+  color: #ffffff;
   cursor: pointer;
   letter-spacing: -1px;
   z-index: 40;
@@ -1210,6 +1280,12 @@ li {
   padding: 27px 23px;
 }
 
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
 .burger-menu span {
   display: block;
 }
@@ -1454,7 +1530,7 @@ li {
   line-height: 48px;
   max-width: 600px;
   margin-bottom: 40px;
-  margin-left: -104px;
+  margin-left: -55px;
   color: #ffffff;
 }
 
@@ -1569,13 +1645,24 @@ li {
 .about {
   margin-right: 0;
   margin-left: 0;
-  background-color: #0e0e0e;
+  background-color: #000000;
   color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
 }
 
 .about img {
   max-width: 475px;
   margin-top: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .about img {
+    max-width: 350px;
+  }
 }
 
 .about li span {
@@ -1587,12 +1674,6 @@ li {
 
 .about a {
   color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  .about {
-    padding: 5vh 3rem 0;
-  }
 }
 
 .about-text__section {
@@ -1635,11 +1716,10 @@ li {
 }
 
 .about-clients {
-  width: 70%;
-  padding: 2rem;
+  width: 45%;
   top: 40px;
-  padding-left: 482px;
   position: relative;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1650,7 +1730,7 @@ li {
 
 @media screen and (max-width: 768px) {
   .about-clients {
-    width: 100%;
+    width: 75%;
   }
 }
 
@@ -1702,6 +1782,23 @@ li {
   text-align: left;
 }
 
+.single-container {
+  margin: 0 auto;
+  padding: 0px 480px;
+}
+
+@media screen and (max-width: 1600px) {
+  .single-container {
+    padding: 0px 140px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .single-container {
+    padding: 0px 24px;
+  }
+}
+
 .single .burger-menu {
   border: 2px solid #ffffff;
   width: 40px;
@@ -1730,9 +1827,15 @@ li {
   padding: 200px 200px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1600px) {
   .single .wheel-item__content {
-    padding: 250px 300px;
+    padding: 250px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .single .wheel-item__content {
+    padding: 100px 24px;
   }
 }
 
@@ -1743,6 +1846,10 @@ li {
 
 .single .footer a {
   color: #ffffff;
+}
+
+html {
+  background: #000;
 }
 
 body {
@@ -1846,7 +1953,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
-  background-color: #f2efe8;
+  background-color: #000;
 }
 
 @media screen and (min-width: 992px) {

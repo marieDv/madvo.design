@@ -14,6 +14,7 @@ h1,
 li,
 strong,
 span {
+  color: #ffffff;
   &::selection {
     //background: $color-marked;
     //color: #ef646e;
@@ -47,7 +48,7 @@ span {
     color: $color-text--main;
     font-size: $text-sm;
     line-height: 24px;
-    color: #000000;
+    color: #ffffff;
     font-weight: 200;
     letter-spacing: 0.2px;
 
@@ -185,20 +186,24 @@ span {
   }
   &--xl {
     font-family: "Berthold Akzidenz Grotesk", sans-serif;
-    color: $black;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #ffffff;
 
     // margin-bottom: 40px;
-    font-weight: 800;
-    font-size: 120px;
+    font-weight: 400;
+    font-size: 96px;
     line-height: 1;
     letter-spacing: 0.7px;
-    text-transform: uppercase;
-
+    // color: #ff5050;
+    // text-transform: uppercase;
+    a {
+      color: #ff5050;
+    }
     @media screen and (min-width: 1300px) {
       font-size: 80px;
     }
     @media screen and (min-width: 1600px) {
-      font-size: 120px;
+      font-size: 80px;
     }
     @media screen and (max-width: 680px) {
       font-size: 24px;

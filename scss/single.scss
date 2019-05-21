@@ -15,6 +15,17 @@
     width: 100%;
     text-align: left;
   }
+
+  &-container {
+    margin: 0 auto;
+    padding: 0px 480px;
+    @media screen and (max-width: 1600px) {
+      padding: 0px 140px;
+    }
+    @media screen and (max-width: $sm) {
+      padding: 0px 24px;
+    }
+  }
   .burger-menu {
     border: 2px solid #ffffff;
     width: 40px;
@@ -38,8 +49,11 @@
     margin-top: 100px;
     padding: 200px 200px;
 
-    @media screen and (max-width: 1300px) {
-      padding: 250px 300px;
+    @media screen and (max-width: 1600px) {
+      padding: 250px 50px;
+    }
+    @media screen and (max-width: $sm) {
+      padding: 100px 24px;
     }
   }
   .footer {
