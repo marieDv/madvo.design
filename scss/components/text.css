@@ -40,10 +40,18 @@ span {
   }
 }
 
+.text-small {
+  font-family: "Roboto", sans-serif;
+  font-size: 8px;
+  letter-spacing: 2%;
+  text-transform: unset;
+  text-transform: uppercase;
+}
+
 .text--sm {
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 24px;
   color: #ffffff;
   font-weight: 200;
@@ -217,8 +225,9 @@ span {
   font-family: "Roboto Condensed", sans-serif;
   color: #ffffff;
   font-weight: 400;
-  font-size: 96px;
+  font-size: 120px;
   line-height: 1;
+  margin-bottom: 18px;
   letter-spacing: 0.7px;
 }
 
@@ -226,13 +235,11 @@ span {
   color: #ff5050;
 }
 
-@media screen and (min-width: 1300px) {
-  .headline--xl {
-    font-size: 80px;
-  }
+.headline--xl:hover {
+  text-decoration: none;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (max-width: 1600px) {
   .headline--xl {
     font-size: 80px;
   }
@@ -335,7 +342,7 @@ li {
 }
 
 .text--nav {
-  color: #161616;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;

@@ -123,6 +123,12 @@
   transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
 }
 
+@media screen and (max-width: 842px) {
+  .quickOverview {
+    width: 255%;
+  }
+}
+
 .quickOverview-container {
   position: relative;
   display: block;
@@ -145,7 +151,7 @@
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  border-top: #131313 solid 2px;
+  border-top: #8a8a8a45 solid 0.75px;
   -ms-grid-columns: (12fr)[12];
       grid-template-columns: repeat(12, 12fr);
   font-weight: 800;
@@ -156,7 +162,8 @@
   line-height: 1.1;
 }
 
-.footer p, .footer span {
+.footer p,
+.footer span {
   color: #ffffff;
 }
 
@@ -215,9 +222,26 @@
   display: flex;
   width: 200%;
   padding-left: 26%;
+  -webkit-transition: all 1.2s ease-out;
+  transition: all 1.2s ease-out;
   position: relative;
   overflow: visible;
-  margin-top: 400px;
+  margin-top: 500px;
+}
+
+@media screen and (max-width: 1300px) {
+  .wheel {
+    width: 300%;
+  }
+}
+
+@media screen and (max-width: 842px) {
+  .wheel {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 250px;
+    max-width: 275px;
+  }
 }
 
 .wheel-container {
@@ -242,8 +266,20 @@
 .wheel-item {
   margin-left: 5%;
   cursor: pointer;
-  width: 500px;
+  width: 600px;
   display: block;
+}
+
+@media screen and (max-width: 1300px) {
+  .wheel-item {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .wheel-item {
+    margin: 32px 0;
+  }
 }
 
 .wheel-item--active {

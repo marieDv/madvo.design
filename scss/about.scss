@@ -6,7 +6,8 @@
   align-items: center;
   display: grid;
   img {
-    max-width: 475px;
+    max-width: 100%;
+    padding: 40px 18px;
     margin-top: 32px;
     @media screen and (max-width: $sm) {
       max-width: 350px;
@@ -17,6 +18,7 @@
     letter-spacing: 2%;
     text-transform: unset;
     padding-left: 15px;
+    font-weight: 200;
   }
   a {
     color: #fff;
@@ -59,9 +61,8 @@
   }
 
   &-clients {
-    width: 45%;
+    width: 39%;
     top: 40px;
-    // padding-left: 482px;
     position: relative;
     margin: 0 auto;
     @media screen and (max-width: 1100px) {

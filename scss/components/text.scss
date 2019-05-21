@@ -43,10 +43,18 @@ span {
       font-size: 0.9rem;
     }
   }
+  &-small {
+    font-family: "Roboto", sans-serif;
+    font-size: 8px;
+    letter-spacing: 2%;
+    text-transform: unset;
+    // padding-left: 15px;
+    text-transform: uppercase;
+  }
   &--sm {
-    font-family: "Oswald", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: $color-text--main;
-    font-size: $text-sm;
+    font-size: 15px;
     line-height: 24px;
     color: #ffffff;
     font-weight: 200;
@@ -191,18 +199,19 @@ span {
 
     // margin-bottom: 40px;
     font-weight: 400;
-    font-size: 96px;
+    font-size: 120px;
     line-height: 1;
+    margin-bottom: 18px;
     letter-spacing: 0.7px;
     // color: #ff5050;
     // text-transform: uppercase;
     a {
       color: #ff5050;
     }
-    @media screen and (min-width: 1300px) {
-      font-size: 80px;
+    &:hover {
+      text-decoration: none;
     }
-    @media screen and (min-width: 1600px) {
+    @media screen and (max-width: 1600px) {
       font-size: 80px;
     }
     @media screen and (max-width: 680px) {
@@ -289,7 +298,7 @@ li {
 }
 
 .text--nav {
-  color: $black;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;

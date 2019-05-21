@@ -38,7 +38,9 @@
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">
       <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
-        <a class="burger-menu" href="<?php echo get_home_url() ?>"></a>
+        <a class="burger-menu" href="<?php echo get_home_url() ?>">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png">
+        </a>
         <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
           Marie Dvorzak
           <li class="text-small">
@@ -60,13 +62,13 @@
   <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about ">
 
     <div class="about-clients  inline text-left">
-    <h2 class=" ic-headline--xl mt-32">Hi, I am Marie a Designer that happens to have a passion for programming</h2>
+      <h2 class=" ic-headline--xl mt-32">Hi, I am Marie a Designer that happens to have a passion for programming</h2>
 
       <p class="text--sm text-left">
         Thank you for stopping by! My name is Marie, I am a passionate programmer and visual artist based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email!
       </p>
       <div class="w-full flex mt-16 items-center about-text__section">
-        <p class="inline">contact</p>
+        <p class="inline text-small ">contact</p>
         <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
       </div>
       <p class="text--sm text-left mt-16">
@@ -74,7 +76,7 @@
       </p>
 
       <div class="w-full flex mt-16 items-center about-text__section">
-        <p class="inline">clients I worked for & resume</p>
+        <p class="inline text-small ">clients I worked for & resume</p>
         <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
       </div>
 
@@ -99,5 +101,5 @@
     </div>
 
   </div>
+  <?php require(dirname(__FILE__) . '/footer.php'); ?>
 </section>
-<?php require(dirname(__FILE__) . '/footer.php'); ?>

@@ -11,7 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/utils/Draggable.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
+<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main.js"></script> -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/skew.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
 <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/anime.js"></script>
@@ -20,6 +20,6 @@
 
 <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/video.js"></script> -->
 <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/toggleAbout.js"></script> -->
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/texthover.js"></script>
+<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/texthover.js"></script> -->
 <script type="text/javascript">
 </script>

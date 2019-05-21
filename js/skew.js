@@ -2,43 +2,58 @@ const section = document.getElementById("wheel");
 let currentPixel = window.pageYOffset;
 
 function looper() {
-        const nPixel = window.pageYOffset;
-        let diff = nPixel - currentPixel;
-        let speed = diff * 0.0025;
+	const nPixel = window.pageYOffset;
+	let diff = nPixel - currentPixel;
+	let speed = diff * 0.0025;
 
-        if (speed !== 0) {
-                // section.style.transform += "skewY(" + speed + "deg)";
-        }
-        //     section.style.transform = "skewY(" + currentPixel + "deg)";
-        currentPixel = nPixel;
-        requestAnimationFrame(looper);
+	if (speed !== 0) {
+		// section.style.transform += "skewY(" + speed + "deg)";
+	}
+	//     section.style.transform = "skewY(" + currentPixel + "deg)";
+	currentPixel = nPixel;
+	requestAnimationFrame(looper);
 }
 looper();
 
 console.log(TweenMax)
 Draggable.create("#overview", {
-	type:"x",
+	type: "x",
 	bounds: document.getElementById("overview-holder"),
-	throwProps:true,
-	onClick:function() {
+	throwProps: true,
+	onClick: function () {
 		console.log("clicked");
 	},
-	onDragEnd:function() {
+	onDragEnd: function () {
 		console.log("drag ended");
 	}
 });
-Draggable.create("#wheel", {
-	type:"x",
-	bounds: document.getElementById("wheel-container"),
-	throwProps:true,
-	onClick:function() {
-		console.log("clicked");
-	},
-	onDragEnd:function() {
-                console.log(this._gsTransform.x)
-		console.log("drag ended");
-	}
+var windowSize = window.innerWidth;
+initDraggable();
+
+window.addEventListener("resize", () => {
+	console.log("RESIZE")
+	windowSize = window.innerWidth;
+	initDraggable()
 });
+
+function initDraggable() {
+	if (windowSize > 842) {
+		Draggable.create("#wheel", {
+			type: "x",
+			bounds: document.getElementById("wheel-container"),
+			throwProps: true,
+			onClick: function () {
+				console.log("clicked");
+			},
+			onDragEnd: function () {
+				// console.log(this._gsTransform.x)
+				console.log("drag ended");
+			}
+		});
+	}
+}
+
+
 
 // window.addEventListener("scroll", looper());
 

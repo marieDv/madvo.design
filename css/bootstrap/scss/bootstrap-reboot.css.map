@@ -35,8 +35,8 @@
         "mixins/_clearfix.scss",
         "mixins/_grid-framework.scss",
         "mixins/_grid.scss",
-        "mixins/_float.scss",
-        "_reboot.scss"
+        "mixins/_float.scss"
+        // "_reboot.scss"
     ],
     "names": [],
     "file": "bootstrap-reboot.css"

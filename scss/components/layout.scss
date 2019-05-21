@@ -97,6 +97,9 @@
   align-items: center;
   width: 150%;
   transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
+  @media screen and (max-width: 842px) {
+    width: 255%;
+  }
   &-container {
     position: relative;
     display: block;
@@ -117,7 +120,7 @@
   width: 100%;
   display: grid;
   align-content: center;
-  border-top: #131313 solid 2px;
+  border-top: #8a8a8a45 solid 0.75px;
   grid-template-columns: repeat(12, 12fr);
   font-weight: 800;
   letter-spacing: 6%;
@@ -125,7 +128,8 @@
   text-transform: uppercase;
   padding-top: 16px;
   line-height: 1.1;
-  p, span {
+  p,
+  span {
     color: #ffffff;
   }
   div {
@@ -158,10 +162,18 @@
   display: flex;
   width: 200%;
   padding-left: 26%;
-  // transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 1.2s ease-out;
   position: relative;
   overflow: visible;
-  margin-top: 400px;
+  margin-top: 500px;
+  @media screen and (max-width: 1300px) {
+    width: 300%;
+  }
+  @media screen and (max-width: 842px) {
+    flex-wrap: wrap;
+    margin-top: 250px;
+    max-width: 275px;
+  }
   &-container {
     position: relative;
     display: block;
@@ -179,8 +191,14 @@
   &-item {
     margin-left: 5%;
     cursor: pointer;
-    width: 500px;
+    width: 600px;
     display: block;
+    @media screen and (max-width: 1300px) {
+      width: 600px;
+    }
+    @media screen and (max-width: 1300px) {
+      margin: 32px 0;
+    }
     &--active {
       height: 100%;
       z-index: 5;

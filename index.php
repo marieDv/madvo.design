@@ -39,10 +39,10 @@
         <div class="absolute pin-t mt-16 mr-6 w-full z-50">
             <ul class="pin-r absolute mr-12 nav">
                 <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
-                    <div class="burger-menu">
+                    <!-- <div class="burger-menu">
                         <span></span>
                         <span></span>
-                    </div>
+                    </div> -->
                     <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
                         Marie Dvorzak
                         <li class="text-small">
@@ -61,80 +61,24 @@
             </ul>
         </div>
 
-
-        <!-- <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about z-50">
-
-            <h2 class=" ic-headline--xl mt-32">hello stranger!</h2>
-            <div class="about-clients  inline text-left">
-                <div class="wheel-item__content__button absolute z-50 headline--sm">
-                    <div class="more-button--sound w-16 h-4 inline-block mr-3"></div>
-                    back
-
-                </div>
-                <p class="text--sm text-left">
-                    Thank you for stopping by! My name is Marie, I am a passionate programmer and visual artist based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email!
-                </p>
-                <div class="w-full flex mt-16 items-center about-text__section">
-                    <p class="inline">contact</p>
-                    <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
-                </div>
-                <p class="text--sm text-left mt-16">
-                    <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">email</a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a>
-                </p>
-
-                <div class="w-full flex mt-16 items-center about-text__section">
-                    <p class="inline">resume</p>
-                    <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
-                </div>
-
-
-
-                <ul class="text--sm  about-text__resume mt-4">
-                    <li class="about-text__resume--emphasized">Development Intern at Wild in Vienna</li>
-
-                    <li class="about-text__resume--emphasized"> Campaigning Bureau (Frontenddevelopment | UI/UX Design)</li>
-                    <li class="about-text__resume--emphasized"> FIV Austria</li>
-                    <li> Mediatechnology and Design (FH Upper Austria)</li>
-                    <li> Courses from Internet Design & Graphic Communication (Plymouth University UK)</li>
-                    <li> Graphische Bundes Lehr- und Versuchsanstalt Wien</li>
-                </ul>
-
-
-            </div>
-            <div class="realtive pin-r w-1/2 h-full text-center pin-t mt-32 ml-32 text-left">
-
-
-            </div>
-
-        </div> -->
-
-
         <!-- ///////////////////////////////CONTROLS -->
 
 
         <div class=" pin-b m-auto flex content-center pr-32 pb-32 w-full fixed z-20 ">
-
-
             <div class=" mb-10 mr-3 -mt-5 m-auto controls__position align-center">
                 <div class="controls__position-bar self-center">
-                    <!--      <span id="nmbrLeft" class="navigation-number inline-block">00</span>-->
-
-
                     <div class=" pin-b pin-r relative mb-10 ml-12  -mt-5">
-                        <!--            <span id="nmbrRight" class="navigation-number relative  inline-block">02</span>-->
                     </div>
                 </div>
             </div>
         </div>
 
 
-
         <!-- ///////////////////////////////WHEEL -->
-        <!--<div id="wheel-container" class="w-full h-screen flex z-10 absolute pin-t">-->
         <?php
         global $i;
         global $post;
-        $args = array('category' => 2); //25 //2 for dev
+        $args = array('category' => 2,'posts_per_page' => -1,); //25 //2 for dev
         $work = get_posts($args);
 
         $args2 = array('category' => 30); //
@@ -147,32 +91,30 @@
                 $i = 0; ?>
                 <?php foreach ($work as $post) : setup_postdata($post); ?>
                     <a class="wheel-item z-30 w-full" href="<?php echo get_permalink($post->ID) ?>">
-                        <!-- <div class="z-30 w-full"></div> -->
-                            <div class="inline self-center w-full z-20">
-                                <div class="img-remove">
-                                </div>
+                        <div class="inline self-center w-full z-20">
+                            <div class="img-remove">
+                            </div>
 
 
-                                <div class="text-right">
-                                </div>
-                                <h3 class="headline--xl">
-                                    <?php the_title(); ?>
-                                </h3>
+                            <div class="text-right">
+                            </div>
+                            <h3 class="headline--xl">
+                                <?php the_title(); ?>
+                            </h3>
+                            <span>
                                 <span>
-                                    <span>
-                                        <?php
-                                        $i += 1;
-                                        echo "0" . $i . " "; ?>
-                                    </span>
-                                    <?php $posttags = get_the_tags();
-                                    if ($posttags) {
-                                        foreach ($posttags as $tag) {
-                                            echo $tag->name . ' ';
-                                        }
-                                    }
-                                    ?>
+                                    <?php
+                                    $i += 1;
+                                    echo "0" . $i . " "; ?>
                                 </span>
-                            <!-- </div> -->
+                                <?php $posttags = get_the_tags();
+                                if ($posttags) {
+                                    foreach ($posttags as $tag) {
+                                        echo $tag->name . ' ';
+                                    }
+                                }
+                                ?>
+                            </span>
                         </div>
                     </a>
 

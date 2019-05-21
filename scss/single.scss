@@ -1,11 +1,11 @@
 .single {
-  background-color: #0e0e0e;
+  background-color: $black;
   // height: 100%;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 26px;
   letter-spacing: 0.3px;
   // @media screen and (max-width: $lg) {
   font-size: 12px;
@@ -27,9 +27,23 @@
     }
   }
   .burger-menu {
+    transition: all 0.5s ease-out;
     border: 2px solid #ffffff;
-    width: 40px;
-    height: 40px;
+    width: 62px;
+    height: 62px;
+    padding: inherit;
+
+    &:hover {
+      transform: scale(0.6);
+      transform: scale(0.6);
+      background-color: #ffffff;
+    }
+    img {
+      width: 10px;
+      margin-left: 23.45px;
+      margin-top: 24px;
+      padding: 0;
+    }
   }
   .headline--xl {
     color: #ffffff;
@@ -39,7 +53,7 @@
     color: #ffffff;
     font-family: "Roboto", sans-serif;
     line-height: 24px;
-    font-size: 12px;
+    font-size: 15px;
     letter-spacing: 0.5px;
   }
   .wheel-preview__text {
@@ -59,6 +73,7 @@
   .footer {
     border-top: 0.8px solid #ffffff;
     color: #ffffff;
+    position: relative;
     a {
       color: #ffffff;
     }

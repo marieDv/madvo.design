@@ -24,7 +24,7 @@
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-  <link src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"/>
+  <link src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" />
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/utils/Draggable.min.js"></script> -->
   <link rel="stylesheet" href="<? bloginfo('stylesheet_url') ?>">
   <?php
@@ -46,7 +46,9 @@
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">
       <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
-        <a class="burger-menu" href="<?php echo get_home_url() ?>"></a>
+        <a class="burger-menu" href="<?php echo get_home_url() ?>">
+          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png">
+        </a>
         <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
           Marie Dvorzak
           <li class="text-small">
@@ -79,7 +81,7 @@
     echo $content;
   endwhile;
   ?>
-<div id="overview-holder" class="quickOverview-container"></div>
+  <div id="overview-holder" class="quickOverview-container"></div>
   <div id="overview" class="quickOverview">
     <?php
     global $i;
@@ -95,6 +97,6 @@
     <?php endforeach;
   wp_reset_postdata(); ?>
   </div>
-</div>
+  </div>
+  <?php require(dirname(__FILE__) . '/footer.php'); ?>
 </section>
-<?php require(dirname(__FILE__) . '/footer.php'); ?>
