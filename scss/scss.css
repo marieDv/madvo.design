@@ -284,7 +284,8 @@ span {
 
 @media screen and (max-width: 680px) {
   .headline--xl {
-    font-size: 24px;
+    font-size: 40px;
+    font-weight: 200;
   }
 }
 
@@ -380,24 +381,12 @@ li {
 
 .text--nav {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   line-height: 15.8px;
   font-style: normal;
-}
-
-@media screen and (min-width: 1600px) {
-  .text--nav {
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .text--nav {
-    font-size: 0.7rem;
-  }
 }
 
 .emphasized {
@@ -411,6 +400,12 @@ li {
   padding: 0 115px;
 }
 
+@media screen and (max-width: 842px) {
+  .nav {
+    padding: 0 43px;
+  }
+}
+
 .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -418,10 +413,6 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.nav-items .toggleabout:first-child {
-  padding-top: 24px;
 }
 
 .nav-items .toggleabout .text-small {
@@ -433,10 +424,16 @@ li {
 .nav-fast {
   position: absolute;
   right: 72px;
+  margin-top: -9px;
 }
 
 .nav-fast li {
   list-style: none;
+}
+
+.nav-fast li.active {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 3px;
 }
 
 .nav-fast li:last-child {
@@ -568,6 +565,12 @@ li {
   line-height: 1.1;
 }
 
+@media screen and (max-width: 842px) {
+  .footer {
+    position: relative;
+  }
+}
+
 .footer p,
 .footer span {
   color: #ffffff;
@@ -626,7 +629,7 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 200%;
+  width: 250%;
   padding-left: 26%;
   -webkit-transition: all 1.2s ease-out;
   transition: all 1.2s ease-out;
@@ -646,7 +649,7 @@ li {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 250px;
-    max-width: 275px;
+    max-width: 335px;
   }
 }
 
@@ -1323,12 +1326,6 @@ li {
   padding: 27px 23px;
 }
 
-@media screen and (max-width: 768px) {
-  .burger-menu {
-    display: none;
-  }
-}
-
 .burger-menu span {
   display: block;
 }
@@ -1569,7 +1566,7 @@ li {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 56px;
   line-height: 64px;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.5px;
   max-width: 600px;
   margin-bottom: 40px;
@@ -1588,6 +1585,7 @@ li {
   .ic-headline--xl {
     font-size: 24px;
     margin-left: 0;
+    line-height: 36px;
   }
 }
 
@@ -1851,6 +1849,20 @@ li {
   }
 }
 
+@media screen and (max-width: 842px) {
+  .single .nav {
+    padding: 0 12px;
+  }
+}
+
+.single .nav-fast {
+  margin-top: -11px;
+}
+
+.single .nav-items .toggleabout:first-child {
+  padding-top: 24px;
+}
+
 .single .burger-menu {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
@@ -1858,6 +1870,12 @@ li {
   width: 62px;
   height: 62px;
   padding: inherit;
+}
+
+@media screen and (max-width: 842px) {
+  .single .burger-menu {
+    margin-bottom: 25px;
+  }
 }
 
 .single .burger-menu:hover {

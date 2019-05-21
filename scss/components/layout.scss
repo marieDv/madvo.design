@@ -5,13 +5,16 @@
   left: 0;
   top: 0;
   padding: 0 115px;
+  @media screen and (max-width: 842px) {
+    padding: 0 43px;
+  }
 }
 
 .nav-items {
   display: flex;
   align-items: center;
   .toggleabout:first-child {
-    padding-top: 24px;
+    // padding-top: 24px;
   }
   .toggleabout .text-small {
     font-size: 8px;
@@ -24,8 +27,13 @@
 .nav-fast {
   position: absolute;
   right: 72px;
+  margin-top: -9px;
   & li {
     list-style: none;
+    &.active {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 3px;
+    }
   }
   & li:last-child {
     margin-left: 48px;
@@ -128,6 +136,9 @@
   text-transform: uppercase;
   padding-top: 16px;
   line-height: 1.1;
+  @media screen and (max-width: 842px) {
+    position: relative;
+  }
   p,
   span {
     color: #ffffff;
@@ -160,7 +171,7 @@
 
 .wheel {
   display: flex;
-  width: 200%;
+  width: 250%;
   padding-left: 26%;
   transition: all 1.2s ease-out;
   position: relative;
@@ -172,7 +183,7 @@
   @media screen and (max-width: 842px) {
     flex-wrap: wrap;
     margin-top: 250px;
-    max-width: 275px;
+    max-width: 335px;
   }
   &-container {
     position: relative;

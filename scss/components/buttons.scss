@@ -154,9 +154,9 @@
   margin-right: 24px;
   padding: 27px 23px;
 
-  @media screen and (max-width: $sm) {
-    display: none;
-  }
+  // @media screen and (max-width: $sm) {
+  //   display: none;
+  // }
   span {
     display: block;
     &:first-child {

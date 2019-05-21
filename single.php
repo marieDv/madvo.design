@@ -57,7 +57,7 @@
         </ul>
         <ul class="nav-fast">
           <li id="" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-            work
+            <a href="<?php echo get_home_url() ?>">work</a>
           </li>
           <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
             <a href="<?php echo get_page_link(186); ?>">about</a>

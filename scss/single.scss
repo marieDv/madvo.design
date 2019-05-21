@@ -26,13 +26,26 @@
       padding: 0px 24px;
     }
   }
+  .nav {
+    @media screen and (max-width: 842px) {
+      padding: 0 12px;
+    }
+  }
+  .nav-fast {
+    margin-top: -11px;
+  }
+  .nav-items .toggleabout:first-child {
+    padding-top: 24px;
+  }
   .burger-menu {
     transition: all 0.5s ease-out;
     border: 2px solid #ffffff;
     width: 62px;
     height: 62px;
     padding: inherit;
-
+    @media screen and (max-width: 842px) {
+      margin-bottom: 25px;
+    }
     &:hover {
       transform: scale(0.6);
       transform: scale(0.6);
