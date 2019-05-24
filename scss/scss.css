@@ -654,6 +654,7 @@ li {
   .wheel {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding-left: 42px;
     margin-top: 250px;
     max-width: 335px;
   }
