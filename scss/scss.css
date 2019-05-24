@@ -256,7 +256,7 @@ span {
 
 .headline--xl {
   font-family: "Berthold Akzidenz Grotesk", sans-serif;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
   font-weight: 400;
   font-size: 120px;
@@ -1580,7 +1580,7 @@ li {
 }
 
 .ic-headline--xl {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 56px;
   line-height: 64px;
   font-weight: 400;
