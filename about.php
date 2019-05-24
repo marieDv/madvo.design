@@ -52,7 +52,7 @@
           <a href="<?php echo get_home_url() ?>">work</a>
           </li>
           <li id="toggleabout" class="inline active toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-          <a href="<?php echo get_page_link('about'); ?>">about</a>
+          <a href="<?php echo get_page_link(about-2); ?>">about</a>
           </li>
         </ul>
       </li>
