@@ -4,7 +4,7 @@
                 <span class="text-small">Designer & Coder</span>
         </div>
         <a href="<?php echo get_home_url() ?>">Work</a>
-        <a href="<?php echo get_page_link(780); ?>">About</a>
+        <a href="<?php echo get_page_link(about); ?>">About</a>
 </footer>
 <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script> -->
