@@ -220,7 +220,7 @@ span {
   font-family: "Berthold Akzidenz Grotesk", sans-serif;
   font-family: "Roboto Condensed", sans-serif;
   color: #ffffff;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 120px;
   line-height: 1;
   margin-bottom: 18px;
@@ -237,10 +237,10 @@ span {
   }
 }
 
-@media screen and (max-width: 842px) {
+@media screen and (max-width: 680px) {
   .headline--xl {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 200;
   }
 }
 
