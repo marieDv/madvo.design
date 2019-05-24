@@ -54,7 +54,7 @@
                             work
                         </li>
                         <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-                            <a href="<?php echo get_page_link(about-2-2); ?>">about</a>
+                            <a href="<?php echo get_page_link(780); ?>">about</a>
                         </li>
                     </ul>
                 </li>
