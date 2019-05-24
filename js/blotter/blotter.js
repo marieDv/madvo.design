@@ -10755,7 +10755,7 @@ Object.assign( Frustum.prototype, {
 		return function intersectsSprite( sprite ) {
 
 			sphere.center.set( 0, 0, 0 );
-			sphere.radius = 0.7071067811865476;
+			sphere.radius = 0.7071067817805476;
 			sphere.applyMatrix4( sprite.matrixWorld );
 
 			return this.intersectsSphere( sphere );
@@ -24053,7 +24053,7 @@ function WebGLRenderer( parameters ) {
 	function isSpriteViewable( sprite ) {
 
 		_sphere.center.set( 0, 0, 0 );
-		_sphere.radius = 0.7071067811865476;
+		_sphere.radius = 0.7071067817805476;
 		_sphere.applyMatrix4( sprite.matrixWorld );
 
 		return isSphereViewable( _sphere );
