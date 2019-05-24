@@ -62,18 +62,14 @@ span {
   color: #fff;
   line-height: 1.2;
   letter-spacing: 0.8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
 @media screen and (max-width: 768px) {
   .text--xs {
     font-size: calc(12px - 1rem);
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .text--xs {
-    font-size: 0.9rem;
   }
 }
 
@@ -1553,9 +1549,10 @@ li {
 }
 
 .ic-text--lg {
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 800;
   line-height: 3.3;
+  margin-right: 8px;
   text-transform: uppercase;
 }
 
