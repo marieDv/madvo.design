@@ -60,7 +60,7 @@
             <a href="<?php echo get_home_url() ?>">work</a>
           </li>
           <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-            <a href="<?php echo get_page_link(about); ?>">about</a>
+            <a href="<?php echo get_page_link(186); ?>">about</a>
           </li>
         </ul>
       </li>
@@ -86,7 +86,7 @@
     <?php
     global $i;
     global $post;
-    $args = array('category' => 25); //25 //2 for dev
+    $args = array('category' => 2); //25 //2 for dev
     $work = get_posts($args);
     ?>
     <?php foreach ($work as $post) : setup_postdata($post); ?>
