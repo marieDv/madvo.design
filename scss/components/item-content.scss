@@ -75,8 +75,8 @@
         padding-top: 6rem;
         padding-top: 27vh;
         top: 208vh;
-        @media screen and (max-width: $sm) {
-          padding: 19vh 2rem 0;
+        @media screen and (max-width: 842px) {
+          padding: 19vh 0 0;
         }
       }
       &--black {
@@ -92,7 +92,7 @@
         //padding-top: 6rem;
 
         @media screen and (max-width: $sm) {
-          padding: 19vh 2rem 0;
+          // padding: 19vh 2rem 0;
         }
       }
 

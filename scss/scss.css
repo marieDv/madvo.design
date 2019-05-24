@@ -1637,9 +1637,9 @@ li {
   top: 208vh;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 842px) {
   .ic-s-screen--white {
-    padding: 19vh 2rem 0;
+    padding: 19vh 0 0;
   }
 }
 
@@ -1647,12 +1647,6 @@ li {
   width: 100%;
   position: relative;
   margin-top: 80px;
-}
-
-@media screen and (max-width: 768px) {
-  .ic-s-screen--black {
-    padding: 19vh 2rem 0;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1890,6 +1884,8 @@ li {
 
 @media screen and (max-width: 842px) {
   .single .burger-menu {
+    width: 48px;
+    height: 48px;
     margin-bottom: 25px;
     margin-right: 10px;
   }
