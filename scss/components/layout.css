@@ -151,6 +151,7 @@
 
 .quickOverview a {
   color: white;
+  cursor: pointer;
   width: 300px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 18px;

@@ -268,10 +268,6 @@ span {
   letter-spacing: 0.7px;
 }
 
-.headline--xl a {
-  color: #ff5050;
-}
-
 .headline--xl:hover {
   text-decoration: none;
 }
@@ -546,6 +542,7 @@ li {
 
 .quickOverview a {
   color: white;
+  cursor: pointer;
   width: 300px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 18px;
@@ -1729,6 +1726,7 @@ li {
 }
 
 .about a {
+  cursor: pointer;
   color: #fff;
 }
 
@@ -1939,6 +1937,7 @@ li {
 }
 
 .single .footer a {
+  cursor: pointer;
   color: #ffffff;
 }
 

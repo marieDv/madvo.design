@@ -231,10 +231,6 @@ span {
   letter-spacing: 0.7px;
 }
 
-.headline--xl a {
-  color: #ff5050;
-}
-
 .headline--xl:hover {
   text-decoration: none;
 }
