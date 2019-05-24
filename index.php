@@ -81,7 +81,7 @@
         $args = array('category' => 25,'posts_per_page' => -1,); //25 //2 for dev
         $work = get_posts($args);
 
-        $args2 = array('category' => 30); //
+        $args2 = array('category' => 30); ///
         $about = get_posts($args2);
 
         ?>
