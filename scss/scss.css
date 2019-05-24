@@ -1890,7 +1890,6 @@ li {
 .single .burger-menu:hover {
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
-  transform: scale(0.6);
   background-color: #ffffff;
 }
 
