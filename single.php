@@ -86,7 +86,7 @@
     <?php
     global $i;
     global $post;
-    $args = array('category' => 2); //25 //2 for dev
+    $args = array('category' => 25); //25 //2 for dev
     $work = get_posts($args);
     ?>
     <?php foreach ($work as $post) : setup_postdata($post); ?>
