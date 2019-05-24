@@ -237,10 +237,10 @@ span {
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 842px) {
   .headline--xl {
     font-size: 40px;
-    font-weight: 200;
+    font-weight: 400;
   }
 }
 
