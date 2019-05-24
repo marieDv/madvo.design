@@ -40,6 +40,10 @@
   }
   & li:last-child {
     margin-left: 48px;
+    margin-top: -9px;
+    @media screen and (max-width: 842px) {
+      margin-left: 24px;
+    }
   }
 }
 

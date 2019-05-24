@@ -49,6 +49,13 @@
 
 .nav-fast li:last-child {
   margin-left: 48px;
+  margin-top: -9px;
+}
+
+@media screen and (max-width: 842px) {
+  .nav-fast li:last-child {
+    margin-left: 24px;
+  }
 }
 
 .navigation-number__box {
