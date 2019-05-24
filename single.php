@@ -86,7 +86,7 @@
     <?php
     global $i;
     global $post;
-    $args = array('category' => 25,'posts_per_page' => -1,); //25 //2 for dev
+    $args = array('category' => 25); //25 //2 for dev
     $work = get_posts($args);
     ?>
     <?php foreach ($work as $post) : setup_postdata($post); ?>
@@ -94,8 +94,7 @@
       <a href="<?php echo get_permalink($post->ID) ?>">
         <?php the_title(); ?>
       </a>
-    <?php endforeach;
-  wp_reset_postdata(); ?>
+    <?php endforeach; ?>
   </div>
   </div>
   <?php require(dirname(__FILE__) . '/footer.php'); ?>
