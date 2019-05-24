@@ -54,7 +54,7 @@
                             work
                         </li>
                         <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-                            <a href="<?php echo get_page_link(about); ?>">about</a>
+                            <a href="<?php echo get_page_link(186); ?>">about</a>
                         </li>
                     </ul>
                 </li>
@@ -78,11 +78,11 @@
         <?php
         global $i;
         global $post;
-        $args = array('category' => 2,'posts_per_page' => -1,); //25 //2 for dev
+        $args = array('category' => 25,'posts_per_page' => -1,); //25 //2 for dev
         $work = get_posts($args);
 
-        $args2 = array('category' => 30); //
-        $about = get_posts($args2);
+        // $args2 = array('category' => 30); //
+        // $about = get_posts($args2);
 
         ?>
         <div id="wheel-container" class="wheel-container">
