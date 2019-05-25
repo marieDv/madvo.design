@@ -85,12 +85,6 @@
   @media screen and (min-width: 1600px) {
     font-size: 0.9rem;
   }
-  &:first-child {
-    //left:-6rem;
-  }
-  &:last-child {
-    //left:3rem;
-  }
   &--active {
     animation: 1.3s push-left forwards;
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
