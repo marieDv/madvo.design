@@ -690,13 +690,13 @@ li {
 
 @media screen and (max-width: 1300px) {
   .wheel-item {
-    width: 600px;
+    width: 400px;
   }
 }
 
 @media screen and (max-width: 1300px) {
   .wheel-item {
-    margin: 32px 0;
+    margin: 32px 20px;
   }
 }
 
