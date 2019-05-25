@@ -112,6 +112,7 @@
   align-items: center;
   width: 150%;
   transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
+  overflow: hidden;
   @media screen and (max-width: 842px) {
     width: 255%;
   }
