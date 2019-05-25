@@ -256,7 +256,7 @@ span {
 
 .headline--xl {
   font-family: "Berthold Akzidenz Grotesk", sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #ffffff;
   font-weight: 400;
   font-size: 120px;
@@ -275,10 +275,10 @@ span {
   }
 }
 
-@media screen and (max-width: 842px) {
+@media screen and (max-width: 680px) {
   .headline--xl {
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 46px;
+    font-weight: 200;
   }
 }
 
@@ -1784,9 +1784,10 @@ li {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 842px) {
   .about-clients {
-    width: 75%;
+    width: 100%;
+    padding: 0 24px;
   }
 }
 
