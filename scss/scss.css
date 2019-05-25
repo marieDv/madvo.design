@@ -1652,6 +1652,10 @@ li {
   margin-top: 80px;
 }
 
+.ic-s-screen--black img {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 842px) {
   .ic-s-screen--black img {
     max-width: 100%;

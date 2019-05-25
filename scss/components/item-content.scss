@@ -79,7 +79,9 @@
         width: 100%;
         position: relative;
         margin-top: 80px;
-
+        img {
+          max-width: 100%;
+        }
         @media screen and (max-width: 842px) {
           img {
             max-width: 100%;
