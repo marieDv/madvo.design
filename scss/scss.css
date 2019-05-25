@@ -1858,7 +1858,7 @@ li {
 
 @media screen and (max-width: 842px) {
   .single .nav {
-    padding: 0 12px;
+    padding: 0 24px;
   }
 }
 
@@ -1885,6 +1885,10 @@ li {
     height: 48px;
     margin-bottom: 25px;
     margin-right: 10px;
+    position: absolute;
+    margin: 0 auto;
+    top: -13px;
+    left: 24px;
   }
 }
 

@@ -27,7 +27,7 @@
   }
   .nav {
     @media screen and (max-width: 842px) {
-      padding: 0 12px;
+      padding: 0 24px;
     }
   }
   .nav-fast {
@@ -47,6 +47,10 @@
       height: 48px;
       margin-bottom: 25px;
       margin-right: 10px;
+      position: absolute;
+      margin: 0 auto;
+      top: -13px;
+      left: 24px;
     }
     &:hover {
       transform: scale(0.6);
