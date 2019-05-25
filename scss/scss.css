@@ -1651,9 +1651,15 @@ li {
   margin-top: 80px;
 }
 
+@media screen and (max-width: 842px) {
+  .ic-s-screen--black img {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .ic-s-screen {
-    padding: 19vh 0 0;
+    padding: 2vh 0 0;
   }
 }
 
@@ -1852,7 +1858,7 @@ li {
 
 @media screen and (max-width: 768px) {
   .single-container {
-    padding: 0px 24px;
+    padding: 0px 0px;
   }
 }
 
@@ -1942,6 +1948,7 @@ li {
 @media screen and (max-width: 768px) {
   .single .wheel-item__content {
     padding: 100px 24px;
+    overflow: hidden;
   }
 }
 
