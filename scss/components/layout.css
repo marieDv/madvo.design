@@ -258,6 +258,12 @@
   margin-top: 40vh;
 }
 
+@media screen and (max-width: 1600px) {
+  .wheel {
+    width: 278%;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .wheel {
     width: 400%;

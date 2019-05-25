@@ -178,6 +178,9 @@
   position: relative;
   overflow: visible;
   margin-top: 40vh;
+  @media screen and (max-width: 1600px) {
+    width: 278%;
+  }
   @media screen and (max-width: 1300px) {
     width: 400%;
   }
