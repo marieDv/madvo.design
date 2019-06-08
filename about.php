@@ -65,7 +65,7 @@
       <h2 class=" ic-headline--xl mt-32">Hi, I am Marie a Designer with a passion for programming</h2>
 
       <p class="text--sm text-left">
-        Thank you for stopping by! My name is Marie, I am a passionate programmer and visual artist based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email!
+      ... based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email!
       </p>
       <div class="w-full flex mt-16 items-center about-text__section">
         <p class="inline text-small ">contact</p>
