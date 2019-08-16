@@ -16,7 +16,7 @@
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<? bloginfo('stylesheet_url') ?>">
     <?php
     function theme_enqueue_styles()
@@ -81,12 +81,12 @@
         $about = get_posts($args2);
 
         ?>
-        <div id="wheel-container" class="wheel-container">
-            <div id="wheel" class="w-full self-center flex wheel z-10 absolute pin-t">
+        <div id="wheel-container" class="wheel-container swiper-container">
+            <div id="wheel" class="wheel w-full self-center flex z-10 absolute pin-t swiper-container swiper-wrapper">
                 <?php global $i;
                 $i = 0; ?>
                 <?php foreach ($work as $post) : setup_postdata($post); ?>
-                    <a class="wheel-item z-30 w-full" href="<?php echo get_permalink($post->ID) ?>">
+                    <a class="wheel-item z-30 w-full wheel swiper-slide" href="<?php echo get_permalink($post->ID) ?>">
                         <div class="inline self-center w-full z-20">
                             <div class="img-remove">
                             </div>
@@ -97,8 +97,8 @@
                             <h3 class="headline--xl">
                                 <?php the_title(); ?>
                             </h3>
-                            <span>
-                                <span>
+                            <span class="text-subheadline">
+                                <span class="text-indicator">
                                     <?php
                                     $i += 1;
                                     echo "0" . $i . " "; ?>
@@ -110,6 +110,7 @@
                                     }
                                 }
                                 ?>
+                                <button class="button__view">view project</button>
                             </span>
                         </div>
                     </a>

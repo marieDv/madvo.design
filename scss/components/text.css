@@ -18,6 +18,16 @@ span {
   color: #ffffff;
 }
 
+.text-subheadline {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.text-indicator {
+  font-weight: 800;
+}
+
 .text--xs {
   font-size: 0.7rem;
   font-weight: 400;
@@ -221,7 +231,7 @@ span {
   font-family: "Roboto Condensed", sans-serif;
   color: #ffffff;
   font-weight: 400;
-  font-size: 120px;
+  font-size: 108px;
   line-height: 1;
   margin-bottom: 18px;
   letter-spacing: 0.7px;

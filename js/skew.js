@@ -28,57 +28,45 @@ Draggable.create("#overview", {
 	}
 });
 var windowSize = window.innerWidth;
-initDraggable();
-
+// initDraggable();
+initSwiper();
 window.addEventListener("resize", () => {
 	console.log("RESIZE")
 	windowSize = window.innerWidth;
-	initDraggable()
+	// initDraggable()
+	initSwiper();
+
 });
 
-function initDraggable() {
-	if (windowSize > 842) {
-		Draggable.create("#wheel", {
-			type: "x",
-			bounds: document.getElementById("wheel-container"),
-			throwProps: true,
-			onClick: function () {
-				console.log("clicked");
-			},
-			onDragEnd: function () {
-				// console.log(this._gsTransform.x)
-				console.log("drag ended");
-			}
-		});
-	}
+function initSwiper(){
+	console.log(window.innerWidth)
+	if(window.innerWidth > 900){
+	let swiper = new Swiper('.swiper-container', {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		spaceBetween: 50,
+	});
+
+	swiper.on('slideChange', function () {
+		console.log('slide changed');
+		// document.getElementsByClassName("swiper-slide-active")[0]
+	});
+}
 }
 
-
-
-// window.addEventListener("scroll", looper());
-
-// var controller = new ScrollMagic.Controller();
-
-// create a scene
-// new ScrollMagic.Scene({
-//   triggerElement: "#wheel",
-//   duration: 100,    // the scene should last for a scroll distance of 100px
-//   offset: 50    // start this scene after scrolling for 50px
-// })
-//   .setPin("#wheel") // pins the element for the the scene's duration
-//   .addTo(controller);
-
-// const section = document.getElementById("wheel"); 
-// section.style.transform = "skewY(" + 20 + "deg)";
-
-// var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 100}});
-
-// // build scenes
-// new ScrollMagic.Scene({triggerElement: "#wheel"})
-//         .setClassToggle("#wheel", "active") // add class toggle
-//         .addIndicators() // add indicators (requires plugin)
-//         .addTo(controller);
-// new ScrollMagic.Scene({triggerElement: "#sec2"})
-//         .setClassToggle("#high2", "active") // add class toggle
-//         .addIndicators() // add indicators (requires plugin)
-//         .addTo(controller);
+// function initDraggable() {
+// 	if (windowSize > 842) {
+// 		Draggable.create("#wheel", {
+// 			type: "x",
+// 			bounds: document.getElementById("wheel-container"),
+// 			throwProps: true,
+// 			onClick: function () {
+// 				console.log("clicked");
+// 			},
+// 			onDragEnd: function () {
+// 				// console.log(this._gsTransform.x)
+// 				console.log("drag ended");
+// 			}
+// 		});
+// 	}
+// }

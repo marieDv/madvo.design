@@ -56,6 +56,16 @@ span {
   color: #ffffff;
 }
 
+.text-subheadline {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.text-indicator {
+  font-weight: 800;
+}
+
 .text--xs {
   font-size: 0.7rem;
   font-weight: 400;
@@ -259,7 +269,7 @@ span {
   font-family: "Roboto Condensed", sans-serif;
   color: #ffffff;
   font-weight: 400;
-  font-size: 120px;
+  font-size: 108px;
   line-height: 1;
   margin-bottom: 18px;
   letter-spacing: 0.7px;
@@ -430,9 +440,28 @@ li {
   list-style: none;
 }
 
-.nav-fast li.active {
-  border-bottom: 1px solid #fff;
-  padding-bottom: 3px;
+.nav-fast li :after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-fast li :hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-fast li.active :after {
+  width: 100%;
+  left: 0;
 }
 
 .nav-fast li:last-child {
@@ -634,28 +663,11 @@ li {
 }
 
 .wheel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 323%;
-  padding-left: 26%;
   -webkit-transition: all 1.2s ease-out;
   transition: all 1.2s ease-out;
   position: relative;
   overflow: visible;
-  margin-top: 40vh;
-}
-
-@media screen and (max-width: 1600px) {
-  .wheel {
-    width: 278%;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .wheel {
-    width: 400%;
-  }
+  margin-top: 18vh;
 }
 
 @media screen and (max-width: 842px) {
@@ -874,6 +886,24 @@ li {
           animation: 0.9s push-up forwards;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
           animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  min-width: 200px;
+  -webkit-transition: all 1 ease-out;
+  transition: all 1 ease-out;
+}
+
+.swiper-slide-active div .headline--xl {
+  -webkit-text-fill-color: transparent;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
 }
 
 @-webkit-keyframes push-down {
@@ -1152,6 +1182,14 @@ li {
   100% {
     opacity: 0;
   }
+}
+
+.button__view {
+  background: #ffffff;
+  color: #000000;
+  font-size: 12px;
+  padding: 2px 8px;
+  margin-left: 16px;
 }
 
 .button__box {

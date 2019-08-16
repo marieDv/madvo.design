@@ -27,6 +27,14 @@ span {
 
 //text styles
 .text {
+  &-subheadline {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &-indicator {
+    font-weight: 800;
+  }
   &--xs {
     font-size: $text-xs;
     font-weight: 400;
@@ -201,7 +209,7 @@ span {
 
     // margin-bottom: 40px;
     font-weight: 400;
-    font-size: 120px;
+    font-size: 108px;
     line-height: 1;
     margin-bottom: 18px;
     letter-spacing: 0.7px;
