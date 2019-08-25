@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700,900&display=swap");
+@font-face {
+  font-family: "Butler Stencil";
+  src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff");
+  src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
 .lis-expansion {
   z-index: 20;
 }
@@ -54,6 +62,40 @@ li,
 strong,
 span {
   color: #ffffff;
+}
+
+.bottomNav {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+}
+
+.bottomNav:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.bottomNav::after {
+  content: "";
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  left: 0;
+  width: 100%;
+  position: absolute;
+  border-bottom: 2px solid black;
+  display: inline;
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 17px;
+}
+
+.bottomNav::after:hover {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .text-subheadline {
@@ -266,13 +308,15 @@ span {
 
 .headline--xl {
   font-family: "Berthold Akzidenz Grotesk", sans-serif;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Butler Stencil", sans-serif;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 108px;
   line-height: 1;
   margin-bottom: 18px;
   letter-spacing: 0.7px;
+  max-width: 400px;
+  font-weight: 300;
 }
 
 .headline--xl:hover {
@@ -281,7 +325,7 @@ span {
 
 @media screen and (max-width: 1600px) {
   .headline--xl {
-    font-size: 80px;
+    font-size: 64px;
   }
 }
 
@@ -459,18 +503,22 @@ li {
   left: 0;
 }
 
+.nav-fast li.active {
+  background: red;
+}
+
 .nav-fast li.active :after {
   width: 100%;
   left: 0;
 }
 
-.nav-fast li:last-child {
+li:last-child {
   margin-left: 48px;
   margin-top: -9px;
 }
 
 @media screen and (max-width: 842px) {
-  .nav-fast li:last-child {
+  li:last-child {
     margin-left: 24px;
   }
 }
@@ -582,6 +630,16 @@ li {
   font-size: 18px;
 }
 
+.hidden-thumbnail {
+  visibility: hidden;
+}
+
+canvas.threejs {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .footer {
   height: 164px;
   position: absolute;
@@ -600,6 +658,15 @@ li {
   text-transform: uppercase;
   padding-top: 16px;
   line-height: 1.1;
+  height: 72px;
+  background-color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.footer a {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  color: #000000;
 }
 
 @media screen and (max-width: 842px) {
@@ -610,7 +677,9 @@ li {
 
 .footer p,
 .footer span {
-  color: #ffffff;
+  color: #000;
+  font-family: "Work Sans";
+  font-weight: 500;
 }
 
 .footer div {
@@ -674,7 +743,6 @@ li {
   .wheel {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-left: 42px;
     margin-top: 250px;
     max-width: 335px;
   }
@@ -900,9 +968,6 @@ li {
 }
 
 .swiper-slide-active div .headline--xl {
-  -webkit-text-fill-color: transparent;
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #ffffff;
 }
 
@@ -1185,11 +1250,14 @@ li {
 }
 
 .button__view {
-  background: #ffffff;
-  color: #000000;
+  border: 2px solid white;
+  color: white;
   font-size: 12px;
   padding: 2px 8px;
   margin-left: 16px;
+  height: 32px;
+  margin: 6px;
+  min-width: 100px;
 }
 
 .button__box {
@@ -1597,6 +1665,69 @@ li {
             transform-origin: right;
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
+  }
+}
+
+.banner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  margin-bottom: 4px;
+  bottom: 102px;
+  position: absolute;
+  width: calc(100% - 168px);
+  margin: auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.banner-container {
+  width: auto;
+  white-space: nowrap;
+  margin: auto;
+  left: 0;
+  top: 0;
+  position: absolute;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  -webkit-animation: example1 14s linear infinite;
+  animation: example1 14s linear infinite;
+}
+
+.banner-container p {
+  color: #ffffff;
+}
+
+@-webkit-keyframes example1 {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes example1 {
+  0% {
+    /* Firefox bug fix */
+    -webkit-transform: translateX(10%);
+    /* Firefox bug fix */
+    transform: translateX(10%);
+  }
+  100% {
+    /* Firefox bug fix */
+    -webkit-transform: translateX(-100%);
+    /* Firefox bug fix */
+    transform: translateX(-100%);
   }
 }
 
@@ -2118,7 +2249,6 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
-  background-color: #000;
 }
 
 @media screen and (min-width: 992px) {

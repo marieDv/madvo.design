@@ -1,0 +1,61 @@
+.banner {
+  width: 100%;
+  // background: green;
+  display: flex;
+  height: 32px;
+  margin-bottom: 4px;
+  bottom: 102px;
+  position: absolute;
+  width: calc(100% - 168px);
+  margin: auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+
+  &-container {
+    width: auto;
+    white-space: nowrap; 
+    margin: auto;
+    left: 0;
+    top:0;
+    position: absolute;
+    font-family: "Work Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    // background: red;
+    letter-spacing: 2px;
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: example1 14s linear infinite;
+    -webkit-animation: example1 14s linear infinite;
+    animation: example1 14s linear infinite;  
+
+
+    p {
+      color: #ffffff;
+    }
+  }
+}
+@-moz-keyframes example1 {
+  0%   { -moz-transform: translateX(100%); }
+  100% { -moz-transform: translateX(-100%); }
+ }
+ @-webkit-keyframes example1 {
+  0%   { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+ }
+ @keyframes example1 {
+  0%   { 
+  -moz-transform: translateX(10%); /* Firefox bug fix */
+  -webkit-transform: translateX(10%); /* Firefox bug fix */
+  transform: translateX(10%); 		
+  }
+  100% { 
+  -moz-transform: translateX(-100%); /* Firefox bug fix */
+  -webkit-transform: translateX(-100%); /* Firefox bug fix */
+  transform: translateX(-100%); 
+  }
+ }

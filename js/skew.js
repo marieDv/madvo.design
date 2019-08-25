@@ -38,20 +38,32 @@ window.addEventListener("resize", () => {
 
 });
 
-function initSwiper(){
+function initSwiper() {
 	console.log(window.innerWidth)
-	if(window.innerWidth > 900){
-	let swiper = new Swiper('.swiper-container', {
-		slidesPerView: 'auto',
-		centeredSlides: true,
-		spaceBetween: 50,
-	});
+	if (window.innerWidth > 900) {
+		let mySwiper = new Swiper('.swiper-container', {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			spaceBetween: 50,
+			on: {
+				slideChange: function () {
+					console.log('swiper initialized');
+					console.log(this.activeIndex
+						)
+					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
+					console.log(universal);
+				}}
+			});
+		// mySwiper.onSlideChangeEnd
+		// mySwiper.on('slideChange', function () {
+		// 	console.log('slide changed');
+		// });
 
-	swiper.on('slideChange', function () {
-		console.log('slide changed');
-		// document.getElementsByClassName("swiper-slide-active")[0]
-	});
-}
+		// swiper.on('slideChange', function () {
+		// 	console.log('slide changed');
+		// 	// document.getElementsByClassName("swiper-slide-active")[0]
+		// });
+	}
 }
 
 // function initDraggable() {

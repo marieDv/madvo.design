@@ -1,0 +1,63 @@
+.banner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  margin-bottom: 4px;
+  bottom: 102px;
+  position: absolute;
+  width: calc(100% - 168px);
+  margin: auto;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.banner-container {
+  width: auto;
+  white-space: nowrap;
+  margin: auto;
+  left: 0;
+  top: 0;
+  position: absolute;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  -webkit-animation: example1 14s linear infinite;
+  animation: example1 14s linear infinite;
+}
+
+.banner-container p {
+  color: #ffffff;
+}
+
+@-webkit-keyframes example1 {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes example1 {
+  0% {
+    /* Firefox bug fix */
+    -webkit-transform: translateX(10%);
+    /* Firefox bug fix */
+    transform: translateX(10%);
+  }
+  100% {
+    /* Firefox bug fix */
+    -webkit-transform: translateX(-100%);
+    /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+}
+/*# sourceMappingURL=banner.css.map */

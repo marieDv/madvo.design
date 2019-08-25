@@ -33,10 +33,11 @@
 </head>
 
 <body class="">
+<canvas class="threejs"></canvas>
     <div id="overlay"></div>
     <section id="main">
 
-        <div class="absolute pin-t mt-16 mr-6 w-full z-50">
+        <!-- <div class="absolute pin-t mt-16 mr-6 w-full z-50">
             <ul class="pin-r absolute mr-12 nav">
                 <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
                     <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
@@ -55,7 +56,7 @@
                     </ul>
                 </li>
             </ul>
-        </div>
+        </div> -->
 
         <!-- ///////////////////////////////CONTROLS -->
 
@@ -74,7 +75,7 @@
         <?php
         global $i;
         global $post;
-        $args = array('category' => 25,'posts_per_page' => -1,); ///25 //2 for dev
+        $args = array('category' => 2,'posts_per_page' => -1,); ///25 //2 for dev
         $work = get_posts($args);
 
         $args2 = array('category' => 30); ///
@@ -87,7 +88,14 @@
                 $i = 0; ?>
                 <?php foreach ($work as $post) : setup_postdata($post); ?>
                     <a class="wheel-item z-30 w-full wheel swiper-slide" href="<?php echo get_permalink($post->ID) ?>">
-                        <div class="inline self-center w-full z-20">
+                    <p class="hidden-thumbnail">
+                    <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                    <?php echo $image[0]; ?>
+                
+                  <?php endif; ?>
+                    </p>    
+                    <div class="inline self-center w-full z-20">
                             <div class="img-remove">
                             </div>
 
@@ -149,7 +157,7 @@
             <?php
             global $i;
             global $post;
-            $args = array('category' => 25); //25 //2 for dev
+            $args = array('category' => 2); //25 //2 for dev
             $work = get_posts($args);
 
             $argse2 = array('category' => 30);
@@ -167,6 +175,11 @@
 
 
     </section>
+    <div class="banner">
+        <div class="banner-container">
+        <p>Welcome to my web page! Pretty cool hah? My name is Marie I am a Visual artist from Vienna and Design is not only what I do to pay off my Mac book and my Camera it’s also my passion</p>
+        </div>
+    </div>
     <?php require(dirname(__FILE__) . '/footer.php'); ?>
 
 </body>

@@ -22,13 +22,13 @@
 //   font-style: normal;
 // }
 
-// @font-face {
-//   font-family: "Roboto Condensed";
-//   src: url("/wp-content/themes/madvo.design/fonts/Roboto Condensed-Book.woff");
-//   src: url("/wp-content/themes/madvo.design/fonts/Roboto Condensed-Book.woff") format("woff");
-//   font-weight: 200;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: "Butler Stencil";
+  src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff");
+  src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700,900&display=swap');
 
@@ -43,6 +43,7 @@
 @import "components/buttons.scss";
 @import "components/stripes.scss";
 @import "components/gradients.scss";
+@import "components/banner.scss";
 @import "components/item-content.scss";
 @import "components/wheel-preview.scss";
 // @import "components/texthover .scss" ;
@@ -82,15 +83,8 @@ body {
 
 #main {
   overflow-x: hidden;
-  // height:100vh;
   width: 100%;
   position: relative;
-  // position: absolute;
-
-  // background: radial-gradient(#19191c, #000000);
-  background-color: #000;
-
-
 &:after {
     @media screen and (min-width: $md) {
       // animation: grain 8s steps(10) infinite;

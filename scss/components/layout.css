@@ -61,18 +61,22 @@
   left: 0;
 }
 
+.nav-fast li.active {
+  background: red;
+}
+
 .nav-fast li.active :after {
   width: 100%;
   left: 0;
 }
 
-.nav-fast li.active li:last-child {
+li:last-child {
   margin-left: 48px;
   margin-top: -9px;
 }
 
 @media screen and (max-width: 842px) {
-  .nav-fast li.active li:last-child {
+  li:last-child {
     margin-left: 24px;
   }
 }
@@ -184,6 +188,16 @@
   font-size: 18px;
 }
 
+.hidden-thumbnail {
+  visibility: hidden;
+}
+
+canvas.threejs {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .footer {
   height: 164px;
   position: absolute;
@@ -202,6 +216,15 @@
   text-transform: uppercase;
   padding-top: 16px;
   line-height: 1.1;
+  height: 72px;
+  background-color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.footer a {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  color: #000000;
 }
 
 @media screen and (max-width: 842px) {
@@ -212,7 +235,9 @@
 
 .footer p,
 .footer span {
-  color: #ffffff;
+  color: #000;
+  font-family: "Work Sans";
+  font-weight: 500;
 }
 
 .footer div {
@@ -276,7 +301,6 @@
   .wheel {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-left: 42px;
     margin-top: 250px;
     max-width: 335px;
   }
@@ -502,9 +526,6 @@
 }
 
 .swiper-slide-active div .headline--xl {
-  -webkit-text-fill-color: transparent;
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #ffffff;
 }
 
