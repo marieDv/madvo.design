@@ -37,7 +37,7 @@
 <section class="single about">
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">
-      <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
+      <!-- <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
         <a class="burger-menu " href="<?php echo get_home_url() ?>">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png">
         </a>
@@ -55,7 +55,7 @@
           <a href="<?php echo get_page_link(780); ?>">about</a>
           </li>
         </ul>
-      </li>
+      </li> -->
     </ul>
   </div>
 
@@ -90,7 +90,7 @@
         <li> Mediatechnology and Design<span>_2016/2019 @FH Hagenberg</span></li>
         <li> Internet Design & Graphic Communication<span>_2018/2019 @Plymouth University UK</span></li>
         <li> Graphische Bundes Lehr- und Versuchsanstalt <span>_2010/2015</span></li>
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/derpme.png">
+        <img alt="me" src="<?php bloginfo('stylesheet_directory'); ?>/assets/derpme.jpg">
       </ul>
 
 
@@ -101,5 +101,5 @@
     </div>
 
   </div>
-  <?php require(dirname(__FILE__) . '/footer.php'); ?>
+  <?php require(dirname(__FILE__) . '/footer-single.php'); ?>
 </section>
