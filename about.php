@@ -90,7 +90,7 @@
         <li> Mediatechnology and Design<span>_2016/2019 @FH Hagenberg</span></li>
         <li> Internet Design & Graphic Communication<span>_2018/2019 @Plymouth University UK</span></li>
         <li> Graphische Bundes Lehr- und Versuchsanstalt <span>_2010/2015</span></li>
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/portrait.png">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/derpme.png">
       </ul>
 
 

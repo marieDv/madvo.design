@@ -46,11 +46,29 @@ span {
   left: 0;
   width: 100%;
   position: absolute;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   display: inline;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   height: 17px;
-  &:hover {
+  &:hover, .active.bottomNav::after {
+    transform: scaleX(1);
+  }
+}
+.white.bottomNav::after {
+  border-bottom: 2px solid black;
+}
+.active.bottomNav::after {
+  transform: scaleX(1);
+}
+.active.bottomNav:hover::after {
+  transform: scaleX(0);
+  animation: redraw 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes redraw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
     transform: scaleX(1);
   }
 }

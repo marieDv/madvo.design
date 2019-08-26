@@ -50,7 +50,7 @@
           <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png">
         </a>
         <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
-          Marie Dvorzak
+          <!-- Marie Dvorzak
           <li class="text-small">
             Designer / Coder
           </li>
@@ -61,7 +61,7 @@
           </li>
           <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
             <a href="<?php echo get_page_link(780); ?>">about</a>
-          </li>
+          </li> -->
         </ul>
       </li>
     </ul>
@@ -97,5 +97,5 @@
     <?php endforeach; ?>
   </div>
   </div>
-  <?php require(dirname(__FILE__) . '/footer.php'); ?>
+  <?php require(dirname(__FILE__) . '/footer-single.php'); ?>
 </section>

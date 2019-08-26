@@ -12,6 +12,13 @@
   left: 0;
   right: 0;
   overflow: hidden;
+  background: #fff;
+}
+
+@media screen and (max-width: 842px) {
+  .banner {
+    display: none;
+  }
 }
 
 .banner-container {
@@ -26,15 +33,17 @@
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 2px;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  /* Apply animation to this element */
-  -webkit-animation: example1 14s linear infinite;
-  animation: example1 14s linear infinite;
+  padding-top: 7px;
+  /* Firefox bug fix */
+  -webkit-transform: translateX(10%);
+  /* Firefox bug fix */
+  transform: translateX(10%);
+  -webkit-animation: example1 164s linear infinite;
+  animation: example1 164s linear infinite;
 }
 
 .banner-container p {
-  color: #ffffff;
+  color: #000000;
 }
 
 @-webkit-keyframes example1 {

@@ -3,10 +3,13 @@
   left: 0;
   top: 0;
   padding: 0 115px;
+  top: 5vh;
+  padding: 0 34px;
 }
 
 @media screen and (max-width: 842px) {
   .nav {
+    top: 0;
     padding: 0 24px;
   }
 }
@@ -207,7 +210,6 @@ canvas.threejs {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  border-top: #8a8a8a45 solid 0.75px;
   -ms-grid-columns: (12fr)[12];
       grid-template-columns: repeat(12, 12fr);
   font-weight: 800;
@@ -217,13 +219,21 @@ canvas.threejs {
   padding-top: 16px;
   line-height: 1.1;
   height: 72px;
-  background-color: #ffffff;
   margin-bottom: 24px;
 }
 
 .footer a {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
+  color: #fff;
+}
+
+.footer.white {
+  background-color: #ffffff;
+  position: fixed;
+}
+
+.footer.white a {
   color: #000000;
 }
 
@@ -234,10 +244,14 @@ canvas.threejs {
 }
 
 .footer p,
-.footer span {
-  color: #000;
+.footer .footer div .text-small {
+  color: #fff;
   font-family: "Work Sans";
   font-weight: 500;
+}
+
+.footer.white p, .footer .footer.white span, .footer .footer div .text-small {
+  color: #000;
 }
 
 .footer div {
@@ -381,6 +395,7 @@ canvas.threejs {
 .wheel-item__content {
   top: 45%;
   padding: 250px 600px;
+  padding: 100px 50px;
 }
 
 @media screen and (max-width: 768px) {

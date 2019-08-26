@@ -86,16 +86,54 @@ span {
   left: 0;
   width: 100%;
   position: absolute;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   display: inline;
   -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   height: 17px;
 }
 
-.bottomNav::after:hover {
+.bottomNav::after:hover, .bottomNav::after .active.bottomNav::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.white.bottomNav::after {
+  border-bottom: 2px solid black;
+}
+
+.active.bottomNav::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.active.bottomNav:hover::after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-animation: redraw 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: redraw 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@-webkit-keyframes redraw {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes redraw {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 
 .text-subheadline {
@@ -445,10 +483,13 @@ li {
   left: 0;
   top: 0;
   padding: 0 115px;
+  top: 5vh;
+  padding: 0 34px;
 }
 
 @media screen and (max-width: 842px) {
   .nav {
+    top: 0;
     padding: 0 24px;
   }
 }
@@ -649,7 +690,6 @@ canvas.threejs {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  border-top: #8a8a8a45 solid 0.75px;
   -ms-grid-columns: (12fr)[12];
       grid-template-columns: repeat(12, 12fr);
   font-weight: 800;
@@ -659,13 +699,21 @@ canvas.threejs {
   padding-top: 16px;
   line-height: 1.1;
   height: 72px;
-  background-color: #ffffff;
   margin-bottom: 24px;
 }
 
 .footer a {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
+  color: #fff;
+}
+
+.footer.white {
+  background-color: #ffffff;
+  position: fixed;
+}
+
+.footer.white a {
   color: #000000;
 }
 
@@ -676,10 +724,14 @@ canvas.threejs {
 }
 
 .footer p,
-.footer span {
-  color: #000;
+.footer .footer div .text-small {
+  color: #fff;
   font-family: "Work Sans";
   font-weight: 500;
+}
+
+.footer.white p, .footer .footer.white span, .footer .footer div .text-small {
+  color: #000;
 }
 
 .footer div {
@@ -823,6 +875,7 @@ canvas.threejs {
 .wheel-item__content {
   top: 45%;
   padding: 250px 600px;
+  padding: 100px 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1682,6 +1735,13 @@ canvas.threejs {
   left: 0;
   right: 0;
   overflow: hidden;
+  background: #fff;
+}
+
+@media screen and (max-width: 842px) {
+  .banner {
+    display: none;
+  }
 }
 
 .banner-container {
@@ -1696,15 +1756,17 @@ canvas.threejs {
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 2px;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  /* Apply animation to this element */
-  -webkit-animation: example1 14s linear infinite;
-  animation: example1 14s linear infinite;
+  padding-top: 7px;
+  /* Firefox bug fix */
+  -webkit-transform: translateX(10%);
+  /* Firefox bug fix */
+  transform: translateX(10%);
+  -webkit-animation: example1 164s linear infinite;
+  animation: example1 164s linear infinite;
 }
 
 .banner-container p {
-  color: #ffffff;
+  color: #000000;
 }
 
 @-webkit-keyframes example1 {
@@ -2122,7 +2184,7 @@ canvas.threejs {
 
 @media screen and (max-width: 1600px) {
   .single .wheel-item__content {
-    padding: 250px 50px;
+    padding: 80px 50px;
   }
 }
 
@@ -2133,15 +2195,8 @@ canvas.threejs {
   }
 }
 
-.single .footer {
-  border-top: 0.8px solid #ffffff;
-  color: #ffffff;
-  position: relative;
-}
-
 .single .footer a {
   cursor: pointer;
-  color: #ffffff;
 }
 
 html {

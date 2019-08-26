@@ -40,16 +40,54 @@ span {
   left: 0;
   width: 100%;
   position: absolute;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   display: inline;
   -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   height: 17px;
 }
 
-.bottomNav::after:hover {
+.bottomNav::after:hover, .bottomNav::after .active.bottomNav::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.white.bottomNav::after {
+  border-bottom: 2px solid black;
+}
+
+.active.bottomNav::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.active.bottomNav:hover::after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-animation: redraw 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: redraw 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@-webkit-keyframes redraw {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes redraw {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 
 .text-subheadline {
