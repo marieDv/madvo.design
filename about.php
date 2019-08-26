@@ -37,11 +37,11 @@
 <section class="single about">
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">
-      <!-- <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
+     <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
         <a class="burger-menu " href="<?php echo get_home_url() ?>">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png">
         </a>
-        <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
+        <!-- <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
           Marie Dvorzak
           <li class="text-small">
             Designer / Coder
@@ -54,8 +54,8 @@
           <li id="toggleabout" class="inline active toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
           <a href="<?php echo get_page_link(780); ?>">about</a>
           </li>
-        </ul>
-      </li> -->
+        </ul> 
+      </li> 
     </ul>
   </div>
 
