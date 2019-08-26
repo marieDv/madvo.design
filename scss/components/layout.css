@@ -151,6 +151,7 @@ li:last-child {
 
 .quickOverview {
   height: 208px;
+  margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -42,6 +42,13 @@
     width: 62px;
     height: 62px;
     padding: inherit;
+
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 42px;
+
     @media screen and (max-width: 842px) {
       width: 48px;
       height: 48px;
@@ -81,9 +88,9 @@
     margin-top: 0;
   }
   .wheel-item__content {
-    margin-top: 100px;
+    
     padding: 200px 200px;
-
+    margin-top: 146px;
     @media screen and (max-width: 1600px) {
       padding: 80px 50px;
     }

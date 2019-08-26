@@ -631,6 +631,7 @@ li:last-child {
 
 .quickOverview {
   height: 208px;
+  margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1498,6 +1499,11 @@ canvas.threejs {
   border-radius: 999px;
   margin-right: 24px;
   padding: 27px 23px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 42px;
 }
 
 @media screen and (max-width: 842px) {
@@ -2126,6 +2132,11 @@ canvas.threejs {
   width: 62px;
   height: 62px;
   padding: inherit;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 42px;
 }
 
 @media screen and (max-width: 842px) {
@@ -2178,8 +2189,8 @@ canvas.threejs {
 }
 
 .single .wheel-item__content {
-  margin-top: 100px;
   padding: 200px 200px;
+  margin-top: 146px;
 }
 
 @media screen and (max-width: 1600px) {
