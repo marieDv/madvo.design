@@ -542,7 +542,10 @@ canvas.threejs {
 }
 
 .swiper-slide-active div .headline--xl {
-  -webkit-text-stroke-color: #ffffff;
+  color: black;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
 
 @-webkit-keyframes push-down {

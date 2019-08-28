@@ -425,10 +425,10 @@ canvas.threejs {
 }
 .swiper-slide-active {
   div .headline--xl {
-    // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    // -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ffffff;
-    // transform: scale(1.13);
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
   }
 }
 @keyframes push-down {
