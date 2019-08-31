@@ -300,15 +300,15 @@ span {
 
 .headline--xl {
   font-family: "Berthold Akzidenz Grotesk", sans-serif;
-  font-family: "Butler Stencil", sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: #ffffff;
   font-weight: 500;
-  font-size: 108px;
+  font-size: 148px;
   line-height: 1;
   margin-bottom: 18px;
   letter-spacing: 0.7px;
-  max-width: 400px;
-  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .headline--xl:hover {
@@ -317,7 +317,7 @@ span {
 
 @media screen and (max-width: 1600px) {
   .headline--xl {
-    font-size: 64px;
+    font-size: 82px;
   }
 }
 

@@ -346,15 +346,15 @@ span {
 
 .headline--xl {
   font-family: "Berthold Akzidenz Grotesk", sans-serif;
-  font-family: "Butler Stencil", sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: #ffffff;
   font-weight: 500;
-  font-size: 108px;
+  font-size: 148px;
   line-height: 1;
   margin-bottom: 18px;
   letter-spacing: 0.7px;
-  max-width: 400px;
-  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .headline--xl:hover {
@@ -363,7 +363,7 @@ span {
 
 @media screen and (max-width: 1600px) {
   .headline--xl {
-    font-size: 64px;
+    font-size: 82px;
   }
 }
 
@@ -822,7 +822,7 @@ canvas.threejs {
 
 .wheel-item {
   margin-left: 5%;
-  cursor: pointer;
+  cursor: none;
   width: 600px;
   display: block;
 }
@@ -955,6 +955,80 @@ canvas.threejs {
           animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+html {
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.cursor--small {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: white;
+}
+
+.cursor--canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 12000;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  min-width: 200px;
+  -webkit-transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#view-ring {
+  visibility: hidden;
+  position: absolute;
+}
+
+.swiper-slide:not(.swiper-slide-active) div .headline--xl {
+  color: black;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.swiper-slide-active div .headline--xl {
+  color: #fff;
+}
+
+.swiper-slide:not(.swiper-slide-active, .swiper-slide-prev) {
+  -webkit-transform: perspective(500px) rotateY(44deg);
+          transform: perspective(500px) rotateY(44deg);
+}
+
+.swiper-slide-active {
+  -webkit-transform: perspective(500px) rotateY(10deg);
+          transform: perspective(500px) rotateY(10deg);
+}
+
+.swiper-slide-next {
+  -webkit-transform: perspective(500px) rotateY(-24deg);
+          transform: perspective(500px) rotateY(-24deg);
+}
+
+.swiper-slide-prev {
+  -webkit-transform: perspective(500px) rotateY(24deg);
+          transform: perspective(500px) rotateY(24deg);
+}
+
 .controls {
   z-index: 50;
 }
@@ -1008,24 +1082,6 @@ canvas.threejs {
           animation: 0.9s push-up forwards;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
           animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  min-width: 200px;
-  -webkit-transition: all 1 ease-out;
-  transition: all 1 ease-out;
-}
-
-.swiper-slide-active div .headline--xl {
-  color: black;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
 }
 
 @-webkit-keyframes push-down {

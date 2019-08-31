@@ -252,22 +252,22 @@ span {
   }
   &--xl {
     font-family: "Berthold Akzidenz Grotesk", sans-serif;
-    font-family: "Butler Stencil", sans-serif;
+    font-family: "Work Sans", sans-serif;
     color: #ffffff;
     font-weight: 500;
-    font-size: 108px;
+    font-size: 148px;
     line-height: 1;
     margin-bottom: 18px;
     letter-spacing: 0.7px;
-    max-width: 400px;
-    // text-transform: uppercase;
-    font-weight: 300;
+    // max-width: 400px;
+    text-transform: uppercase;
+    font-weight: 600;
 
     &:hover {
       text-decoration: none;
     }
     @media screen and (max-width: 1600px) {
-      font-size: 64px;
+      font-size: 82px;
     }
     @media screen and (max-width: 680px) {
       font-size: 46px;

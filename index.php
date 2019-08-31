@@ -33,10 +33,13 @@
 </head>
 
 <body class="">
-<canvas class="threejs"></canvas>
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
+    <img alt="cursor-image" id="view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png">
+
+    <canvas class="threejs"></canvas>
     <div id="overlay"></div>
     <section id="main">
-
         <!-- <div class="absolute pin-t mt-16 mr-6 w-full z-50">
             <ul class="pin-r absolute mr-12 nav">
                 <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
@@ -75,7 +78,7 @@
         <?php
         global $i;
         global $post;
-        $args = array('category' => 25,'posts_per_page' => -1,); ///25 //2 for dev
+        $args = array('category' => 2, 'posts_per_page' => -1,); ///25 //2 for dev
         $work = get_posts($args);
 
         $args2 = array('category' => 30); ///
@@ -88,14 +91,14 @@
                 $i = 0; ?>
                 <?php foreach ($work as $post) : setup_postdata($post); ?>
                     <a class="wheel-item z-30 w-full wheel swiper-slide" href="<?php echo get_permalink($post->ID) ?>">
-                    <p class="hidden-thumbnail">
-                    <?php if (has_post_thumbnail( $post->ID ) ): ?>
-                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-                    <?php echo $image[0]; ?>
-                
-                  <?php endif; ?>
-                    </p>    
-                    <div class="inline self-center w-full z-20">
+                        <p class="hidden-thumbnail">
+                            <?php if (has_post_thumbnail($post->ID)) : ?>
+                                <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
+                                <?php echo $image[0]; ?>
+
+                            <?php endif; ?>
+                        </p>
+                        <div class="inline self-center w-full z-20">
                             <div class="img-remove">
                             </div>
 
@@ -108,23 +111,23 @@
                             <span class="text-subheadline">
                                 <span class="text-indicator">
                                     <?php
-                                    $i += 1;
-                                    echo "0" . $i . " "; ?>
+                                        $i += 1;
+                                        echo "0" . $i . " "; ?>
                                 </span>
                                 <?php $posttags = get_the_tags();
-                                if ($posttags) {
-                                    foreach ($posttags as $tag) {
-                                        echo $tag->name . ' ';
+                                    if ($posttags) {
+                                        foreach ($posttags as $tag) {
+                                            echo $tag->name . ' ';
+                                        }
                                     }
-                                }
-                                ?>
+                                    ?>
                                 <button class="button__view">view project</button>
                             </span>
                         </div>
                     </a>
 
                 <?php endforeach;
-            wp_reset_postdata(); ?>
+                wp_reset_postdata(); ?>
             </div>
         </div>
         <?php foreach ($work as $post) : setup_postdata($post); ?>
@@ -140,7 +143,7 @@
                 </div>
             </div>
         <?php endforeach;
-    ?>
+        ?>
 
 
 
@@ -157,7 +160,7 @@
             <?php
             global $i;
             global $post;
-            $args = array('category' => 25); //25 //2 for dev
+            $args = array('category' => 2); //25 //2 for dev
             $work = get_posts($args);
 
             $argse2 = array('category' => 30);
@@ -177,10 +180,10 @@
     </section>
     <div class="banner">
         <div class="banner-container">
-        <p>
-        Welcome to my web page! Pretty cool huh? My name is Marie I am a Visual artist from Vienna. Right now I am searching for a job as a UI-Designer in a cool team that is open to new ideas and coffee breaks (It’s a cliche I like to confirm to). Mainly because I need money to finance my passion in food and photography(and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them A LOT. It’s always an amazing conversation starter with me if you need one. :) If you are still reading this you are either my mom (Hi Mom!), or really interested in employing me. In this case you can either go to the about page to find out more about my education and former work places or enjoy this summary: I graduated from „Die Graphische“ in Vienna as Graphicdesigner. Afterwards I chose to study „Mediatechnology and -design“ at „FH-Oberösterreich“. During that time I did internships as a Designer and Coder for companies like Campaigning Bureau and Wild. Asides from that I am very interested in Art and defending basic human rights. 🌈
-        Welcome to my web page! Pretty cool huh? My name is Marie I am a Visual artist from Vienna. Right now I am searching for a job as a UI-Designer in a cool team that is open to new ideas and coffee breaks (It’s a cliche I like to confirm to). Mainly because I need money to finance my passion in food and photography(and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them A LOT. It’s always an amazing conversation starter with me if you need one. :) If you are still reading this you are either my mom (Hi Mom!), or really interested in employing me. In this case you can either go to the about page to find out more about my education and former work places or enjoy this summary: I graduated from „Die Graphische“ in Vienna as Graphicdesigner. Afterwards I chose to study „Mediatechnology and -design“ at „FH-Oberösterreich“. During that time I did internships as a Designer and Coder for companies like Campaigning Bureau and Wild. Asides from that I am very interested in Art and defending basic human rights. 🌈
-        </p>
+            <p>
+                Welcome to my web page! Pretty cool huh? My name is Marie I am a Visual artist from Vienna. Right now I am searching for a job as a UI-Designer in a cool team that is open to new ideas and coffee breaks (It’s a cliche I like to confirm to). Mainly because I need money to finance my passion in food and photography(and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them A LOT. It’s always an amazing conversation starter with me if you need one. :) If you are still reading this you are either my mom (Hi Mom!), or really interested in employing me. In this case you can either go to the about page to find out more about my education and former work places or enjoy this summary: I graduated from „Die Graphische“ in Vienna as Graphicdesigner. Afterwards I chose to study „Mediatechnology and -design“ at „FH-Oberösterreich“. During that time I did internships as a Designer and Coder for companies like Campaigning Bureau and Wild. Asides from that I am very interested in Art and defending basic human rights. 🌈
+                Welcome to my web page! Pretty cool huh? My name is Marie I am a Visual artist from Vienna. Right now I am searching for a job as a UI-Designer in a cool team that is open to new ideas and coffee breaks (It’s a cliche I like to confirm to). Mainly because I need money to finance my passion in food and photography(and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them A LOT. It’s always an amazing conversation starter with me if you need one. :) If you are still reading this you are either my mom (Hi Mom!), or really interested in employing me. In this case you can either go to the about page to find out more about my education and former work places or enjoy this summary: I graduated from „Die Graphische“ in Vienna as Graphicdesigner. Afterwards I chose to study „Mediatechnology and -design“ at „FH-Oberösterreich“. During that time I did internships as a Designer and Coder for companies like Campaigning Bureau and Wild. Asides from that I am very interested in Art and defending basic human rights. 🌈
+            </p>
         </div>
     </div>
     <?php require(dirname(__FILE__) . '/footer.php'); ?>
