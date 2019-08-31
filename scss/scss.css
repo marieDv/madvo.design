@@ -370,7 +370,7 @@ span {
 
 @media screen and (max-width: 1600px) {
   .headline--xl {
-    font-size: 170px;
+    font-size: 140px;
     font-weight: 700;
   }
 }
