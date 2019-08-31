@@ -56,7 +56,7 @@ function initSwiper() {
 		let mySwiper = new Swiper('.swiper-container', {
 			slidesPerView: 'auto',
 			centeredSlides: true,
-			spaceBetween: 50,
+			spaceBetween: 10,
 			on: {
 				slideChange: function () {
 					console.log('swiper initialized');
@@ -152,7 +152,7 @@ const initCanvas = () => {
 		radius
 	);
 	polygon.strokeColor = strokeColor;
-	polygon.fillColor = "#fff";
+	// polygon.fillColor = "#fff";
 	polygon.strokeWidth = strokeWidth;
 	// let text = new paper.PointText(new paper.Point(30, 30));
 	// text.fillColor = 'red';
@@ -163,7 +163,7 @@ const initCanvas = () => {
 	let raster = new paper.Raster('view-ring');
 	// raster.position = 'center';
 	raster.scale(0.005);
-
+	raster.visible = false;
 
 	polygon.smooth();
 	group = new paper.Group([polygon, raster]);
@@ -200,16 +200,15 @@ const initCanvas = () => {
 
 		if (isHovering) {
 			// polygon.fillColor = "#fcba03";
-			console.log(polygon.fillColor.hue)
-
-			polygon.fillColor.hue += 1;
+			// console.log(polygon.fillColor.hue)
+			polygon.fillColor = "#fff";
+			// polygon.fillColor.hue += 1;
 			if (once === false) {
 				polygon.fillColor = "#fcba03";
 				if (growCircle === false) {
 					// polygon.scale += 0.3;
 				}
-				// setTimeout(() => {
-					console.log("execution")
+				
 					setTimeout(() => {
 					// TweenMax.to(polygon.scaling, 1.0, {x:1.0 ,y: 1.2}); 
 					}, 1000);
@@ -219,6 +218,7 @@ const initCanvas = () => {
 				growCircle = true;
 				
 				// }, 400);
+				raster.visible = true;
 				raster.scale(10);
 				polygon.scale(2.0);
 
@@ -231,8 +231,9 @@ const initCanvas = () => {
 		} else {
 			if (reset === true) {
 				polygon.scale(0.5);
+				raster.visible = false;
 				raster.scale(0.1);
-				polygon.fillColor = "#fff";
+				polygon.fillColor = "transparent";
 				reset = false;
 				growCircle = false;
 			}

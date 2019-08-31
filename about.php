@@ -33,7 +33,8 @@
 
 
 </head>
-
+<div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
 <section class="single about">
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">

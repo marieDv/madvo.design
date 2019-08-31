@@ -305,11 +305,11 @@ canvas.threejs {
 }
 
 .wheel {
-  -webkit-transition: all 1.2s ease-out;
-  transition: all 1.2s ease-out;
+  -webkit-transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   overflow: visible;
-  margin-top: 18vh;
+  margin-top: 12.5vh;
 }
 
 @media screen and (max-width: 842px) {
@@ -343,14 +343,8 @@ canvas.threejs {
 .wheel-item {
   margin-left: 5%;
   cursor: none;
-  width: 600px;
+  width: 800px;
   display: block;
-}
-
-@media screen and (max-width: 1300px) {
-  .wheel-item {
-    width: 400px;
-  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -535,18 +529,18 @@ html {
 }
 
 .swiper-slide-active {
-  -webkit-transform: perspective(500px) rotateY(10deg);
-          transform: perspective(500px) rotateY(10deg);
+  -webkit-transform: perspective(500px) rotateY(0deg);
+          transform: perspective(500px) rotateY(0deg);
 }
 
 .swiper-slide-next {
-  -webkit-transform: perspective(500px) rotateY(-24deg);
-          transform: perspective(500px) rotateY(-24deg);
+  -webkit-transform: perspective(500px) rotateY(-24deg) translateX(-300px);
+          transform: perspective(500px) rotateY(-24deg) translateX(-300px);
 }
 
 .swiper-slide-prev {
-  -webkit-transform: perspective(500px) rotateY(24deg);
-          transform: perspective(500px) rotateY(24deg);
+  -webkit-transform: perspective(500px) rotateY(24deg) translateX(300px);
+          transform: perspective(500px) rotateY(24deg) translateX(300px);
 }
 
 .controls {
