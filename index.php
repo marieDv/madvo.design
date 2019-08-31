@@ -35,7 +35,8 @@
 <body class="">
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
-    <img alt="cursor-image" id="view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png">
+    <!-- <img alt="cursor-image" id="view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png"> -->
+    <img id="view-ring" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png">
 
     <canvas class="threejs"></canvas>
     <div id="overlay"></div>
