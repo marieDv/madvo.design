@@ -160,7 +160,7 @@ const initCanvas = () => {
 
 	// text.content = 'View project';
 
-	let raster = new paper.Raster('view-ring');
+	let raster = new paper.Raster('view-rings');
 	// raster.position = 'center';
 	raster.scale(0.005);
 	raster.visible = false;
