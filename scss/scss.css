@@ -370,7 +370,7 @@ span {
 
 @media screen and (max-width: 1600px) {
   .headline--xl {
-    font-size: 139px;
+    font-size: 119px;
   }
 }
 
@@ -813,7 +813,7 @@ canvas.threejs {
 
 @media screen and (max-width: 1600px) {
   .wheel {
-    margin-top: 12.5vh;
+    margin-top: 16.5vh;
   }
 }
 
