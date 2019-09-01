@@ -1,10 +1,11 @@
 <footer class="footer white">
-        <div>
-                <p>@ Marie Dvorzak</p>
-                <span class="text-small">Designer & Coder</span>
-        </div>
-        <a class="bottomNav white work" href="<?php echo get_home_url() ?>">Work</a>
-        <a class="bottomNav white" href="<?php echo get_page_link(780); ?>">About</a>
+         <!-- <div> -->
+                <!-- <p>Marie Dvorzak</p> -->
+                <!-- <span class="text-small">Designer & Coder</span> -->
+        <!-- </div>  -->
+        <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
+        <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
+        <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>

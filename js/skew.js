@@ -201,10 +201,12 @@ const initCanvas = () => {
 		if (isHovering) {
 			// polygon.fillColor = "#fcba03";
 			// console.log(polygon.fillColor.hue)
-			polygon.fillColor = "#fff";
+			// polygon.fillColor = "#f8073a";
+			// polygon.strokeColor = "#f8073a";
 			// polygon.fillColor.hue += 1;
 			if (once === false) {
-				polygon.fillColor = "#fcba03";
+				polygon.fillColor = "#e2183a";
+				polygon.strokeColor = "#e2183a";
 				if (growCircle === false) {
 					// polygon.scale += 0.3;
 				}
@@ -234,6 +236,7 @@ const initCanvas = () => {
 				raster.visible = false;
 				raster.scale(0.1);
 				polygon.fillColor = "transparent";
+				polygon.strokeColor = "#fff";
 				reset = false;
 				growCircle = false;
 			}

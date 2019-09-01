@@ -184,9 +184,19 @@ canvas.threejs {
     font-weight: 500;
     color: #fff;
   }
+  a:first-child {
+    grid-column: 2/3;
+  }
+  a:nth-child(2) {
+    grid-column: 3/4;
+  }
+  a:nth-child(3) {
+    grid-column: 4/5;
+  }
   &.white {
     background-color: #ffffff;
     position: fixed;
+    padding-top: inherit;
     a {
       color: #000000;
     }
@@ -223,7 +233,7 @@ canvas.threejs {
       grid-column: 9 / 10;
     }
     &:last-child {
-      grid-column: 5 / 6;
+      // grid-column: 5 / 6;
       @media screen and (max-width: $sm) {
         grid-column: 11 / 12;
       }
@@ -235,8 +245,11 @@ canvas.threejs {
   transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   overflow: visible;
-  margin-top: 12.5vh;
-
+  margin-top: 17vh;
+  
+  @media screen and (max-width: 1600px) {
+    margin-top: 12.5vh;
+  }
   @media screen and (max-width: 842px) {
     flex-wrap: wrap;
     margin-top: 250px;
@@ -401,14 +414,15 @@ html {
 }
 #view-ring {
   visibility: hidden;
+  display: none;
   position: absolute;
 }
 .swiper-slide:not(.swiper-slide-active) {
   div .headline--xl {
-    color: black;
+    // color: fff;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: #fff;
   }
 }
 .swiper-slide-active {

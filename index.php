@@ -41,26 +41,26 @@
     <canvas class="threejs"></canvas>
     <div id="overlay"></div>
     <section id="main">
-        <!-- <div class="absolute pin-t mt-16 mr-6 w-full z-50">
+        <div class="absolute pin-t mt-16 mr-6 w-full z-50">
             <ul class="pin-r absolute mr-12 nav">
                 <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
                     <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
                         Marie Dvorzak
-                        <li class="text-small">
+                        <!-- <li class="text-small">
                             Designer / Coder
-                        </li>
+                        </li> -->
                     </ul>
-                    <ul class="nav-fast">
+                    <!-- <ul class="nav-fast">
                         <li id="" class="inline active toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
                             work
                         </li>
                         <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
                             <a href="<?php echo get_page_link(780); ?>">about</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
             </ul>
-        </div> -->
+        </div>
 
         <!-- ///////////////////////////////CONTROLS -->
 

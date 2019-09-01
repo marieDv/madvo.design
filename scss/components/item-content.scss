@@ -20,15 +20,16 @@
   }
   &-headline {
     &--xl {
-      font-family: "Butler Stencil", serif;
+      font-family: "Work Sans", serif;
       font-size: 56px;
       line-height: 64px;
       font-weight: 400;
-      letter-spacing: 0.5px;
-      max-width: 600px;
+      letter-spacing: 0px;
+      max-width: 700px;
       margin-bottom: 40px;
       margin-left: -55px;
       color: #ffffff;
+  
       @media screen and (max-width: 1600px) {
         font-size: 46px;
         line-height: 48px;

@@ -229,9 +229,28 @@ canvas.threejs {
   color: #fff;
 }
 
+.footer a:first-child {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.footer a:nth-child(2) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.footer a:nth-child(3) {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+}
+
 .footer.white {
   background-color: #ffffff;
   position: fixed;
+  padding-top: inherit;
 }
 
 .footer.white a {
@@ -290,12 +309,6 @@ canvas.threejs {
   }
 }
 
-.footer a:last-child {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
-  grid-column: 5 / 6;
-}
-
 @media screen and (max-width: 768px) {
   .footer a:last-child {
     -ms-grid-column: 11;
@@ -309,7 +322,13 @@ canvas.threejs {
   transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   overflow: visible;
-  margin-top: 12.5vh;
+  margin-top: 17vh;
+}
+
+@media screen and (max-width: 1600px) {
+  .wheel {
+    margin-top: 12.5vh;
+  }
 }
 
 @media screen and (max-width: 842px) {
@@ -509,14 +528,14 @@ html {
 
 #view-ring {
   visibility: hidden;
+  display: none;
   position: absolute;
 }
 
 .swiper-slide:not(.swiper-slide-active) div .headline--xl {
-  color: black;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #fff;
 }
 
 .swiper-slide-active div .headline--xl {
