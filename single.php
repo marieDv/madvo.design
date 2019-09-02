@@ -49,7 +49,8 @@
       <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
         <a class="burger-menu" href="<?php echo get_home_url() ?>">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png">
-        </a>
+          <!-- <span>back</span> -->
+        </a> 
         <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
           <!-- Marie Dvorzak
           <li class="text-small">

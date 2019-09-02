@@ -5,6 +5,8 @@
   padding: 0 115px;
   top: 5vh;
   padding: 0 34px;
+  top: -80px;
+  padding: 0 6.5%;
 }
 
 @media screen and (max-width: 842px) {
@@ -71,11 +73,6 @@
 .nav-fast li.active :after {
   width: 100%;
   left: 0;
-}
-
-li:last-child {
-  margin-left: 86px;
-  margin-top: -9px;
 }
 
 @media screen and (max-width: 842px) {
@@ -194,6 +191,7 @@ li:last-child {
 
 .hidden-thumbnail {
   visibility: hidden;
+  display: none;
 }
 
 canvas.threejs {
@@ -560,6 +558,11 @@ html {
   min-width: 200px;
   -webkit-transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 1300px) {
@@ -572,6 +575,12 @@ html {
   visibility: hidden;
   display: none;
   position: absolute;
+}
+
+.swiper-slide div .headline--xl {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .swiper-slide:not(.swiper-slide-active) div .headline--xl {

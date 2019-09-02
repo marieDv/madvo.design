@@ -63,36 +63,38 @@
   <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about ">
 
     <div class="about-clients  inline text-left">
-      <h2 class=" ic-headline--xl mt-32">Hi, I am Marie a Designer with a passion for programming</h2>
+      <h2 class=" ic-headline--xl mt-32">Hey there, I am Marie a Designer with a passion for programming!</h2>
 
       <p class="text--sm text-left">
-      ... based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email!
-      </p>
+      <!-- ... based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email! -->
+      <span>Welcome to my web page! Pretty cool huh?</span>I am a Visual artist from Vienna. Right now I am searching for a job as <strong>UI-Designer</strong> in an innovative team that is open to new ideas and coffee breaks ☕️(It’s one of the many cliches I like to confirm to). Mainly because I need money to finance my passion in food and photography (and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them A LOT. Asides from that I spend my free time looking at modern art, shopping for plants 🌱 and defending human rights 🌈. My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome! 💥
+    </p>
+
+     
+
+      <div class="w-full flex mt-16 items-center about-text__section">
+        <p class="inline text-small ">companies I worked for & resume</p>
+        <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
+      </div>
+
+      <ul class="text--sm  about-text__resume mt-4">
+        <li class="about-text__resume--emphasized">WILD <span>2019 Development Intern</span></li>
+
+        <li class="about-text__resume--emphasized"> CAMPAIGNING BUREAU <span>2017/2018 Development/UI-Design Intern</span></li>
+        <li class="about-text__resume--emphasized"> FIV AUSTRIA<span>2015/2019 Wordpress</span></li>
+        <li class="about-text__resume-li"> Mediatechnology and Design<span>2016/2019 @FH Hagenberg</span></li>
+        <li class="about-text__resume-li"> Internet Design & Graphic Communication<span>2018/2019 @Plymouth University UK</span></li>
+        <li class="about-text__resume-li"> Graphische Bundes Lehr- und Versuchsanstalt <span>2010/2015</span></li>
+      </ul>
+
       <div class="w-full flex mt-16 items-center about-text__section">
         <p class="inline text-small ">contact</p>
         <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
       </div>
       <p class="text--sm text-left mt-16">
-        <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">email</a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a>
+        <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">dvorzak.marie@gmail.com</a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a>
       </p>
-
-      <div class="w-full flex mt-16 items-center about-text__section">
-        <p class="inline text-small ">clients I worked for & resume</p>
-        <div class="w-full h-1 bg-white inline about-hr ml-2"></div>
-      </div>
-
-
-
-      <ul class="text--sm  about-text__resume mt-4">
-        <li class="about-text__resume--emphasized">WILD <span>_2019 Development Intern</span></li>
-
-        <li class="about-text__resume--emphasized"> CAMPAIGNING BUREAU <span>_2017/2018 Development/UI-Design Intern</span></li>
-        <li class="about-text__resume--emphasized"> FIV AUSTRIA<span>_2015/2019 Wordpress</span></li>
-        <li> Mediatechnology and Design<span>_2016/2019 @FH Hagenberg</span></li>
-        <li> Internet Design & Graphic Communication<span>_2018/2019 @Plymouth University UK</span></li>
-        <li> Graphische Bundes Lehr- und Versuchsanstalt <span>_2010/2015</span></li>
-        <img alt="me" src="<?php bloginfo('stylesheet_directory'); ?>/assets/derpme.jpg">
-      </ul>
+      <img alt="me" src="<?php bloginfo('stylesheet_directory'); ?>/assets/derpme.jpg">
 
 
     </div>

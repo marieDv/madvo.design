@@ -125,11 +125,12 @@ span {
 }
 
 .text-small {
-  font-family: "Roboto", sans-serif;
-  font-size: 8px;
-  letter-spacing: 2%;
-  text-transform: unset;
+  font-family: "Work Sans", sans-serif;
+  font-size: 9px;
   text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 500;
+  color: #353535;
 }
 
 .text--sm {
