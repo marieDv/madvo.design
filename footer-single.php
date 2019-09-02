@@ -1,4 +1,4 @@
-<footer class="footer white">
+<footer id="footer-white" class="footer white">
          <!-- <div> -->
                 <!-- <p>Marie Dvorzak</p> -->
                 <!-- <span class="text-small">Designer & Coder</span> -->

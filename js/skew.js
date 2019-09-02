@@ -1,8 +1,11 @@
 const section = document.getElementById("wheel");
 let currentPixel = window.pageYOffset;
 var activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
+var footer = document.getElementById("footer-white");
 var isHovering = false;
+var isHoveringFooter = false;
 let once = false;
+let changeFooter = false;
 let reset = false;
 let growCircle = false;
 
@@ -83,19 +86,22 @@ const initCursor = () => {
 		clientX = e.clientX;
 		clientY = e.clientY;
 		activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
-		// console.log("wtf are you being parsed?")
-		// console.log(activeSlide)
+
+		if (footer) {
+			footer.addEventListener("mouseover", () => {
+				isHoveringFooter = true;
+			});
+			footer.addEventListener("mouseleave", () => {
+				isHoveringFooter = false;
+			});
+		}
 		if (activeSlide) {
 			activeSlide.addEventListener("mouseover", () => {
-				// setTimeout(() => {
 				isHovering = true;
-				// }, 200);
-
 			});
 			activeSlide.addEventListener("mouseleave", () => {
 				isHovering = false;
 			});
-
 		}
 
 	});
@@ -104,13 +110,11 @@ const initCursor = () => {
 	// use requestAnimationFrame() for smooth performance
 	const render = () => {
 		innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
-		// if you are already using TweenMax in your project, you might as well
-		// use TweenMax.set() instead
-		// TweenMax.set(innerCursor, {
-		//   x: clientX,
-		//   y: clientY
-		// });
-
+		if(isHoveringFooter){
+			innerCursor.style.background = "#e2183a";
+		}else {
+			innerCursor.style.background = "#fff";
+		}
 		requestAnimationFrame(render);
 	};
 	requestAnimationFrame(render);
@@ -152,13 +156,8 @@ const initCanvas = () => {
 		radius
 	);
 	polygon.strokeColor = strokeColor;
-	// polygon.fillColor = "#fff";
 	polygon.strokeWidth = strokeWidth;
-	// let text = new paper.PointText(new paper.Point(30, 30));
-	// text.fillColor = 'red';
-	// text.justification = 'center';
 
-	// text.content = 'View project';
 
 	let raster = new paper.Raster('view-ring');
 	// raster.position = 'center';
@@ -187,29 +186,27 @@ const initCanvas = () => {
 		);
 	};
 
-	// the draw loop of Paper.js 
-	// (60fps with requestAnimationFrame under the hood)
 	paper.view.onFrame = event => {
-		// using linear interpolation, the circle will move 0.2 (20%)
-		// of the distance between its current position and the mouse
-		// coordinates per Frame
 		lastX = lerp(lastX, clientX, 0.2);
 		lastY = lerp(lastY, clientY, 0.2);
 		group.position = new paper.Point(lastX, lastY);
-		// console.log("hover" + isHovering);
 
+		if(isHoveringFooter){
+			if (changeFooter === false) {
+				// polygon.fillColor = "#e2183a";
+				polygon.strokeColor = "#e2183a";
+				changeFooter = true;
+			}
+		}else if(!isHovering){
+			polygon.strokeColor = "#fff";
+			changeFooter = false;
+		}
 		if (isHovering) {
-			// polygon.fillColor = "#fcba03";
-			// console.log(polygon.fillColor.hue)
-			// polygon.fillColor = "#f8073a";
-			// polygon.strokeColor = "#f8073a";
-			// polygon.fillColor.hue += 1;
+
 			if (once === false) {
 				polygon.fillColor = "#e2183a";
 				polygon.strokeColor = "#e2183a";
-				if (growCircle === false) {
-					// polygon.scale += 0.3;
-				}
+
 				
 					setTimeout(() => {
 					// TweenMax.to(polygon.scaling, 1.0, {x:1.0 ,y: 1.2}); 
@@ -219,7 +216,6 @@ const initCanvas = () => {
 				reset = true;
 				growCircle = true;
 				
-				// }, 400);
 				raster.visible = true;
 				raster.scale(10);
 				polygon.scale(2.0);
@@ -240,7 +236,6 @@ const initCanvas = () => {
 				reset = false;
 				growCircle = false;
 			}
-			// polygon.fillColor = "#ffffff";
 			polygon.scale(1.0);
 			once = false;
 		}

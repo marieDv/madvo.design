@@ -70,7 +70,8 @@
   }
 }
 li:last-child {
-  margin-left: 48px;
+  // margin-left: 48px;
+  margin-left: 86px;
   margin-top: -9px;
   @media screen and (max-width: 842px) {
     margin-left: 24px;
@@ -183,15 +184,24 @@ canvas.threejs {
     font-family: "Work Sans", sans-serif;
     font-weight: 500;
     color: #fff;
+    @media screen and (max-width: 680px) {
+      color: #000;
+    }
   }
   a:first-child {
     grid-column: 2/3;
   }
   a:nth-child(2) {
     grid-column: 3/4;
+    @media screen and (max-width: 680px) {
+    grid-column: 4/5;
+    }
   }
   a:nth-child(3) {
     grid-column: 4/5;
+    @media screen and (max-width: 680px) {
+      grid-column: 5/6;
+      }
   }
   &.white {
     background-color: #ffffff;
@@ -200,11 +210,14 @@ canvas.threejs {
     a {
       color: #000000;
     }
-
   }
 
   @media screen and (max-width: 842px) {
     position: relative;
+  }
+  @media screen and (max-width: 680px) {
+    background-color: white;
+    position: fixed;
   }
   p,
   .footer div .text-small {
@@ -212,7 +225,9 @@ canvas.threejs {
     font-family: "Work Sans";
     font-weight: 500;
   }
-  &.white p, .footer.white span, .footer div .text-small {
+  &.white p,
+  .footer.white span,
+  .footer div .text-small {
     color: #000;
   }
   div {
@@ -235,7 +250,8 @@ canvas.threejs {
     &:last-child {
       // grid-column: 5 / 6;
       @media screen and (max-width: $sm) {
-        grid-column: 11 / 12;
+        // grid-column: 11 / 12;
+        grid-column: 6/7;
       }
     }
   }
@@ -246,9 +262,12 @@ canvas.threejs {
   position: relative;
   overflow: visible;
   margin-top: 17vh;
-  
+
   @media screen and (max-width: 1600px) {
     margin-top: 16.5vh;
+  }
+  @media screen and (max-width: 1300px) {
+    margin-top: 29.5vh;
   }
   @media screen and (max-width: 842px) {
     flex-wrap: wrap;
@@ -274,9 +293,7 @@ canvas.threejs {
     cursor: none;
     width: 800px;
     display: block;
-    @media screen and (max-width: 1300px) {
-      // width: 400px;
-    }
+
     @media screen and (max-width: 1300px) {
       margin: 32px 20px;
     }
@@ -307,16 +324,10 @@ canvas.threejs {
       }
     }
     &__content {
-      // display: none;
-      //color: $color-text--main;
       top: 45%;
-      //max-width: 40%;
-
       padding: 250px 600px;
       padding: 100px 50px;
-      // @media screen and (max-width: 1300px) {
-      //   padding: 200px 460px;
-      // }
+
       @media screen and (max-width: $sm) {
         padding: 2rem;
       }
@@ -384,7 +395,7 @@ canvas.threejs {
 html {
   cursor: none;
 }
-  .cursor {
+.cursor {
   position: fixed;
   left: 0;
   top: 0;
@@ -411,6 +422,9 @@ html {
 .swiper-slide {
   min-width: 200px;
   transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
+  @media screen and (max-width: 1300px){
+  max-width: 700px;
+  }
 }
 #view-ring {
   visibility: hidden;
@@ -419,10 +433,15 @@ html {
 }
 .swiper-slide:not(.swiper-slide-active) {
   div .headline--xl {
-    // color: fff;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
+
+    @media screen and (max-width: 680px){
+       color: #fff;
+       -webkit-text-fill-color: #fff;
+       -webkit-text-stroke-color: transparent;
+    }
   }
 }
 .swiper-slide-active {
@@ -446,8 +465,8 @@ html {
   // transform: perspective(500px) rotateY(24deg) translateX(-90px) translateY(500px) translateZ(-600px);
 }
 
-.swiper-slide-prev, .swiper-slide-next {
- 
+.swiper-slide-prev,
+.swiper-slide-next {
 }
 .controls__position {
 }
@@ -495,7 +514,6 @@ html {
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
-
 
 @keyframes push-down {
   0% {

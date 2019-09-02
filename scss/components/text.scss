@@ -77,13 +77,13 @@ span {
 .text {
   &-subheadline {
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 200;
   }
   &-indicator {
-    font-weight: 800;
+    font-weight: 600;
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 44px;
+    font-size: 24px;
     color: black;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
@@ -274,11 +274,14 @@ span {
     }
     @media screen and (max-width: 1600px) {
       font-size: 119px;
-      // font-weight: 700;
+    }
+    @media screen and (max-width: 1300px) {
+    font-size: 95px;
     }
     @media screen and (max-width: 680px) {
-      font-size: 46px;
-      // font-weight: 200;
+      font-size: 36px;
+      color: white;
+      font-weight: 400;
     }
 
     &-large {
@@ -362,10 +365,10 @@ li {
 
 .text--nav {
   color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 500;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Work Sans", sans-serif;
   line-height: 15.8px;
   font-style: normal;
 }

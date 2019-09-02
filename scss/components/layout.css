@@ -74,7 +74,7 @@
 }
 
 li:last-child {
-  margin-left: 48px;
+  margin-left: 86px;
   margin-top: -9px;
 }
 
@@ -229,6 +229,12 @@ canvas.threejs {
   color: #fff;
 }
 
+@media screen and (max-width: 680px) {
+  .footer a {
+    color: #000;
+  }
+}
+
 .footer a:first-child {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -241,10 +247,26 @@ canvas.threejs {
   grid-column: 3/4;
 }
 
+@media screen and (max-width: 680px) {
+  .footer a:nth-child(2) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+  }
+}
+
 .footer a:nth-child(3) {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
+}
+
+@media screen and (max-width: 680px) {
+  .footer a:nth-child(3) {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    grid-column: 5/6;
+  }
 }
 
 .footer.white {
@@ -263,6 +285,13 @@ canvas.threejs {
   }
 }
 
+@media screen and (max-width: 680px) {
+  .footer {
+    background-color: white;
+    position: fixed;
+  }
+}
+
 .footer p,
 .footer .footer div .text-small {
   color: #fff;
@@ -270,7 +299,9 @@ canvas.threejs {
   font-weight: 500;
 }
 
-.footer.white p, .footer .footer.white span, .footer .footer div .text-small {
+.footer.white p,
+.footer .footer.white span,
+.footer .footer div .text-small {
   color: #000;
 }
 
@@ -311,9 +342,9 @@ canvas.threejs {
 
 @media screen and (max-width: 768px) {
   .footer a:last-child {
-    -ms-grid-column: 11;
+    -ms-grid-column: 6;
     -ms-grid-column-span: 1;
-    grid-column: 11 / 12;
+    grid-column: 6/7;
   }
 }
 
@@ -328,6 +359,12 @@ canvas.threejs {
 @media screen and (max-width: 1600px) {
   .wheel {
     margin-top: 16.5vh;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .wheel {
+    margin-top: 29.5vh;
   }
 }
 
@@ -526,6 +563,12 @@ html {
   transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+@media screen and (max-width: 1300px) {
+  .swiper-slide {
+    max-width: 700px;
+  }
+}
+
 #view-ring {
   visibility: hidden;
   display: none;
@@ -536,6 +579,14 @@ html {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
+}
+
+@media screen and (max-width: 680px) {
+  .swiper-slide:not(.swiper-slide-active) div .headline--xl {
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-color: transparent;
+  }
 }
 
 .swiper-slide-active div .headline--xl {
