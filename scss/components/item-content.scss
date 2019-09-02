@@ -81,7 +81,7 @@
         position: relative;
         margin-top: 80px;
         img {
-          max-width: 100%;
+          width: 100%;
         }
         @media screen and (max-width: 842px) {
           img {
@@ -90,7 +90,7 @@
         }
       }
 
-      @media screen and (max-width: $sm) {
+      @media screen and (max-width: 680px) {
         padding: 2vh 0 0;
       }
     }

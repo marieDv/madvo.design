@@ -17,9 +17,9 @@
 
   &-container {
     margin: 0 auto;
-    padding: 0px 480px;
+    // padding: 0px 480px;
     @media screen and (max-width: 1600px) {
-      padding: 0px 140px;
+      // padding: 0px 140px;
     }
     @media screen and (max-width: $sm) {
       padding: 0px 0px;
@@ -92,10 +92,10 @@
   }
   .wheel-item__content {
     
-    padding: 200px 200px;
+    // padding: 200px 200px;
     margin-top: 146px;
     @media screen and (max-width: 1600px) {
-      padding: 80px 50px;
+      // padding: 80px 50px;
     }
     @media screen and (max-width: $sm) {
       padding: 100px 24px;

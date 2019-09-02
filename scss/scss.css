@@ -939,8 +939,7 @@ canvas.threejs {
 
 .wheel-item__content {
   top: 45%;
-  padding: 250px 600px;
-  padding: 100px 50px;
+  padding: 50px 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -2038,7 +2037,7 @@ html {
 }
 
 .ic-s-screen--black img {
-  max-width: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 842px) {
@@ -2047,7 +2046,7 @@ html {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 680px) {
   .ic-s-screen {
     padding: 2vh 0 0;
   }
@@ -2238,13 +2237,6 @@ html {
 
 .single-container {
   margin: 0 auto;
-  padding: 0px 480px;
-}
-
-@media screen and (max-width: 1600px) {
-  .single-container {
-    padding: 0px 140px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2334,14 +2326,7 @@ html {
 }
 
 .single .wheel-item__content {
-  padding: 200px 200px;
   margin-top: 146px;
-}
-
-@media screen and (max-width: 1600px) {
-  .single .wheel-item__content {
-    padding: 80px 50px;
-  }
 }
 
 @media screen and (max-width: 768px) {
