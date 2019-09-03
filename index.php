@@ -44,7 +44,7 @@
         <div class="absolute pin-t mt-16 mr-6 w-full z-50">
             <ul class="pin-r absolute mr-12 nav">
                 <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
-                    <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
+                    <ul class="name inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
                         Marie Dvorzak
                         <!-- <li class="text-small">
                             Designer / Coder

@@ -31,13 +31,14 @@
     display: block;
     line-height: 0;
     margin-top: -10px;
-
+    @media screen and (max-width: 680px) {
+      display: none;
+    }
   }
   a {
     cursor: pointer;
     color: #fff;
   }
-
 
   &-text__section {
     font-family: "Roboto Condensed";
@@ -64,12 +65,18 @@
       font-weight: 100;
       color: #737373;
       text-transform: uppercase;
+      @media screen and (max-width: 680px) {
+        font-size: 12px;
+      }
     }
     &--emphasized {
       font-weight: 600;
       height: 60px;
       border-bottom: 1px solid #131313;
       padding-top: 20px;
+      @media screen and (max-width: 680px) {
+        font-size: 12px;
+      }
     }
   }
   &-headline {
@@ -95,8 +102,8 @@
       width: 60%;
     }
     @media screen and (max-width: 842px) {
-      width: 100%;
-      padding: 0 24px;
+      width: calc(100% - 32px);
+      // padding: 0 24px;
     }
   }
 

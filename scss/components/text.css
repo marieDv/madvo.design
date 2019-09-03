@@ -127,12 +127,6 @@ span {
   letter-spacing: 0.6px;
 }
 
-@media screen and (max-width: 768px) {
-  .text--xs {
-    font-size: calc(12px - 1rem);
-  }
-}
-
 .text-small {
   font-family: "Work Sans", sans-serif;
   font-size: 9px;

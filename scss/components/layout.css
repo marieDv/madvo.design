@@ -26,7 +26,7 @@
 }
 
 @media screen and (max-width: 680px) {
-  .nav-items {
+  .nav-items .name {
     display: none;
   }
 }
@@ -79,12 +79,6 @@
 .nav-fast li.active :after {
   width: 100%;
   left: 0;
-}
-
-@media screen and (max-width: 842px) {
-  li:last-child {
-    margin-left: 24px;
-  }
 }
 
 .navigation-number__box {
@@ -416,6 +410,7 @@ canvas.threejs {
 
 @media screen and (max-width: 1300px) {
   .wheel-item {
+    width: 700px;
     margin: 32px 20px;
   }
 }

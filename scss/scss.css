@@ -174,12 +174,6 @@ span {
   letter-spacing: 0.6px;
 }
 
-@media screen and (max-width: 768px) {
-  .text--xs {
-    font-size: calc(12px - 1rem);
-  }
-}
-
 .text-small {
   font-family: "Work Sans", sans-serif;
   font-size: 9px;
@@ -531,7 +525,7 @@ li {
 }
 
 @media screen and (max-width: 680px) {
-  .nav-items {
+  .nav-items .name {
     display: none;
   }
 }
@@ -584,12 +578,6 @@ li {
 .nav-fast li.active :after {
   width: 100%;
   left: 0;
-}
-
-@media screen and (max-width: 842px) {
-  li:last-child {
-    margin-left: 24px;
-  }
 }
 
 .navigation-number__box {
@@ -921,6 +909,7 @@ canvas.threejs {
 
 @media screen and (max-width: 1300px) {
   .wheel-item {
+    width: 700px;
     margin: 32px 20px;
   }
 }
@@ -2038,9 +2027,9 @@ html {
 
 @media screen and (max-width: 680px) {
   .ic-headline--xl {
-    font-size: 24px;
     margin-left: 0;
-    line-height: 36px;
+    line-height: 46px;
+    font-size: 39px;
   }
 }
 
@@ -2190,6 +2179,12 @@ html {
   margin-top: -10px;
 }
 
+@media screen and (max-width: 680px) {
+  .about li span {
+    display: none;
+  }
+}
+
 .about a {
   cursor: pointer;
   color: #fff;
@@ -2227,11 +2222,23 @@ html {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 680px) {
+  .about-text__resume-li {
+    font-size: 12px;
+  }
+}
+
 .about-text__resume--emphasized {
   font-weight: 600;
   height: 60px;
   border-bottom: 1px solid #131313;
   padding-top: 20px;
+}
+
+@media screen and (max-width: 680px) {
+  .about-text__resume--emphasized {
+    font-size: 12px;
+  }
 }
 
 .about-headline {
@@ -2262,8 +2269,7 @@ html {
 
 @media screen and (max-width: 842px) {
   .about-clients {
-    width: 100%;
-    padding: 0 24px;
+    width: calc(100% - 32px);
   }
 }
 
