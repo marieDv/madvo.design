@@ -25,6 +25,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 680px) {
+  .nav-items {
+    display: none;
+  }
+}
+
 .nav-items .toggleabout .text-small {
   font-size: 8px;
   letter-spacing: 2%;
@@ -219,6 +225,13 @@ canvas.threejs {
   line-height: 1.1;
   height: 72px;
   margin-bottom: 24px;
+  z-index: 200;
+}
+
+@media screen and (max-width: 680px) {
+  .footer {
+    padding-top: 0;
+  }
 }
 
 .footer a {
@@ -554,6 +567,12 @@ html {
   height: 100%;
 }
 
+@media screen and (max-width: 680px) {
+  .swiper-container {
+    padding-bottom: 80px;
+  }
+}
+
 .swiper-slide {
   min-width: 200px;
   -webkit-transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -565,9 +584,11 @@ html {
           justify-content: center;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 860px) {
   .swiper-slide {
-    max-width: 700px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
 }
 
@@ -583,17 +604,26 @@ html {
   width: max-content;
 }
 
-.swiper-slide:not(.swiper-slide-active) div .headline--xl {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+@media screen and (min-width: 680px) {
+  .swiper-slide:not(.swiper-slide-active) div .headline--xl {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+  }
 }
 
 @media screen and (max-width: 680px) {
   .swiper-slide:not(.swiper-slide-active) div .headline--xl {
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1;
+    text-transform: inherit;
     color: #fff;
-    -webkit-text-fill-color: #fff;
-    -webkit-text-stroke-color: transparent;
+    letter-spacing: 0;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 46px;
+    text-transform: uppercase;
   }
 }
 

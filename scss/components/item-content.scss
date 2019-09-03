@@ -30,8 +30,6 @@
       margin-left: -55px;
       color: #ffffff;
 
-  
-  
       @media screen and (max-width: 1600px) {
         font-size: 46px;
         line-height: 48px;
@@ -88,7 +86,10 @@
 
         width: 180%;
         margin-left: -40%;
-
+        @media screen and (max-width: 680px) {
+          width: 100%;
+          margin-left: 0;
+        }
         img {
           width: 100%;
         }

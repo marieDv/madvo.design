@@ -89,7 +89,7 @@
       position: absolute;
       margin: 0 auto;
       top: -13px;
-      left: 24px;
+      // left: 24px;
       right: 0;
     }
   }
@@ -121,6 +121,7 @@
     }
     @media screen and (max-width: $sm) {
       padding: 100px 24px;
+      margin-top: 0;
       overflow: hidden;
     }
   }
