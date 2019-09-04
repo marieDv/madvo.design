@@ -50,14 +50,13 @@ window.addEventListener("resize", () => {
 
 function initOverview() {
 
-	console.log(document.getElementsByClassName("quickOverview")[0]);
 	let overviewSwiper = new Swiper('.swiper-container', {
 		slidesPerView: 'auto',
 		centeredSlides: true,
 		spaceBetween: 10,
 		on: {
 			slideChange: function () {
-				console.log('swiper initialized');
+				
 			}
 		}
 	});
@@ -66,7 +65,7 @@ function initOverview() {
 
 
 function initSwiper() {
-	console.log(window.innerWidth)
+	
 	if (window.innerWidth > 900) {
 		let mySwiper = new Swiper('.swiper-container', {
 			slidesPerView: 'auto',
@@ -77,19 +76,18 @@ function initSwiper() {
 
 			on: {
 				click: function () {
-					console.log("clicked")
+					
 					// this.preventDefault();
 				},
 				slideChange: function () {
-					console.log('swiper initialized');
-					console.log(this.activeIndex);
+			
 
 					setTimeout(() => {
 						activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
 					}, 200);
 
 					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
-					console.log(universal);
+		
 				}
 			}
 		});
@@ -108,12 +106,14 @@ const initCursor = () => {
 		clientY = e.clientY;
 		activeSlide = document.getElementsByClassName("swiper-slide-active")[0].children[1];
 		// console.log(document.getElementsByClassName("swiper-slide-active")[0].children[1])
-		wheel.addEventListener("mouseover", () => {
-			isHoveringWheel = true;
-		});
-		wheel.addEventListener("mouseleave", () => {
-			isHoveringWheel = false;
-		});
+		if (wheel) {
+			wheel.addEventListener("mouseover", () => {
+				isHoveringWheel = true;
+			});
+			wheel.addEventListener("mouseleave", () => {
+				isHoveringWheel = false;
+			});
+		}
 		if (footer) {
 			footer.addEventListener("mouseover", () => {
 				isHoveringFooter = true;
@@ -233,7 +233,7 @@ const initCanvas = () => {
 		lastY = lerp(lastY, clientY, 0.2);
 		group.position = new paper.Point(lastX, lastY);
 
-		if(isHoveringWheel && !isHovering){
+		if (isHoveringWheel && !isHovering) {
 			// polygon.strokeColor = "#e2183a";
 			arrows.visible = true;
 			// innerCursor.style.background = "red";
@@ -242,7 +242,7 @@ const initCanvas = () => {
 			// innerCursor.style.height = "40px";
 			// TweenMax.to(innerCursor, 1.0, {scale:5.5}); 
 
-		}else {
+		} else {
 			arrows.visible = false;
 		}
 		if (isHoveringFooter) {
