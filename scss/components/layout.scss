@@ -453,7 +453,8 @@ html {
     justify-content: left;
   }
 }
-#view-ring, #arrows {
+#view-ring,
+#arrows {
   visibility: hidden;
   display: none;
   position: absolute;
@@ -478,7 +479,6 @@ html {
   }
 }
 .swiper-slide:not(.swiper-slide-active, .single-slide) {
-
   div .headline--xl {
     @media screen and (min-width: 680px) {
       -webkit-text-fill-color: transparent;
@@ -502,7 +502,7 @@ html {
     }
   }
 }
-.swiper-slide:not(.swiper-slide-active){
+.swiper-slide:not(.swiper-slide-active) {
   // pointer-events: none;
   // background: pink;
 }
@@ -581,6 +581,23 @@ html {
     animation: 0.9s push-up forwards;
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes push-down {
