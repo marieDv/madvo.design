@@ -1,9 +1,12 @@
 const section = document.getElementById("wheel");
 let currentPixel = window.pageYOffset;
 var activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
+var wheel = document.getElementsByClassName("wheel")[0];
+
 var footer = document.getElementById("footer-white");
 var isHovering = false;
 var isHoveringFooter = false;
+var isHoveringWheel = false;
 let once = false;
 let changeFooter = false;
 let reset = false;
@@ -23,33 +26,42 @@ function looper() {
 }
 looper();
 
-console.log(TweenMax)
-Draggable.create("#overview", {
-	type: "x",
-	bounds: document.getElementById("overview-holder"),
-	throwProps: true,
-	onClick: function () {
-		console.log("clicked");
-	},
-	onDragEnd: function () {
-		console.log("drag ended");
-	}
-});
+
 var windowSize = window.innerWidth;
-// initDraggable();
 
-
-
-initSwiper();
-window.addEventListener("resize", () => {
-	console.log("RESIZE")
-	windowSize = window.innerWidth;
-	// initDraggable()
+let overview = document.getElementById("overview-holder");
+if (overview) { initOverview(); } else {
 	initSwiper();
+}
+
+
+
+window.addEventListener("resize", () => {
+	windowSize = window.innerWidth;
+
+	if (overview) { initOverview(); } else {
+		initSwiper();
+	}
+
+
 
 });
 
 
+function initOverview() {
+
+	console.log(document.getElementsByClassName("quickOverview")[0]);
+	let overviewSwiper = new Swiper('.swiper-container', {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		spaceBetween: 10,
+		on: {
+			slideChange: function () {
+				console.log('swiper initialized');
+			}
+		}
+	});
+}
 
 
 
@@ -59,8 +71,15 @@ function initSwiper() {
 		let mySwiper = new Swiper('.swiper-container', {
 			slidesPerView: 'auto',
 			centeredSlides: true,
+			simulateTouch: true,
+			slideToClickedSlide: true,
 			spaceBetween: 10,
+
 			on: {
+				click: function () {
+					console.log("clicked")
+					// this.preventDefault();
+				},
 				slideChange: function () {
 					console.log('swiper initialized');
 					console.log(this.activeIndex);
@@ -82,11 +101,19 @@ const innerCursor = document.querySelector(".cursor--small");
 
 const initCursor = () => {
 	// add listener to track the current mouse position
+
+
 	document.addEventListener("mousemove", e => {
 		clientX = e.clientX;
 		clientY = e.clientY;
-		activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
-
+		activeSlide = document.getElementsByClassName("swiper-slide-active")[0].children[1];
+		// console.log(document.getElementsByClassName("swiper-slide-active")[0].children[1])
+		wheel.addEventListener("mouseover", () => {
+			isHoveringWheel = true;
+		});
+		wheel.addEventListener("mouseleave", () => {
+			isHoveringWheel = false;
+		});
 		if (footer) {
 			footer.addEventListener("mouseover", () => {
 				isHoveringFooter = true;
@@ -96,12 +123,14 @@ const initCursor = () => {
 			});
 		}
 		if (activeSlide) {
-			activeSlide.addEventListener("mouseover", () => {
-				isHovering = true;
-			});
-			activeSlide.addEventListener("mouseleave", () => {
-				isHovering = false;
-			});
+			if (!activeSlide.classList.contains("single-slide")) {
+				activeSlide.addEventListener("mouseover", () => {
+					isHovering = true;
+				});
+				activeSlide.addEventListener("mouseleave", () => {
+					isHovering = false;
+				});
+			}
 		}
 
 	});
@@ -109,10 +138,20 @@ const initCursor = () => {
 	// transform the innerCursor to the current mouse position
 	// use requestAnimationFrame() for smooth performance
 	const render = () => {
+		// document.addEventListener('mousedown', () => {
+		// 	console.log("mousedown")
+		// 	TweenMax.to(innerCursor, 1.0, {scale:5.5}); 
+
+		// });
+		// document.addEventListener('mouseup', () => {
+		// 	console.log("mousedown")
+		// 	TweenMax.to(innerCursor, 1.0, {scale:1.0}); 
+
+		// });
 		innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
-		if(isHoveringFooter){
+		if (isHoveringFooter) {
 			innerCursor.style.background = "#e2183a";
-		}else {
+		} else {
 			innerCursor.style.background = "#fff";
 		}
 		requestAnimationFrame(render);
@@ -158,14 +197,17 @@ const initCanvas = () => {
 	polygon.strokeColor = strokeColor;
 	polygon.strokeWidth = strokeWidth;
 
+	let arrows = new paper.Raster('arrows');
+	arrows.scale(0.06);
+	arrows.visible = false;
+
 
 	let raster = new paper.Raster('view-ring');
-	// raster.position = 'center';
 	raster.scale(0.005);
 	raster.visible = false;
 
 	polygon.smooth();
-	group = new paper.Group([polygon, raster]);
+	group = new paper.Group([polygon, raster, arrows]);
 	group.applyMatrix = false;
 
 
@@ -191,13 +233,25 @@ const initCanvas = () => {
 		lastY = lerp(lastY, clientY, 0.2);
 		group.position = new paper.Point(lastX, lastY);
 
-		if(isHoveringFooter){
+		if(isHoveringWheel && !isHovering){
+			// polygon.strokeColor = "#e2183a";
+			arrows.visible = true;
+			// innerCursor.style.background = "red";
+			// innerCursor.style.transformOrigin = "center";
+			// innerCursor.style.width = "40px";
+			// innerCursor.style.height = "40px";
+			// TweenMax.to(innerCursor, 1.0, {scale:5.5}); 
+
+		}else {
+			arrows.visible = false;
+		}
+		if (isHoveringFooter) {
 			if (changeFooter === false) {
 				// polygon.fillColor = "#e2183a";
 				polygon.strokeColor = "#e2183a";
 				changeFooter = true;
 			}
-		}else if(!isHovering){
+		} else if (!isHovering) {
 			polygon.strokeColor = "#fff";
 			changeFooter = false;
 		}
@@ -207,28 +261,28 @@ const initCanvas = () => {
 				polygon.fillColor = "#e2183a";
 				polygon.strokeColor = "#e2183a";
 
-				
-					setTimeout(() => {
+
+				setTimeout(() => {
 					// TweenMax.to(polygon.scaling, 1.0, {x:1.0 ,y: 1.2}); 
-					}, 1000);
+				}, 1000);
 
 				once = true;
 				reset = true;
 				growCircle = true;
-				
+				arrows.visible = false;
 				raster.visible = true;
 				raster.scale(10);
-				polygon.scale(2.0);
+				polygon.scale(0.8);
 
 
 			} else {
-				group.rotate(1);
-				polygon.scale(1.0);
+				raster.rotate(1);
+				// polygon.scale(1.1);
 			}
 
 		} else {
 			if (reset === true) {
-				polygon.scale(0.5);
+				polygon.scale(1.25);
 				raster.visible = false;
 				raster.scale(0.1);
 				polygon.fillColor = "transparent";

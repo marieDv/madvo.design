@@ -83,20 +83,25 @@
     echo $content;
   endwhile;
   ?>
-  <div id="overview-holder" class="quickOverview-container"></div>
-  <div id="overview" class="quickOverview">
+  <div id="overview-holder" class="quickOverview-container overview-container"></div>
+  <div class="swiper-container ">
+  <div id="overview" class="quickOverview swiper-wrapper">
     <?php
     global $i;
     global $post;
-    $args = array('category' => 25); //25 //2 for dev
+    $args = array('category' => 2); //25 //2 for dev
     $work = get_posts($args);
     ?>
     <?php foreach ($work as $post) : setup_postdata($post); ?>
 
-      <a href="<?php echo get_permalink($post->ID) ?>">
-        <?php the_title(); ?>
+      <a class="swiper-slide single-slide" href="<?php echo get_permalink($post->ID) ?>">
+      <?php
+      $title = get_the_title();
+      echo str_replace('<br>',' ', $title );
+      ?>
       </a>
     <?php endforeach; ?>
+  </div>
   </div>
   </div>
   <?php require(dirname(__FILE__) . '/footer-single.php'); ?>

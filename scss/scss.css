@@ -139,7 +139,7 @@ span {
 
 .text-subheadline {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 24px;
+  font-size: 19px;
   font-weight: 200;
 }
 
@@ -152,7 +152,7 @@ span {
 .text-indicator {
   font-weight: 600;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 24px;
+  font-size: 19px;
   color: white;
 }
 
@@ -645,6 +645,10 @@ li {
   will-change: transform;
 }
 
+.overview-container {
+  border-top: 0.8px solid white;
+}
+
 .quickOverview {
   height: 208px;
   margin-bottom: 80px;
@@ -657,7 +661,6 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-top: 0.8px solid white;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -670,7 +673,8 @@ li {
 
 @media screen and (max-width: 842px) {
   .quickOverview {
-    width: 255%;
+    height: 118px;
+    margin-bottom: 14px;
   }
 }
 
@@ -684,7 +688,7 @@ li {
   color: white;
   cursor: pointer;
   width: 300px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 18px;
 }
 
@@ -858,6 +862,8 @@ canvas.threejs {
   position: relative;
   overflow: visible;
   margin-top: 17vh;
+  height: 75vh;
+  height: 45vh;
 }
 
 @media screen and (max-width: 1600px) {
@@ -868,7 +874,9 @@ canvas.threejs {
 
 @media screen and (max-width: 1300px) {
   .wheel {
+    height: 45vh;
     margin-top: 29.5vh;
+    margin-top: 23.5vh;
   }
 }
 
@@ -1067,7 +1075,7 @@ html {
   }
 }
 
-.swiper-slide {
+.swiper-slide:not(.single-slide) {
   min-width: 200px;
   -webkit-transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.2 cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1079,27 +1087,39 @@ html {
 }
 
 @media screen and (max-width: 860px) {
-  .swiper-slide {
+  .swiper-slide:not(.single-slide) {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
   }
 }
 
-#view-ring {
+#view-ring, #arrows {
   visibility: hidden;
   display: none;
   position: absolute;
 }
 
-.swiper-slide div .headline--xl {
+.wheel {
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.wheel:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.swiper-slide:not(.single-slide) div .headline--xl {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 
 @media screen and (min-width: 680px) {
-  .swiper-slide:not(.swiper-slide-active) div .headline--xl {
+  .swiper-slide div .headline--xl {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
@@ -1107,7 +1127,7 @@ html {
 }
 
 @media screen and (max-width: 680px) {
-  .swiper-slide:not(.swiper-slide-active) div .headline--xl {
+  .swiper-slide div .headline--xl {
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1;
@@ -1121,8 +1141,16 @@ html {
   }
 }
 
-.swiper-slide-active div .headline--xl {
+.swiper-slide-active:not(.single-slide):hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.swiper-slide-active:not(.single-slide) div .headline--xl {
   color: #fff;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: transparent;
 }
 
 .swiper-slide:not(.swiper-slide-active, .swiper-slide-prev) {
@@ -1130,17 +1158,17 @@ html {
           transform: perspective(500px) rotateY(44deg);
 }
 
-.swiper-slide-active {
+.swiper-slide-active:not(.single-slide) {
   -webkit-transform: perspective(500px) rotateY(0deg);
           transform: perspective(500px) rotateY(0deg);
 }
 
-.swiper-slide-next {
+.swiper-slide-next:not(.single-slide) {
   -webkit-transform: perspective(500px) rotateY(-24deg) translateX(-300px);
           transform: perspective(500px) rotateY(-24deg) translateX(-300px);
 }
 
-.swiper-slide-prev {
+.swiper-slide-prev:not(.single-slide) {
   -webkit-transform: perspective(500px) rotateY(24deg) translateX(300px);
           transform: perspective(500px) rotateY(24deg) translateX(300px);
 }
@@ -2441,6 +2469,12 @@ html {
     padding: 80px 50px;
     padding: 160px 200px;
     padding: 160px 300px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .single .wheel-item__content {
+    padding: 160px 100px;
   }
 }
 

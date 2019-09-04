@@ -37,7 +37,7 @@
     <canvas class="cursor cursor--canvas" resize></canvas>
     <!-- <img alt="cursor-image" id="view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png"> -->
     <img id="view-ring" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png">
-
+    <img id="arrows" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/arrows.png">
     <canvas class="threejs"></canvas>
     <div id="overlay"></div>
     <section id="main">
@@ -79,7 +79,7 @@
         <?php
         global $i;
         global $post;
-        $args = array('category' => 25, 'posts_per_page' => -1,); ///25 //2 for dev
+        $args = array('category' => 2, 'posts_per_page' => -1,); ///25 //2 for dev
         $work = get_posts($args);
 
         $args2 = array('category' => 30); ///
@@ -99,7 +99,7 @@
 
                             <?php endif; ?>
                         </p>
-                        <div class="inline self-center w-full z-20">
+                        <div class="inline self-center w-full z-20 swiper-text">
                             <div class="img-remove">
                             </div>
 
@@ -161,7 +161,7 @@
             <?php
             global $i;
             global $post;
-            $args = array('category' => 25); //25 //2 for dev
+            $args = array('category' => 2); //25 //2 for dev
             $work = get_posts($args);
 
             $argse2 = array('category' => 30);
