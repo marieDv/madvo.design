@@ -220,10 +220,13 @@ canvas.threejs {
     background-color: #ffffff;
     position: fixed;
     padding-top: inherit;
+    // animation: 0.9s footerBlendIn forwards;
     a {
       color: #000000;
     }
   }
+
+
 
   @media screen and (max-width: 842px) {
     position: relative;
@@ -270,6 +273,18 @@ canvas.threejs {
   }
 }
 
+@keyframes footerBlendIn {
+  0% {
+   opacity: 0.2;
+   transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+
+
 .wheel {
   transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
@@ -290,8 +305,11 @@ canvas.threejs {
   }
   @media screen and (max-width: 842px) {
     flex-wrap: wrap;
-    margin-top: 250px;
+    margin-top: 80px;
     max-width: 335px;
+
+    height: 100%;
+    margin-left: 24px;
   }
   &-container {
     position: relative;
@@ -660,24 +678,14 @@ html {
   0% {
     -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    //background: radial-gradient(circle at center, $color-bg-light 0%, $color-bg-light 0%, $color-bg-light 100%);
   }
 
   50% {
     opacity: 0.3;
-    //background: radial-gradient(circle at center, rgb(0, 0, 0) 49%, $color-bg-light 50%, $color-bg-light 100%);
   }
-  75% {
-    //background: radial-gradient(circle at center, rgb(0, 0, 0) 74%, $color-bg-light 75%, $color-bg-light 100%);
-  }
-
   100% {
     opacity: 1;
-    //background-color: #000000;
-    // -webkit-clip-path: polygon(0 200%, 200% 200%, 200% 0, 0 0);
-    // clip-path: polygon(0 200%, 200% 200%, 200% 0, 0 0);
     transform: translateY(-90px);
-    //background: radial-gradient(circle at center, rgb(0, 0, 0) 74%, $color-bg-light 75%, $color-bg-light 100%);
   }
 }
 
