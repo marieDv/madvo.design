@@ -136,7 +136,7 @@ li:last-child {
 }
 .quickOverview {
   height: 208px;
-  margin-bottom: 80px;
+  padding-bottom: 92px;
   display: flex;
   align-content: center;
   text-transform: uppercase;
@@ -150,6 +150,8 @@ li:last-child {
     // width: 255%;
     height: 118px;
     margin-bottom: 14px;
+    width: fit-content;
+    padding-top: 89px;
   }
   &-container {
     position: relative;
@@ -162,6 +164,12 @@ li:last-child {
     width: 300px;
     font-family: "Work Sans", sans-serif;
     font-size: 18px;
+
+    @media screen and (max-width: 842px) {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+    }
   }
 }
 .hidden-thumbnail {

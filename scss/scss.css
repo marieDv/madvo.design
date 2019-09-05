@@ -651,7 +651,7 @@ li {
 
 .quickOverview {
   height: 208px;
-  margin-bottom: 80px;
+  padding-bottom: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -675,6 +675,10 @@ li {
   .quickOverview {
     height: 118px;
     margin-bottom: 14px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 89px;
   }
 }
 
@@ -690,6 +694,14 @@ li {
   width: 300px;
   font-family: "Work Sans", sans-serif;
   font-size: 18px;
+}
+
+@media screen and (max-width: 842px) {
+  .quickOverview a {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 .hidden-thumbnail {
