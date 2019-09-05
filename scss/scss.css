@@ -1159,7 +1159,7 @@ html {
   width: max-content;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 860px) {
   .swiper-slide div .headline--xl {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
@@ -1167,7 +1167,7 @@ html {
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 860px) {
   .swiper-slide div .headline--xl {
     font-weight: 500;
     letter-spacing: 0;
@@ -1177,7 +1177,7 @@ html {
     letter-spacing: 0;
     line-height: 1;
     font-weight: 500;
-    font-size: 46px;
+    font-size: 38px;
     text-transform: uppercase;
   }
 }
