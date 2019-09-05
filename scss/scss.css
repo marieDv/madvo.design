@@ -360,7 +360,7 @@ span {
   font-family: "Work Sans", sans-serif;
   color: #fff;
   font-weight: 500;
-  font-size: 142px;
+  font-size: 109px;
   line-height: 1;
   margin-bottom: 18px;
   text-transform: uppercase;
@@ -2300,7 +2300,7 @@ html {
   height: 60px;
   border-bottom: 1px solid #131313;
   padding-top: 20px;
-  font-weight: 100;
+  font-weight: 400;
   color: #737373;
   text-transform: uppercase;
 }
@@ -2338,7 +2338,7 @@ html {
 
 .about-clients {
   width: 39%;
-  width: 43%;
+  width: 560px;
   top: 40px;
   position: relative;
   margin: 0 auto;
@@ -2346,7 +2346,7 @@ html {
 
 @media screen and (max-width: 1100px) {
   .about-clients {
-    width: 60%;
+    width: 90%;
   }
 }
 

@@ -62,7 +62,7 @@
       height: 60px;
       border-bottom: 1px solid #131313;
       padding-top: 20px;
-      font-weight: 100;
+      font-weight: 400;
       color: #737373;
       text-transform: uppercase;
       @media screen and (max-width: 680px) {
@@ -94,12 +94,12 @@
 
   &-clients {
     width: 39%;
-    width: 43%;
+    width: 560px;
     top: 40px;
     position: relative;
     margin: 0 auto;
     @media screen and (max-width: 1100px) {
-      width: 60%;
+      width: 90%;
     }
     @media screen and (max-width: 842px) {
       width: calc(100% - 32px);
