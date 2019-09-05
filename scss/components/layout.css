@@ -199,7 +199,7 @@
 
 @media screen and (max-width: 842px) {
   .quickOverview a {
-    width: 200px;
+    width: 300px;
     font-size: 16px;
     font-weight: 400;
   }
