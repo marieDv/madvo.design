@@ -2510,6 +2510,7 @@ html {
 @media screen and (max-width: 842px) {
   .single .headline--xl {
     font-size: 42px;
+    display: inline;
   }
 }
 
