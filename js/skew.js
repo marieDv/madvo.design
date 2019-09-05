@@ -56,7 +56,7 @@ function initOverview() {
 		spaceBetween: 10,
 		on: {
 			slideChange: function () {
-				
+
 			}
 		}
 	});
@@ -65,7 +65,7 @@ function initOverview() {
 
 
 function initSwiper() {
-	
+
 	if (window.innerWidth > 900) {
 		let mySwiper = new Swiper('.swiper-container', {
 			slidesPerView: 'auto',
@@ -76,18 +76,18 @@ function initSwiper() {
 
 			on: {
 				click: function () {
-					
+
 					// this.preventDefault();
 				},
 				slideChange: function () {
-			
+
 
 					setTimeout(() => {
 						activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
 					}, 200);
 
 					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
-		
+
 				}
 			}
 		});
@@ -104,7 +104,9 @@ const initCursor = () => {
 	document.addEventListener("mousemove", e => {
 		clientX = e.clientX;
 		clientY = e.clientY;
-		activeSlide = document.getElementsByClassName("swiper-slide-active")[0].children[1];
+		if (document.getElementsByClassName("swiper-slide-active")[0]) {
+			activeSlide = document.getElementsByClassName("swiper-slide-active")[0].children[1];
+		}
 		// console.log(document.getElementsByClassName("swiper-slide-active")[0].children[1])
 		if (wheel) {
 			wheel.addEventListener("mouseover", () => {
