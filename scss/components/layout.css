@@ -452,8 +452,14 @@ canvas.threejs {
 .wheel-item {
   margin-left: 5%;
   cursor: none;
-  width: 800px;
   display: block;
+  width: 1000px;
+}
+
+@media screen and (max-width: 1600px) {
+  .wheel-item {
+    width: 800px;
+  }
 }
 
 @media screen and (max-width: 1300px) {

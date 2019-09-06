@@ -336,9 +336,11 @@ canvas.threejs {
   &-item {
     margin-left: 5%;
     cursor: none;
-    width: 800px;
     display: block;
-
+    width: 1000px;
+    @media screen and (max-width: 1600px) {
+      width: 800px;
+    }
     @media screen and (max-width: 1300px) {
       width: 700px;
       margin: 32px 20px;

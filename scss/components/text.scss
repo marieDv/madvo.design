@@ -271,10 +271,11 @@ span {
     letter-spacing: -3.5px;
     line-height: 0.8;
     font-weight: 700;
-
+    font-size: 156px;
     &:hover {
       text-decoration: none;
     }
+
     @media screen and (max-width: 1600px) {
       font-size: 119px;
     }

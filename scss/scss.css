@@ -367,6 +367,7 @@ span {
   letter-spacing: -3.5px;
   line-height: 0.8;
   font-weight: 700;
+  font-size: 156px;
 }
 
 .headline--xl:hover {
@@ -951,8 +952,14 @@ canvas.threejs {
 .wheel-item {
   margin-left: 5%;
   cursor: none;
-  width: 800px;
   display: block;
+  width: 1000px;
+}
+
+@media screen and (max-width: 1600px) {
+  .wheel-item {
+    width: 800px;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -2499,12 +2506,17 @@ html {
   letter-spacing: 0;
   line-height: 1;
   font-weight: 500;
-  font-size: 46px;
-  font-weight: 500;
-  font-size: 64px;
-  max-width: 600px;
   text-transform: inherit;
   display: block;
+  font-size: 96px;
+  width: 900px;
+}
+
+@media screen and (max-width: 1600px) {
+  .single .headline--xl {
+    font-size: 64px;
+    max-width: 600px;
+  }
 }
 
 @media screen and (max-width: 842px) {
@@ -2522,9 +2534,16 @@ html {
   font-weight: 100;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
-  line-height: 22px;
-  font-size: 16px;
+  line-height: 28px;
+  font-size: 20px;
   font-weight: 200;
+}
+
+@media screen and (max-width: 1600px) {
+  .single .text--sm {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .single .wheel-preview__text {
@@ -2532,7 +2551,7 @@ html {
 }
 
 .single .wheel-item__content {
-  padding: 200px 200px;
+  padding: 300px 500px;
   margin-top: 146px;
 }
 
