@@ -3,6 +3,7 @@ let currentPixel = window.pageYOffset;
 var activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
 var wheel = document.getElementsByClassName("wheel")[0];
 
+let infoRing = document.getElementsByClassName("info-ring")[0];
 var footer = document.getElementById("footer-white");
 var isHovering = false;
 var isHoveringFooter = false;
@@ -12,19 +13,17 @@ let changeFooter = false;
 let reset = false;
 let growCircle = false;
 
-function looper() {
-	const nPixel = window.pageYOffset;
-	let diff = nPixel - currentPixel;
-	let speed = diff * 0.0025;
+// function looper() {
+// 	const nPixel = window.pageYOffset;
+// 	let diff = nPixel - currentPixel;
+// 	let speed = diff * 0.0025;
 
-	if (speed !== 0) {
-		// section.style.transform += "skewY(" + speed + "deg)";
-	}
-	//     section.style.transform = "skewY(" + currentPixel + "deg)";
-	currentPixel = nPixel;
-	requestAnimationFrame(looper);
-}
-looper();
+// 	if (speed !== 0) {
+// 	}
+// 	currentPixel = nPixel;
+// 	requestAnimationFrame(looper);
+// }
+// looper();
 
 
 var windowSize = window.innerWidth;
@@ -76,12 +75,14 @@ function initSwiper() {
 
 			on: {
 				click: function () {
-
-					// this.preventDefault();
 				},
 				slideChange: function () {
-
-
+					if(( this.previousIndex - this.activeIndex ) < 0){
+						TweenMax.to(infoRing, 1.5, {rotation: '+= 90'}); 
+					}else {
+						TweenMax.to(infoRing, 1.5, {rotation: '-= 90'}); 
+					}
+				
 					setTimeout(() => {
 						activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
 					}, 200);
@@ -140,16 +141,6 @@ const initCursor = () => {
 	// transform the innerCursor to the current mouse position
 	// use requestAnimationFrame() for smooth performance
 	const render = () => {
-		// document.addEventListener('mousedown', () => {
-		// 	console.log("mousedown")
-		// 	TweenMax.to(innerCursor, 1.0, {scale:5.5}); 
-
-		// });
-		// document.addEventListener('mouseup', () => {
-		// 	console.log("mousedown")
-		// 	TweenMax.to(innerCursor, 1.0, {scale:1.0}); 
-
-		// });
 		innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
 		if (isHoveringFooter) {
 			innerCursor.style.background = "#e2183a";
@@ -236,20 +227,13 @@ const initCanvas = () => {
 		group.position = new paper.Point(lastX, lastY);
 
 		if (isHoveringWheel && !isHovering) {
-			// polygon.strokeColor = "#e2183a";
 			arrows.visible = true;
-			// innerCursor.style.background = "red";
-			// innerCursor.style.transformOrigin = "center";
-			// innerCursor.style.width = "40px";
-			// innerCursor.style.height = "40px";
-			// TweenMax.to(innerCursor, 1.0, {scale:5.5}); 
 
 		} else {
 			arrows.visible = false;
 		}
 		if (isHoveringFooter) {
 			if (changeFooter === false) {
-				// polygon.fillColor = "#e2183a";
 				polygon.strokeColor = "#e2183a";
 				changeFooter = true;
 			}

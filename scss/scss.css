@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap");
 @font-face {
   font-family: "Butler Stencil";
   src: url("/wp-content/themes/madvo.design/fonts/butler_regular_stencil.woff");
@@ -356,8 +357,7 @@ span {
 }
 
 .headline--xl {
-  font-family: "Berthold Akzidenz Grotesk", sans-serif;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
   font-weight: 500;
   font-size: 109px;
@@ -376,7 +376,7 @@ span {
 
 @media screen and (max-width: 1600px) {
   .headline--xl {
-    font-size: 119px;
+    font-size: 108px;
   }
 }
 
@@ -1082,6 +1082,15 @@ canvas.threejs {
           animation: 0.5s push-up forwards;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
           animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.info-ring {
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 8%;
+  top: 82px;
 }
 
 html {

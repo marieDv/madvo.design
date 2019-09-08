@@ -584,6 +584,15 @@ canvas.threejs {
           animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+.info-ring {
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 8%;
+  top: 82px;
+}
+
 html {
   cursor: none;
 }

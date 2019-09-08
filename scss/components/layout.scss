@@ -438,7 +438,14 @@ canvas.threejs {
     }
   }
 }
-
+.info-ring {
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 8%;
+  top: 82px;
+}
 html {
   cursor: none;
 }

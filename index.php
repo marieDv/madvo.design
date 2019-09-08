@@ -45,19 +45,10 @@
             <ul class="pin-r absolute mr-12 nav">
                 <li class="nav-items text--xs inline mt-16 cursor-pointer ml-4 pinm-r">
                     <ul class="name inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
-                        Marie Dvorzak
-                        <!-- <li class="text-small">
-                            Designer / Coder
-                        </li> -->
+                        <!-- Marie Dvorzak -->
+                        <img id="" alt="about me ring" class="info-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/info-ring.png">
+
                     </ul>
-                    <!-- <ul class="nav-fast">
-                        <li id="" class="inline active toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-                            work
-                        </li>
-                        <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-                            <a href="<?php echo get_page_link(780); ?>">about</a>
-                        </li>
-                    </ul> -->
                 </li>
             </ul>
         </div>
@@ -79,7 +70,7 @@
         <?php
         global $i;
         global $post;
-        $args = array('category' => 25, 'posts_per_page' => -1,); ///25 //2 for dev
+        $args = array('category' => 2, 'posts_per_page' => -1,); ///25 //2 for dev
         $work = get_posts($args);
 
         $args2 = array('category' => 30); ///
@@ -161,7 +152,7 @@
             <?php
             global $i;
             global $post;
-            $args = array('category' => 25); //25 //2 for dev
+            $args = array('category' => 2); //25 //2 for dev
             $work = get_posts($args);
 
             $argse2 = array('category' => 30);
