@@ -13,21 +13,9 @@ let changeFooter = false;
 let reset = false;
 let growCircle = false;
 
-// function looper() {
-// 	const nPixel = window.pageYOffset;
-// 	let diff = nPixel - currentPixel;
-// 	let speed = diff * 0.0025;
-
-// 	if (speed !== 0) {
-// 	}
-// 	currentPixel = nPixel;
-// 	requestAnimationFrame(looper);
-// }
-// looper();
 
 
 var windowSize = window.innerWidth;
-
 let overview = document.getElementById("overview-holder");
 if (overview) { initOverview(); } else {
 	initSwiper();

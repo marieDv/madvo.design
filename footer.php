@@ -15,14 +15,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 
 <script>var universal = "http://localhost/wordpress/wp-content/uploads/2019/05/finalimplementation.png";</script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/EffectComposer.js"></script>
+<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/EffectComposer.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/RenderPass.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ShaderPass.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/CopyShader.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/SepiaShader.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/VolumetericLightShader.js"></script>
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/AdditiveBlendingShader.js"></script>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/canvas.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/canvas.js"></script> -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/skew.js"></script>
 

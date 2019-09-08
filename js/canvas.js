@@ -24,23 +24,6 @@ var occlusionComposer, lightSphere,
     DEFAULT_LAYER = 0,
     OCCLUSION_LAYER = 1;
 
-/**
- *render and camera
- */
-let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs')[0] });
-renderer.setClearColor(0xffffff, 0);//default color for bg
-renderer.setPixelRatio(window.devicePixelRatio);//for higher density displays
-let addtocanvas = 0;
-renderer.setSize(window.innerWidth, window.innerHeight + addtocanvas); //set to window size
-let scene = new THREE.Scene();
-originalAspect = window.innerWidth / window.innerHeight;
-let camera = new THREE.PerspectiveCamera(32, window.innerWidth / (window.innerHeight + addtocanvas), 0.1, 1000); //smaller when further away
-camera.position.set(0, 0, 200);
-
-camera.lookAt(scene.position);
-window.addEventListener('resize', onWindowResize, false);
-
-
 //****** letIABLES *******
 let threeDObj;
 let cube;
@@ -62,6 +45,42 @@ const HEIGHT_AMPLIFIER = 0.01;
 let starsGroup = new THREE.Group();
 
 
+/**
+ *render and camera
+ */
+let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs')[0] });
+renderer.setClearColor(0xffffff, 0);//default color for bg
+renderer.setPixelRatio(window.devicePixelRatio);//for higher density displays
+let addtocanvas = 0;
+renderer.setSize(window.innerWidth, window.innerHeight + addtocanvas); //set to window size
+let scene = new THREE.Scene();
+originalAspect = window.innerWidth / window.innerHeight;
+let camera = new THREE.PerspectiveCamera(32, window.innerWidth / (window.innerHeight + addtocanvas), 0.1, 1000); //smaller when further away
+camera.position.set(0, 0, 200);
+
+camera.lookAt(scene.position);
+window.addEventListener('resize', onWindowResize, false);
+
+////////////////////////////////////////////////////////
+//////// COMPOSER
+
+let composer = new THREE.EffectComposer(renderer);
+
+//Passes
+let renderPass = new THREE.RenderPass(scene, camera);
+composer.addPass(renderPass);
+renderPass.renderToScreen = true;
+
+let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
+pass1.uniforms.weight.value = 3;//decay density weight
+pass1.uniforms.decay.value = 0.85;
+pass1.uniforms.density.value = 0.09;
+pass1.needsSwap = false;
+composer.addPass(pass1);
+pass1.renderToScreen = true;
+///////// COMPOSER END
+
+
 animation();
 
 image();
@@ -70,7 +89,7 @@ scene1();
 
 function image() {
     var image = new Image();
-    image.src = "http://localhost/wordpress/wp-content/themes/wp-bootstrap_2/assets/cactus.png";
+    image.src = "http://localhost/wordpress/wp-content/themes/wp-bootstrap_2/assets/wild.png";
     image.onload = function () {
         WIDTH = image.width;
         HEIGHT = image.height;
@@ -141,9 +160,6 @@ function scene1() {
 
     lights(scene);
     let geometry = new THREE.SphereGeometry(100, 40, 40);
-    //     console.log(WIDTH + "height:" +HEIGHT)
-    // let plane = new THREE.PlaneBufferGeometry(WIDTH * SIZE_AMPLIFIER, HEIGHT * SIZE_AMPLIFIER, WIDTH - 1, HEIGHT - 1);
-    // let plane = new THREE.PlaneBufferGeometry(10, 10, 10 - 1, 10 - 1);
     let plane = new THREE.PlaneBufferGeometry(WIDTH, HEIGHT, WIDTH - 1, HEIGHT - 1);
     plane.castShadow = true;
     plane.receiveShadow = true;
@@ -155,10 +171,9 @@ function scene1() {
     //     vertices[i] = returnArray[i] * 80;
     // }
 
-    for (i = 0, j = 2; i < data.length; i += 4, j += 3) {
+    for (i = 0, j = 2; i < returnArray.length; i += 4, j += 3) {
         vertices[j] = returnArray[i] * HEIGHT_AMPLIFIER;
         if (returnArray[i] === 0) {
-            console.log("entering?")
             vertices[j] = -90000;
         }
 
@@ -174,7 +189,7 @@ function scene1() {
     // let material = new THREE.MeshNormalMaterial({ color: 0x888888 });
     let material = new THREE.PointsMaterial({
         depthWrite: true,
-        color: 0xeb4034,
+        color: 0x095ee6,
         // blending: THREE.AdditiveBlending
     })
     cube = new THREE.Mesh(plane, material);
@@ -192,89 +207,18 @@ function scene1() {
     starsGroup.add(starField);
     starsGroup.add(starFieldCopy);
     starsGroup.add(starFieldCopyCopy);
+    // starsGroup.position.z -= 80;
     scene.add(starsGroup)
-    starsGroup.rotation.y += 10;
+    starsGroup.rotation.y += 3;
     warpVector = new THREE.Vector3(0, 50, 0); //50
     warpVector2 = new THREE.Vector3(20, 120, 0);
 
-    // scene.add(cube)
 
 
 
-
-    // scene.add(cube);
-
-
-
-    // load a resource
-    // loader.load(
-    //     // resource URL
-    //     universal,
-
-    //     // onLoad callback
-    //     function (texture) {
-    //         // in this example we create the material when the texture is loaded
-    //         var material = new THREE.MeshStandardMaterial({
-    //             map: texture,
-    //             roughness: 1.0,
-    //             flatShading: true,
-    //         });
-    //         cube = new THREE.Mesh(geometry, material);
-    //         cube.material.map.needsUpdate = true;
-    //         warpVector = new THREE.Vector3(0, 50, 0); //50
-    //         warpVector2 = new THREE.Vector3(20, 120, 0);
-    //         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-    //             texture.offset.set( 0, 0 );
-    //             texture.repeat.set( 5, 5 );
-
-    //         cube.geometry.dynamic = true;
-    //         cube.material.needsUpdate = true;
-    //         scene.add(cube);
-    //     },
-
-    //     // onProgress callback currently not supported
-    //     undefined,
-
-    //     // onError callback
-    //     function (err) {
-    //         console.error('An error happened.');
-    //         let material = new THREE.MeshNormalMaterial({ color: 0xffff00 });
-    //         cube = new THREE.Mesh(geometry, material);
-    //         warpVector = new THREE.Vector3(0, 50, 0); //50
-    //         warpVector2 = new THREE.Vector3(20, 120, 0);
-    //         scene.add(cube);
-    //     }
-    // );
-
-
-
-
-    renderer.render(scene, camera);
+    // renderer.render(scene, camera);
 }
 
-function addSphere(scene) {
-    console.log("sphere")
-    let geometry = new THREE.SphereGeometry(
-        30,
-        870,
-        870);
-
-    let mat = new THREE.MeshNormalMaterial();
-    mesh = new THREE.Mesh(geometry, mat);
-    mesh.castShadow = true;
-    mesh.receiveLights = true;
-    mesh.geometry.dynamic = true;
-    mesh.material.needsUpdate = true;
-    // mesh.scale.set(0.4, 0.4, 0.4);
-    mesh.rotation.x = 30;
-    scene.add(mesh);
-    console.log(mesh)
-    warpVector = new THREE.Vector3(0, 50, 0); //50
-    warpVector2 = new THREE.Vector3(20, 120, 0);
-}
-
-function render() {
-}
 
 function lights(scene) {
 
@@ -324,13 +268,14 @@ function animation() {
 
         }
         // wave();
-        cube.rotation.y += 0.0009 + 0.01 * Math.random();
-        cube.rotation.z += 0.0007 + 0.01 * Math.random();
+        // starsGroup.rotation.y += 0.0009 + 0.01 * Math.random();
+        // starsGroup.rotation.z += 0.0007 + 0.01 * Math.random();
         // cube.position.x += 0.03;
         requestAnimationFrame(animation);
-
-        // composer.render();
-        renderer.render(scene, camera);
+        // composer.setRenderTarget( target )
+        // composer.clear();
+        composer.render();
+        // renderer.render(scene, camera);
         // wave();
 
     }, 80);
@@ -339,9 +284,10 @@ function animation() {
  * wave animation
  */
 function wave() {
+    console.log(cube)
     const { vertices } = cube.geometry;
     const { frequenz, speed, radius, magnitude, waveDepth } = config;
-
+    console.log("wavy" + vertices)
     for (let i = 0; i < vertices.length; i++) {
         const v = vertices[i];
         const dist = v.distanceTo(warpVector);
