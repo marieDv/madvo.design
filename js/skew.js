@@ -76,7 +76,8 @@ function initSwiper() {
 					}, 200);
 
 					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
-
+					universalIndex = this.activeIndex;
+					console.log(universal)
 				}
 			}
 		});
