@@ -5,9 +5,13 @@ var wheel = document.getElementsByClassName("wheel")[0];
 
 let infoRing = document.getElementsByClassName("info-ring")[0];
 var footer = document.getElementById("footer-white");
+var marieLink = document.getElementById("toggleFace");
+let portraitcursor = document.getElementsByClassName("cursor--canvas-about")[0];
+
 var isHovering = false;
 var isHoveringFooter = false;
 var isHoveringWheel = false;
+var isHoveringMarie = false;
 let once = false;
 let changeFooter = false;
 let reset = false;
@@ -17,6 +21,10 @@ let growCircle = false;
 
 var windowSize = window.innerWidth;
 let overview = document.getElementById("overview-holder");
+
+
+
+
 if (overview) { initOverview(); } else {
 	initSwiper();
 }
@@ -60,24 +68,39 @@ function initSwiper() {
 			simulateTouch: true,
 			slideToClickedSlide: true,
 			spaceBetween: 10,
-
+			cssMode: true,
+			// followFinger: true,
+			speed: 1500,
 			on: {
 				click: function () {
 				},
 				slideChange: function () {
+					if(!document.getElementsByClassName("swiper-container")[0].classList.contains("about-container")){
+				
+				
 					if(( this.previousIndex - this.activeIndex ) < 0){
 						TweenMax.to(infoRing, 1.5, {rotation: '+= 90'}); 
 					}else {
 						TweenMax.to(infoRing, 1.5, {rotation: '-= 90'}); 
 					}
-				
+				this.simulateTouch = false;
+				console.log(this.simulateTouch)
+					// this.noSwiping = true;
+					// this.allowSlidePrev = true;
+					// this.allowSlideNext = true;
+
+					document.getElementsByClassName("swiper-container")[0].classList.add("swiper-container--notouch");
 					setTimeout(() => {
 						activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
 					}, 200);
+					setTimeout(() => {
+						document.getElementsByClassName("swiper-container")[0].classList.remove("swiper-container--notouch");
 
+					}, 1500);
 					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
 					universalIndex = this.activeIndex;
 					console.log(universal)
+				}
 				}
 			}
 		});
@@ -97,7 +120,6 @@ const initCursor = () => {
 		if (document.getElementsByClassName("swiper-slide-active")[0]) {
 			activeSlide = document.getElementsByClassName("swiper-slide-active")[0].children[1];
 		}
-		// console.log(document.getElementsByClassName("swiper-slide-active")[0].children[1])
 		if (wheel) {
 			wheel.addEventListener("mouseover", () => {
 				isHoveringWheel = true;
@@ -106,6 +128,15 @@ const initCursor = () => {
 				isHoveringWheel = false;
 			});
 		}
+		// if (marieLink) {
+		// 	marieLink.addEventListener("mouseover", () => {
+		// 		isHoveringMarie = true;
+		// 	});
+		// 	marieLink.addEventListener("mouseleave", () => {
+		// 		isHoveringMarie = false;
+		// 	});
+		// }
+
 		if (footer) {
 			footer.addEventListener("mouseover", () => {
 				isHoveringFooter = true;
@@ -130,18 +161,25 @@ const initCursor = () => {
 	// transform the innerCursor to the current mouse position
 	// use requestAnimationFrame() for smooth performance
 	const render = () => {
+	
 		innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
 		if (isHoveringFooter) {
 			innerCursor.style.background = "#e2183a";
 		} else {
 			innerCursor.style.background = "#fff";
 		}
-		requestAnimationFrame(render);
+		// setTimeout(() => {
+
+		// }, 1/30);
+
+		setTimeout(function(){ //throttle requestAnimationFrame to 20fps
+			requestAnimationFrame(render);
+	}, 1000/20)
+
 	};
 	requestAnimationFrame(render);
 };
 
-initCursor();
 
 
 
@@ -188,8 +226,13 @@ const initCanvas = () => {
 	raster.scale(0.005);
 	raster.visible = false;
 
+	let portrait = new paper.Raster('portrait');
+	portrait.scale(0.25);
+	portrait.visible = false;
+
+
 	polygon.smooth();
-	group = new paper.Group([polygon, raster, arrows]);
+	group = new paper.Group([polygon, raster, arrows, portrait]);
 	group.applyMatrix = false;
 
 
@@ -220,6 +263,20 @@ const initCanvas = () => {
 
 		} else {
 			arrows.visible = false;
+		}
+		if(isHoveringMarie){
+			portraitcursor.classList.add("cursor--canvas-about--active");
+			portraitcursor.classList.remove("cursor--canvas-about--leaving");
+			portrait.visible = true;
+		}else {
+			if(portrait.visible === true){
+				portraitcursor.classList.remove("cursor--canvas-about--active");
+				portraitcursor.classList.add("cursor--canvas-about--leaving");
+			}
+			setTimeout(() => {
+				portrait.visible = false;				
+			}, 400);
+
 		}
 		if (isHoveringFooter) {
 			if (changeFooter === false) {
@@ -272,5 +329,6 @@ const initCanvas = () => {
 	}
 }
 
-initCanvas();
 
+initCursor();
+initCanvas();
