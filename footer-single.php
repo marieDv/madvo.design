@@ -269,5 +269,5 @@ void main() {
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/canvas-single.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/skew.js"></script>
 <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/skewAbout.js"></script> -->
-<!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ScrollMagic.js"></script> -->
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ScrollMagic-single.js"></script>
 

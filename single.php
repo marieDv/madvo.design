@@ -54,7 +54,7 @@
       </li>
     </ul>
   </div>
-  <div class="scroll-popup">Scroll<span></span></div>
+  <div id="scroll-popup" class="scroll-popup"><p id="scroll-popup-text">Scroll</p><span id="scroll-popup-line"></span></div>
   <?php
   while (have_posts()) : the_post();
 

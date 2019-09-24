@@ -303,6 +303,8 @@ canvas.threejs {
   position: fixed;
   padding-top: inherit;
   display: none;
+  display: -ms-grid;
+  display: grid;
 }
 
 @media screen and (max-width: 860px) {

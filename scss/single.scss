@@ -14,6 +14,9 @@
     width: 100%;
     text-align: left;
   }
+  .scroll-popup-line {
+    transform-origin: top;
+  }
   .canvas-container {
     width: 50%;
     height: 500px;
@@ -27,6 +30,15 @@
       right: 0;
       left: 0;
       top: 10vh;
+    }
+  }
+  #image-container {
+
+  }
+  #text-anchor {
+    &.moveImages {
+      opacity: 0;
+      height: 400px;
     }
   }
   .text-container {

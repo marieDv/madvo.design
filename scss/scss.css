@@ -804,6 +804,8 @@ canvas.threejs {
   position: fixed;
   padding-top: inherit;
   display: none;
+  display: -ms-grid;
+  display: grid;
 }
 
 @media screen and (max-width: 860px) {
@@ -3044,6 +3046,11 @@ html {
   text-align: left;
 }
 
+.single .scroll-popup-line {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
 .single .canvas-container {
   width: 50%;
   height: 500px;
@@ -3062,6 +3069,11 @@ html {
     left: 0;
     top: 10vh;
   }
+}
+
+.single #text-anchor.moveImages {
+  opacity: 0;
+  height: 400px;
 }
 
 .single .text-container {
