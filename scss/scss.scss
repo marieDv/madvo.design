@@ -36,14 +36,26 @@
 html {
   background: #f7f0e9;
   background: #a2a2a2;
+  
+  opacity: 0;
   background: #020202;
+  animation: 1.5s load-screen forwards;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 body {
   overflow-x: hidden;
-  // height:100vh;
-
 }
 
+@keyframes load-screen {
+  0% {
+    opacity: 0;
+    background: #020202;
+  }
+  100% {
+    opacity: 1;
+    background: #020202;
+  }
+}
 
 @keyframes grain {
   0%, 100% { transform:translate(0, 0) }

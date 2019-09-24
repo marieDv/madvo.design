@@ -259,7 +259,7 @@ void main() {
 
 
 <script>
-        var universal = "http://localhost/wordpress/wp-content/uploads/2019/09/cactus-1.png";
+        var universal = "http://localhost/wordpress/wp-content/uploads/2019/09/cactus-1-1.png";
         var universalIndex = 0;
 </script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/EffectComposer.js"></script>

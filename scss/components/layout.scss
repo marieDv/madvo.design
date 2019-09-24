@@ -166,9 +166,9 @@ li:last-child {
     font-size: 18px;
 
     @media screen and (max-width: 842px) {
-    width: 300px;
-    font-size: 16px;
-    font-weight: 400;
+      width: 300px;
+      font-size: 16px;
+      font-weight: 400;
     }
   }
 }
@@ -232,13 +232,16 @@ canvas.threejs {
     background-color: #ffffff;
     position: fixed;
     padding-top: inherit;
+    display: none;
+    @media screen and (max-width: 860px) {
+      display: grid;
+
+    }
     // animation: 0.9s footerBlendIn forwards;
     a {
       color: #000000;
     }
   }
-
-
 
   @media screen and (max-width: 842px) {
     position: relative;
@@ -287,15 +290,14 @@ canvas.threejs {
 
 @keyframes footerBlendIn {
   0% {
-   opacity: 0.2;
-   transform: translateY(20px);
+    opacity: 0.2;
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
     transform: translateY(-20px);
   }
 }
-
 
 .wheel {
   transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -447,8 +449,11 @@ canvas.threejs {
   left: 0;
   right: 0;
   position: absolute;
-  width: 8%;
+  width: 156px;
   top: 82px;
+  @media screen and (max-width: 1600px) {
+    width: 112px;
+  }
 }
 html {
   cursor: none;

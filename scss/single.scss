@@ -14,16 +14,77 @@
     width: 100%;
     text-align: left;
   }
+  .canvas-container {
+    width: 50%;
+    height: 500px;
+    @media screen and (max-width: 860px) {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      margin-top: -191px;
+      filter: brightness(0.2);
+      margin: 0 auto;
+      right: 0;
+      left: 0;
+      top: 10vh;
+    }
+  }
+  .text-container {
+    width: 50%;
+    @media screen and (max-width: 860px) {
+      width: 100%;
+      z-index: 2;
+    }
+  }
+  .ic-s-screen {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    margin-top: 30vh;
+    @media screen and (max-width: 1600px) {
+      margin-top: 10vh;
+    }
+    @media screen and (max-width: 860px) {
+      height: auto;
+    }
+  }
+  .scroll-popup {
+    position: absolute;
+    bottom: 70px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 200px;
+
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+
+    span {
+      background-color: white;
+      width: 1px;
+      height: 50px;
+      display: block;
+      border-radius: 8px;
+      position: absolute;
+      margin: 20px auto;
+      left: 0;
+      right: 0;
+    }
+  }
   .info-ring {
     position: fixed;
     left: 42px;
     margin: inherit;
-    width: 11%;
+    // width: 11%;
     top: -41px;
   }
   &-container {
     margin: 0 auto;
-    // padding: 0px 480px;
+
     @media screen and (max-width: 1600px) {
       // padding: 0px 140px;
     }
@@ -132,8 +193,8 @@
     max-width: 1900px;
     text-align: left;
     @media screen and (max-width: 1600px) {
-      // font-size: 64px;
-      // max-width: 600px;
+      font-size: 48px;
+      max-width: 400px;
     }
     @media screen and (max-width: 842px) {
       font-size: 42px;
@@ -157,21 +218,20 @@
     line-height: 2.4;
     font-weight: 300;
 
-    @media screen and (max-width: 1600px) {
-      // font-size: 16px;
-      // line-height: 24px;
+    @media screen and (max-width: 860px) {
+      font-size: 16px;
+      line-height: 24px;
     }
   }
   .wheel-preview__text {
     margin-top: 0;
   }
   .wheel-item__content {
-    padding: 300px 500px;
-    margin-top: 146px;
+    padding: 0 500px;
+    padding: 0 300px;
+    // margin-top: 146px;
     @media screen and (max-width: 1600px) {
-      padding: 80px 50px;
-      padding: 160px 200px;
-      padding: 160px 300px;
+      padding: 130px 100px;
     }
     @media screen and (max-width: 1300px) {
       padding: 160px 100px;

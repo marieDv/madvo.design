@@ -44,36 +44,39 @@
       <a class="burger-menu " href="<?php echo get_home_url() ?>">
         <!-- <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png"> -->
       </a>
-        <!-- <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
-          Marie Dvorzak
-          <li class="text-small">
-            Designer / Coder
-          </li>
+        <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/"> 
+        <!-- <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
+        <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
+        <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a> -->
         </ul>
-        <ul class="nav-fast">
+        <!-- <ul class="nav-fast">
           <li id="" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
           <a href="<?php echo get_home_url() ?>">work</a>
           </li>
           <li id="toggleabout" class="inline active toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
           <a href="<?php echo get_page_link(780); ?>">about</a>
           </li>
-        </ul> -->
+        </ul>  -->
       </li>
     </ul>
-    <div id="info-ring" class="info-ring">
-  
-      <!-- <img id="" alt="about me ring" class="" src="<?php bloginfo('stylesheet_directory'); ?>/assets/info-ring.png"> -->
-      <!-- <a target="_blank" href="https://www.instagram.com/madvo.design/" class="left-link">instagram</a>
-      <a class="left-link" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">e-mail</a> -->
-    </div>
   </div>
-
+  <div id="info-ring" class="info-ring">
+  
+  <img id="" alt="about me ring" class="" src="<?php bloginfo('stylesheet_directory'); ?>/assets/info-ring.png">
+  <!-- <a target="_blank" href="https://www.instagram.com/madvo.design/" class="left-link">instagram</a>
+  <a class="left-link" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">e-mail</a> -->
+</div>
   <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about ">
       <img alt="me" id="portrait" src="<?php bloginfo('stylesheet_directory'); ?>/assets/derpme.jpg">
+
     <div class="about-clients  inline text-left">
-    <h2 class="ic-headline--xl-xl">Hey there, I am <a id="toggleFace">Marie</a> a Digital Designer with a passion for coding!</h2>
-    <h2 id="trigger1" class=" ic-headline--xl mt-32 info-section">Right now I am searching for a job as <strong>UI-Designer</strong> in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography (and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them at any chance. Asides from that I spend my free time looking at modern art, shopping for plants and defending human rights.
-</h2>
+    <h2 id="about-title" class="ic-headline--xl-xl"><span id="triggerH11">Hey there, I am </span><span id="triggerH12"><a id="toggleFace">Marie</a><br> a Digital Designer with</span><br><span id="triggerH13">a passion for coding!</span></h2>
+    <div id="trigger3" class="indicators"></div>
+
+    <div id="trigger1" class=" ic-headline--xl mt-32 info-section">  <span id="trigger-start-subheadline" class="start-subheadline-anim">who?</span><h2  class="start-subtext-anim">Right now I am searching for a job as UI-Designer in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography (and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them at any chance. Asides from that I spend my free time looking at modern art, shopping for plants and defending human rights.
+    <!-- My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome! 💥 -->
+  </h2>
+</div>
       <p class="text--sm text-left">
         <!-- ... based in Vienna, currently specializing in Frontend Development and UI-Design with Vue, React and Three.js. If you have a project that gives me the opportunity to learn or wanna chit-chat write me an email! -->
         <!-- Welcome to my web page! Pretty cool huh? I am a Visual artist from Vienna. Right now I am searching for a job as <strong>UI-Designer</strong> in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography (and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them A LOT. Asides from that I spend my free time looking at modern art, shopping for plants and defending human rights 🌈. -->
@@ -102,31 +105,42 @@
     </div>
 
   </div>
-  <div id="trigger3">TRIGGER</div>
-  <div id="" class="about-swiper about-wheel">
+  <!-- <div id="trigger3" class="indicators">Resume</div> -->
+  
+  <div id="trigger2" class="about-swiper about-wheel">
     <!-- <h3 class="ic-headline--xl-xl">What I've done so far</h3> -->
-  <div id="animate3" class="swiper-container about-container">
-    <div id="" class="aboutOverview swiper-wrapper">
-      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">Wild<p>2019</p><span class="text--sm"> 4 month Development Intern</span></div>
-      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">FH Hagenberg<p>2016 - 2019</p><span>BSc in Mediatechnology and Design</span></div>
-      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"> Plymouth<br>University UK<p>2018/2019</p><span>Exchange semester <br> Internet Design & Graphic Communication</span></div>
+    <h2 id="education-headline" class="ic-headline--xl-xl">Experience and <br>Education</h2>
+      <span id="" class="ic-headline--xl">My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome!</span>
 
-      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"> Campaigning <br>Bureau <p>2017 / 2018</p><span>Development/UI-Design Intern</span></div>
-      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"> FIV Austria <p>2015/2019</p><span>Freelance Content Manager in Wordpress</span></div>
-      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"> Graphische<p>2010/2015</p><span>Higher school certificate in <strong>Graphicdesign</strong><br> @ Die Graphische in Vienna</span></div>
+    <a href="<?php bloginfo('stylesheet_directory'); ?>/assets/dvorzak_marie_resume.pdf" download>Download Resume</a>
+  <div id="animate3" class="swiper-container about-container">
+    <div id="about-swiper" class="aboutOverview swiper-wrapper">
+      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"><p>2019</p>Wild<span class="text--sm"> 4 month Development Intern</span></div>
+      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"><p>2016 – 2019</p>FH Hagenberg<span>BSc in Mediatechnology and Design</span></div>
+      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"><p>2018 – 2019</p>Plymouth<br>University UK<span>Exchange semester <br> Internet Design & Graphic Communication</span></div>
+
+      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"><p>2017 / 2018</p>Campaigning <br>Bureau<span>Development/UI-Design Intern</span></div>
+      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"><p>2015 – 2019</p>FIV Austria<span>Freelance Content Manager in Wordpress</span></div>
+      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized"><p>2010 – 2015</p>Graphische<span>Higher school certificate in <strong>Graphicdesign</strong><br> @ Die Graphische in Vienna</span></div>
 
     </div>
   </div>
-  </div>
+
   <div class="about-clients resume-section">
-  <span class="ic-headline--xl">My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome! 💥</span>
-        <a href="<?php bloginfo('stylesheet_directory'); ?>/assets/dvorzak_marie_resume.pdf" download>Download Resume</a>
+  <!-- <span id="" class="ic-headline--xl">My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome! 💥</span> -->
+        <!-- <a href="<?php bloginfo('stylesheet_directory'); ?>/assets/dvorzak_marie_resume.pdf" download>Download Resume</a> -->
         </div>
-
-  <div class="text--sm text-left mt-16 contact-section">
-    <p>Let’s create <strong>something amazing</strong> together!</p>
-   <div> <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!"><strong>dvorzak.marie@gmail.com</strong></a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a></div>
   </div>
 
-  <?php require(dirname(__FILE__) . '/footer-single.php'); ?>
+
+  <div id="something-amazing" class="text--sm text-left mt-16 contact-section">
+    <p>Let’s create <strong>something amazing</strong> together!</p>
+   <div id="contacts"> <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!"><strong>dvorzak.marie@gmail.com</strong></a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a></div>
+  </div>
+<footer id="footer-about" class="footer white">
+        <a class="bottomNav work active">© Marie Dvorzak</a>
+        <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
+        <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
+</footer>
+  <?php require(dirname(__FILE__) . '/footer-about.php'); ?>
 </section>

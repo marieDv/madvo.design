@@ -302,6 +302,14 @@ canvas.threejs {
   background-color: #ffffff;
   position: fixed;
   padding-top: inherit;
+  display: none;
+}
+
+@media screen and (max-width: 860px) {
+  .footer.white {
+    display: -ms-grid;
+    display: grid;
+  }
 }
 
 .footer.white a {
@@ -597,8 +605,14 @@ canvas.threejs {
   left: 0;
   right: 0;
   position: absolute;
-  width: 8%;
+  width: 156px;
   top: 82px;
+}
+
+@media screen and (max-width: 1600px) {
+  .info-ring {
+    width: 112px;
+  }
 }
 
 html {

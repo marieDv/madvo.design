@@ -45,35 +45,40 @@ function initSwiper() {
 
 	if (window.innerWidth > 900) {
 		let mySwiper = new Swiper('.swiper-container', {
-			slidesPerView: 'auto',
-			centeredSlides: true,
-      simulateTouch: true,
-      slidesPerView: 3,
+			// slidesPerView: 'auto',
+			// centeredSlides: true,
+			// slidesOffsetBefore: 264,
+			simulateTouch: true,
+			slidesPerView: 2,
 			slideToClickedSlide: true,
-			spaceBetween: 500,
-
+			spaceBetween: 300,
+			breakpoints: {
+				1600: {
+					// slidesOffsetBefore: 132
+				}
+			},
 
 			on: {
 				click: function () {
 				},
 				slideChange: function () {
-					if(!document.getElementsByClassName("swiper-container")[0].classList.contains("about-container")){
-				
-				
-					if(( this.previousIndex - this.activeIndex ) < 0){
-						TweenMax.to(infoRing, 1.5, {rotation: '+= 90'}); 
-					}else {
-						TweenMax.to(infoRing, 1.5, {rotation: '-= 90'}); 
-					}
-				
-					setTimeout(() => {
-						activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
-					}, 200);
+					if (!document.getElementsByClassName("swiper-container")[0].classList.contains("about-container")) {
 
-					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
-					universalIndex = this.activeIndex;
-					console.log(universal)
-				}
+
+						if ((this.previousIndex - this.activeIndex) < 0) {
+							TweenMax.to(infoRing, 1.5, { rotation: '+= 90' });
+						} else {
+							TweenMax.to(infoRing, 1.5, { rotation: '-= 90' });
+						}
+
+						setTimeout(() => {
+							activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
+						}, 200);
+
+						universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
+						universalIndex = this.activeIndex;
+						console.log(universal)
+					}
 				}
 			}
 		});
@@ -134,7 +139,7 @@ const initCursor = () => {
 	// transform the innerCursor to the current mouse position
 	// use requestAnimationFrame() for smooth performance
 	const render = () => {
-	
+
 		innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
 		if (isHoveringFooter) {
 			innerCursor.style.background = "#e2183a";
@@ -145,9 +150,9 @@ const initCursor = () => {
 
 		// }, 1/30);
 
-		setTimeout(function(){ //throttle requestAnimationFrame to 20fps
+		setTimeout(function () { //throttle requestAnimationFrame to 20fps
 			requestAnimationFrame(render);
-	}, 1000/20)
+		}, 1000 / 20)
 
 	};
 	requestAnimationFrame(render);
@@ -229,17 +234,17 @@ const initCanvas = () => {
 		} else {
 			arrows.visible = false;
 		}
-		if(isHoveringMarie){
+		if (isHoveringMarie) {
 			portraitcursor.classList.add("cursor--canvas-about--active");
 			portraitcursor.classList.remove("cursor--canvas-about--leaving");
 			portrait.visible = true;
-		}else {
-			if(portrait.visible === true){
+		} else {
+			if (portrait.visible === true) {
 				portraitcursor.classList.remove("cursor--canvas-about--active");
 				portraitcursor.classList.add("cursor--canvas-about--leaving");
 			}
 			setTimeout(() => {
-				portrait.visible = false;				
+				portrait.visible = false;
 			}, 400);
 
 		}
