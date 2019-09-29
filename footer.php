@@ -248,8 +248,10 @@ varying vec2 vUv;
 uniform float time;
 
 void main() {
-    gl_FragColor = texture2D(texture1, vUv); // Displays Nothing
+     gl_FragColor = texture2D(texture1, vUv); // Displays Nothing   * abs(sin(time / 5.0))
     //gl_FragColor = vec4(0.5, 0.2, 1.0, 1.0); // Works; Displays Flat Color
+  
+
 }
 </script>
 
@@ -259,7 +261,7 @@ void main() {
 
 
 <script>
-        var universal = "http://localhost/wordpress/wp-content/uploads/2019/09/cactus-1-1.png";
+        var universal = "http://localhost/wordpress/wp-content/uploads/2019/09/cambuilder.png";
         var universalIndex = 0;
 </script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/EffectComposer.js"></script>

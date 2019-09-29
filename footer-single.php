@@ -267,7 +267,7 @@ void main() {
 
 <!-- <script>var universal = "http://localhost/wordpress/wp-content/uploads/2019/05/finalimplementation.png";</script> -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/canvas-single.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/skew.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/skew-single.js"></script>
 <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/skewAbout.js"></script> -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ScrollMagic-single.js"></script>
 

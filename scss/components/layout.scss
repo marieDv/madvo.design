@@ -133,19 +133,25 @@ li:last-child {
 }
 .overview-container {
   border-top: 0.8px solid white;
+  background: white;
+  margin-bottom: 66px;
+  border-bottom: 3px solid black;
+}
+#arrows-black {
+  display: none;
 }
 .quickOverview {
   height: 208px;
-  padding-bottom: 92px;
   display: flex;
   align-content: center;
   text-transform: uppercase;
   justify-content: center;
   text-align: center;
   align-items: center;
-  width: 150%;
-  transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
-  overflow: hidden;
+  width: fit-content;
+  transition: all 0.2s cubic-bezier(0.73, 0.57, 0.71, 1.06);
+  // overflow: hidden;
+
   @media screen and (max-width: 842px) {
     // width: 255%;
     height: 118px;
@@ -159,12 +165,17 @@ li:last-child {
     width: 100%;
   }
   a {
-    color: white;
+    color: #000;
     cursor: pointer;
     width: 300px;
     font-family: "Work Sans", sans-serif;
     font-size: 18px;
 
+    font-size: 42px;
+    min-width: 800px;
+    font-weight: 400;
+    font-weight: 400;
+    letter-spacing: -1px;
     @media screen and (max-width: 842px) {
       width: 300px;
       font-size: 16px;
@@ -236,7 +247,6 @@ canvas.threejs {
     display: grid;
     @media screen and (max-width: 860px) {
       display: grid;
-
     }
     // animation: 0.9s footerBlendIn forwards;
     a {
@@ -560,6 +570,7 @@ html {
   }
   div .headline--xl {
     color: #fff;
+    text-shadow: 2px 7px 10px rgba(0,0,0,0.17)
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: transparent;

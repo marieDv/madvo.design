@@ -33,11 +33,14 @@
 
 
 </head>
+
 <img id="arrows" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/arrows.png">
 
 <div class="cursor cursor--small"></div>
 <canvas class="cursor cursor--canvas cursor--canvas-about" resize></canvas>
 <section class="single about">
+<div id="scroll-popup" class="scroll-popup"><p id="scroll-popup-text">Scroll</p><span id="scroll-popup-line"></span></div>
+
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">
       <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
@@ -69,7 +72,7 @@
   <div class="w-full flex wrap row mt-32 md:mt-2 xs:p-2 md:p-32 about ">
       <img alt="me" id="portrait" src="<?php bloginfo('stylesheet_directory'); ?>/assets/derpme.jpg">
 
-    <div class="about-clients  inline text-left">
+    <div id="about-clients" class="about-clients  inline text-left">
     <h2 id="about-title" class="ic-headline--xl-xl"><span id="triggerH11">Hey there, I am </span><span id="triggerH12"><a id="toggleFace">Marie</a><br> a Digital Designer with</span><br><span id="triggerH13">a passion for coding!</span></h2>
     <div id="trigger3" class="indicators"></div>
 
@@ -139,7 +142,7 @@
   </div>
 <footer id="footer-about" class="footer white">
         <a class="bottomNav work active">© Marie Dvorzak</a>
-        <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
+        <a class="bottomNav" href="<?php echo get_home_url() ?>">Work</a>
         <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
 </footer>
   <?php require(dirname(__FILE__) . '/footer-about.php'); ?>

@@ -42,7 +42,7 @@ let WIDTH;
 let HEIGHT;
 let returnArray = [];
 
-const HEIGHT_AMPLIFIER = 0.7;//0.7
+const HEIGHT_AMPLIFIER = 0.9;//0.7
 let starsGroup = new THREE.Object3D();
 let countRotation = 0;
 let step = 0;
@@ -56,7 +56,7 @@ let timer = Date.now();
 let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
-let cameraDistance = 700;
+let cameraDistance = 730;
 
 /**
  *render and camera
@@ -124,7 +124,9 @@ function createImage(src, index) {
         let alpha = [];
         // iterate over all pixels
         for (var i = 0, n = mData.length; i < n; i += 4) {
-            alpha[i] = mData[i];
+            // alpha[i] = mData[i];
+            alpha[i] = mData[i +1];
+            alpha[i+1] = mData[i +2];
         }
         let j = 0;
         let mReturnArray = [];
@@ -183,7 +185,8 @@ function image() {
             var red = data[i];
             var green = data[i + 1];
             var blue = data[i + 2];
-            alpha[i] = data[i];
+            alpha[i] = data[i +1];
+            alpha[i+1] = data[i +2];
         }
 
         let j = 0;
@@ -213,9 +216,9 @@ function scene1() {
     plane.dynamic = true;
     plane.computeFaceNormals();
     plane.computeVertexNormals();
-    console.log("plane " + returnArray.length)
+
     /////// MORPH TARGET
-    morphTarget = new THREE.PlaneBufferGeometry(WIDTH, HEIGHT, WIDTH - 1, HEIGHT - 1);
+    morphTarget = new THREE.SphereBufferGeometry(WIDTH, HEIGHT, HEIGHT);
 
     positions = morphTarget.attributes.position.array;
 
@@ -236,19 +239,6 @@ function scene1() {
 
     /// MORPH TARGET END
 
-    function createCanvas() {
-        let canvas = document.createElement('canvas');
-        canvas.setAttribute('height', 3);
-        canvas.setAttribute('width', 3);
-        ctx = canvas.getContext('2d');
-        ctx.fillStyle = 'hsla(187, 48%, 69%, 1)';
-        ctx.fillRect(0, 0, 4, 4);
-
-        return canvas;
-    }
-
-    var texture = new THREE.TextureLoader().load(createCanvas().toDataURL());
-
     var numVerts = 10947;
     var sphereGeometry = new THREE.SphereBufferGeometry(50, 32, 32);
     var sphereVerts = THREE.GeometryUtils.randomPointsInBufferGeometry(sphereGeometry, numVerts);
@@ -265,10 +255,6 @@ function scene1() {
 
     bufferGeometry.addAttribute('position', new THREE.BufferAttribute(vertices, 3));
     bufferGeometry.addAttribute('morph0', new THREE.BufferAttribute(positions, 3));
-
-
-
-
 
     let material = new THREE.MeshNormalMaterial({ color: 0x888888, wireframe: true });
     shaderMaterial = new THREE.ShaderMaterial({
@@ -287,7 +273,7 @@ function scene1() {
         fragmentShader: document.getElementById('fragmentShader').textContent
     });
 
-    cube = new THREE.Points(bufferGeometry, shaderMaterial);
+    // cube = new THREE.Points(bufferGeometry, shaderMaterial);
     cube = new THREE.Mesh(bufferGeometry, shaderMaterial);
     cube.matrixAutoUpdate = true;
     cube.updateMatrix();
@@ -360,7 +346,7 @@ function scene1() {
     camera.position.z = cameraDistance * Math.cos(THREE.Math.degToRad(1));
     // camera.lookAt(camera.target);
 
-    shaderMaterial.uniforms.torus.value = 1;
+    shaderMaterial.uniforms.torus.value = 0.8;
     warpVector = new THREE.Vector3(0, 50, 0); //50
     warpVector2 = new THREE.Vector3(20, 120, 0);
 
@@ -416,7 +402,7 @@ function render() {
         }, 700);
     } else {
         if (shaderMaterial) {
-            if (shaderMaterial.uniforms.torus.value > 0.2 && firstLoad) {
+            if (shaderMaterial.uniforms.torus.value > 0.4 && firstLoad) {
                 shaderMaterial.uniforms.torus.value -= 0.05;
             }
         }

@@ -38,7 +38,7 @@
   ?>
   <? wp_head(); ?>
 
-
+  <img id="arrows-black" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/arrows-black.png">
 </head>
 <div class="cursor cursor--small"></div>
 <canvas class="cursor cursor--canvas" resize></canvas>
@@ -71,8 +71,8 @@
   <p class="hidden-thumbnail">
     <?php echo $image[0] ?>
   </p>
-  <div id="overview-holder" class="quickOverview-container overview-container"></div>
-  <div class="swiper-container ">
+  <!-- <div id="overview-holder" class="quickOverview-container overview-container"></div> -->
+  <div id="overview-swiper-single" class="swiper-container overview-container">
     <div id="overview" class="quickOverview swiper-wrapper">
       <?php
       global $i;

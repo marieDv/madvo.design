@@ -4,7 +4,8 @@ var activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
 var wheel = document.getElementsByClassName("about-wheel")[0];
 
 let infoRing = document.getElementsByClassName("info-ring")[0];
-var footer = document.getElementById("footer-white");
+var footer = document.getElementById("footer-about");
+let education = document.getElementById("trigger2");
 var marieLink = document.getElementById("toggleFace");
 let portraitcursor = document.getElementsByClassName("cursor--canvas-about")[0];
 
@@ -12,10 +13,12 @@ var isHovering = false;
 var isHoveringFooter = false;
 var isHoveringWheel = false;
 var isHoveringMarie = false;
+let isHoveringWhite = false;
 let once = false;
 let changeFooter = false;
 let reset = false;
 let growCircle = false;
+
 
 let lastX = 0;
 let lastY = 0;
@@ -45,9 +48,6 @@ function initSwiper() {
 
 	if (window.innerWidth > 900) {
 		let mySwiper = new Swiper('.swiper-container', {
-			// slidesPerView: 'auto',
-			// centeredSlides: true,
-			// slidesOffsetBefore: 264,
 			simulateTouch: true,
 			slidesPerView: 2,
 			slideToClickedSlide: true,
@@ -89,9 +89,6 @@ let clientY = -100;
 const innerCursor = document.querySelector(".cursor--small");
 
 const initCursor = () => {
-	// add listener to track the current mouse position
-
-
 	document.addEventListener("mousemove", e => {
 		clientX = e.clientX;
 		clientY = e.clientY;
@@ -114,7 +111,14 @@ const initCursor = () => {
 				isHoveringMarie = false;
 			});
 		}
-
+		if (education) {
+			education.addEventListener("mouseover", () => {
+				isHoveringWhite = true;
+			});
+			education.addEventListener("mouseleave", () => {
+				isHoveringWhite = false;
+			});
+		}
 		if (footer) {
 			footer.addEventListener("mouseover", () => {
 				isHoveringFooter = true;
@@ -123,16 +127,6 @@ const initCursor = () => {
 				isHoveringFooter = false;
 			});
 		}
-		// if (activeSlide) {
-		// 	if (!activeSlide.classList.contains("single-slide")) {
-		// 		activeSlide.addEventListener("mouseover", () => {
-		// 			isHovering = true;
-		// 		});
-		// 		activeSlide.addEventListener("mouseleave", () => {
-		// 			isHovering = false;
-		// 		});
-		// 	}
-		// }
 
 	});
 
@@ -141,8 +135,9 @@ const initCursor = () => {
 	const render = () => {
 
 		innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
-		if (isHoveringFooter) {
-			innerCursor.style.background = "#e2183a";
+		
+		if (isHoveringFooter || isHoveringWhite) {
+			innerCursor.style.background = "#000";
 		} else {
 			innerCursor.style.background = "#fff";
 		}
@@ -247,6 +242,11 @@ const initCanvas = () => {
 				portrait.visible = false;
 			}, 400);
 
+		}
+		if(isHoveringWhite){
+			polygon.strokeColor = "#000";
+		}else {
+			polygon.strokeColor = "#fff";
 		}
 		if (isHoveringFooter) {
 			if (changeFooter === false) {
