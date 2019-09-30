@@ -133,19 +133,25 @@ li:last-child {
 }
 .overview-container {
   border-top: 0.8px solid white;
+  background: white;
+  margin-bottom: 66px;
+  border-bottom: 3px solid black;
+}
+#arrows-black {
+  display: none;
 }
 .quickOverview {
   height: 208px;
-  padding-bottom: 92px;
   display: flex;
   align-content: center;
   text-transform: uppercase;
   justify-content: center;
   text-align: center;
   align-items: center;
-  width: 150%;
-  transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
-  overflow: hidden;
+  width: fit-content;
+  transition: all 0.2s cubic-bezier(0.73, 0.57, 0.71, 1.06);
+  // overflow: hidden;
+
   @media screen and (max-width: 842px) {
     // width: 255%;
     height: 118px;
@@ -159,16 +165,21 @@ li:last-child {
     width: 100%;
   }
   a {
-    color: white;
+    color: #000;
     cursor: pointer;
     width: 300px;
     font-family: "Work Sans", sans-serif;
     font-size: 18px;
 
-    @media screen and (max-width: 842px) {
-    width: 300px;
-    font-size: 16px;
+    font-size: 42px;
+    min-width: 800px;
     font-weight: 400;
+    font-weight: 400;
+    letter-spacing: -1px;
+    @media screen and (max-width: 842px) {
+      width: 300px;
+      font-size: 16px;
+      font-weight: 400;
     }
   }
 }
@@ -180,6 +191,10 @@ canvas.threejs {
   position: absolute;
   left: 0;
   top: 0;
+  filter: saturate(1.2);
+  @media screen and (max-width: 842px) {
+    display: none;
+  }
 }
 .footer {
   height: 164px;
@@ -228,13 +243,16 @@ canvas.threejs {
     background-color: #ffffff;
     position: fixed;
     padding-top: inherit;
+    display: none;
+    display: grid;
+    @media screen and (max-width: 860px) {
+      display: grid;
+    }
     // animation: 0.9s footerBlendIn forwards;
     a {
       color: #000000;
     }
   }
-
-
 
   @media screen and (max-width: 842px) {
     position: relative;
@@ -283,15 +301,14 @@ canvas.threejs {
 
 @keyframes footerBlendIn {
   0% {
-   opacity: 0.2;
-   transform: translateY(20px);
+    opacity: 0.2;
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
     transform: translateY(-20px);
   }
 }
-
 
 .wheel {
   transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -443,8 +460,11 @@ canvas.threejs {
   left: 0;
   right: 0;
   position: absolute;
-  width: 8%;
+  width: 156px;
   top: 82px;
+  @media screen and (max-width: 1600px) {
+    width: 112px;
+  }
 }
 html {
   cursor: none;
@@ -472,6 +492,9 @@ html {
 .swiper-container {
   width: 100%;
   height: 100%;
+  &--notouch {
+    pointer-events: none;
+  }
   @media screen and (max-width: 680px) {
     padding-bottom: 80px;
   }
@@ -547,6 +570,7 @@ html {
   }
   div .headline--xl {
     color: #fff;
+    text-shadow: 2px 7px 10px rgba(0,0,0,0.17);
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: transparent;
@@ -560,11 +584,14 @@ html {
 }
 .swiper-slide-next:not(.single-slide) {
   // background: red;
-  transform: perspective(500px) rotateY(-24deg) translateX(-300px);
+  transform: perspective(500px) rotateY(-24deg) translateX(-300px) rotateZ(5deg);
+  // transform: perspective(500px) translateX(246px) rotateZ(5deg);
+  // transform: perspective(478px) translateX(50px) translateY(34px)  rotateZ(5deg);
 }
 .swiper-slide-prev:not(.single-slide) {
   // background: blue;
   transform: perspective(500px) rotateY(24deg) translateX(300px);
+  // transform: perspective(500px)translateX(40px) translateY(48px) rotateZ(-5deg);
   // transform: perspective(500px) rotateY(24deg) translateX(-90px) translateY(500px) translateZ(-600px);
 }
 

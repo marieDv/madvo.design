@@ -148,11 +148,17 @@
 
 .overview-container {
   border-top: 0.8px solid white;
+  background: white;
+  margin-bottom: 66px;
+  border-bottom: 3px solid black;
+}
+
+#arrows-black {
+  display: none;
 }
 
 .quickOverview {
   height: 208px;
-  padding-bottom: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,10 +172,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 150%;
-  -webkit-transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
-  transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
-  overflow: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all 0.2s cubic-bezier(0.73, 0.57, 0.71, 1.06);
+  transition: all 0.2s cubic-bezier(0.73, 0.57, 0.71, 1.06);
 }
 
 @media screen and (max-width: 842px) {
@@ -190,11 +197,16 @@
 }
 
 .quickOverview a {
-  color: white;
+  color: #000;
   cursor: pointer;
   width: 300px;
   font-family: "Work Sans", sans-serif;
   font-size: 18px;
+  font-size: 42px;
+  min-width: 800px;
+  font-weight: 400;
+  font-weight: 400;
+  letter-spacing: -1px;
 }
 
 @media screen and (max-width: 842px) {
@@ -214,6 +226,14 @@ canvas.threejs {
   position: absolute;
   left: 0;
   top: 0;
+  -webkit-filter: saturate(1.2);
+          filter: saturate(1.2);
+}
+
+@media screen and (max-width: 842px) {
+  canvas.threejs {
+    display: none;
+  }
 }
 
 .footer {
@@ -294,6 +314,16 @@ canvas.threejs {
   background-color: #ffffff;
   position: fixed;
   padding-top: inherit;
+  display: none;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media screen and (max-width: 860px) {
+  .footer.white {
+    display: -ms-grid;
+    display: grid;
+  }
 }
 
 .footer.white a {
@@ -589,8 +619,14 @@ canvas.threejs {
   left: 0;
   right: 0;
   position: absolute;
-  width: 8%;
+  width: 156px;
   top: 82px;
+}
+
+@media screen and (max-width: 1600px) {
+  .info-ring {
+    width: 112px;
+  }
 }
 
 html {
@@ -623,6 +659,10 @@ html {
 .swiper-container {
   width: 100%;
   height: 100%;
+}
+
+.swiper-container--notouch {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 680px) {
@@ -705,6 +745,7 @@ html {
 
 .swiper-slide-active:not(.single-slide) div .headline--xl {
   color: #fff;
+  text-shadow: 2px 7px 10px rgba(0, 0, 0, 0.17);
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: transparent;
@@ -721,8 +762,8 @@ html {
 }
 
 .swiper-slide-next:not(.single-slide) {
-  -webkit-transform: perspective(500px) rotateY(-24deg) translateX(-300px);
-          transform: perspective(500px) rotateY(-24deg) translateX(-300px);
+  -webkit-transform: perspective(500px) rotateY(-24deg) translateX(-300px) rotateZ(5deg);
+          transform: perspective(500px) rotateY(-24deg) translateX(-300px) rotateZ(5deg);
 }
 
 .swiper-slide-prev:not(.single-slide) {

@@ -38,42 +38,23 @@
   ?>
   <? wp_head(); ?>
 
-
+  <img id="arrows-black" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/arrows-black.png">
 </head>
 <div class="cursor cursor--small"></div>
-    <canvas class="cursor cursor--canvas" resize></canvas>
+<canvas class="cursor cursor--canvas" resize></canvas>
 <section class="single">
 
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
     <ul class="pin-r absolute mr-12 nav">
       <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
         <a class="burger-menu" href="<?php echo get_home_url() ?>">
-          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png">
-          <!-- <span>back</span> -->
-        </a> 
+        </a>
         <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
-          <!-- Marie Dvorzak
-          <li class="text-small">
-            Designer / Coder
-          </li>
-        </ul>
-        <ul class="nav-fast">
-          <li id="" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-            <a href="<?php echo get_home_url() ?>">work</a>
-          </li>
-          <li id="toggleabout" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-            <a href="<?php echo get_page_link(780); ?>">about</a>
-          </li> -->
         </ul>
       </li>
     </ul>
   </div>
-
-
-  <!-- <a><?php get_home_url() ?>Back</a>
-  <div class="more-button--sound w-16 h-4 inline-block mr-3"></div>
-  <a href="<?php echo get_home_url() ?>">back</a>
-  </div> -->
+  <div id="scroll-popup" class="scroll-popup"><p id="scroll-popup-text">Scroll</p><span id="scroll-popup-line"></span></div>
   <?php
   while (have_posts()) : the_post();
 
@@ -83,25 +64,32 @@
     echo $content;
   endwhile;
   ?>
-  <div id="overview-holder" class="quickOverview-container overview-container"></div>
-  <div class="swiper-container ">
-  <div id="overview" class="quickOverview swiper-wrapper">
-    <?php
-    global $i;
-    global $post;
-    $args = array('category' => 25); //25 //2 for dev
-    $work = get_posts($args);
-    ?>
-    <?php foreach ($work as $post) : setup_postdata($post); ?>
 
-      <a class="swiper-slide single-slide" href="<?php echo get_permalink($post->ID) ?>">
+  <?php if (has_post_thumbnail($post->ID)) : ?>
+    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
+  <?php endif; ?>
+  <p class="hidden-thumbnail">
+    <?php echo $image[0] ?>
+  </p>
+  <!-- <div id="overview-holder" class="quickOverview-container overview-container"></div> -->
+  <div id="overview-swiper-single" class="swiper-container overview-container">
+    <div id="overview" class="quickOverview swiper-wrapper">
       <?php
-      $title = get_the_title();
-      echo str_replace('<br>',' ', $title );
+      global $i;
+      global $post;
+      $args = array('category' => 25); //25 //2 for dev
+      $work = get_posts($args);
       ?>
-      </a>
-    <?php endforeach; ?>
-  </div>
+      <?php foreach ($work as $post) : setup_postdata($post); ?>
+
+        <a class="swiper-slide single-slide" href="<?php echo get_permalink($post->ID) ?>">
+          <?php
+            $title = get_the_title();
+            echo str_replace('<br>', ' ', $title);
+            ?>
+        </a>
+      <?php endforeach; ?>
+    </div>
   </div>
   </div>
   <?php require(dirname(__FILE__) . '/footer-single.php'); ?>
