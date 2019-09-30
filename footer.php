@@ -18,7 +18,7 @@
 
 
 <script id="vertexShader" type="x-shader/x-vertex">
-//
+  //
 // GLSL textureless classic 3D noise "cnoise",
 // with an RSL-style periodic variant "pnoise".
 // Author:  Stefan Gustavson (stefan.gustavson@liu.se)
@@ -197,14 +197,16 @@ float pnoise(vec3 P, vec3 rep)
 }
 ////// START vertexShader
 
-  attribute vec3 morph0;
   uniform float explosionValue;
 
-  uniform float torus;
+
   uniform float size;
   uniform float time;
   uniform vec2 u_mouse;
   uniform vec2 u_resolution;
+  varying float DEPTH ;
+
+  uniform float FARPLANE ;
 
   varying float noise;
   varying vec2 vUv;
@@ -228,8 +230,7 @@ return t;
     vUv = uv;
 
     vec3 morphed = vec3(0.0, 0.0, 0.0);
-    //morphed += (morph0 - position) * torus;
- 
+
     float f = explosionValue * pnoise( normal + time, vec3( 10.0 ) * 90.0 );
     noise =explosionValue* pnoise( normal + time, vec3( 10.0 ) );
 		vNormal = normal;
@@ -237,45 +238,46 @@ return t;
 
     morphed += pos;
 
-		gl_Position = projectionMatrix * modelViewMatrix * vec4(morphed, 1.0);
 
+
+		gl_Position = projectionMatrix * modelViewMatrix * vec4(morphed, 1.0);
+    DEPTH = ((gl_Position.z * 1.5) / (FARPLANE));
   }
 </script>
 
 <script id="fragmentShader" type="x-shader/x-fragment">
-  uniform sampler2D texture1;
 
+  uniform sampler2D texture1;
+  uniform float uvPosition;
 varying float noise;
 varying vec2 vUv;
+varying vec3 vNormal;
+varying float DEPTH ;
+
 //uniform float time;
 //uniform float uvPosition;
 float random( vec3 scale, float seed ){
   return fract( sin( dot( gl_FragCoord.xyz + seed, scale ) ) * 43758.5453 + seed ) ;
 }
 void main() {
-   //  gl_FragColor = texture2D(texture1, vUv); // Displays Nothing * uvPosition
+
+  float r = 0.00001 * random( vec3( 500.5, 500.05, 500.5 ), 1.0 );
+
+  vec2 tPos = vec2( 0, (0.08) * (noise * vUv) + r) / vec2(0.8, 0.8);//vUv
+  vec4 texture = texture2D(texture1, vUv * (0.9 + 0.1 * (uvPosition / 2.0)) + tPos);//tPos
+
+ //vec3 color = vec3( vUv / 5.0, 0.0 );
+  //vec3 color = vec3((2.0 * 1.0 * FARPLANE) / (FARPLANE + 1.0 - DEPTH * (FARPLANE - 1.0))) / vec3(50.0);
+  vec3 color = texture.rgb;
+  color /= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(50.0);
+  gl_FragColor = vec4( color.rgb, 1.0 );
 
 
-  // vec3 color = vec3( vUv * ( 1. - 2. * noise ), 0.0 );
- // gl_FragColor = vec4( color.rgb, 1.0 );
+  //vec3 color = vec3( vec2(0.0, 0.0 ),  1. - 2. * noise );
+  //color += texture.rgb;
+  //gl_FragColor = vec4( color.rgb, 1.0 );
 
- //vec2 color = vec2( vUv * time * ( 1. - 2. * noise ) );
-  //gl_FragColor = texture2D(texture1, color);
-
-
-  float r = 0.01 * random( vec3( 500.5, 500.05, 0.5 ), 0.2 );
-
-  vec2 tPos = vec2( 0, 1.5 * noise + r) / vec2(0.8, 0.8);//vUv
-  vec4 texture = texture2D(texture1, tPos);//tPos
-  //vec4 color = vec3(0.0, vUv * ( 1. - 2. * noise ) );//vUv
-
-
-  gl_FragColor = vec4( texture.rgb, 1.0 );
-
-  //vec3 finalColor = texture + color;
-
-  
-  //gl_FragColor = vec4( color, 0.0 );
+  //gl_FragColor = vec4( (texture.rgb ), vUv );
 
 }
 </script>

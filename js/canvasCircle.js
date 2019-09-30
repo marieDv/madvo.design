@@ -48,8 +48,11 @@ let timer = Date.now();
 let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
-let cameraDistance = 740;
+let cameraDistance = 690;
 
+
+let raycaster = new THREE.Raycaster(); // create once
+let mouse = new THREE.Vector2(); // create once
 
 let uvPosition = Math.abs(Math.sin(timer / 5.0));//Math.abs(Math.sin(timer / 5.0))
 /**
@@ -84,9 +87,9 @@ composer.addPass(renderPass);
 renderPass.renderToScreen = true;
 
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
-pass1.uniforms.weight.value = 4.8;//decay density weight
-pass1.uniforms.decay.value = 0.85;
-pass1.uniforms.density.value = 1.2;//0.09
+pass1.uniforms.weight.value = 0.7;//decay density weight
+pass1.uniforms.decay.value = 0.9;
+pass1.uniforms.density.value = 0.8;//0.09
 pass1.needsSwap = false;
 
 pass1.renderToScreen = true;
@@ -95,8 +98,8 @@ pass1.renderToScreen = true;
 const bloomPass = new THREE.BloomPass(
   1.4,    // strength
   20,   // kernel size
-  1,    // sigma ?
-  356,  // blur render target resolution
+  0.1,    // sigma ?
+  556,  // blur render target resolution
 );
 //composer.addPass(bloomPass);
 
@@ -107,8 +110,9 @@ const filmPass = new THREE.FilmPass(
   false,  // grayscale
 );
 filmPass.renderToScreen = true;
-composer.addPass(filmPass);
-composer.addPass(pass1);
+//composer.addPass(filmPass);
+//composer.addPass(pass1);
+
 // let pass2 = new THREE.FilmPass(THREE.FilmShader);
 // composer.addPass(pass2);
 // pass2.renderToScreen = true;
@@ -131,31 +135,31 @@ function createTextures(src, index) {
   loader.load(
     // resource URL
     src,
-  
+
     // onLoad callback
-    function ( texture ) {
+    function (texture) {
       console.log(texture)
       modelArray[index] = texture;
     },
-  
+
     // onProgress callback currently not supported
     undefined,
-  
+
     // onError callback
-    function ( err ) {
-      console.error( 'An error happened.' +src);
+    function (err) {
+      console.error('An error happened.' + src);
     }
   );
 
-  }
+}
 
-  // if(index === 0){
-  //     setTimeout(() => {
-  //         console.log(modelArray)
-  //     scene1();
-  //     }, 500);
+// if(index === 0){
+//     setTimeout(() => {
+//         console.log(modelArray)
+//     scene1();
+//     }, 500);
 
-  // }
+// }
 
 
 
@@ -280,7 +284,9 @@ function scene1() {
         type: "f",
         value: 0.0
       },
-      uvPosition: { type: "f", value: uvPosition }
+      uvPosition: { type: "f", value: uvPosition },
+      FARPLANE: {type: "f", value: 300.0},
+      DEPTH: {type: "f", value: 1.0},
 
     },
     vertexShader: document.getElementById('vertexShader').textContent,
@@ -302,21 +308,33 @@ function scene1() {
 
   scene.add(cube);
   let changeX = 0;
+  let cubeBox = new THREE.Box3().setFromObject(cube);
+  console.log(cubeBox.max.x)
+  console.log(cubeBox.min.x)
+
+
+
+
+
+
+
   document.onmousemove = function (e) {
-    shaderMaterial.uniforms.u_mouse.value.x = e.pageX;
-    shaderMaterial.uniforms.u_mouse.value.y = e.pageY;
+
+
+    mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
+    mouse.y = - (event.clientY / renderer.domElement.clientHeight) * 2 + 1;
+
+
+
+    // shaderMaterial.uniforms.u_mouse.value.x = e.pageX;
+    // shaderMaterial.uniforms.u_mouse.value.y = e.pageY;
     changeX = e.pageX;
-    // console.log((e.pageX)+ " " +renderer.domElement.width/4)
     if (e.pageX > renderer.domElement.width / 4) {
-      // cube.rotation.z += (changeX*0.0000001);
-      cube.rotation.x -= (5 * 0.00001);
+      cube.rotation.x -= (5 * 0.0001);
 
     } else {
-      // cube.rotation.z -= (changeX*0.0000001);
-      // console.log(changeX)
-      cube.rotation.x += (5 * 0.000001);
+      cube.rotation.x += (5 * 0.00001);
     }
-    // console.log(changeX/1000000)
   }
   shaderMaterial.uniforms.u_resolution.value.x = renderer.domElement.width;
   shaderMaterial.uniforms.u_resolution.value.y = renderer.domElement.height;
@@ -382,6 +400,28 @@ function animate() {
 }
 
 function render() {
+  raycaster.setFromCamera(mouse, camera);
+
+  // calculate objects intersecting the picking ray
+  var intersects = raycaster.intersectObjects(scene.children);
+
+  for (var i = 0; i < intersects.length; i++) {
+
+    // console.log(intersects[ i ]);
+
+    if (shaderMaterial.uniforms.explosionValue.value < 40) {
+      shaderMaterial.uniforms.explosionValue.value += mouse.x;
+      shaderMaterial.uniforms.uvPosition.value = mouse.x * 6;
+    }
+    // TweenMax.to(shaderMaterial.uniforms.explosionValue, 3, {
+    //   ease: Elastic.easeOut.config(1, 0.9),
+    //   value: "2", //move each box 500px to right
+    // });
+  }
+
+
+
+
 
 
 
@@ -405,23 +445,23 @@ function render() {
         //pass1.uniforms.density.value += 0.01;//0.09
         //shaderMaterial.uniforms.explosionValue.value += 0.5;
       }
-          TweenMax.to(shaderMaterial.uniforms.explosionValue, 0.8, {
-            ease: Elastic.easeOut.config(1, 0.9),
-            value: "40", //move each box 500px to right
-          });
-          TweenMax.to(shaderMaterial.uniforms.explosionValue, 1, {
-            ease: Elastic.easeOut.config(1, 0.3),
-            value: "10", //move each box 500px to right
-            delay: 1
-          });
+      TweenMax.to(shaderMaterial.uniforms.explosionValue, 0.8, {
+        ease: Elastic.easeOut.config(1, 0.9),
+        value: "40", //move each box 500px to right
+      });
+      TweenMax.to(shaderMaterial.uniforms.explosionValue, 1, {
+        ease: Elastic.easeOut.config(1, 0.3),
+        value: "10", //move each box 500px to right
+        delay: 1
+      });
       console.log("shader" + shaderMaterial.uniforms.explosionValue)
-   
+
 
       updateOnce = false;
       updateNow = universal;
       setTimeout(() => {
         firstLoad = false;
-        
+
         updateOnce = true;
         // shaderMaterial.uniforms.explosionValue.value = 10;
         // if (pass1.uniforms.density.value > 0) {
