@@ -1,11 +1,11 @@
 <footer class="footer">
-        <!-- <div>
+  <!-- <div>
                 <p>@ Marie Dvorzak</p>
                 <span class="text-small">Designer & Coder</span>
         </div> -->
-        <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
-        <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
-        <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
+  <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
+  <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
+  <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
 </footer>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -18,7 +18,21 @@
 
 
 <script id="vertexShader" type="x-shader/x-vertex">
-        vec3 mod289(vec3 x)
+//
+// GLSL textureless classic 3D noise "cnoise",
+// with an RSL-style periodic variant "pnoise".
+// Author:  Stefan Gustavson (stefan.gustavson@liu.se)
+// Version: 2011-10-11
+//
+// Many thanks to Ian McEwan of Ashima Arts for the
+// ideas for permutation and gradient selection.
+//
+// Copyright (c) 2011 Stefan Gustavson. All rights reserved.
+// Distributed under the MIT license. See LICENSE file.
+// https://github.com/ashima/webgl-noise
+//
+
+vec3 mod289(vec3 x)
 {
   return x - floor(x * (1.0 / 289.0)) * 289.0;
 }
@@ -108,7 +122,7 @@ float cnoise(vec3 P)
   vec3 fade_xyz = fade(Pf0);
   vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
   vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
-  float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
+  float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x);
   return 2.2 * n_xyz;
 }
 
@@ -178,13 +192,13 @@ float pnoise(vec3 P, vec3 rep)
   vec3 fade_xyz = fade(Pf0);
   vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
   vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
-  float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
+  float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x);
   return 2.2 * n_xyz;
 }
- 
 ////// START vertexShader
 
   attribute vec3 morph0;
+  uniform float explosionValue;
 
   uniform float torus;
   uniform float size;
@@ -195,14 +209,14 @@ float pnoise(vec3 P, vec3 rep)
   varying float noise;
   varying vec2 vUv;
   varying vec4 vColor;
-
+  varying vec3 vNormal;
   float turbulence( vec3 p ) {
 
 float w = 100.0;
 float t = -.5;
 
 for (float f = 1.0 ; f <= 10.0 ; f++ ){
-  float power = pow( 2.0, f );
+  float power = pow( 0.70, f );
   t += abs( pnoise( vec3( power * p ), vec3( 10.0, 10.0, 10.0 ) ) / power );
 }
 
@@ -211,46 +225,57 @@ return t;
 }
 
   void main() {
-        vUv = uv;
+    vUv = uv;
 
+    vec3 morphed = vec3(0.0, 0.0, 0.0);
+    //morphed += (morph0 - position) * torus;
+ 
+    float f = explosionValue * pnoise( normal + time, vec3( 10.0 ) * 90.0 );
+    noise =explosionValue* pnoise( normal + time, vec3( 10.0 ) );
+		vNormal = normal;
+    vec3 pos = vec3( position + f * normal );
 
+    morphed += pos;
 
-gl_Position =   projectionMatrix * 
-                modelViewMatrix * 
-                vec4(position,1.0);
-
-    gl_PointSize = size;
-
-
-
-
-  noise = 10.0 *  -.10 * turbulence( .5 * normal + (time) );
-  float b = 20.0 * pnoise( 0.9 * position + vec3(1.0*time+((u_mouse/(u_resolution) / vec2(5.0))), 100.0 ), vec3(100 ) );
-  float displacement = - noise + b;
-
-  vec3 newPosition = (position + normal * displacement);
-
-    vec3 morphed = vec3( 0.0 , 0.0 , 0.0 );
-    morphed += ( morph0 - position ) * torus;
-    morphed += newPosition;
-
-
-  gl_Position = projectionMatrix * modelViewMatrix * vec4( morphed, 1.0 ); // * vec4( morphed, 1.0 )
-
+		gl_Position = projectionMatrix * modelViewMatrix * vec4(morphed, 1.0);
 
   }
 </script>
 
 <script id="fragmentShader" type="x-shader/x-fragment">
-        uniform sampler2D texture1;
+  uniform sampler2D texture1;
 
+varying float noise;
 varying vec2 vUv;
-uniform float time;
-
+//uniform float time;
+//uniform float uvPosition;
+float random( vec3 scale, float seed ){
+  return fract( sin( dot( gl_FragCoord.xyz + seed, scale ) ) * 43758.5453 + seed ) ;
+}
 void main() {
-     gl_FragColor = texture2D(texture1, vUv); // Displays Nothing   * abs(sin(time / 5.0))
-    //gl_FragColor = vec4(0.5, 0.2, 1.0, 1.0); // Works; Displays Flat Color
+   //  gl_FragColor = texture2D(texture1, vUv); // Displays Nothing * uvPosition
+
+
+  // vec3 color = vec3( vUv * ( 1. - 2. * noise ), 0.0 );
+ // gl_FragColor = vec4( color.rgb, 1.0 );
+
+ //vec2 color = vec2( vUv * time * ( 1. - 2. * noise ) );
+  //gl_FragColor = texture2D(texture1, color);
+
+
+  float r = 0.01 * random( vec3( 500.5, 500.05, 0.5 ), 0.2 );
+
+  vec2 tPos = vec2( 0, 1.5 * noise + r) / vec2(0.8, 0.8);//vUv
+  vec4 texture = texture2D(texture1, tPos);//tPos
+  //vec4 color = vec3(0.0, vUv * ( 1. - 2. * noise ) );//vUv
+
+
+  gl_FragColor = vec4( texture.rgb, 1.0 );
+
+  //vec3 finalColor = texture + color;
+
   
+  //gl_FragColor = vec4( color, 0.0 );
 
 }
 </script>
@@ -261,18 +286,23 @@ void main() {
 
 
 <script>
-        var universal = "http://localhost/wordpress/wp-content/uploads/2019/09/cambuilder.png";
-        var universalIndex = 0;
+  var universal = "http://localhost/wordpress/wp-content/uploads/2019/09/trans-filling-1.png";
+  var universalIndex = 0;
 </script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/EffectComposer.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/RenderPass.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ShaderPass.js"></script>
+
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/CopyShader.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/FilmShader.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ConvolutionShader.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/FilmPass.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/BloomPass.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/VolumetericLightShader.js"></script>
 
 <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/AdditiveBlendingShader.js"></script> -->
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/GeometryUtils.js"></script>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/canvas.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/canvasCircle.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/skew.js"></script>
 <!-- <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/ScrollMagic.js"></script> -->

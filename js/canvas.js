@@ -42,7 +42,7 @@ let WIDTH;
 let HEIGHT;
 let returnArray = [];
 
-const HEIGHT_AMPLIFIER = 0.9;//0.7
+const HEIGHT_AMPLIFIER = 0.5;//0.7
 let starsGroup = new THREE.Object3D();
 let countRotation = 0;
 let step = 0;
@@ -56,8 +56,10 @@ let timer = Date.now();
 let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
-let cameraDistance = 730;
+let cameraDistance = 740;
 
+
+let uvPosition = Math.abs(Math.sin(timer / 5.0)) ;//Math.abs(Math.sin(timer / 5.0))
 /**
  *render and camera
  */
@@ -73,6 +75,7 @@ camera.position.set(0, 0, 20);
 //camera.lookAt(scene.position);
 camera.target = new THREE.Vector3(0, 0, 0);
 
+scene.fog = new THREE.Fog("#fff", 600, 1000);
 
 
 
@@ -89,7 +92,7 @@ composer.addPass(renderPass);
 renderPass.renderToScreen = true;
 
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
-pass1.uniforms.weight.value = 1.5;//decay density weight
+pass1.uniforms.weight.value = 1.6;//decay density weight
 pass1.uniforms.decay.value = 0.85;
 pass1.uniforms.density.value = 0.3;//0.09
 pass1.needsSwap = false;
@@ -97,6 +100,25 @@ composer.addPass(pass1);
 pass1.renderToScreen = true;
 
 
+const bloomPass = new THREE.BloomPass(
+    1.9,    // strength
+    20,   // kernel size
+    1,    // sigma ?
+    356,  // blur render target resolution
+);
+composer.addPass(bloomPass);
+
+const filmPass = new THREE.FilmPass(
+    0.45,   // noise intensity
+    0.025,  // scanline intensity
+    248,    // scanline count
+    false,  // grayscale
+);
+filmPass.renderToScreen = true;
+composer.addPass(filmPass);
+// let pass2 = new THREE.FilmPass(THREE.FilmShader);
+// composer.addPass(pass2);
+// pass2.renderToScreen = true;
 
 
 let hiddenthumbnails = document.getElementsByClassName("hidden-thumbnail");
@@ -111,6 +133,7 @@ console.log(hiddenthumbnails)
 function createImage(src, index) {
     let loaded = false;
     let image = new Image();
+    // image.src = src;
     image.src = src;
     image.onload = function () {
         WIDTH = image.width;
@@ -125,7 +148,7 @@ function createImage(src, index) {
         // iterate over all pixels
         for (var i = 0, n = mData.length; i < n; i += 4) {
             // alpha[i] = mData[i];
-            alpha[i] = mData[i +1];
+            alpha[i] = mData[i + 1];//alpha[i] = mData[i +1];
             alpha[i+1] = mData[i +2];
         }
         let j = 0;
@@ -164,6 +187,7 @@ animate();
 
 function image() {
     var image = new Image();
+    //image.src = universal;
     image.src = universal;
     image.onload = function () {
         WIDTH = image.width;
@@ -185,6 +209,7 @@ function image() {
             var red = data[i];
             var green = data[i + 1];
             var blue = data[i + 2];
+            // alpha[i] = data[i];
             alpha[i] = data[i +1];
             alpha[i+1] = data[i +2];
         }
@@ -201,14 +226,14 @@ function image() {
 function scene1() {
 
     // lights(scene);
-    let bufferGeometry = new THREE.PlaneBufferGeometry(WIDTH, HEIGHT, WIDTH - 1, HEIGHT - 1);
-    let plane = new THREE.PlaneBufferGeometry(WIDTH, HEIGHT, WIDTH - 1, HEIGHT - 1);
+    let bufferGeometry = new THREE.SphereBufferGeometry(WIDTH, HEIGHT, WIDTH - 1, HEIGHT - 1);
+    let plane = new THREE.SphereBufferGeometry(WIDTH, HEIGHT, WIDTH - 1, HEIGHT - 1);
     plane.castShadow = true;
     plane.receiveShadow = true;
     var vertices = plane.attributes.position.array;
 
     for (i = 0, j = 2; i < returnArray.length; i += 4, j += 3) {
-        vertices[j] = returnArray[i] * HEIGHT_AMPLIFIER;
+        vertices[j] = returnArray[i];// * HEIGHT_AMPLIFIER;
         if (returnArray[i] === 0) {
             vertices[j] = backgroundPlane;
         }
@@ -218,7 +243,7 @@ function scene1() {
     plane.computeVertexNormals();
 
     /////// MORPH TARGET
-    morphTarget = new THREE.SphereBufferGeometry(WIDTH, HEIGHT, HEIGHT);
+    morphTarget = new THREE.SphereBufferGeometry(WIDTH, HEIGHT, WIDTH - 1);
 
     positions = morphTarget.attributes.position.array;
 
@@ -227,7 +252,7 @@ function scene1() {
 
 
     for (i = 0, j = 2; i < returnArray.length; i += 4, j += 3) {
-        positions[j] = plane.attributes.position.array[j] + 190 * (Math.random() - 0.5) - step; //0
+        positions[j] = plane.attributes.position.array[j]; //+ 190 * (Math.random() - 0.5) - step; //0
         step -= 0.005;
         x = x;
         z = z;
@@ -256,7 +281,7 @@ function scene1() {
     bufferGeometry.addAttribute('position', new THREE.BufferAttribute(vertices, 3));
     bufferGeometry.addAttribute('morph0', new THREE.BufferAttribute(positions, 3));
 
-    let material = new THREE.MeshNormalMaterial({ color: 0x888888, wireframe: true });
+    let material = new THREE.MeshNormalMaterial({ color: 0x888888, wireframe: false });
     shaderMaterial = new THREE.ShaderMaterial({
         uniforms: {
             torus: { value: 1.0 },
@@ -267,13 +292,16 @@ function scene1() {
             time: { // float initialized to 0
                 type: "f",
                 value: 0.0
-            }
+            },
+            uvPosition: {type:"f", value: uvPosition}
+
         },
         vertexShader: document.getElementById('vertexShader').textContent,
         fragmentShader: document.getElementById('fragmentShader').textContent
     });
 
     // cube = new THREE.Points(bufferGeometry, shaderMaterial);
+
     cube = new THREE.Mesh(bufferGeometry, shaderMaterial);
     cube.matrixAutoUpdate = true;
     cube.updateMatrix();
@@ -281,6 +309,10 @@ function scene1() {
 
     // mesh = new THREE.Points( bufferGeometry, shaderMaterial );
     cube.position.z = 440;//420
+
+
+    cube.position.z = 480;
+    // cube.rotation.x += 9.2;
     // cube.rotation.y -= 0.02;
     // cube.position.y -= 20;
     // cube.rotation.x -= 0.19;
@@ -344,6 +376,7 @@ function scene1() {
 
 
     camera.position.z = cameraDistance * Math.cos(THREE.Math.degToRad(1));
+    
     // camera.lookAt(camera.target);
 
     shaderMaterial.uniforms.torus.value = 0.8;
@@ -396,7 +429,7 @@ function render() {
             if (pass1.uniforms.density.value > 0) {
                 pass1.uniforms.density.value -= 0.0051;//0.09
             }
-            console.log(pass1.uniforms.density.value)
+            // console.log(pass1.uniforms.density.value)
             // pass1.uniforms.density.value = 0.3;//0.09
             camera.position.z = cameraDistance * Math.cos(THREE.Math.degToRad(1));
         }, 700);
@@ -408,6 +441,10 @@ function render() {
         }
         if (shaderMaterial) {
             shaderMaterial.uniforms.time.value = .00025 * (Date.now() - timer);
+            // console.log(Math.sin(shaderMaterial.uniforms.time.value / 5.0))
+            if(Math.sin(shaderMaterial.uniforms.time.value / 5.0) < 1.5 && Math.sin(shaderMaterial.uniforms.time.value / 5.0) > 1.1)
+            
+            shaderMaterial.uniforms.uvPosition.value= Math.abs(Math.sin(shaderMaterial.uniforms.time.value / 5.0));
         }
         // console.log(shaderMaterial.uniforms.u_mouse.value / shaderMaterial.uniforms.u_resolution.value)
     }

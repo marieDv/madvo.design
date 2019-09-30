@@ -72,7 +72,7 @@ function initSwiper() {
 			spaceBetween: 10,
 			cssMode: true,
 			// followFinger: true,
-			speed: 1500,
+			speed: 1700,
 			on: {
 				click: function () {
 				},
@@ -87,9 +87,7 @@ function initSwiper() {
 					}
 				this.simulateTouch = false;
 				console.log(this.simulateTouch)
-					// this.noSwiping = true;
-					// this.allowSlidePrev = true;
-					// this.allowSlideNext = true;
+
 
 					document.getElementsByClassName("swiper-container")[0].classList.add("swiper-container--notouch");
 					setTimeout(() => {
@@ -101,7 +99,7 @@ function initSwiper() {
 					}, 1500);
 					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
 					universalIndex = this.activeIndex;
-					console.log(universal)
+				// 	console.log(universal)
 				}
 				}
 			}
