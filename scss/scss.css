@@ -1246,6 +1246,7 @@ html {
 
 .swiper-slide-active:not(.single-slide) div .headline--xl {
   color: #fff;
+  text-shadow: 2px 7px 10px rgba(0, 0, 0, 0.17);
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: transparent;
@@ -3175,6 +3176,12 @@ html {
   letter-spacing: 2px;
 }
 
+@media screen and (max-width: 1600px) {
+  .single .scroll-popup {
+    font-size: 16px;
+  }
+}
+
 .single .scroll-popup span {
   background-color: white;
   width: 1px;
@@ -3342,6 +3349,13 @@ html {
   font-size: 1.2rem;
   line-height: 2.4;
   font-weight: 300;
+}
+
+@media screen and (max-width: 1600px) {
+  .single .text--sm {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
 }
 
 @media screen and (max-width: 860px) {

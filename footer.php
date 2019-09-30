@@ -241,7 +241,7 @@ return t;
 
 
 		gl_Position = projectionMatrix * modelViewMatrix * vec4(morphed, 1.0);
-    DEPTH = ((gl_Position.z * 1.5) / (FARPLANE));
+    DEPTH = ((gl_Position.z * 1.45) / (FARPLANE));
   }
 </script>
 
@@ -288,7 +288,7 @@ void main() {
 
 
 <script>
-  var universal = "http://localhost/wordpress/wp-content/uploads/2019/09/trans-filling-1.png";
+  var universal = "";
   var universalIndex = 0;
 </script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/EffectComposer.js"></script>

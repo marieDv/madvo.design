@@ -87,7 +87,7 @@ composer.addPass(renderPass);
 renderPass.renderToScreen = true;
 
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
-pass1.uniforms.weight.value = 0.7;//decay density weight
+pass1.uniforms.weight.value = 0.6;//decay density weight
 pass1.uniforms.decay.value = 0.9;
 pass1.uniforms.density.value = 0.8;//0.09
 pass1.needsSwap = false;
@@ -101,16 +101,16 @@ const bloomPass = new THREE.BloomPass(
   0.1,    // sigma ?
   556,  // blur render target resolution
 );
-//composer.addPass(bloomPass);
+composer.addPass(bloomPass);
 
 const filmPass = new THREE.FilmPass(
   0.45,   // noise intensity
-  0.025,  // scanline intensity
+  0.0025,  // scanline intensity
   248,    // scanline count
   false,  // grayscale
 );
 filmPass.renderToScreen = true;
-//composer.addPass(filmPass);
+composer.addPass(filmPass);
 //composer.addPass(pass1);
 
 // let pass2 = new THREE.FilmPass(THREE.FilmShader);
@@ -153,23 +153,12 @@ function createTextures(src, index) {
 
 }
 
-// if(index === 0){
-//     setTimeout(() => {
-//         console.log(modelArray)
-//     scene1();
-//     }, 500);
-
-// }
-
-
-
 image();
-// scene1();
 animate();
 
 function image() {
+  universal = document.getElementsByClassName("hidden-thumbnail")[0].innerHTML;
   var image = new Image();
-  //image.src = universal;
   image.src = universal;
   image.onload = function () {
     WIDTH = image.width;
@@ -184,23 +173,6 @@ function image() {
     console.log('image loaded');
     context.drawImage(image, 0, 0);
     data = context.getImageData(0, 0, WIDTH, HEIGHT).data;
-
-    // let alpha = [];
-
-    // for (var i = 0, n = data.length; i < n; i += 4) {
-    //     var red = data[i];
-    //     var green = data[i + 1];
-    //     var blue = data[i + 2];
-
-    //     alpha[i] = data[i +1];
-    //     alpha[i+1] = data[i +2];
-    // }
-
-    // let j = 0;
-    // for (var i = 0; i < data.length; i += 1) {
-    //     returnArray[j] = alpha[i];
-    //     j++;
-    // }
     scene1();
   }
 }
@@ -278,7 +250,7 @@ function scene1() {
         type: "t",
         value: THREE.ImageUtils.loadTexture(universal)
       },
-      explosionValue: { type: "f", value: 40.0 },
+      explosionValue: { type: "f", value: 70.0 },
       u_mouse: { type: "v2", value: new THREE.Vector2(100.0, 100.0) },
       time: { // float initialized to 0
         type: "f",
@@ -473,7 +445,7 @@ function render() {
     }
   } else {
     if (shaderMaterial) {
-      if (shaderMaterial.uniforms.explosionValue.value > 10 && firstLoad) {//shaderMaterial.uniforms.explosionValue.value > 10 && 
+      if (shaderMaterial.uniforms.explosionValue.value > 30 && firstLoad) {//shaderMaterial.uniforms.explosionValue.value > 10 && 
         console.log("firstLoad" + firstLoad);
         TweenMax.to(shaderMaterial.uniforms.explosionValue, 6, {
           ease: Elastic.easeOut.config(2, 0.3),

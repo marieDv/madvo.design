@@ -12,7 +12,7 @@ function aniamteAllTextElements(controller, element, delay) {
     offset: -250,
   })
     .setTween(tween)
-    .addIndicators({ name: element + "start" }) // add indicators (requires plugin)
+ //   .addIndicators({ name: element + "start" }) // add indicators (requires plugin)
     .addTo(controller);
 }
 
