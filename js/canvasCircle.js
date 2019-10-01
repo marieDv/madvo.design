@@ -161,6 +161,7 @@ function createTextures(src, index) {
 image();
 animate();
 
+
 function image() {
   universal = document.getElementsByClassName("hidden-thumbnail")[0].innerHTML;
   var image = new Image();
