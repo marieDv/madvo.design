@@ -488,6 +488,9 @@ html {
   width: 100vw;
   height: 100vh;
   z-index: 12000;
+  &--active {
+    mix-blend-mode: exclusion;
+  }
 }
 .swiper-container {
   width: 100%;

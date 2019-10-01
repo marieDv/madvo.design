@@ -77,30 +77,30 @@ function initSwiper() {
 				click: function () {
 				},
 				slideChange: function () {
-					if(!document.getElementsByClassName("swiper-container")[0].classList.contains("about-container")){
-				
-				
-					if(( this.previousIndex - this.activeIndex ) < 0){
-						TweenMax.to(infoRing, 1.5, {rotation: '+= 90'}); 
-					}else {
-						TweenMax.to(infoRing, 1.5, {rotation: '-= 90'}); 
+					if (!document.getElementsByClassName("swiper-container")[0].classList.contains("about-container")) {
+
+
+						if ((this.previousIndex - this.activeIndex) < 0) {
+							TweenMax.to(infoRing, 1.5, { rotation: '+= 90' });
+						} else {
+							TweenMax.to(infoRing, 1.5, { rotation: '-= 90' });
+						}
+						this.simulateTouch = false;
+						console.log(this.simulateTouch)
+
+
+						document.getElementsByClassName("swiper-container")[0].classList.add("swiper-container--notouch");
+						setTimeout(() => {
+							activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
+						}, 200);
+						setTimeout(() => {
+							document.getElementsByClassName("swiper-container")[0].classList.remove("swiper-container--notouch");
+
+						}, 1500);
+						universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
+						universalIndex = this.activeIndex;
+						// 	console.log(universal)
 					}
-				this.simulateTouch = false;
-				console.log(this.simulateTouch)
-
-
-					document.getElementsByClassName("swiper-container")[0].classList.add("swiper-container--notouch");
-					setTimeout(() => {
-						activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
-					}, 200);
-					setTimeout(() => {
-						document.getElementsByClassName("swiper-container")[0].classList.remove("swiper-container--notouch");
-
-					}, 1500);
-					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
-					universalIndex = this.activeIndex;
-				// 	console.log(universal)
-				}
 				}
 			}
 		});
@@ -149,9 +149,11 @@ const initCursor = () => {
 		if (activeSlide) {
 			if (!activeSlide.classList.contains("single-slide")) {
 				activeSlide.addEventListener("mouseover", () => {
+					document.getElementsByClassName("cursor--canvas")[0].classList.add("cursor--canvas--active");
 					isHovering = true;
 				});
 				activeSlide.addEventListener("mouseleave", () => {
+					document.getElementsByClassName("cursor--canvas")[0].classList.remove("cursor--canvas--active");
 					isHovering = false;
 				});
 			}
@@ -162,9 +164,9 @@ const initCursor = () => {
 	// transform the innerCursor to the current mouse position
 	// use requestAnimationFrame() for smooth performance
 	const render = () => {
-	
+
 		innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
-		if (isHoveringFooter || isHoveringSwiper) {
+		if (isHoveringFooter || isHoveringSwiper) {
 			innerCursor.style.background = "#000";
 		} else {
 			innerCursor.style.background = "#fff";
@@ -173,9 +175,9 @@ const initCursor = () => {
 
 		// }, 1/30);
 
-		setTimeout(function(){ //throttle requestAnimationFrame to 20fps
+		setTimeout(function () { //throttle requestAnimationFrame to 20fps
 			requestAnimationFrame(render);
-	}, 1000/20)
+		}, 1000 / 20)
 
 	};
 	requestAnimationFrame(render);
@@ -269,17 +271,17 @@ const initCanvas = () => {
 			arrows.visible = false;
 		}
 
-		if(isHoveringMarie){
+		if (isHoveringMarie) {
 			portraitcursor.classList.add("cursor--canvas-about--active");
 			portraitcursor.classList.remove("cursor--canvas-about--leaving");
 			portrait.visible = true;
-		}else {
-			if(portrait.visible === true){
+		} else {
+			if (portrait.visible === true) {
 				portraitcursor.classList.remove("cursor--canvas-about--active");
 				portraitcursor.classList.add("cursor--canvas-about--leaving");
 			}
 			setTimeout(() => {
-				portrait.visible = false;				
+				portrait.visible = false;
 			}, 400);
 
 		}
@@ -295,8 +297,8 @@ const initCanvas = () => {
 		if (isHovering) {
 
 			if (once === false) {
-				polygon.fillColor = "#e2183a";
-				polygon.strokeColor = "#e2183a";
+				polygon.fillColor = "#fff";
+				polygon.strokeColor = "#fff";
 
 
 				setTimeout(() => {
@@ -331,10 +333,10 @@ const initCanvas = () => {
 			once = false;
 		}
 
-		if(isHoveringSwiper) {
+		if (isHoveringSwiper) {
 			polygon.strokeColor = "#000";
 			arrowsBlack.visible = true;
-		}else{
+		} else {
 			polygon.strokeColor = "#fff";
 			arrowsBlack.visible = false;
 		}

@@ -87,40 +87,45 @@ composer.addPass(renderPass);
 renderPass.renderToScreen = true;
 
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
-pass1.uniforms.weight.value = 0.6;//decay density weight
-pass1.uniforms.decay.value = 0.9;
-pass1.uniforms.density.value = 0.8;//0.09
-pass1.needsSwap = false;
+pass1.uniforms.tDiffuse = { value: null };
+pass1.uniforms.lightPosition = { value: new THREE.Vector2(0.5, 0.5) };
+pass1.uniforms.exposure = { value: 0.58 };
+pass1.uniforms.decay = { value: 0.95 };
+pass1.uniforms.density = { value: 0.9 };
+pass1.uniforms.weight = { value: 0.1 };
+pass1.uniforms.samples = {value: 50};
 
-pass1.renderToScreen = true;
-
-
-const bloomPass = new THREE.BloomPass(
-  1.4,    // strength
-  20,   // kernel size
-  0.1,    // sigma ?
-  556,  // blur render target resolution
-);
-composer.addPass(bloomPass);
-
-const filmPass = new THREE.FilmPass(
-  0.45,   // noise intensity
-  0.0025,  // scanline intensity
-  248,    // scanline count
-  false,  // grayscale
-);
-filmPass.renderToScreen = true;
-composer.addPass(filmPass);
-//composer.addPass(pass1);
-
-// let pass2 = new THREE.FilmPass(THREE.FilmShader);
-// composer.addPass(pass2);
-// pass2.renderToScreen = true;
+  pass1.renderToScreen = true;
 
 
-let hiddenthumbnails = document.getElementsByClassName("hidden-thumbnail");
-let modelArray = [];
-for (let i = 0; i < hiddenthumbnails.length; i++) {
+  const bloomPass = new THREE.BloomPass(
+    1.4,    // strength
+    20,   // kernel size
+    0.1,    // sigma ?
+    556,  // blur render target resolution
+  );
+  //composer.addPass(bloomPass);
+
+  const filmPass = new THREE.FilmPass(
+    0.05,   // noise intensity
+    0.0025,  // scanline intensity
+    448,    // scanline count
+    false,  // grayscale
+  );
+  filmPass.renderToScreen = true;
+
+  composer.addPass(pass1);
+  composer.addPass(filmPass);
+
+
+  let pass2 = new THREE.FilmPass(THREE.FilmShader);
+  //composer.addPass(pass2);
+  // pass2.renderToScreen = true;
+
+
+  let hiddenthumbnails = document.getElementsByClassName("hidden-thumbnail");
+  let modelArray =[];
+  for(let i = 0; i <hiddenthumbnails.length; i++) {
   console.log(hiddenthumbnails[i].innerHTML)
   //  createImage(hiddenthumbnails[i].innerHTML, i);
   createTextures(hiddenthumbnails[i].innerHTML, i);
@@ -257,8 +262,8 @@ function scene1() {
         value: 0.0
       },
       uvPosition: { type: "f", value: uvPosition },
-      FARPLANE: {type: "f", value: 300.0},
-      DEPTH: {type: "f", value: 1.0},
+      FARPLANE: { type: "f", value: 300.0 },
+      DEPTH: { type: "f", value: 1.0 },
 
     },
     vertexShader: document.getElementById('vertexShader').textContent,

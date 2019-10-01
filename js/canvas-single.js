@@ -46,7 +46,8 @@ let timer = Date.now();
 let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
-let cameraDistance = 690;
+let cameraDistance = 650.0;
+let farplane = ((cameraDistance-130) / 2.0) ;//(cameraDistance / 2.0) -90.0
 let universal = document.getElementsByClassName("hidden-thumbnail")[0].innerHTML;
 
 let raycaster = new THREE.Raycaster(); // create once
@@ -84,31 +85,40 @@ let renderPass = new THREE.RenderPass(scene, camera);
 composer.addPass(renderPass);
 renderPass.renderToScreen = true;
 
+
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
-pass1.uniforms.weight.value = 1.5;//decay density weight
-pass1.uniforms.decay.value = 0.85;
-pass1.uniforms.density.value = 0.3;//0.09
-pass1.needsSwap = false;
+pass1.uniforms.tDiffuse = { value: null };
+pass1.uniforms.lightPosition = { value: new THREE.Vector2(0.5, 0.5) };
+pass1.uniforms.exposure = { value: 0.58 };
+pass1.uniforms.decay = { value: 0.89 };
+pass1.uniforms.density = { value: 1.2 };
+pass1.uniforms.weight = { value: 0.1 };
+pass1.uniforms.samples = {value: 50};
+
+  pass1.renderToScreen = true;
 
 
-const bloomPass = new THREE.BloomPass(
-  1.4,    // strength
-  20,   // kernel size
-  0.1,    // sigma ?
-  556,  // blur render target resolution
-);
-composer.addPass(bloomPass);
+  const bloomPass = new THREE.BloomPass(
+    1.4,    // strength
+    20,   // kernel size
+    0.1,    // sigma ?
+    556,  // blur render target resolution
+  );
+  //composer.addPass(bloomPass);
 
-const filmPass = new THREE.FilmPass(
-  0.45,   // noise intensity
-  0.0025,  // scanline intensity
-  248,    // scanline count
-  false,  // grayscale
-);
-filmPass.renderToScreen = true;
-composer.addPass(filmPass);
-//composer.addPass(pass1);
-composer.addPass(pass1);
+  const filmPass = new THREE.FilmPass(
+    0.05,   // noise intensity
+    0.0025,  // scanline intensity
+    448,    // scanline count
+    false,  // grayscale
+  );
+  filmPass.renderToScreen = true;
+
+  composer.addPass(pass1);
+  composer.addPass(filmPass);
+
+
+
 pass1.renderToScreen = true;
 
 
@@ -223,7 +233,7 @@ function scene1() {
           value: 0.0
         },
         uvPosition: { type: "f", value: uvPosition },
-        FARPLANE: {type: "f", value: 300.0},
+        FARPLANE: {type: "f", value: farplane},
         DEPTH: {type: "f", value: 1.0},
   
       },

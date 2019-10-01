@@ -1157,6 +1157,10 @@ html {
   z-index: 12000;
 }
 
+.cursor--canvas--active {
+  mix-blend-mode: exclusion;
+}
+
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -3107,6 +3111,7 @@ html {
 .single .canvas-container {
   width: 50%;
   height: 500px;
+  margin-top: -12vh;
 }
 
 @media screen and (max-width: 860px) {
