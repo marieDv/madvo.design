@@ -1,17 +1,24 @@
 
-scrollAnimation();
-scrollSingle();
-
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1600) {
+    scrollAnimation();
+    scrollSingle();
+  }
+});
+if (window.innerWidth > 1600) {
+  scrollAnimation();
+  scrollSingle();
+}
 function aniamteAllTextElements(controller, element, delay) {
   // let elementClasses = document.getElementById(element);
   // elementClasses.style.opacity = 0;
   //anim-about-text
   // var tween = TweenMax.fromTo("#"+element, 1.2,{opacity: 1.0,y: yDecay ? "-"+yDecay : 40 }, { opacity: 1.0, y: yDecay ? yDecay : -40 });
   var tween;
-  if(delay){
-  tween = TweenMax.fromTo("#" + element, 1.2,{ y: 0}, { y: -40});
-  }{
-    tween = TweenMax.to("#" + element, 1.7, { y: -40});//className: "+=anim-about-text"
+  if (delay) {
+    tween = TweenMax.fromTo("#" + element, 1.2, { y: 0 }, { y: -40 });
+  } {
+    tween = TweenMax.to("#" + element, 1.7, { y: -40 });//className: "+=anim-about-text"
   }
   let mScene = new ScrollMagic.Scene({
 
@@ -62,7 +69,7 @@ function scrollAnimation() {
 }
 
 
-function scrollSingle(){
+function scrollSingle() {
   let controller = new ScrollMagic.Controller();
 
   scrollImagesUp(controller);

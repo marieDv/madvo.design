@@ -2510,7 +2510,7 @@ html {
 
 @media screen and (max-width: 1600px) {
   .about .ic-headline--xl {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 2;
   }
 }
@@ -2542,18 +2542,15 @@ html {
 
 @media screen and (max-width: 1600px) {
   .about .ic-headline--xl-xl {
-    font-size: 64px;
-    font-size: 52px;
-    font-weight: 400;
-    font-size: 48px;
-    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+    font-size: 56px;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .about .ic-headline--xl-xl {
     margin-left: 0;
-    font-size: 43px;
   }
 }
 
@@ -2584,6 +2581,12 @@ html {
   height: 100vh;
   background: white;
   background: linear-gradient(9deg, white 56%, #ececec 100%);
+}
+
+@media screen and (max-width: 1600px) {
+  .about .about-swiper {
+    margin-top: 0;
+  }
 }
 
 .about .about-swiper .ic-headline--xl-xl {
@@ -2632,6 +2635,12 @@ html {
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1600px) {
+  .about .scroll-popup {
+    display: none;
+  }
 }
 
 .about .scroll-popup span {
@@ -2715,7 +2724,7 @@ html {
 
 @media screen and (max-width: 1600px) {
   .about .info-section h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
@@ -2746,6 +2755,7 @@ html {
 @media screen and (max-width: 1600px) {
   .about .info-section {
     font-size: 20px;
+    margin-top: 96px;
   }
 }
 
@@ -2979,7 +2989,9 @@ html {
 @media screen and (max-width: 1600px) {
   .about-clients {
     width: 71vw;
-    top: 90px;
+    top: 0;
+    height: 80vh;
+    padding-top: 13vh;
   }
 }
 

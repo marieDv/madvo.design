@@ -90,8 +90,8 @@ let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
 pass1.uniforms.tDiffuse = { value: null };
 pass1.uniforms.lightPosition = { value: new THREE.Vector2(0.5, 0.5) };
 pass1.uniforms.exposure = { value: 0.58 };
-pass1.uniforms.decay = { value: 0.89 };
-pass1.uniforms.density = { value: 1.2 };
+pass1.uniforms.decay = { value: 0.93 };
+pass1.uniforms.density = { value: 0.8 };
 pass1.uniforms.weight = { value: 0.1 };
 pass1.uniforms.samples = {value: 50};
 
