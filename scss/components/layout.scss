@@ -8,7 +8,7 @@
   top: 5vh;
   padding: 0 34px;
 
-  top: -80px;
+  //top: -80px;
   padding: 0 6.5%;
 
   @media screen and (max-width: 842px) {
@@ -132,16 +132,16 @@ li:last-child {
   will-change: transform;
 }
 .overview-container {
-  border-top: 0.8px solid white;
-  background: white;
+  // border-top: 0.8px solid white;
   margin-bottom: 66px;
-  border-bottom: 3px solid black;
+  background: #0a0a0a;
 }
 #arrows-black {
   display: none;
 }
 .quickOverview {
   height: 208px;
+  height: 50vh;
   display: flex;
   align-content: center;
   text-transform: uppercase;
@@ -150,7 +150,6 @@ li:last-child {
   align-items: center;
   width: fit-content;
   transition: all 0.2s cubic-bezier(0.73, 0.57, 0.71, 1.06);
-  // overflow: hidden;
 
   @media screen and (max-width: 842px) {
     // width: 255%;
@@ -171,11 +170,20 @@ li:last-child {
     font-family: "Work Sans", sans-serif;
     font-size: 18px;
 
-    font-size: 42px;
+    font-size: 24px;
     min-width: 800px;
-    font-weight: 400;
-    font-weight: 400;
     letter-spacing: -1px;
+    text-transform: lowercase;
+    //border: 1px solid black;
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    letter-spacing: 4px;
+    font-weight: 300;
+    text-transform: uppercase;
     @media screen and (max-width: 842px) {
       width: 300px;
       font-size: 16px;
@@ -196,6 +204,108 @@ canvas.threejs {
     display: none;
   }
 }
+
+.single-intro-text {
+  padding-left: 5.5vw;
+  &::before {
+    content: "";
+    background: #fff;
+    position: absolute;
+    height: 2px;
+    width: 4vw;
+    margin-left: -5.5vw;
+    margin-top: 2vh;
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+    
+  }
+  @media screen and (max-width: 860px) {
+    margin-top: 42px;
+    margin-bottom: 80px;
+    padding-left: 0;
+  }
+}
+.color-codes {
+  position: absolute;
+  right: 21px;
+  //bottom: 48px;
+
+  margin-top: calc(25% - 27px);
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  span {
+    height: 24px;
+    width: 24px;
+    display: block;
+    border-radius: 999px;
+  }
+  span:first-child {
+    background: #ff23ff;
+    margin-bottom: 24px;
+  }
+  span:last-child {
+    background: #1cffff;
+  }
+}
+.single-top-nav {
+  .current-index {
+    margin-left: 264px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    @media screen and (max-width: 1600px) {
+      margin-left: 0;
+    }
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+  .burger-menu {
+    position: absolute;
+    left: 230px;
+    right: inherit !important;
+    margin-top: -1.8vh !important;
+    padding: 0 !important;
+    left: 300px;
+
+    @media screen and (max-width: 1600px) {
+      left: 21px;
+    }
+    @media screen and (max-width: 1200px) {
+      background: pink;
+      left: 0 !important;
+      right: 0 !important;
+      margin: 0 auto !important;
+    }
+  }
+  .header-nav {
+    right: 0;
+    padding-right: 300px;
+    position: absolute;
+
+    @media screen and (max-width: 1600px) {
+      padding-right: 100px;
+    }
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+    a {
+      letter-spacing: 6%;
+      text-transform: uppercase;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 500;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+    a:not(:last-child) {
+      margin-right: 6vw;
+    }
+  }
+}
 .footer {
   height: 164px;
   position: absolute;
@@ -204,10 +314,7 @@ canvas.threejs {
   display: grid;
   align-content: center;
   grid-template-columns: repeat(12, 12fr);
-  font-weight: 800;
-  letter-spacing: 6%;
-  font-size: 12px;
-  text-transform: uppercase;
+
   padding-top: 16px;
   line-height: 1.1;
   height: 72px;
@@ -217,9 +324,12 @@ canvas.threejs {
     padding-top: 0;
   }
   a {
+    letter-spacing: 6%;
+    text-transform: uppercase;
     font-family: "Work Sans", sans-serif;
     font-weight: 500;
     color: #fff;
+    font-size: 12px;
     @media screen and (max-width: 680px) {
       color: #000;
     }
@@ -573,7 +683,7 @@ html {
   }
   div .headline--xl {
     color: #fff;
-    text-shadow: 2px 7px 10px rgba(0,0,0,0.17);
+    text-shadow: 2px 7px 10px rgba(0, 0, 0, 0.17);
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: transparent;

@@ -148,7 +148,7 @@ const initCursor = () => {
 	const render = () => {
 	
 		innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
-		if (isHoveringFooter || isHoveringSwiper) {
+		if (isHoveringFooter) {
 			innerCursor.style.background = "#000";
 		} else {
 			innerCursor.style.background = "#fff";
@@ -246,7 +246,7 @@ const initCanvas = () => {
 		lastY = lerp(lastY, clientY, 0.2);
 		group.position = new paper.Point(lastX, lastY);
 
-		if (isHoveringWheel && !isHovering && !isHoveringSwiper) {
+		if (isHoveringSwiper && !isHovering) {
 			arrows.visible = true;
 
 		} else {
@@ -267,15 +267,7 @@ const initCanvas = () => {
 			}, 400);
 
 		}
-		if (isHoveringFooter) {
-			if (changeFooter === false) {
-				polygon.strokeColor = "#e2183a";
-				changeFooter = true;
-			}
-		} else if (!isHovering) {
-			polygon.strokeColor = "#fff";
-			changeFooter = false;
-		}
+
 		if (isHovering) {
 
 			if (once === false) {
@@ -316,11 +308,19 @@ const initCanvas = () => {
 		}
 
 		if(isHoveringSwiper) {
-			polygon.strokeColor = "#000";
-			arrowsBlack.visible = true;
+			polygon.strokeColor = "#fff";
+			arrows.visible = true;
 		}else{
 			polygon.strokeColor = "#fff";
-			arrowsBlack.visible = false;
+			arrows.visible = false;
+		}
+		if (isHoveringFooter) {
+				polygon.strokeColor = "#000";
+				changeFooter = true;
+			
+		} else if (!isHovering) {
+			polygon.strokeColor = "#fff";
+			changeFooter = false;
 		}
 
 	}

@@ -47,7 +47,7 @@ let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
 let cameraDistance = 650.0;
-let farplane = ((cameraDistance-130) / 2.0) ;//(cameraDistance / 2.0) -90.0
+let farplane = ((cameraDistance-180) / 2.0) ;//(cameraDistance / 2.0) -90.0
 let universal = document.getElementsByClassName("hidden-thumbnail")[0].innerHTML;
 
 let raycaster = new THREE.Raycaster(); // create once
@@ -61,7 +61,6 @@ renderer.setClearColor(0xffffff, 0);//default color for bg
 renderer.setPixelRatio(window.devicePixelRatio / 2);//for higher density displays
 let addtocanvas = 0;
 let porportions = document.getElementsByClassName("canvas-container")[0];
-console.log(porportions.offsetWidth)
 renderer.setSize(porportions.offsetWidth, porportions.offsetHeight + addtocanvas); //set to window size
 let scene = new THREE.Scene();
 originalAspect = porportions.offsetWidth / porportions.offsetHeight;
@@ -89,9 +88,9 @@ renderPass.renderToScreen = true;
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
 pass1.uniforms.tDiffuse = { value: null };
 pass1.uniforms.lightPosition = { value: new THREE.Vector2(0.5, 0.5) };
-pass1.uniforms.exposure = { value: 0.58 };
+pass1.uniforms.exposure = { value: 0.78 };
 pass1.uniforms.decay = { value: 0.93 };
-pass1.uniforms.density = { value: 0.8 };
+pass1.uniforms.density = { value: 0.5 };
 pass1.uniforms.weight = { value: 0.1 };
 pass1.uniforms.samples = {value: 50};
 
@@ -107,7 +106,7 @@ pass1.uniforms.samples = {value: 50};
   //composer.addPass(bloomPass);
 
   const filmPass = new THREE.FilmPass(
-    0.05,   // noise intensity
+    0.3,   // noise intensity
     0.0025,  // scanline intensity
     448,    // scanline count
     false,  // grayscale
@@ -226,7 +225,7 @@ function scene1() {
           type: "t",
           value: THREE.ImageUtils.loadTexture(universal)
         },
-        explosionValue: { type: "f", value: 20.0 },
+        explosionValue: { type: "f", value: 8.0 },
         u_mouse: { type: "v2", value: new THREE.Vector2(100.0, 100.0) },
         time: { // float initialized to 0
           type: "f",
