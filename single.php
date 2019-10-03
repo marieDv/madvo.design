@@ -50,7 +50,7 @@
 <?php 
 global $i;
 global $post;
-$args = array('category' => 2); //25 //2 for dev
+$args = array('category' => 25); //25 //2 for dev
 $work = get_posts($args);
 
 foreach ($work as $post) : setup_postdata($post);
@@ -66,7 +66,7 @@ endforeach; echo "0" . $i . " "; ?>
       <li class="header-nav">
         <a class="bottomNav work" href="<?php echo get_home_url() ?>">Work</a>
         <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
-        <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
+        <a class="bottomNav" href="mailto:mariedvorzak@gmail.com?Subject=Hi!">contact</a>
       </li>
       <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
         <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
@@ -76,10 +76,6 @@ endforeach; echo "0" . $i . " "; ?>
   </div>
   <div id="scroll-popup" class="scroll-popup">
     <p id="scroll-popup-text">Scroll</p><span id="scroll-popup-line"></span>
-  </div>
-  <div class="color-codes">
-    <span></span>
-    <span></span>
   </div>
   <?php
   global $currentPostId;

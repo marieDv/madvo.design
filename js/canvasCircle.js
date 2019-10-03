@@ -107,7 +107,7 @@ pass1.uniforms.samples = {value: 50};
   //composer.addPass(bloomPass);
 
   const filmPass = new THREE.FilmPass(
-    0.05,   // noise intensity
+    0.15,   // noise intensity
     0.0025,  // scanline intensity
     448,    // scanline count
     false,  // grayscale

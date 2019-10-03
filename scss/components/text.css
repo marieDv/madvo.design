@@ -336,6 +336,7 @@ span {
 @media screen and (max-width: 1600px) {
   .headline--xl {
     font-size: 108px;
+    font-size: 80px;
   }
 }
 

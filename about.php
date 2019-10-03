@@ -138,7 +138,7 @@
 
   <div id="something-amazing" class="text--sm text-left mt-16 contact-section">
     <p>Let’s create <strong>something amazing</strong> together!</p>
-   <div id="contacts"> <a href="mailto:dvorzak.marie@gmx.at?Subject=Hi!"><strong>dvorzak.marie@gmail.com</strong></a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a></div>
+   <div id="contacts"> <a href="mailto:mariedvorzak@gmail.com?Subject=Hi!"><strong>mariedvorzak@gmail.com</strong></a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a></div>
   </div>
 <footer id="footer-about" class="footer white">
         <a class="bottomNav work active">© Marie Dvorzak</a>

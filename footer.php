@@ -1,11 +1,21 @@
-<footer class="footer">
+<footer class="footer no-grid">
   <!-- <div>
                 <p>@ Marie Dvorzak</p>
                 <span class="text-small">Designer & Coder</span>
         </div> -->
-  <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
+  <!-- <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
   <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
-  <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
+  <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a> -->
+  <div class="navigate">
+    <span>drag to navigate</span>
+  </div>
+  
+
+  <div class="explore"><<a class="" href="">explore project</a></div>
+  <div class="e-mail">
+    <a href="mailto:mariedvorzak@gmail.com?Subject=Hi!" >mariedvorzak@gmail.com</a>
+  </div>
+
 </footer>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>

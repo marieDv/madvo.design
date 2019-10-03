@@ -24,7 +24,10 @@ let growCircle = false;
 var windowSize = window.innerWidth;
 let overview = document.getElementById("overview-holder");
 
-
+setTimeout(() => {
+	setExploreLink();
+	
+}, 500);
 
 
 if (overview) { initOverview(); } else {
@@ -43,7 +46,17 @@ window.addEventListener("resize", () => {
 
 
 });
-
+function setExploreLink(){
+	let explore = document.getElementsByClassName("explore")[0].children[0];
+	let slide = document.getElementsByClassName("swiper-slide-active")[0];
+	let link;
+	if(slide){
+		link = slide.href;
+	}
+	console.log(link);
+	console.log(explore);
+	explore.href = link;
+}
 
 function initOverview() {
 
@@ -78,7 +91,7 @@ function initSwiper() {
 				},
 				slideChange: function () {
 					if (!document.getElementsByClassName("swiper-container")[0].classList.contains("about-container")) {
-
+						
 
 						if ((this.previousIndex - this.activeIndex) < 0) {
 							TweenMax.to(infoRing, 1.5, { rotation: '+= 90' });
@@ -91,6 +104,7 @@ function initSwiper() {
 
 						document.getElementsByClassName("swiper-container")[0].classList.add("swiper-container--notouch");
 						setTimeout(() => {
+							setExploreLink();
 							activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
 						}, 200);
 						setTimeout(() => {
