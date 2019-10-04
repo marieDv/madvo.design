@@ -42,24 +42,24 @@
 <div id="scroll-popup" class="scroll-popup"><p id="scroll-popup-text">Scroll</p><span id="scroll-popup-line"></span></div>
 
   <div class=" absolute pin-t mt-16 mr-6 w-full z-50">
-    <ul class="pin-r absolute mr-12 nav">
-      <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
-      <a class="burger-menu " href="<?php echo get_home_url() ?>">
-        <!-- <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/close.png"> -->
+  <ul class="pin-r absolute mr-12 nav  single-top-nav">
+      <!-- <li class="info-ring-nav">
+        <img id="" alt="about me ring" class="info-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/info-ring.png">
+      </li> -->
+
+      <a class="burger-menu" href="<?php echo get_home_url() ?>">
       </a>
-        <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/"> 
-        <!-- <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
+      <div class="e-mail">
+    <a href="mailto:mariedvorzak@gmail.com?Subject=Hi!" >mariedvorzak@gmail.com</a>
+  </div>
+      <li class="header-nav">
+        <a class="bottomNav work" href="<?php echo get_home_url() ?>">Work</a>
         <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
-        <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a> -->
+        <a class="bottomNav" href="mailto:mariedvorzak@gmail.com?Subject=Hi!">contact</a>
+      </li>
+      <li class="nav-items text--xs inline mt-16 cursor-pointer pinm-r">
+        <ul class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up pr-3" target="_blank" href="https://www.instagram.com/madvo.design/">
         </ul>
-        <!-- <ul class="nav-fast">
-          <li id="" class="inline toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-          <a href="<?php echo get_home_url() ?>">work</a>
-          </li>
-          <li id="toggleabout" class="inline active toggleabout text--sm text--nav headline--sm texthover texthover-up" href="">
-          <a href="<?php echo get_page_link(780); ?>">about</a>
-          </li>
-        </ul>  -->
       </li>
     </ul>
   </div>
@@ -76,7 +76,7 @@
     <h2 id="about-title" class="ic-headline--xl-xl"><span id="triggerH11">Hey there, I am </span><span id="triggerH12"><a id="toggleFace">Marie</a><br> a Digital Designer with</span><br><span id="triggerH13">a passion for coding!</span></h2>
     <div id="trigger3" class="indicators"></div>
 
-    <div id="trigger1" class=" ic-headline--xl mt-32 info-section">  <span id="trigger-start-subheadline" class="start-subheadline-anim">who?</span><h2  class="start-subtext-anim">Right now I am searching for a job as UI-Designer in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography (and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them at any chance. Asides from that I spend my free time looking at modern art, shopping for plants and defending human rights.
+    <div id="trigger1" class=" ic-headline--xl mt-32 info-section">  <span id="trigger-start-subheadline" class="start-subheadline-anim">huh?</span><h2  class="start-subtext-anim">Right now I am searching for a job as UI-Designer in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography (and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them at any chance. Asides from that I spend my free time looking at modern art, shopping for plants and defending human rights.
     <!-- My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome! 💥 -->
   </h2>
 </div>

@@ -236,7 +236,7 @@ canvas.threejs {
   right: 21px;
   height: 10.5vh;
   padding-top: 2vh;
-
+  display: none;
   @media screen and (max-width: 1200px) {
     display: none;
   }
@@ -276,18 +276,31 @@ canvas.threejs {
     color: #fff;
     font-size: 12px;
     letter-spacing: 1.5px;
+    @media screen and (max-width: 1600px) {
+      font-size: 10px;
+    }
   }
   a:not(:last-child) {
     margin-right: 6vw;
   }
 }
 .single-top-nav {
+
+  .e-mail {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.3;
+    left: 395px;
+    position: absolute;
+    letter-spacing: 0.5px;
+  }
   .current-index {
     margin-left: 264px;
     font-family: "Work Sans", sans-serif;
     font-size: 12px;
     @media screen and (max-width: 1600px) {
       margin-left: 0;
+      font-size: 10px;
     }
     @media screen and (max-width: 1200px) {
       display: none;
@@ -330,6 +343,9 @@ canvas.threejs {
       color: #fff;
       font-size: 12px;
       letter-spacing: 1.5px;
+      @media screen and (max-width: 1600px) {
+        font-size: 10px;
+      }
     }
     a:not(:last-child) {
       margin-right: 6vw;
@@ -350,6 +366,10 @@ canvas.threejs {
   height: 72px;
   margin-bottom: 24px;
   z-index: 200;
+  font-size: 12px;
+  @media screen and (max-width: 1600px) {
+    font-size: 10px;
+  }
   @media screen and (max-width: 680px) {
     padding-top: 0;
   }
@@ -359,7 +379,7 @@ canvas.threejs {
     font-family: "Work Sans", sans-serif;
     font-weight: 500;
     color: #fff;
-    font-size: 12px;
+    // font-size: 12px;
     @media screen and (max-width: 680px) {
       color: #000;
     }
@@ -807,8 +827,10 @@ html {
   height: 100%;
 }
 .info-ring {
-  left: calc(300px - 146px);
+  left: calc(300px - 74px);
+  top: -7vh;
   @media screen and (max-width: 1600px) {
+    top: -6vh;
     left: 50px;
   }
   @media screen and (max-width: 860px) {
@@ -819,11 +841,23 @@ html {
   display: block;
   font-weight: 500;
   font-family: "Work Sans", sans-serif;
+  @media screen and (max-width: 1600px) {
+    font-size: 10px;
+  }
   .navigate {
     position: absolute;
     left: 0;
     opacity: 0.3;
     left: 300px;
+
+    span {
+      text-transform: lowercase;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      @media screen and (max-width: 1600px) {
+        font-size: 12px;
+      }
+    }
     @media screen and (max-width: 1600px) {
       left: 100px;
     }
@@ -851,7 +885,7 @@ html {
       left: 0;
       right: 0;
       margin: 0 auto;
-      margin-top: -14px;
+      margin-top: -18px;
     }
     &::after {
       content: "";
@@ -863,12 +897,13 @@ html {
       left: 0;
       right: 0;
       margin: 0 auto;
-      margin-top: 32px;
+      margin-top: 28px;
     }
     span {
       opacity: 0.3;
     }
     &:hover {
+      opacity: 0.3;
       &::before {
         transform: translateY(10px);
       }
@@ -882,6 +917,15 @@ html {
     position: absolute;
     right: 0;
     right: 300px;
+
+    a {
+      text-transform: lowercase;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      @media screen and (max-width: 1600px) {
+        font-size: 12px;
+      }
+    }
     @media screen and (max-width: 1600px) {
       right: 100px;
     }

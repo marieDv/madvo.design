@@ -10,10 +10,7 @@ if (window.innerWidth > 1600) {
   scrollSingle();
 }
 function aniamteAllTextElements(controller, element, delay) {
-  // let elementClasses = document.getElementById(element);
-  // elementClasses.style.opacity = 0;
-  //anim-about-text
-  // var tween = TweenMax.fromTo("#"+element, 1.2,{opacity: 1.0,y: yDecay ? "-"+yDecay : 40 }, { opacity: 1.0, y: yDecay ? yDecay : -40 });
+  
   var tween;
   if (delay) {
     tween = TweenMax.fromTo("#" + element, 1.2, { y: 0 }, { y: -40 });
@@ -39,13 +36,11 @@ function scrollAnimation() {
   aniamteAllTextElements(controller, "education-headline");
   aniamteAllTextElements(controller, "about-swiper");
   aniamteAllTextElements(controller, "something-amazing");
-  // aniamteAllTextElements(controller, "contacts", true);
 
   var scene = new ScrollMagic.Scene({
     triggerElement: "#trigger1",
     offset: 200,
   })
-    // .addIndicators({ name: "1 (duration: 0)" }) // add indicators (requires plugin)
     .addTo(controller);
   console.log(scene.progress())
 
@@ -53,7 +48,6 @@ function scrollAnimation() {
     triggerElement: ".aboutOverview",
     offset: 200,
   })
-    // .addIndicators({ name: "1 (duration: 0)" }) // add indicators (requires plugin)
     .addTo(controller);
 
   var tween = TweenMax.to("#animate3", 1, { className: "+=fish" });
@@ -62,8 +56,14 @@ function scrollAnimation() {
     .addTo(controller);
 
 
-  var infoTween = TweenMax.fromTo("#info-ring", 0.21, { opacity: 0 }, { className: "+=moving", opacity: 1 });
-  var scene4 = new ScrollMagic.Scene({ triggerElement: "#trigger3", duration: 4000, offset: -200 })
+  //var infoTween = TweenMax.fromTo("#info-ring", 0.1, { opacity: 0 }, { className: "+=moving", opacity: 1 });
+
+
+  let infoTween = new TimelineLite();
+  infoTween.fromTo("#info-ring", 0.05, {opacity: 0}, {opacity: 1});
+  infoTween.to("#info-ring", 2.0, {className: "+=moving"});
+
+  var scene4 = new ScrollMagic.Scene({ triggerElement: "#trigger3", duration: 4000, offset: 20 })
     .setTween(infoTween)
     .addTo(controller);
 }

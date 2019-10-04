@@ -44,25 +44,32 @@
       </li> -->
 
       <a class="burger-menu" href="<?php echo get_home_url() ?>">
-    </a>
-    <a class="current-index"><strong>
+      </a>
+      <a class="current-index"><strong>
 
-<?php 
-global $i;
-global $post;
-$args = array('category' => 25); //25 //2 for dev
-$work = get_posts($args);
+          <?php
+          while (have_posts()) : the_post();
 
-foreach ($work as $post) : setup_postdata($post);
-  $i += 1;
- 
-endforeach; echo "0" . $i . " "; ?>
+            $id = $post->ID;
+            $currentPostId = $id;
+          endwhile;
+          global $i;
+          global $post;
+          $currentIndex = 0;
+          $args = array('category' => 25); //25 //2 for dev
+          $work = get_posts($args);
+          ?>
+          <?php foreach ($work as $post) : setup_postdata($post); ?>
+            <?php $currentIndex += 1;     
+              if ($currentPostId === $id) {
+                echo ("0" . $currentIndex);
+              } ?>
+          <?php endforeach; ?>
+
+        </strong> / <?php echo "0" . count_cat_post(2) ?>
 
 
-</strong> / <?php echo "0" . wp_count_posts()->publish ?>
-
-
-</a>
+      </a>
       <li class="header-nav">
         <a class="bottomNav work" href="<?php echo get_home_url() ?>">Work</a>
         <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
@@ -85,7 +92,6 @@ endforeach; echo "0" . $i . " "; ?>
     $post = get_post($id);
     $content = apply_filters('the_content', $post->post_content);
     $currentPostId = $id;
-
     echo $content;
   endwhile;
   ?>
@@ -101,12 +107,14 @@ endforeach; echo "0" . $i . " "; ?>
       <?php
       global $i;
       global $post;
+      $currentIndex = 0;
       $args = array('category' => 25); //25 //2 for dev
       $work = get_posts($args);
       ?>
-      <?php foreach ($work as $post) : setup_postdata($post); ?>
-        <?php if ($currentPostId !== $id) { ?>
-          
+      <?php foreach ($work as $post) : setup_postdata($post); ?> 
+        <?php $currentIndex += 1;
+          if ($currentPostId !== $id) { ?>
+
 
           <a class="swiper-slide single-slide" href="<?php echo get_permalink($post->ID) ?>">
             <?php
@@ -114,7 +122,7 @@ endforeach; echo "0" . $i . " "; ?>
                 echo str_replace('<br>', ' ', $title);
                 ?>
           </a>
-        <?php } ?>
+        <?php }  ?>
       <?php endforeach; ?>
     </div>
   </div>

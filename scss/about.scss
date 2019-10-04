@@ -575,13 +575,12 @@ html {
   }
 
   &-me {
-    //max-width: 41vh;
+
     width: 25%;
     align-self: flex-start;
     width: 17%;
     margin: 2rem;
-    //top: 20vh;
-    //right: 10rem;
+
     box-shadow: 15px 17px 58px 0px rgba(0, 0, 0, 0.5);
     & img {
       max-width: 100%;
@@ -591,7 +590,6 @@ html {
   }
 }
 .cursor--canvas-about {
-  // mix-blend-mode: normal;
   mix-blend-mode: exclusion;
   &--active {
     transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -599,7 +597,6 @@ html {
     animation: 0.7s animate-opacity forwards;
   }
   &--leaving {
-    // transition: all 1.8s cubic-bezier(0.165, 0.84, 0.44, 1);
     animation: 0.7s animate-opacity-back;
   }
 }

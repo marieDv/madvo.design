@@ -74,7 +74,7 @@
         <?php
         global $i;
         global $post;
-        $args = array('category' => 2, 'posts_per_page' => -1,); ///25 //2 for dev
+        $args = array('category' => 25, 'posts_per_page' => -1,); ///25 //2 for dev
         $work = get_posts($args);
 
         $args2 = array('category' => 30); ///
@@ -156,7 +156,7 @@
             <?php
             global $i;
             global $post;
-            $args = array('category' => 2); //25 //2 for dev
+            $args = array('category' => 25); //25 //2 for dev
             $work = get_posts($args);
 
             $argse2 = array('category' => 30);

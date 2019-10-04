@@ -11,7 +11,7 @@
   </div>
   
 
-  <div class="explore"><<a class="" href="">explore project</a></div>
+  <div class="explore"><a class="" href="">explore project</a></div>
   <div class="e-mail">
     <a href="mailto:mariedvorzak@gmail.com?Subject=Hi!" >mariedvorzak@gmail.com</a>
   </div>

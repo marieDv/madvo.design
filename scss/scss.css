@@ -797,6 +797,7 @@ canvas.threejs {
   right: 21px;
   height: 10.5vh;
   padding-top: 2vh;
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -851,8 +852,23 @@ canvas.threejs {
   letter-spacing: 1.5px;
 }
 
+@media screen and (max-width: 1600px) {
+  .header-nav a {
+    font-size: 10px;
+  }
+}
+
 .header-nav a:not(:last-child) {
   margin-right: 6vw;
+}
+
+.single-top-nav .e-mail {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.3;
+  left: 395px;
+  position: absolute;
+  letter-spacing: 0.5px;
 }
 
 .single-top-nav .current-index {
@@ -864,6 +880,7 @@ canvas.threejs {
 @media screen and (max-width: 1600px) {
   .single-top-nav .current-index {
     margin-left: 0;
+    font-size: 10px;
   }
 }
 
@@ -925,6 +942,12 @@ canvas.threejs {
   letter-spacing: 1.5px;
 }
 
+@media screen and (max-width: 1600px) {
+  .single-top-nav .header-nav a {
+    font-size: 10px;
+  }
+}
+
 .single-top-nav .header-nav a:not(:last-child) {
   margin-right: 6vw;
 }
@@ -945,6 +968,13 @@ canvas.threejs {
   height: 72px;
   margin-bottom: 24px;
   z-index: 200;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1600px) {
+  .footer {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -959,7 +989,6 @@ canvas.threejs {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
   color: #fff;
-  font-size: 12px;
 }
 
 @media screen and (max-width: 680px) {
@@ -1540,11 +1569,13 @@ html {
 }
 
 .info-ring {
-  left: calc(300px - 146px);
+  left: calc(300px - 74px);
+  top: -7vh;
 }
 
 @media screen and (max-width: 1600px) {
   .info-ring {
+    top: -6vh;
     left: 50px;
   }
 }
@@ -1561,11 +1592,29 @@ html {
   font-family: "Work Sans", sans-serif;
 }
 
+@media screen and (max-width: 1600px) {
+  .footer.no-grid {
+    font-size: 10px;
+  }
+}
+
 .footer.no-grid .navigate {
   position: absolute;
   left: 0;
   opacity: 0.3;
   left: 300px;
+}
+
+.footer.no-grid .navigate span {
+  text-transform: lowercase;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+@media screen and (max-width: 1600px) {
+  .footer.no-grid .navigate span {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 1600px) {
@@ -1606,7 +1655,7 @@ html {
   left: 0;
   right: 0;
   margin: 0 auto;
-  margin-top: -14px;
+  margin-top: -18px;
 }
 
 .footer.no-grid .explore::after {
@@ -1620,10 +1669,14 @@ html {
   left: 0;
   right: 0;
   margin: 0 auto;
-  margin-top: 32px;
+  margin-top: 28px;
 }
 
 .footer.no-grid .explore span {
+  opacity: 0.3;
+}
+
+.footer.no-grid .explore:hover {
   opacity: 0.3;
 }
 
@@ -1642,6 +1695,18 @@ html {
   position: absolute;
   right: 0;
   right: 300px;
+}
+
+.footer.no-grid .e-mail a {
+  text-transform: lowercase;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+@media screen and (max-width: 1600px) {
+  .footer.no-grid .e-mail a {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 1600px) {
@@ -3419,6 +3484,7 @@ html {
 .single .item-content__extrainfo-box {
   width: 100%;
   text-align: left;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1600px) {
@@ -3436,8 +3502,13 @@ html {
   width: 50%;
   height: 500px;
   height: 100vh;
-  margin-top: -30vh;
-  margin-top: -25vh;
+  margin-top: -15vh;
+}
+
+@media screen and (max-width: 1600px) {
+  .single .canvas-container {
+    margin-top: -25vh;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -3464,6 +3535,12 @@ html {
   width: 50%;
 }
 
+@media screen and (max-width: 1600px) {
+  .single .text-container {
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 860px) {
   .single .text-container {
     width: 100%;
@@ -3479,6 +3556,7 @@ html {
   display: flex;
   height: 100vh;
   margin-top: 30vh;
+  margin-top: 20vh;
 }
 
 @media screen and (max-width: 1600px) {
@@ -3501,16 +3579,18 @@ html {
   right: 0;
   text-align: center;
   width: 200px;
-  font-size: 20px;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
+  z-index: 99999;
 }
 
 @media screen and (max-width: 1600px) {
   .single .scroll-popup {
-    font-size: 12px;
+    font-size: 10px;
+    bottom: 46px;
   }
 }
 
@@ -3536,7 +3616,7 @@ html {
   position: fixed;
   left: 42px;
   margin: inherit;
-  top: -41px;
+  top: 5vh;
 }
 
 .single-container {
@@ -3671,6 +3751,7 @@ html {
   font-weight: 400;
   max-width: 1900px;
   text-align: left;
+  margin-bottom: 72px;
 }
 
 @media screen and (max-width: 1600px) {
@@ -3699,7 +3780,7 @@ html {
   line-height: 28px;
   font-size: 20px;
   font-weight: 200;
-  font-size: 1.2rem;
+  font-size: 18px;
   line-height: 2.4;
   font-weight: 300;
 }

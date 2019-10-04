@@ -21,4 +21,16 @@ function the_category_unlinked($separator = ' ') {
     
     echo $thelist;
 }
+function count_cat_post($category) {
+    if(is_string($category)) {
+        $catID = get_cat_ID($category);
+    }
+    elseif(is_numeric($category)) {
+        $catID = $category;
+    } else {
+        return 0;
+    }
+    $cat = get_category($catID);
+    return $cat->count;
+    }
 ?>

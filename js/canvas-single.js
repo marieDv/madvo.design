@@ -46,8 +46,8 @@ let timer = Date.now();
 let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
-let cameraDistance = 650.0;
-let farplane = ((cameraDistance-180) / 2.0) ;//(cameraDistance / 2.0) -90.0
+let cameraDistance = 670.0;
+let farplane = ((cameraDistance-150) / 2.0) ;//(cameraDistance / 2.0) -90.0
 let universal = document.getElementsByClassName("hidden-thumbnail")[0].innerHTML;
 
 let raycaster = new THREE.Raycaster(); // create once
