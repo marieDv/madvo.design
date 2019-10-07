@@ -18,7 +18,9 @@
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/regular.min.css" rel="stylesheet">
+  
   <link rel="stylesheet" href="<? bloginfo('stylesheet_url') ?>">
   <?php
   function theme_enqueue_styles()
@@ -74,11 +76,15 @@
     <img alt="me" id="portrait" src="<?php bloginfo('stylesheet_directory'); ?>/assets/derpme.jpg">
 
     <div id="about-clients" class="about-clients  inline text-left">
-      <h2 id="about-title" class="ic-headline--xl-xl"><span id="triggerH11">Hey there, I am </span><span id="triggerH12"><a id="toggleFace">Marie</a> a Digital Designer with</span><br><span id="triggerH13">a passion for coding!</span></h2>
+      <!-- <h2 id="about-title" class="ic-headline--xl-xl"><span id="triggerH11">Hey there, I am </span><span id="triggerH12"><a id="toggleFace">Marie</a> a Digital Designer that</span><br><span id="triggerH13">loves to create visuals with code</span></h2> -->
+      <h2 class="ic-headline--xl-xl">Huh?</h2>
       <div id="trigger3" class="indicators"></div>
 
-      <div id="trigger1" class=" ic-headline--xl mt-32 info-section"> <span id="trigger-start-subheadline" class="start-subheadline-anim">huh?</span>
-        <h2 class="start-subtext-anim">Right now I am searching for a job as UI-Designer in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography (and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them at any chance. Asides from that I spend my free time looking at modern art, shopping for plants and defending human rights.
+      <div id="trigger1" class=" ic-headline--xl mt-32 info-section">
+         <!-- <span id="trigger-start-subheadline" class="start-subheadline-anim">huh?</span> -->
+        <h2 class="start-subtext-anim">
+        Hey there, I am <a id="toggleFace">Marie</a> a Digital Designer thatloves to create visuals with code!
+        Right now I am searching for a job as UI-Designer in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography (and that one’s real pricy), but also because I sincerely love to create concepts for websites and applications. I like things that are well designed and talk about them at any chance. Asides from that I spend my free time looking at modern art, shopping for plants and defending human rights.
           <!-- My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome! 💥 -->
         </h2>
       </div>
@@ -127,7 +133,12 @@
           <p>2010 – 2015</p>Graphische<span>Higher school certificate in <strong>Graphicdesign</strong><br> @ Die Graphische in Vienna</span>
         </div>
 
+        <div class="download-resume-container">
+          <a class="download-resume" href="<?php bloginfo('stylesheet_directory'); ?>/assets/dvorzak_marie_resume.pdf" download>Download Resume</a>
+        </div>
       </div>
+
+
       <!-- <h2 id="education-headline" class="ic-headline--xl-xl">Experience and <br>Education</h2>
       <span id="" class="ic-headline--xl">My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome!
         <a class="download-resume" href="<?php bloginfo('stylesheet_directory'); ?>/assets/dvorzak_marie_resume.pdf" download>Download Resume</a>
@@ -135,11 +146,12 @@
       </span> -->
 
 
-      <div class=" ic-headline--xl mt-32 info-section"> <span id="trigger-start-subheadline" class="start-subheadline-anim">Experience and Education</span>
-        <h2 class="start-subtext-anim">My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome!
-        <a class="download-resume" href="<?php bloginfo('stylesheet_directory'); ?>/assets/dvorzak_marie_resume.pdf" download>Download Resume</a> 
-      </h2>
-        
+      <div class=" ic-headline--xl mt-32 info-section">
+        <!-- <span id="trigger-start-subheadline" class="start-subheadline-anim">Experience and Education</span> -->
+        <!-- <h2 class="start-subtext-anim">My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome! -->
+        <!-- <a class="download-resume" href="<?php bloginfo('stylesheet_directory'); ?>/assets/dvorzak_marie_resume.pdf" download>Download Resume</a>  -->
+        </h2>
+
       </div>
 
     </div>
@@ -152,8 +164,12 @@
 
 
   <div id="something-amazing" class="text--sm text-left mt-16 contact-section">
-    <p>Let’s create <strong>something amazing</strong> together!</p>
-    <div id="contacts"> <a href="mailto:mariedvorzak@gmail.com?Subject=Hi!"><strong>mariedvorzak@gmail.com</strong></a><a target="_blank" href="https://www.instagram.com/madvo.design/" class="ml-3">instagram</a></div>
+    <h3 class="ic-headline--xl-xl">Let’s create <strong>something <br>amazing</strong> together!</h3>
+    <div id="contacts"> <a href="mailto:mariedvorzak@gmail.com?Subject=Hi!"><strong>e-mail </strong><span class="far fa-paper-plane symbol"></span><span class="address">mariedvorzak@gmail.com</span></a>
+    <a target="_blank" href="https://www.instagram.com/madvo.design/" class="">instagram <span class="fab fa-instagram symbol"></span><span class="address">@madvo.design</span></a>
+    <a target="_blank" href="https://www.behance.net/dvorzakmar5f83" class="">behance <span class="fab fa-behance symbol"></span></a>
+  </div>
+  <span class="copyright-claim">© CODE BY MARIE DVORZAK</span>
   </div>
   <footer id="footer-about" class="footer white">
     <a class="bottomNav work active">© Marie Dvorzak</a>

@@ -32,7 +32,7 @@ let group, stuckX, stuckY, fillOuterCursor;
 var windowSize = window.innerWidth;
 let overview = document.getElementById("overview-holder");
 if (overview) { initOverview(); } else {
-	initSwiper();
+	// initSwiper();
 }
 
 
@@ -40,7 +40,7 @@ window.addEventListener("resize", () => {
 	windowSize = window.innerWidth;
 
 	if (overview) { initOverview(); } else {
-		initSwiper();
+		// initSwiper();
 	}
 });
 
@@ -49,9 +49,9 @@ function initSwiper() {
 	if (window.innerWidth > 900) {
 		let mySwiper = new Swiper('.swiper-container', {
 			simulateTouch: true,
-			slidesPerView: 2,
+			slidesPerView: 5,
 			slideToClickedSlide: true,
-			spaceBetween: 300,
+			spaceBetween: 30,
 			breakpoints: {
 				1600: {
 					// slidesOffsetBefore: 132

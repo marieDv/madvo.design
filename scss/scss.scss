@@ -30,7 +30,7 @@
 
 /*///////PAGES///////*/
 @import "about.scss";
-@import "single.scss";
+@import "single.scss"; 
 
 //@import "../dragdealer/dragdealer.css";
 html {
@@ -56,7 +56,12 @@ body {
     background: #020202;
   }
 }
-
+p, span, h3, h2, strong, a {
+  &::selection {
+    background: #ff002b;
+    //mix-blend-mode: difference;
+  }
+}
 @keyframes grain {
   0%, 100% { transform:translate(0, 0) }
   10% { transform:translate(-5%, -10%) }
