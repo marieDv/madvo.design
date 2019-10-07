@@ -133,8 +133,8 @@ pass1.renderToScreen = true;
 let hiddenthumbnails = document.getElementsByClassName("hidden-thumbnail");
 let modelArray = [];
 
-image();
-// scene1();
+// image();
+scene1();
 animate();
 
 function image() {
@@ -170,7 +170,7 @@ function scene1() {
   plane.castShadow = true;
   plane.receiveShadow = true;
   var vertices = plane.attributes.position.array;
-
+  let returnArray = vertices;
   for (i = 0, j = 2; i < returnArray.length; i += 4, j += 3) {
     vertices[j] = returnArray[i] * Math.random() * (8 - -0.2) + -0.2;// * HEIGHT_AMPLIFIER;
     if (returnArray[i] === 0) {
