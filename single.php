@@ -66,7 +66,7 @@
               } ?>
           <?php endforeach; ?>
 
-        </strong> / <?php echo "0" . count_cat_post(2) ?>
+        </strong> / <?php echo "0" . count_cat_post(25) ?> <!--   2 25 -->
 
 
       </a>

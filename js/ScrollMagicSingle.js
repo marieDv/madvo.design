@@ -48,7 +48,7 @@ function scrollImagesUp(controller) {
   //   .addTo(controller);
 
   var tween = TweenMax.to("#text-anchor", 0.2, { className: "+=moveImages" });
-  var scene3 = new ScrollMagic.Scene({ triggerElement: "#text-anchor", duration: 400, offset: 300 })
+  var scene3 = new ScrollMagic.Scene({ triggerElement: "#text-anchor", duration: 400, offset: 900 })
     .setTween(tween)
     .addTo(controller);
 }

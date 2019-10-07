@@ -72,7 +72,7 @@ function scrollAnimation() {
 function scrollSingle() {
   let controller = new ScrollMagic.Controller();
 
-  scrollImagesUp(controller);
+  //scrollImagesUp(controller);
   aniamteScrollPopup(controller, "scroll-popup");
 }
 
@@ -106,7 +106,7 @@ function aniamteScrollPopup(controller, element, delay) {
 
 function scrollImagesUp(controller) {
   var tween = TweenMax.to("#about-clients", 1.2, { className: "+=moveImages" });
-  var scene3 = new ScrollMagic.Scene({ triggerElement: "#about-clients", duration: 400, offset: 500 })
+  var scene3 = new ScrollMagic.Scene({ triggerElement: "#about-clients", duration: 400, offset: 1500 })
     .setTween(tween)
     .addTo(controller);
 }

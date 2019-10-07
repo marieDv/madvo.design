@@ -363,6 +363,12 @@ canvas.threejs {
   letter-spacing: 0.5px;
 }
 
+@media screen and (max-width: 1600px) {
+  .single-top-nav .e-mail {
+    left: 268px;
+  }
+}
+
 .single-top-nav .current-index {
   margin-left: 264px;
   font-family: "Work Sans", sans-serif;
@@ -394,6 +400,7 @@ canvas.threejs {
 @media screen and (max-width: 1600px) {
   .single-top-nav .burger-menu {
     left: 21px;
+    left: 201px;
   }
 }
 

@@ -9,15 +9,21 @@ html {
   align-items: center;
   padding-bottom: 0;
 
-
   #about-clients {
     &.moveImages {
       opacity: 0;
       height: 30vh;
     }
   }
-
-
+  #three-about {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    mix-blend-mode: exclusion;
+    z-index: 9999;
+    pointer-events: none;
+  }
   #footer-about {
     position: relative;
     margin-bottom: 0;
@@ -52,12 +58,9 @@ html {
     }
   }
   #info-ring {
-    // opacity: 0;
-
     &.moving {
       transform-origin: center;
       transform: rotate(-880deg);
-      // background: red;
     }
   }
   .info-ring {
@@ -175,17 +178,25 @@ html {
       font-weight: 400;
       text-transform: lowercase;
 
-      font-size: 72px;
+      font-size: 64px;
       line-height: 1.3;
       letter-spacing: -0.3px;
+      font-size: 9rem;
+
+      // font-size: 7rem;
+      height: 55vh;
+      padding-top: 15vh;
+
       @media screen and (max-width: 1600px) {
         line-height: 1.3;
         letter-spacing: -0.3px;
         font-size: 56px;
+        font-size: 120px;
+        font-weight: 500;
       }
       @media screen and (max-width: 1200px) {
         margin-left: 0;
-      //  font-size: 43px;
+        //  font-size: 43px;
       }
       @media screen and (max-width: 860px) {
         font-size: 42px;
@@ -213,18 +224,33 @@ html {
     @media screen and (max-width: 1600px) {
       margin-top: 0;
     }
+    .ic-headline--xl {
+      font-size: 18px;
+      color: #000000;
+
+    }
     .ic-headline--xl-xl {
       text-align: left;
       line-height: 1.2;
       color: #000000;
       width: 800px;
       margin-left: 13vw;
-      // font-size: 70px;
       margin-top: 146px;
-
-      // font-size: 80px;
       margin-top: 11vh;
       font-weight: 500;
+      font-size: 42px;
+
+    }
+    .start-subtext-anim {
+      min-width: 66%;
+    }
+    .download-resume {
+      color: #000;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: "Work Sans", sans-serif;
+      text-transform: uppercase;
+      text-decoration: underline;
     }
     span {
       color: black;
@@ -236,6 +262,11 @@ html {
       font-size: 20px;
       line-height: 1.9;
     }
+    .start-subheadline-anim {
+      color: #000;
+    }
+
+
     @media screen and (max-width: 860px) {
       display: none;
     }
@@ -283,6 +314,9 @@ html {
     display: -webkit-box;
     text-align: center;
     transition: all 0.7s cubic-bezier(0.73, 0.57, 0.71, 1.06);
+    @media screen and (max-width: 1600px) {
+      padding-top: 7vh;
+    }
     span {
       margin-left: 0;
     }
@@ -295,16 +329,20 @@ html {
     min-width: 400px;
     display: grid;
     color: #000;
+    font-size: 32px;
+    font-weight: 500;
     &:not(.swiper-slide-active) {
       color: #232323 !important;
 
       p,
       span,
       strong {
+        font-weight: 400;
         color: #232323 !important;
       }
     }
     p {
+      font-weight: 400;
       font-size: 24px;
       margin-bottom: 72px;
       color: #000;
@@ -317,6 +355,9 @@ html {
       line-height: 1.6;
       margin-top: 32px;
       font-weight: 400;
+      @media screen and (max-width: 1600px) {
+        font-size: 18px;
+      }
     }
   }
   .info-section {
@@ -324,7 +365,6 @@ html {
     line-height: 1.9;
     font-size: 24px;
     display: flex;
-
 
     h2 {
       color: #818181;
@@ -386,8 +426,11 @@ html {
     p {
       font-size: 42px;
       font-family: "Poppins", sans-serif;
-      font-weight: 400;
+      font-weight: 200;
       letter-spacing: -1px;
+      strong {
+        font-weight: 700;
+      }
       @media screen and (max-width: 860px) {
         font-size: 32px;
         padding: 0 93px;
@@ -552,17 +595,16 @@ html {
     position: relative;
     margin: 0 auto;
 
-
     margin: 0 auto;
     // border: 2px solid red;
     height: 70vh;
     top: 0;
     padding-top: 16vh;
-
+    height: 100%;
     @media screen and (max-width: 1600px) {
       width: 71vw;
       top: 0;
-      height: 80vh;
+      height: 190vh;
       padding-top: 13vh;
     }
     @media screen and (max-width: 1100px) {
@@ -575,7 +617,6 @@ html {
   }
 
   &-me {
-
     width: 25%;
     align-self: flex-start;
     width: 17%;

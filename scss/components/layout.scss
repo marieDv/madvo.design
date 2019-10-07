@@ -285,7 +285,6 @@ canvas.threejs {
   }
 }
 .single-top-nav {
-
   .e-mail {
     font-size: 14px;
     font-weight: 400;
@@ -293,6 +292,9 @@ canvas.threejs {
     left: 395px;
     position: absolute;
     letter-spacing: 0.5px;
+    @media screen and (max-width: 1600px) {
+      left: 268px;
+    }
   }
   .current-index {
     margin-left: 264px;
@@ -316,6 +318,7 @@ canvas.threejs {
 
     @media screen and (max-width: 1600px) {
       left: 21px;
+      left: 201px;
     }
     @media screen and (max-width: 1200px) {
       background: pink;

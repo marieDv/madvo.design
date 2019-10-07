@@ -46,8 +46,8 @@ let timer = Date.now();
 let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
-let cameraDistance = 670.0;
-let farplane = ((cameraDistance-150) / 2.0) ;//(cameraDistance / 2.0) -90.0
+let cameraDistance = 690.0;
+let farplane = ((cameraDistance-110) / 2.0) ;//(cameraDistance / 2.0) -90.0
 let universal = document.getElementsByClassName("hidden-thumbnail")[0].innerHTML;
 
 let raycaster = new THREE.Raycaster(); // create once
@@ -89,7 +89,7 @@ let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
 pass1.uniforms.tDiffuse = { value: null };
 pass1.uniforms.lightPosition = { value: new THREE.Vector2(0.5, 0.5) };
 pass1.uniforms.exposure = { value: 0.78 };
-pass1.uniforms.decay = { value: 0.93 };
+pass1.uniforms.decay = { value: 0.97 };
 pass1.uniforms.density = { value: 0.5 };
 pass1.uniforms.weight = { value: 0.1 };
 pass1.uniforms.samples = {value: 50};
@@ -106,7 +106,7 @@ pass1.uniforms.samples = {value: 50};
   //composer.addPass(bloomPass);
 
   const filmPass = new THREE.FilmPass(
-    0.3,   // noise intensity
+    0.1,   // noise intensity
     0.0025,  // scanline intensity
     448,    // scanline count
     false,  // grayscale
