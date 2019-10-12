@@ -63,8 +63,7 @@ let uvPosition = Math.abs(Math.sin(timer / 5.0)) ;//Math.abs(Math.sin(timer / 5.
 /**
  *render and camera
  */
-let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs')[0] });
-renderer.setClearColor(0xffffff, 0);//default color for bg
+let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs')[0], alpha: true });
 renderer.setPixelRatio(window.devicePixelRatio / 2);//for higher density displays
 let addtocanvas = 0;
 renderer.setSize(window.innerWidth, window.innerHeight + addtocanvas); //set to window size
@@ -77,7 +76,8 @@ camera.target = new THREE.Vector3(0, 0, 0);
 
 scene.fog = new THREE.Fog("#fff", 600, 1000);
 
-
+//renderer.setClearColor(0xffffff, 0);//default color for bg
+scene.background = new THREE.Color( 0xff0000 );
 
 window.addEventListener('resize', onWindowResize, false);
 

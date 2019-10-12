@@ -238,6 +238,7 @@ canvas.threejs {
   top: 0;
   -webkit-filter: saturate(1.2);
           filter: saturate(1.2);
+  pointer-events: none;
 }
 
 @media screen and (max-width: 842px) {
@@ -247,7 +248,7 @@ canvas.threejs {
 }
 
 .single-intro-text {
-  padding-left: 5.5vw;
+  position: relative;
 }
 
 .single-intro-text::before {
@@ -255,9 +256,10 @@ canvas.threejs {
   background: #fff;
   position: absolute;
   height: 2px;
-  width: 4vw;
-  margin-left: -5.5vw;
+  width: 100%;
   margin-top: 2vh;
+  margin-top: -4vh;
+  opacity: 0.1;
 }
 
 @media screen and (max-width: 860px) {
@@ -369,6 +371,12 @@ canvas.threejs {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .single-top-nav .e-mail {
+    display: none;
+  }
+}
+
 .single-top-nav .current-index {
   margin-left: 264px;
   font-family: "Work Sans", sans-serif;
@@ -377,7 +385,7 @@ canvas.threejs {
 
 @media screen and (max-width: 1600px) {
   .single-top-nav .current-index {
-    margin-left: 0;
+    margin-left: 192px;
     font-size: 10px;
   }
 }
@@ -406,7 +414,6 @@ canvas.threejs {
 
 @media screen and (max-width: 1200px) {
   .single-top-nav .burger-menu {
-    background: pink;
     left: 0 !important;
     right: 0 !important;
     margin: 0 auto !important;
@@ -449,6 +456,16 @@ canvas.threejs {
 
 .single-top-nav .header-nav a:not(:last-child) {
   margin-right: 6vw;
+}
+
+.starter .bottomNav {
+  display: none;
+}
+
+@media screen and (max-width: 860px) {
+  .starter .bottomNav {
+    display: block;
+  }
 }
 
 .footer {
@@ -653,6 +670,7 @@ canvas.threejs {
   margin-top: 17vh;
   height: 75vh;
   height: 45vh;
+  z-index: -1;
 }
 
 @media screen and (max-width: 1600px) {
@@ -972,26 +990,6 @@ html {
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: transparent;
-}
-
-.swiper-slide:not(.swiper-slide-active, .swiper-slide-prev) {
-  -webkit-transform: perspective(500px) rotateY(44deg);
-          transform: perspective(500px) rotateY(44deg);
-}
-
-.swiper-slide-active:not(.single-slide) {
-  -webkit-transform: perspective(500px) rotateY(0deg);
-          transform: perspective(500px) rotateY(0deg);
-}
-
-.swiper-slide-next:not(.single-slide) {
-  -webkit-transform: perspective(500px) rotateY(-24deg) translateX(-300px) rotateZ(5deg);
-          transform: perspective(500px) rotateY(-24deg) translateX(-300px) rotateZ(5deg);
-}
-
-.swiper-slide-prev:not(.single-slide) {
-  -webkit-transform: perspective(500px) rotateY(24deg) translateX(300px);
-          transform: perspective(500px) rotateY(24deg) translateX(300px);
 }
 
 .controls {

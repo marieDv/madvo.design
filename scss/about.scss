@@ -27,6 +27,8 @@ html {
       height: 80vh;
     }
     @media screen and (max-width: 860px) {
+      height: 100%;
+      margin-bottom: 40px;
       padding: 0 16px;
     }
   }
@@ -762,7 +764,10 @@ html {
       display: block;
       width: calc(100% - 32px);
       .ic-headline--xl-xl {
-        display: none;
+        font-size: 5rem;
+        line-height: 0;
+        margin-left: -5px;
+        margin-right: -21px;
       }
     }
   }

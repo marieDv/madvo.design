@@ -329,6 +329,13 @@ span {
   text-align: center;
 }
 
+.headline--xl span {
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
 .headline--xl:hover {
   text-decoration: none;
 }

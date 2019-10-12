@@ -200,21 +200,26 @@ canvas.threejs {
   left: 0;
   top: 0;
   filter: saturate(1.2);
+  // z-index: 99;
+  pointer-events: none;
   @media screen and (max-width: 842px) {
     display: none;
   }
 }
 
 .single-intro-text {
-  padding-left: 5.5vw;
+  // padding-left: 5.5vw;
+  position: relative;
   &::before {
     content: "";
     background: #fff;
     position: absolute;
     height: 2px;
-    width: 4vw;
-    margin-left: -5.5vw;
+    width: 100%;
     margin-top: 2vh;
+
+    margin-top: -4vh;
+    opacity: 0.1;
     @media screen and (max-width: 860px) {
       display: none;
     }
@@ -295,13 +300,16 @@ canvas.threejs {
     @media screen and (max-width: 1600px) {
       left: 268px;
     }
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
   }
   .current-index {
     margin-left: 264px;
     font-family: "Work Sans", sans-serif;
     font-size: 12px;
     @media screen and (max-width: 1600px) {
-      margin-left: 0;
+      margin-left: 192px;
       font-size: 10px;
     }
     @media screen and (max-width: 1200px) {
@@ -321,7 +329,6 @@ canvas.threejs {
       left: 201px;
     }
     @media screen and (max-width: 1200px) {
-      background: pink;
       left: 0 !important;
       right: 0 !important;
       margin: 0 auto !important;
@@ -352,6 +359,14 @@ canvas.threejs {
     }
     a:not(:last-child) {
       margin-right: 6vw;
+    }
+  }
+}
+.starter {
+  .bottomNav {
+    display: none;
+    @media screen and (max-width: 860px) {
+      display: block;
     }
   }
 }
@@ -480,9 +495,8 @@ canvas.threejs {
   margin-top: 17vh;
 
   height: 75vh;
-  // background: red;
   height: 45vh;
-
+  z-index: -1;
   @media screen and (max-width: 1600px) {
     margin-top: 16.5vh;
   }
@@ -745,22 +759,17 @@ html {
   }
 }
 .swiper-slide:not(.swiper-slide-active, .swiper-slide-prev) {
-  transform: perspective(500px) rotateY(44deg);
+  // transform: perspective(500px) rotateY(44deg);
 }
 .swiper-slide-active:not(.single-slide) {
-  transform: perspective(500px) rotateY(0deg);
+  // transform: perspective(500px) rotateY(0deg);
 }
 .swiper-slide-next:not(.single-slide) {
-  // background: red;
-  transform: perspective(500px) rotateY(-24deg) translateX(-300px) rotateZ(5deg);
-  // transform: perspective(500px) translateX(246px) rotateZ(5deg);
-  // transform: perspective(478px) translateX(50px) translateY(34px)  rotateZ(5deg);
+  // transform: perspective(500px) rotateY(-24deg) translateX(-300px) rotateZ(5deg);
+
 }
 .swiper-slide-prev:not(.single-slide) {
-  // background: blue;
-  transform: perspective(500px) rotateY(24deg) translateX(300px);
-  // transform: perspective(500px)translateX(40px) translateY(48px) rotateZ(-5deg);
-  // transform: perspective(500px) rotateY(24deg) translateX(-90px) translateY(500px) translateZ(-600px);
+  // transform: perspective(500px) rotateY(24deg) translateX(300px);
 }
 
 .swiper-slide-prev,

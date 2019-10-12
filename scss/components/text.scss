@@ -31,6 +31,7 @@ span {
   // width: fit-content;
   // height: 17px;
 }
+
 .bottomNav {
   width: fit-content;
   position: relative;
@@ -281,6 +282,14 @@ span {
     font-size: 142px;
     font-size: 120px;
     text-align: center;
+
+
+    span {
+      -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: white;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
     &:hover {
       text-decoration: none;
     }

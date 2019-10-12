@@ -56,13 +56,24 @@ let uvPosition = Math.abs(Math.sin(timer / 5.0));
 /**
  *render and camera
  */
-let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs-single')[0] });
-renderer.setClearColor(0xffffff, 0);//default color for bg
+let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs-single')[0], alpha: true });
+// renderer.setClearColor(0xffffff, 0);//default color for bg
 renderer.setPixelRatio(window.devicePixelRatio / 2);//for higher density displays
 let addtocanvas = 0;
 let porportions = document.getElementsByClassName("canvas-container")[0];
 renderer.setSize(porportions.offsetWidth, porportions.offsetHeight + addtocanvas); //set to window size
 let scene = new THREE.Scene();
+// let color = document.getElementsByClassName("wheel-item__content")[0].attributes.alt.nodeValue;
+// scene.background = new THREE.Color( color );
+
+// let colorValue = document.getElementById("grab-color").innerHTML;
+// var colorValue = parseInt ( color.replace("#","0x"), 16 );
+// var colored = new THREE.Color( colorValue );
+// scene.background = new THREE.Color( "#000000");
+// renderer.setClearColor(0xD1C8B7, 0);
+// console.log(colored)
+
+
 originalAspect = porportions.offsetWidth / porportions.offsetHeight;
 let camera = new THREE.PerspectiveCamera(32, porportions.offsetWidth / (porportions.offsetHeight), 0.1, 1000); //smaller when further away
 camera.position.set(0, 0, 20);
@@ -88,7 +99,7 @@ renderPass.renderToScreen = true;
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
 pass1.uniforms.tDiffuse = { value: null };
 pass1.uniforms.lightPosition = { value: new THREE.Vector2(0.5, 0.5) };
-pass1.uniforms.exposure = { value: 0.78 };
+pass1.uniforms.exposure = { value: 0.38 };
 pass1.uniforms.decay = { value: 0.97 };
 pass1.uniforms.density = { value: 0.5 };
 pass1.uniforms.weight = { value: 0.1 };

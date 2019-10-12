@@ -1,11 +1,11 @@
-<footer class="footer no-grid">
+<footer class="footer no-grid starter">
   <!-- <div>
                 <p>@ Marie Dvorzak</p>
                 <span class="text-small">Designer & Coder</span>
         </div> -->
-  <!-- <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
+  <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
   <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
-  <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a> -->
+  <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
   <div class="navigate">
     <span>drag to navigate</span>
   </div>
@@ -251,7 +251,7 @@ return t;
 
 
 		gl_Position = projectionMatrix * modelViewMatrix * vec4(morphed, 1.0);
-    DEPTH = ((gl_Position.z * 1.45) / (FARPLANE));
+    DEPTH = ((gl_Position.z * 1.49) / (FARPLANE));
   }
 </script>
 
@@ -279,7 +279,7 @@ void main() {
  //vec3 color = vec3( vUv / 5.0, 0.0 );
   //vec3 color = vec3((2.0 * 1.0 * FARPLANE) / (FARPLANE + 1.0 - DEPTH * (FARPLANE - 1.0))) / vec3(50.0);
   vec3 color = texture.rgb;
-  color /= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(50.0);
+  color *= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(50.0);
   gl_FragColor = vec4( color.rgb, 1.0 );
 
 

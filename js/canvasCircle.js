@@ -58,8 +58,8 @@ let uvPosition = Math.abs(Math.sin(timer / 5.0));//Math.abs(Math.sin(timer / 5.0
 /**
  *render and camera
  */
-let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs')[0] });
-renderer.setClearColor(0xffffff, 0);//default color for bg
+let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs')[0], alpha: true });
+//renderer.setClearColor(0xffffff, 0);//default color for bg
 renderer.setPixelRatio(window.devicePixelRatio / 2);//for higher density displays
 let addtocanvas = 0;
 renderer.setSize(window.innerWidth, window.innerHeight + addtocanvas); //set to window size
@@ -71,7 +71,7 @@ camera.position.set(0, 0, 20);
 camera.target = new THREE.Vector3(0, 0, 0);
 
 scene.fog = new THREE.Fog("#fff", 600, 1000);
-
+//scene.background = new THREE.Color( 'transparent' );
 
 
 window.addEventListener('resize', onWindowResize, false);
@@ -89,7 +89,7 @@ renderPass.renderToScreen = true;
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
 pass1.uniforms.tDiffuse = { value: null };
 pass1.uniforms.lightPosition = { value: new THREE.Vector2(0.5, 0.5) };
-pass1.uniforms.exposure = { value: 0.58 };
+pass1.uniforms.exposure = { value: 0.68 };
 pass1.uniforms.decay = { value: 0.93 };
 pass1.uniforms.density = { value: 0.8 };
 pass1.uniforms.weight = { value: 0.1 };
@@ -99,7 +99,7 @@ pass1.uniforms.samples = {value: 50};
 
 
   const bloomPass = new THREE.BloomPass(
-    1.4,    // strength
+    1.1,    // strength
     20,   // kernel size
     0.1,    // sigma ?
     556,  // blur render target resolution
@@ -107,7 +107,7 @@ pass1.uniforms.samples = {value: 50};
   //composer.addPass(bloomPass);
 
   const filmPass = new THREE.FilmPass(
-    0.15,   // noise intensity
+    0.05,   // noise intensity
     0.0025,  // scanline intensity
     448,    // scanline count
     false,  // grayscale

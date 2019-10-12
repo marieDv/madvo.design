@@ -76,7 +76,7 @@ function initOverview() {
 
 function initSwiper() {
 
-	if (window.innerWidth > 900) {
+	// if (window.innerWidth > 900) {
 		let mySwiper = new Swiper('.swiper-container', {
 			slidesPerView: 'auto',
 			centeredSlides: true,
@@ -118,7 +118,7 @@ function initSwiper() {
 				}
 			}
 		});
-	}
+	// }
 }
 
 
