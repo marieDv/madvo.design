@@ -82,7 +82,7 @@ function initSwiper() {
 			centeredSlides: true,
 			simulateTouch: true,
 			slideToClickedSlide: true,
-			spaceBetween: 10,
+			spaceBetween: 200,
 			cssMode: true,
 			// followFinger: true,
 			speed: 1700,
