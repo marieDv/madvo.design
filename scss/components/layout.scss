@@ -677,8 +677,10 @@ html {
   &--notouch {
     pointer-events: none;
   }
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 860px) {
     padding-bottom: 80px;
+    margin-left: 0;
+    overflow: hidden;
   }
 }
 .swiper-slide:not(.single-slide) {
