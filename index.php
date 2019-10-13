@@ -153,7 +153,7 @@
         <div class="container--fluid pos--absolute pos--buttons">
 
 
-        
+
             <?php
             global $i;
             global $post;

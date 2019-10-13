@@ -184,6 +184,12 @@ li:last-child {
     letter-spacing: 4px;
     font-weight: 300;
     text-transform: uppercase;
+
+    display: inline-flex;
+    font-size: 62px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: initial;
     @media screen and (max-width: 842px) {
       width: 300px;
       font-size: 16px;
@@ -210,20 +216,20 @@ canvas.threejs {
 .single-intro-text {
   // padding-left: 5.5vw;
   position: relative;
-  &::before {
-    content: "";
-    background: #fff;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    margin-top: 2vh;
+  // &::before {
+  //   content: "";
+  //   background: #fff;
+  //   position: absolute;
+  //   height: 2px;
+  //   width: 100%;
+  //   margin-top: 2vh;
 
-    margin-top: -4vh;
-    opacity: 0.1;
-    @media screen and (max-width: 860px) {
-      display: none;
-    }
-  }
+  //   margin-top: -4vh;
+  //   opacity: 0.1;
+  //   @media screen and (max-width: 860px) {
+  //     display: none;
+  //   }
+  // }
   @media screen and (max-width: 860px) {
     margin-top: 42px;
     margin-bottom: 80px;
@@ -311,6 +317,8 @@ canvas.threejs {
     @media screen and (max-width: 1600px) {
       margin-left: 192px;
       font-size: 10px;
+      margin-left: 102px;
+
     }
     @media screen and (max-width: 1200px) {
       display: none;
@@ -325,8 +333,7 @@ canvas.threejs {
     left: 300px;
 
     @media screen and (max-width: 1600px) {
-      left: 21px;
-      left: 201px;
+      left: 102px;
     }
     @media screen and (max-width: 1200px) {
       left: 0 !important;

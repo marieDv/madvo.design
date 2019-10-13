@@ -82,10 +82,16 @@ function initSwiper() {
 			centeredSlides: true,
 			simulateTouch: true,
 			slideToClickedSlide: true,
-			spaceBetween: 200,
+			spaceBetween: 400,
 			cssMode: true,
 			// followFinger: true,
 			speed: 1700,
+			breakpoints: {
+				// when window width is >= 320px
+				1600: {
+					spaceBetween: 200
+				},
+			},
 			on: {
 				click: function () {
 				},

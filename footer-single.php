@@ -255,7 +255,7 @@ void main() {
 
  
   vec3 color = texture.rgb;
-  color += vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(50.0);
+  color *= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(50.0);
   gl_FragColor = vec4( color.rgb, 1.0 );
 
 
