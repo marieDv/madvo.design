@@ -286,6 +286,8 @@ const initCanvas = () => {
 
 	}
 }
-initCursor();
-initCanvas();
+if (window.innerWidth >= 860) {
+	initCursor();
+	initCanvas();
+}
 

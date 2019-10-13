@@ -85,8 +85,10 @@ span {
     width: 100%;
     display: block;
     margin-top: 42px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 860px) {
       font-size: 14px;
+      text-align: left;
+      margin-top: 2px;
     }
   }
   &-indicator {

@@ -24,12 +24,6 @@
           align-items: center;
 }
 
-@media screen and (max-width: 680px) {
-  .nav-items .name {
-    display: none;
-  }
-}
-
 .nav-items .toggleabout .text-small {
   font-size: 8px;
   letter-spacing: 2%;
@@ -448,16 +442,6 @@ canvas.threejs {
   margin-right: 6vw;
 }
 
-.starter .bottomNav {
-  display: none;
-}
-
-@media screen and (max-width: 860px) {
-  .starter .bottomNav {
-    display: block;
-  }
-}
-
 .footer {
   height: 164px;
   position: absolute;
@@ -677,14 +661,15 @@ canvas.threejs {
   }
 }
 
-@media screen and (max-width: 842px) {
+@media screen and (max-width: 860px) {
   .wheel {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 80px;
     max-width: 335px;
     height: 100%;
-    margin-left: 24px;
+    margin-top: 280px;
+    margin-left: -36px;
   }
 }
 
@@ -956,16 +941,21 @@ html {
 
 @media screen and (max-width: 860px) {
   .swiper-slide div .headline--xl {
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1;
-    text-transform: inherit;
-    color: #fff;
-    letter-spacing: 0;
-    line-height: 1;
-    font-weight: 500;
-    font-size: 38px;
-    text-transform: uppercase;
+    font-size: 42px;
+    display: inline;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .headline--xl {
+    font-size: 42px;
+    display: inline;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
   }
 }
 
@@ -1069,7 +1059,9 @@ html {
 
 @media screen and (max-width: 860px) {
   .info-ring {
-    display: none;
+    width: 220px;
+    right: 0;
+    left: inherit;
   }
 }
 
@@ -1205,6 +1197,47 @@ html {
 @media screen and (max-width: 1200px) {
   .footer.no-grid .e-mail {
     display: none;
+  }
+}
+
+.starter {
+  display: block;
+}
+
+@media screen and (max-width: 860px) {
+  .starter {
+    display: none !important;
+  }
+}
+
+#starter-footer-mobile {
+  display: none;
+}
+
+#starter-footer-mobile a:first-child {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+#starter-footer-mobile a:nth-child(2) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+#starter-footer-mobile a:nth-child(3) {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+}
+
+@media screen and (max-width: 860px) {
+  #starter-footer-mobile {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (12fr)[7];
+        grid-template-columns: repeat(7, 12fr);
   }
 }
 

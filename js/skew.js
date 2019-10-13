@@ -26,7 +26,7 @@ let overview = document.getElementById("overview-holder");
 
 setTimeout(() => {
 	setExploreLink();
-	
+
 }, 500);
 
 
@@ -46,11 +46,11 @@ window.addEventListener("resize", () => {
 
 
 });
-function setExploreLink(){
+function setExploreLink() {
 	let explore = document.getElementsByClassName("explore")[0].children[0];
 	let slide = document.getElementsByClassName("swiper-slide-active")[0];
 	let link;
-	if(slide){
+	if (slide) {
 		link = slide.href;
 	}
 	console.log(link);
@@ -77,53 +77,53 @@ function initOverview() {
 function initSwiper() {
 
 	// if (window.innerWidth > 900) {
-		let mySwiper = new Swiper('.swiper-container', {
-			slidesPerView: 'auto',
-			centeredSlides: true,
-			simulateTouch: true,
-			slideToClickedSlide: true,
-			spaceBetween: 400,
-			cssMode: true,
-			// followFinger: true,
-			speed: 1700,
-			breakpoints: {
-				// when window width is >= 320px
-				1600: {
-					spaceBetween: 200
-				},
+	let mySwiper = new Swiper('.swiper-container', {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		simulateTouch: true,
+		slideToClickedSlide: true,
+		spaceBetween: 400,
+		cssMode: true,
+		// followFinger: true,
+		speed: 1700,
+		breakpoints: {
+			// when window width is >= 320px
+			1600: {
+				spaceBetween: 200
 			},
-			on: {
-				click: function () {
-				},
-				slideChange: function () {
-					if (!document.getElementsByClassName("swiper-container")[0].classList.contains("about-container")) {
-						
-
-						if ((this.previousIndex - this.activeIndex) < 0) {
-							TweenMax.to(infoRing, 1.5, { rotation: '+= 90' });
-						} else {
-							TweenMax.to(infoRing, 1.5, { rotation: '-= 90' });
-						}
-						this.simulateTouch = false;
-						console.log(this.simulateTouch)
+		},
+		on: {
+			click: function () {
+			},
+			slideChange: function () {
+				if (!document.getElementsByClassName("swiper-container")[0].classList.contains("about-container")) {
 
 
-						document.getElementsByClassName("swiper-container")[0].classList.add("swiper-container--notouch");
-						setTimeout(() => {
-							setExploreLink();
-							activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
-						}, 200);
-						setTimeout(() => {
-							document.getElementsByClassName("swiper-container")[0].classList.remove("swiper-container--notouch");
-
-						}, 1500);
-						universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
-						universalIndex = this.activeIndex;
-						// 	console.log(universal)
+					if ((this.previousIndex - this.activeIndex) < 0) {
+						TweenMax.to(infoRing, 1.5, { rotation: '+= 90' });
+					} else {
+						TweenMax.to(infoRing, 1.5, { rotation: '-= 90' });
 					}
+					this.simulateTouch = false;
+					console.log(this.simulateTouch)
+
+
+					document.getElementsByClassName("swiper-container")[0].classList.add("swiper-container--notouch");
+					setTimeout(() => {
+						setExploreLink();
+						activeSlide = document.getElementsByClassName("swiper-slide-active")[0];
+					}, 200);
+					setTimeout(() => {
+						document.getElementsByClassName("swiper-container")[0].classList.remove("swiper-container--notouch");
+
+					}, 1500);
+					universal = document.getElementsByClassName("hidden-thumbnail")[this.activeIndex].innerHTML;
+					universalIndex = this.activeIndex;
+					// 	console.log(universal)
 				}
 			}
-		});
+		}
+	});
 	// }
 }
 
@@ -364,6 +364,7 @@ const initCanvas = () => {
 	}
 }
 
-
-initCursor();
-initCanvas();
+if (window.innerWidth >= 860) {
+	initCursor();
+	initCanvas();
+}

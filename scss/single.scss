@@ -72,7 +72,7 @@
       width: calc(100% - 200px);
       mix-blend-mode: lighten;
     }
- 
+
     canvas {
       // mix-blend-mode: exclusion;
     }
@@ -314,12 +314,22 @@
         left: 0;
         position: absolute;
         border-radius: 999999px;
+
+        @media screen and (max-width: 860px) {
+          height: 32px;
+          width: 32px;
+          margin-top: 4px;
+        }
       }
       @media screen and (max-width: 1600px) {
         font-size: 64px;
       }
       @media screen and (max-width: 1200px) {
         max-width: 100%;
+      }
+      @media screen and (max-width: 860px) {
+        font-size: 42px;
+        text-indent: 60px;
       }
       &:after {
         content: "";
