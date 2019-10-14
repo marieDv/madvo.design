@@ -85,6 +85,9 @@ p, span, h3, h2, strong, a {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  @media screen and (max-width: 1600px) {
+    overflow: hidden;
+  }
 &:after {
     @media screen and (min-width: $md) {
       content: "";

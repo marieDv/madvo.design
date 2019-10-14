@@ -108,7 +108,7 @@
       global $i;
       global $post;
       $currentIndex = 0;
-      $args = array('category' => 25); //25 //2 for dev
+      $args = array('category' => 2); //25 //2 for dev
       $work = get_posts($args);
       ?>
       <?php foreach ($work as $post) : setup_postdata($post); ?> 
@@ -119,7 +119,8 @@
           <a class="swiper-slide single-slide" href="<?php echo get_permalink($post->ID) ?>">
             <?php
                 $title = get_the_title();
-                echo str_replace('<br>', ' ', $title);
+                // echo str_replace('<br>', ' ', $title);
+                echo $title;
                 ?>
           </a>
         <?php }  ?>

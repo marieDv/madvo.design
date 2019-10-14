@@ -251,7 +251,7 @@ return t;
 
 
 		gl_Position = projectionMatrix * modelViewMatrix * vec4(morphed, 1.0);
-    DEPTH = ((gl_Position.z * 1.49) / (FARPLANE));
+    DEPTH = ((gl_Position.z * 1.49) / (FARPLANE + 10.0));
   }
 </script>
 

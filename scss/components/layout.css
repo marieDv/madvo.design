@@ -218,6 +218,12 @@
   font-weight: 600;
   letter-spacing: 0.3px;
   text-transform: initial;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 @media screen and (max-width: 842px) {

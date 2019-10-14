@@ -735,6 +735,12 @@ li {
   font-weight: 600;
   letter-spacing: 0.3px;
   text-transform: initial;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 @media screen and (max-width: 842px) {
@@ -2718,6 +2724,12 @@ html {
   padding-bottom: 0;
 }
 
+@media screen and (max-width: 1600px) and (min-width: 1200px) {
+  .about .burger-menu {
+    margin-left: 103px !important;
+  }
+}
+
 .about #about-clients.moveImages {
   opacity: 0;
   height: 30vh;
@@ -2726,18 +2738,19 @@ html {
 .about #something-amazing {
   width: 100%;
   padding: 0 24%;
+  padding: 0 0 0 24%;
   margin-top: 200px;
 }
 
 @media screen and (max-width: 2100px) {
   .about #something-amazing {
-    padding: 0 20%;
+    padding: 0 0 0 20%;
   }
 }
 
 @media screen and (max-width: 1600px) {
   .about #something-amazing {
-    padding: 0 100px;
+    padding: 0 0 0 100px;
     height: 80vh;
   }
 }
@@ -2746,7 +2759,7 @@ html {
   .about #something-amazing {
     height: 100%;
     margin-bottom: 40px;
-    padding: 0 16px;
+    padding: 0 0 0 16px;
   }
 }
 
@@ -2991,8 +3004,15 @@ html {
   max-width: 49%;
 }
 
+@media screen and (max-width: 2100px) {
+  .about .ic-headline--xl-xl {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .about .ic-headline--xl-xl {
+    max-width: 100%;
     height: auto;
   }
 }
@@ -4495,6 +4515,12 @@ p::selection, span::selection, h3::selection, h2::selection, strong::selection, 
   overflow-x: hidden;
   width: 100%;
   position: relative;
+}
+
+@media screen and (max-width: 1600px) {
+  #main {
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 992px) {
