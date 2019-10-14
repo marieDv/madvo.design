@@ -3286,6 +3286,7 @@ html {
 }
 
 .about .info-section h2 {
+  font-family: "Work Sans", sans-serif;
   color: #818181;
   color: white;
   font-size: 18px;
@@ -4232,6 +4233,10 @@ html {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .single .headline--xl::after {
