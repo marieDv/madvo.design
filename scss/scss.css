@@ -2727,6 +2727,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 0;
+  position: relative;
 }
 
 @media screen and (max-width: 1600px) and (min-width: 1200px) {
@@ -2769,8 +2770,8 @@ html {
 }
 
 .about #three-about {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: 100%;
   top: 0;
   position: absolute;
   mix-blend-mode: exclusion;

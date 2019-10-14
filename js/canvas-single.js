@@ -63,13 +63,13 @@ let addtocanvas = 0;
 let porportions = document.getElementsByClassName("canvas-container")[0];
 renderer.setSize(porportions.offsetWidth, porportions.offsetHeight + addtocanvas); //set to window size
 let scene = new THREE.Scene();
-// let color = document.getElementsByClassName("wheel-item__content")[0].attributes.alt.nodeValue;
+let color = document.getElementsByClassName("wheel-item__content")[0].attributes.alt.nodeValue;
 // scene.background = new THREE.Color( color );
 
 // let colorValue = document.getElementById("grab-color").innerHTML;
-// var colorValue = parseInt ( color.replace("#","0x"), 16 );
-// var colored = new THREE.Color( colorValue );
-// scene.background = new THREE.Color( "#000000");
+var colorValue = parseInt ( color.replace("#","0x"), 16 );
+var colored = new THREE.Color( colorValue );
+scene.background = new THREE.Color( "#000000");
 // renderer.setClearColor(0xD1C8B7, 0);
 // console.log(colored)
 

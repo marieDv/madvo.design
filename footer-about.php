@@ -256,7 +256,7 @@ void main() {
   vec4 texture = texture2D(texture1, vUv * (0.9 + 0.1 * (uvPosition / 2.0)) + tPos);//tPos
 
   vec3 color = vec3(2.0, 2.0, 2.0);
-  color -= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(350.0);
+  color *= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(350.0);
   gl_FragColor = vec4( color.rgb, 1.0 );
 
 

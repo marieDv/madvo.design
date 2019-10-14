@@ -46,8 +46,8 @@ let timer = Date.now();
 let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
-let cameraDistance = 730.0;
-let farplane = ((cameraDistance -10) / 2.0);//(cameraDistance / 2.0) -90.0
+let cameraDistance = 880.0;
+let farplane = ((cameraDistance +330) / 2.0);//(cameraDistance / 2.0) -90.0
 let universal = "http://localhost/wordpress/wp-content/uploads/2019/09/trans-filling-1.png";
 
 let raycaster = new THREE.Raycaster(); // create once
@@ -257,12 +257,16 @@ function scene1() {
   cubeCopy.position.z = 480;//420
   cube.position.z = 480;//420
 
+
+  cube.position.x += 30;
+  cube.position.y += 30;
+
   cubeCopy.position.x += 90;
-  cubeCopy.position.y += 20;
+  cubeCopy.position.y += 120;
   cubeCopy.rotation.x += 20;
 
   cubeCopyCopy.position.z = 480;
-  cubeCopyCopy.position.y = - 50;
+  cubeCopyCopy.position.y = - 90;
   cubeCopyCopy.position.x = - 80;
   scene.add(cube);
   scene.add(cubeCopy);
@@ -287,7 +291,7 @@ function animateCubes(cubeCopy, seed){
   //posY = Math.sin(Math.floor(Math.random() * (window.innerWidth - -window.innerHeight) + -window.innerHeight * window.innerHeight) *seed );
 
   tl = new TimelineMax({ repeat: -1, yoyo: true });
-  tl.to(cubeCopy.position, 60, {
+  tl.to(cubeCopy.position, 180, {
     x: seed,
     y: posY,
     onComplete: function () {
