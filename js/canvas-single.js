@@ -47,7 +47,7 @@ let backgroundPlane = 0;//-9000
 let addSpeed = 0;
 let firstLoad = true;
 let cameraDistance =640.0;
-let farplane = ((cameraDistance-240) / 2.0) ;//(cameraDistance / 2.0) -90.0
+let farplane = ((cameraDistance-230) / 2.0) ;//(cameraDistance / 2.0) -90.0
 let universal = document.getElementsByClassName("hidden-thumbnail")[0].innerHTML;
 
 let raycaster = new THREE.Raycaster(); // create once
@@ -99,7 +99,7 @@ renderPass.renderToScreen = true;
 let pass1 = new THREE.ShaderPass(THREE.VolumetericLightShader);
 pass1.uniforms.tDiffuse = { value: null };
 pass1.uniforms.lightPosition = { value: new THREE.Vector2(0.5, 0.5) };
-pass1.uniforms.exposure = { value: 0.38 };
+pass1.uniforms.exposure = { value: 0.98 };
 pass1.uniforms.decay = { value: 0.91 };
 pass1.uniforms.density = { value: 0.5 };
 pass1.uniforms.weight = { value: 0.1 };
