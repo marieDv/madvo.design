@@ -198,10 +198,16 @@ li:last-child {
     text-transform: uppercase;
     font-weight: 800;
 
-    @media screen and (max-width: 842px) {
+    @media screen and (max-width: 860px) {
       width: 300px;
       font-size: 16px;
       font-weight: 400;
+
+      font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #ffffff;
     }
   }
 }

@@ -743,11 +743,16 @@ li {
   font-weight: 800;
 }
 
-@media screen and (max-width: 842px) {
+@media screen and (max-width: 860px) {
   .quickOverview a {
     width: 300px;
     font-size: 16px;
     font-weight: 400;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-fill-color: #ffffff;
   }
 }
 
@@ -4149,6 +4154,9 @@ html {
     height: 32px;
     width: 32px;
     margin-top: 4px;
+    height: 24px;
+    width: 24px;
+    margin-top: 7px;
   }
 }
 
@@ -4168,6 +4176,7 @@ html {
   .single .ic-s-screen--black .ic-headline--xl {
     font-size: 42px;
     text-indent: 60px;
+    text-indent: 40px;
   }
 }
 

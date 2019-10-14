@@ -31,7 +31,9 @@ setTimeout(() => {
 
 
 if (overview) { initOverview(); } else {
-	initSwiper();
+	if (window.innerWidth >= 860) {
+		initSwiper();
+	}
 }
 
 
@@ -40,7 +42,9 @@ window.addEventListener("resize", () => {
 	windowSize = window.innerWidth;
 
 	if (overview) { initOverview(); } else {
-		initSwiper();
+		if (window.innerWidth >= 860) {
+			initSwiper();
+		}
 	}
 
 
@@ -86,10 +90,18 @@ function initSwiper() {
 		cssMode: true,
 		// followFinger: true,
 		speed: 1700,
+		// simulateTouch:false,
 		breakpoints: {
 			// when window width is >= 320px
+			200: {
+				simulateTouch:false
+			},
+			861: {
+				simulateTouch:true
+			},
 			1600: {
 				spaceBetween: 200
+
 			},
 		},
 		on: {
