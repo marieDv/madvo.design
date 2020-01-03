@@ -94,7 +94,7 @@
 
         <li class="about-text__resume-li about-text__resume--emphasized">WILD <span>2019 Development Intern</span></li>
         <li class="about-text__resume-li about-text__resume--emphasized"> Campaigning Bureau <span>2017/2018 Development/UI-Design Intern</span></li>
-        <li class="about-text__resume-li about-text__resume--emphasized"> FIV Austria<span>2015/2019 Wordpress</span></li>
+        <!-- <li class="about-text__resume-li about-text__resume--emphasized"> FIV Austria<span>2015/2019 Wordpress</span></li> -->
         <li class="about-text__resume-li"> BSc Mediatechnology and Design<span>2016/2019 @FH Hagenberg</span></li>
         <li class="about-text__resume-li"> Internet Design & Graphic Communication<span>2018/2019 @Plymouth University UK</span></li>
         <li class="about-text__resume-li"> Graphische Bundes Lehr- und Versuchsanstalt <span>2010/2015</span></li>
