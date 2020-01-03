@@ -93,7 +93,6 @@
       <li class="about-text__resume-li about-text__resume--emphasized">Process Studio <span>2019 Freelance</span></li>
 
         <li class="about-text__resume-li about-text__resume--emphasized">WILD <span>2019 Development Intern</span></li>
-
         <li class="about-text__resume-li about-text__resume--emphasized"> Campaigning Bureau <span>2017/2018 Development/UI-Design Intern</span></li>
         <li class="about-text__resume-li about-text__resume--emphasized"> FIV Austria<span>2015/2019 Wordpress</span></li>
         <li class="about-text__resume-li"> BSc Mediatechnology and Design<span>2016/2019 @FH Hagenberg</span></li>
