@@ -90,6 +90,8 @@
       </div>
 
       <ul class="text--sm  about-text__resume mt-4">
+      <li class="about-text__resume-li about-text__resume--emphasized">Process Studio <span>2019 Freelance</span></li>
+
         <li class="about-text__resume-li about-text__resume--emphasized">WILD <span>2019 Development Intern</span></li>
 
         <li class="about-text__resume-li about-text__resume--emphasized"> Campaigning Bureau <span>2017/2018 Development/UI-Design Intern</span></li>
