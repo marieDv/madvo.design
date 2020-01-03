@@ -99,8 +99,6 @@
         <li class="about-text__resume-li"> Internet Design & Graphic Communication<span>2018/2019 @Plymouth University UK</span></li>
         <li class="about-text__resume-li"> Graphische Bundes Lehr- und Versuchsanstalt <span>2010/2015</span></li>
 
-
-
       </ul>
 
     </div>
