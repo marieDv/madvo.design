@@ -122,7 +122,6 @@
         <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">
           <p>2018 – 2019</p>Plymouth<br>University UK<span>Exchange semester <br> Internet Design & Graphic Communication</span>
         </div>
-
         <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">
           <p>2017 / 2018</p>Campaigning <br>Bureau<span>Development/UI-Design Intern</span>
         </div>
