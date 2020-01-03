@@ -126,9 +126,9 @@
         <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">
           <p>2017 / 2018</p>Campaigning <br>Bureau<span>Development/UI-Design Intern</span>
         </div>
-        <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">
+        <!-- <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">
           <p>2015 – 2019</p>FIV Austria<span>Freelance Content Manager in Wordpress</span>
-        </div>
+        </div> -->
         <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">
           <p>2010 – 2015</p>Graphische<span>Higher school certificate in <strong>Graphicdesign</strong><br> @ Die Graphische in Vienna</span>
         </div>
