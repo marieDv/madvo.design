@@ -110,6 +110,9 @@
 
     <div id="animate3" class="swiper-container about-container">
       <div id="about-swiper" class="aboutOverview swiper-wrapper">
+      <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">
+          <p>2019</p>Process Studio<span class="text--sm"> Freelancer</span>
+        </div>
         <div class="swiper-slide about-slide single-slide about-text__resume-li about-text__resume--emphasized">
           <p>2019</p>Wild<span class="text--sm"> 4 month Development Intern</span>
         </div>
