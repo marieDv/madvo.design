@@ -100,7 +100,6 @@
         <li class="about-text__resume-li"> Graphische Bundes Lehr- und Versuchsanstalt <span>2010/2015</span></li>
 
       </ul>
-
     </div>
 
   </div>
