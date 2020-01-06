@@ -3102,13 +3102,6 @@ html {
   left: 0;
   text-align: left;
   margin-top: 160px;
-  margin-top: -28px;
-}
-
-@media screen and (max-width: 1600px) {
-  .about .about-swiper .download-resume-container {
-    margin-top: 0;
-  }
 }
 
 .about .about-swiper .download-resume:hover {
