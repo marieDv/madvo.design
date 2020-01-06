@@ -38,7 +38,7 @@
     <!-- <img alt="cursor-image" id="view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png"> -->
     <img id="view-ring" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png">
     <img id="arrows" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/arrows.png">
-    <canvas class="threejs"></canvas>
+    <!-- <canvas class="threejs"></canvas> -->
     <div id="overlay"></div>
     <section id="main">
         <div class="absolute pin-t mt-16 mr-6 w-full z-50">
