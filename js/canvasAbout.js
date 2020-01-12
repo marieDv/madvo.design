@@ -210,8 +210,6 @@ function scene1() {
   var sphereVerts = THREE.GeometryUtils.randomPointsInBufferGeometry(sphereGeometry, numVerts);
   sphere = new Float32Array(sphereVerts.length * 3);
   for (var v = 0; v < sphereVerts.length; v += 1) {
-    // vertices[v] = sphereVerts[v];
-    // sphere[v * 3 + 0] = sphereVerts[v].x  * Math.random() * (0.1 - -0.2) + -0.2;
     sphere[v * 3 + 0] = sphereVerts[v].x * (Math.random() - 0.9) - 5;
     sphere[v * 3 + 1] = sphereVerts[v].y * (Math.random() - 0.9) + 10;
     sphere[v * 3 + 2] = sphereVerts[v].z * (Math.random() - 0.9) + 10;
