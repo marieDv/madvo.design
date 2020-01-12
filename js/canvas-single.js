@@ -208,7 +208,8 @@ function scene1() {
     /// MORPH TARGET END
   
     var numVerts = vertices.length;
-    var sphereGeometry = new THREE.SphereBufferGeometry(50, 32, 32);
+    // var sphereGeometry = new THREE.SphereBufferGeometry(50, 32, 32);
+    var sphereGeometry = new THREE.IcosahedronBufferGeometry( 60, 5 );
     var sphereVerts = THREE.GeometryUtils.randomPointsInBufferGeometry(sphereGeometry, numVerts);
     sphere = new Float32Array(sphereVerts.length * 3);
     for (var v = 0; v < sphereVerts.length; v += 1) {
@@ -334,9 +335,9 @@ function scene1() {
 
 function animate() {
 
-    setTimeout(() => {
+    // setTimeout(() => {
         requestAnimationFrame(animate);
-    }, 1 / 200);
+    // }, 1 / 200);
 
     render();
 
