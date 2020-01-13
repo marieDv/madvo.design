@@ -35,7 +35,7 @@ function scrollAnimation() {
     .setTween(tween3)
     .addTo(controller);
 
-  scrollImagesUp(mController);
+  // scrollImagesUp(mController);
   aniamteAllTextElements(controller, "scroll-popup");
 
 }

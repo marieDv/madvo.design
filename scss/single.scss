@@ -300,15 +300,22 @@
       font-weight: 600;
       max-width: 1900px;
       text-align: left;
-      margin-bottom: 72px;
+      // margin-bottom: 72px;
       font-size: 80px;
       max-width: 50%;
-      text-indent: 60px;
+      text-indent: 30px;
       line-height: 1;
 
+      font-size: 60px;
+      font-weight: 200;
+      font-family: "Roboto", sans-serif;
       .circle {
         height: 42px;
         width: 42px;
+
+        height: 16px;
+        width: 16px;
+
         display: inline-block;
         margin-top: 20px;
         left: 0;
@@ -357,7 +364,7 @@
       margin-bottom: 64px;
       line-height: 1.9;
       font-weight: 300;
-      max-width: 50%;
+      // max-width: 50%;
       font-size: 16px;
       @media screen and (max-width: 1600px) {
         font-size: 14px;
@@ -376,8 +383,9 @@
     display: block;
 
     font-size: 80px;
+    font-size: 12rem;
     width: 900px;
-
+    margin-bottom: 72px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     max-width: 1900px;
@@ -405,6 +413,7 @@
     }
     @media screen and (max-width: 1600px) {
       font-size: 64px;
+      font-size: 9rem;
       margin-bottom: 60px;
     }
     @media screen and (max-width: 842px) {
@@ -486,5 +495,11 @@
   100% {
     background: transparent;
     border-color: white;
+  }
+}
+.threejs-single {
+  display: none;
+  @media screen and (max-width: 860px) {
+    display: block;
   }
 }
