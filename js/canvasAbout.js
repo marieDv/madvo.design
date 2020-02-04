@@ -132,41 +132,19 @@ pass1.renderToScreen = true;
 
 let hiddenthumbnails = document.getElementsByClassName("hidden-thumbnail");
 let modelArray = [];
-
-// image();
 scene1();
 animate();
 
-function image() {
-  var image = new Image();
-  //image.src = universal;
-  image.src = universal;
-  image.onload = function () {
-    WIDTH = image.width;
-    HEIGHT = image.height;
-
-    var canvas = document.createElement('canvas');
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
-    var context = canvas.getContext('2d');
-
-
-    console.log('image loaded');
-    context.drawImage(image, 0, 0);
-    data = context.getImageData(0, 0, WIDTH, HEIGHT).data;
-    scene1();
-  }
-}
 
 
 function scene1() {
 
   // lights(scene);
-  let bufferGeometry = new THREE.IcosahedronBufferGeometry(WIDTH / 2, 3);//20
+  let bufferGeometry = new THREE.IcosahedronBufferGeometry(WIDTH / 2, 1);//20
 
 
 
-  let plane = new THREE.IcosahedronBufferGeometry(WIDTH / 2, 3);
+  let plane = new THREE.IcosahedronBufferGeometry(WIDTH / 2, 1);
   plane.castShadow = true;
   plane.receiveShadow = true;
   var vertices = plane.attributes.position.array;
@@ -204,8 +182,8 @@ function scene1() {
   /// MORPH TARGET END
 
   var numVerts = vertices.length;
-  // var sphereGeometry = new THREE.SphereBufferGeometry(20, 25, 25);
-  var sphereGeometry = new THREE.IcosahedronBufferGeometry( 20, 5 );
+  //var sphereGeometry = new THREE.IcosahedronBufferGeometry( 13, 3 );
+  var sphereGeometry = new THREE.PlaneBufferGeometry( 33, 33, 20, 20 );
 
   var sphereVerts = THREE.GeometryUtils.randomPointsInBufferGeometry(sphereGeometry, numVerts);
   sphere = new Float32Array(sphereVerts.length * 3);
@@ -215,9 +193,7 @@ function scene1() {
     sphere[v * 3 + 2] = sphereVerts[v].z * (Math.random() - 0.9) + 10;
   }
   // sphereGeometry.position.x -= 0.5;
-  sphereGeometry.scale.z = 0.2;
-  console.log(modelArray[0])
-  console.log(vertices.length)
+  sphereGeometry.scale.z = 0.02;
   bufferGeometry.addAttribute('position', new THREE.BufferAttribute(vertices, 3));
   bufferGeometry.addAttribute('morph0', new THREE.BufferAttribute(positions, 3));
 
@@ -225,14 +201,14 @@ function scene1() {
   shaderMaterial = new THREE.ShaderMaterial({
     uniforms: {
       torus: { value: 1.0 },
-      size: { value: 2.33 },
+      size: { value: 1.33 },
       u_resolution: { type: "v2", value: new THREE.Vector2(1.0, 1.0) },
       texture1: { type: "t", value: THREE.ImageUtils.loadTexture(universal) },
       tExplosion: {
         type: "t",
         value: THREE.ImageUtils.loadTexture(universal)
       },
-      explosionValue: { type: "f", value: 4.0 },
+      explosionValue: { type: "f", value: 1.0 },
       u_mouse: { type: "v2", value: new THREE.Vector2(100.0, 100.0) },
       time: { // float initialized to 0
         type: "f",
@@ -355,22 +331,20 @@ function animateCubes(cubeCopy, seed){
 
 function animate() {
 
-  // setTimeout(() => {
-    requestAnimationFrame(animate);
-  // }, 1 / 200);
 
+    requestAnimationFrame(animate);
   render();
 
 }
 
 function render() {
-setInterval(() => {
+
   posX = Math.cos(Math.floor(Math.random() * (window.innerWidth - -window.innerWidth) + -window.innerWidth * window.innerWidth) );
   posY = Math.cos(Math.floor(Math.random() * (window.innerWidth - -window.innerHeight) + -window.innerHeight * window.innerHeight) );
 
   posXTwo = Math.cos(Math.floor(Math.random() * (window.innerWidth - -window.innerWidth) + -window.innerWidth * window.innerWidth) );
   posXThree = Math.cos(Math.floor(Math.random() * (window.innerWidth - -window.innerWidth) + -window.innerWidth * window.innerWidth) );
-}, 2000);
+
 
   posXBefore = Math.floor(Math.random() * window.innerWidth) / 10;
   if (shaderMaterial) {

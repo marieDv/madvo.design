@@ -403,14 +403,6 @@ span {
   }
 }
 
-.headline--lg::-moz-selection {
-  color: #ef646e;
-}
-
-.headline--lg::selection {
-  color: #ef646e;
-}
-
 ul {
   padding-left: 0;
 }

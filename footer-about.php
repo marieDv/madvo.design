@@ -243,11 +243,23 @@ varying vec2 vUv;
 varying vec3 vNormal;
 varying float DEPTH ;
 
-//uniform float time;
+uniform float time;
 //uniform float uvPosition;
 float random( vec3 scale, float seed ){
   return fract( sin( dot( gl_FragCoord.xyz + seed, scale ) ) * 43758.5453 + seed ) ;
 }
+
+float rectangle(vec2 st, vec2 center, vec2 thickness){
+  float edgeX = step(center.x, st.x + thickness.x * 0.5) - step(center.x, st.x - thickness.x * 0.5);
+  float edgeY = step(center.y, st.y + thickness.y * 0.5) - step(center.y, st.y - thickness.y * 0.5);
+  return edgeX * edgeY;
+}
+float rectangleSmooth(vec2 st, vec2 center, vec2 thickness, vec2 smoothness){
+  float edgeX = smoothstep(center.x, center.x + smoothness.x, st.x + thickness.x * 0.5) - smoothstep(center.x - smoothness.x, center.x, st.x - thickness.x * 0.5);
+  float edgeY = smoothstep(center.y, center.y + smoothness.y, st.y + thickness.y * 0.5) - smoothstep(center.y - smoothness.y, center.y, st.y - thickness.y * 0.5);
+  return edgeX * edgeY;
+}
+
 void main() {
 
   float r = 0.00001 * random( vec3( 500.5, 500.05, 500.5 ), 1.0 );
@@ -255,9 +267,26 @@ void main() {
   vec2 tPos = vec2( 0, (0.08) * (noise * vUv) + r) / vec2(0.8, 0.8);//vUv
   vec4 texture = texture2D(texture1, vUv * (0.9 + 0.1 * (uvPosition / 2.0)) + tPos);//tPos
 
-  vec3 color = vec3(2.0, 2.0, 2.0);
-  color *= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(350.0);
-  gl_FragColor = vec4( color.rgb, 1.0 );
+  //vec3 color = vec3(2.0, 2.0, 2.0);
+  //color *= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(350.0);
+  //gl_FragColor = vec4( color.rgb, 1.0 );
+
+  vec2 st = vec2(vUv.x, vUv.y);
+
+float amplitude = 0.025 * sin(time * 2.0);
+float frequency = 2.5;
+float wave = sin( st.x * 3.1415926535 * frequency);
+st.y += wave * amplitude;
+
+vec2 colsrows = vec2(20.0, 19.0);
+vec2 nst = st * colsrows;
+vec2 fst = fract(nst);// 0 - 1
+vec2 ist = floor(nst);
+
+float rectangle = rectangleSmooth(fst, vec2(0.5), vec2(0.95, 1.0), vec2(0.01, 0.05));
+vec3 color = vec3(rectangle) + vec3(0.0);
+color *= vec3((2.0 * 1.0 * 400.0) / (400.0 + 1.0 - DEPTH * (400.0 - 1.0))) / vec3(350.0);
+gl_FragColor = vec4( color.rgb, 1.0 );
 
 
 }

@@ -293,14 +293,12 @@
       font-size: 32px;
       font-weight: 700;
       letter-spacing: 1px;
-      // margin-left: 87px;
       margin-left: 0;
       padding-top: 80px;
       margin-bottom: 36px;
       font-weight: 600;
       max-width: 1900px;
       text-align: left;
-      // margin-bottom: 72px;
       font-size: 80px;
       max-width: 50%;
       text-indent: 30px;
@@ -322,7 +320,7 @@
         position: absolute;
         border-radius: 999999px;
         @media screen and (max-width: 1600px) {
-        margin-top: 13px;
+          margin-top: 13px;
         }
         @media screen and (max-width: 860px) {
           height: 32px;
@@ -370,7 +368,7 @@
         font-size: 14px;
       }
       @media screen and (max-width: 1600px) {
-        max-width: 80%;
+        // max-width: 80%;
       }
     }
   }
@@ -386,7 +384,7 @@
     font-size: 12rem;
     width: 900px;
     margin-bottom: 72px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
     max-width: 1900px;
     text-align: left;
@@ -396,7 +394,7 @@
 
     position: relative;
     width: min-content;
-    
+
     &::after {
       content: "";
       background: #fff;
@@ -412,8 +410,7 @@
       }
     }
     @media screen and (max-width: 1600px) {
-      font-size: 64px;
-      font-size: 9rem;
+      font-size: 7rem;
       margin-bottom: 60px;
     }
     @media screen and (max-width: 842px) {
@@ -438,6 +435,7 @@
     @media screen and (max-width: 860px) {
       font-size: 16px;
       line-height: 24px;
+      max-width: 100%;
     }
   }
   .wheel-preview__text {

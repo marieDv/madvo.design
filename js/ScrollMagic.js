@@ -2,12 +2,12 @@
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1600) {
     // scrollAnimation();
-    scrollSingle();
+   // scrollSingle();
   }
 });
 if (window.innerWidth > 1600) {
   // scrollAnimation();
-  scrollSingle();
+  //scrollSingle();
 }
 function aniamteAllTextElements(controller, element, delay) {
   

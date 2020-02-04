@@ -111,14 +111,14 @@ const initCursor = () => {
 				isHoveringMarie = false;
 			});
 		}
-		if (education) {
-			education.addEventListener("mouseover", () => {
-				isHoveringWhite = true;
-			});
-			education.addEventListener("mouseleave", () => {
-				isHoveringWhite = false;
-			});
-		}
+		// if (education) {
+		// 	education.addEventListener("mouseover", () => {
+		// 		isHoveringWhite = true;
+		// 	});
+		// 	education.addEventListener("mouseleave", () => {
+		// 		isHoveringWhite = false;
+		// 	});
+		// }
 		if (footer) {
 			footer.addEventListener("mouseover", () => {
 				isHoveringFooter = true;
@@ -224,7 +224,8 @@ const initCanvas = () => {
 		group.position = new paper.Point(lastX, lastY);
 
 		if (isHoveringWheel && !isHovering) {
-			arrows.visible = true;
+			// arrows.visible = true;
+			// polygon.fillColor = "#eeffff";
 
 		} else {
 			arrows.visible = false;

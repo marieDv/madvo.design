@@ -60,7 +60,7 @@ body {
 }
 p, span, h3, h2, strong, a {
   &::selection {
-    background: #ff002b;
+    // background: #ff002b;
     //mix-blend-mode: difference;
   }
 }
