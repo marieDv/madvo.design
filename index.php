@@ -31,10 +31,18 @@
 
 
 </head>
+
 <body class="">
+<header id="" class="header-mobile ">
+        <!-- <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a> -->
+        <p>Marie Dvorzak</p>
+        <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
+        <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
+</header>
+
     <div class="cursor cursor--small"></div>
     <canvas class="cursor cursor--canvas" resize></canvas>
-    <!-- <img alt="cursor-image" id="view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png"> -->
+    <img alt="cursor-image" id="view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png">
     <img id="view-ring" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/view-ring.png">
     <img id="arrows" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/arrows.png">
     <canvas class="threejs"></canvas>
@@ -85,6 +93,10 @@
                 $i = 0; ?>
                 <?php foreach ($work as $post) : setup_postdata($post); ?>
                     <a class="wheel-item z-30 w-full wheel swiper-slide" href="<?php echo get_permalink($post->ID) ?>">
+                        <?php if (get_field('image_mobile')) : ?>
+                                <div class="mobile_thumb" style="background-image: url('<?php the_field('image_mobile'); ?>');">
+                                </div>
+                            <?php endif; ?>
                         <p class="hidden-thumbnail">
                             <?php if (has_post_thumbnail($post->ID)) : ?>
                                 <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
@@ -100,21 +112,25 @@
                             <div class="text-right">
                             </div>
                             <h3 class="headline--xl">
+                            <span class="indicator-mobile">
+                                    <?php
+                                    $i += 1;
+                                    echo "0" . $i . " "; ?>
+                                </span>
                                 <?php the_title(); ?>
                             </h3>
                             <span class="text-subheadline">
                                 <span class="text-indicator">
                                     <?php
-                                        $i += 1;
-                                        echo "0" . $i . " "; ?>
+                                    echo "0" . $i . " "; ?>
                                 </span>
                                 <?php $posttags = get_the_tags();
-                                    if ($posttags) {
-                                        foreach ($posttags as $tag) {
-                                            echo $tag->name . ' ';
-                                        }
+                                if ($posttags) {
+                                    foreach ($posttags as $tag) {
+                                        echo $tag->name . ' ';
                                     }
-                                    ?>
+                                }
+                                ?>
                                 <!-- <button class="button__view">view project</button> -->
                             </span>
                         </div>

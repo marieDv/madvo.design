@@ -10,11 +10,11 @@
 </footer>
 
 
-<footer id="starter-footer-mobile" class="footer white footer-white  ">
+<!-- <footer id="starter-footer-mobile" class="footer white footer-white  ">
         <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a>
         <a class="bottomNav" href="<?php echo get_page_link(780); ?>">About</a>
         <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
-</footer>
+</footer> -->
 
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>

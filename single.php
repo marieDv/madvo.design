@@ -33,6 +33,12 @@
 
   <img id="arrows" alt="cursor-image-view-ring" src="<?php bloginfo('stylesheet_directory'); ?>/assets/arrows.png">
 </head>
+<header id="" class="header-mobile ">
+        <!-- <a class="bottomNav work active" href="<?php echo get_home_url() ?>">Work</a> -->
+        <p>Marie Dvorzak</p>
+        <a class="bottomNav" href="<?php echo get_home_url(); ?>">Work</a>
+        <a class="bottomNav" href="mailto:dvorzak.marie@gmx.at?Subject=Hi!">contact</a>
+</header>
 <div class="cursor cursor--small"></div>
 <canvas class="cursor cursor--canvas" resize></canvas>
 <section class="single">

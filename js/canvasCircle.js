@@ -59,7 +59,6 @@ let uvPosition = Math.abs(Math.sin(timer / 5.0));//Math.abs(Math.sin(timer / 5.0
  *render and camera
  */
 let renderer = new THREE.WebGLRenderer({ canvas: document.getElementsByClassName('threejs')[0], alpha: true });
-//renderer.setClearColor(0xffffff, 0);//default color for bg
 renderer.setPixelRatio(window.devicePixelRatio / 2);//for higher density displays
 let addtocanvas = 0;
 renderer.setSize(window.innerWidth, window.innerHeight + addtocanvas); //set to window size
@@ -67,11 +66,8 @@ let scene = new THREE.Scene();
 originalAspect = window.innerWidth / window.innerHeight;
 let camera = new THREE.PerspectiveCamera(32, window.innerWidth / (window.innerHeight), 0.1, 1000); //smaller when further away
 camera.position.set(0, 0, 20);
-//camera.lookAt(scene.position);
 camera.target = new THREE.Vector3(0, 0, 0);
-
 scene.fog = new THREE.Fog("#fff", 600, 1000);
-//scene.background = new THREE.Color( 'transparent' );
 
 
 window.addEventListener('resize', onWindowResize, false);
@@ -157,9 +153,10 @@ function createTextures(src, index) {
   );
 
 }
-
+if (window.innerWidth >= 860){
 image();
 animate();
+}
 
 
 function image() {
@@ -386,11 +383,11 @@ function render() {
   for (var i = 0; i < intersects.length; i++) {
 
     // console.log(intersects[ i ]);
-
+    if(shaderMaterial){
     if (shaderMaterial.uniforms.explosionValue.value < 40) {
       shaderMaterial.uniforms.explosionValue.value += mouse.x;
       shaderMaterial.uniforms.uvPosition.value = mouse.x * 6;
-    }
+    }}
     // TweenMax.to(shaderMaterial.uniforms.explosionValue, 3, {
     //   ease: Elastic.easeOut.config(1, 0.9),
     //   value: "2", //move each box 500px to right
@@ -406,14 +403,9 @@ function render() {
   if (updateNow !== universal) {
 
     if (updateOnce === true) {
-      // previousMorphTarget = positions;
-
-      // cube.geometry.addAttribute('position', new THREE.BufferAttribute(sphere, 3));
-      //  cube.geometry.addAttribute('morph0', new THREE.BufferAttribute(modelArray[universalIndex], 3));
-
-      //shaderMaterial.uniforms.torus.value = 0;
+      if(shaderMaterial){
       shaderMaterial.uniforms.texture1.value = modelArray[universalIndex];
-
+   
 
       console.log('step 1');
 
@@ -433,7 +425,7 @@ function render() {
         delay: 1
       });
       console.log("shader" + shaderMaterial.uniforms.explosionValue)
-
+    }
 
       updateOnce = false;
       updateNow = universal;
