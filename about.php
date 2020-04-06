@@ -85,7 +85,7 @@
       <div id="trigger1" class=" ic-headline--xl mt-32 info-section">
         <!-- <span id="trigger-start-subheadline" class="start-subheadline-anim">huh?</span> -->
         <h2 class="start-subtext-anim">
-         Right now, I am searching for a job as UI-Designer, in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography, but also because I sincerely love to create concepts for websites and applications. I like things that are well-designed and I talk about them any chance I get to do so. Aside from that, I spend my free time looking at modern art, shopping for plants and defending human rights.
+         <!-- Right now, I am searching for a job as UI-Designer, in an innovative team that is open to new ideas and coffee breaks. Mainly because I need money to finance my passion in food and photography, but also because I sincerely love to create concepts for websites and applications. I like things that are well-designed and I talk about them any chance I get to do so. Aside from that, I spend my free time looking at modern art, shopping for plants and defending human rights. -->
 
           <!-- My former internships gave me the opportunity to learn how to program and design from some of the leading companies in Austria and now I am more than eager to use that to make your projects awesome! 💥 -->
         </h2>
