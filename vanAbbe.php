@@ -1,6 +1,6 @@
 <?php /* Template Name: vanAbbe */ ?>
 
-<<html>
+<html>
 
 <head>
 	<title>Three.js Boilerplate</title>
@@ -93,11 +93,15 @@
 			color: #ffffff;
 			border-radius: 99px;
 			font-family: "Agrandir", sans-serif;
-			padding-top: 3px;
-			font-size: 12px;
+			padding-top: 6px;
+    font-size: 24px;
 			cursor: pointer;
 		}
-		button:focus {outline:0;}
+
+		button:focus {
+			outline: 0;
+		}
+
 		button:hover {
 			background: #ffffff;
 			color: #000000;
@@ -107,6 +111,7 @@
 			background: #ffffff;
 			color: #000000;
 		}
+
 		li {
 			font-size: 8px;
 			margin-top: -19px;
@@ -132,13 +137,11 @@
 
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"
-		integrity="sha512-kgjZw3xjgSUDy9lTU085y+UCVPz3lhxAtdOVkcO4O2dKl2VSBcNsQ9uMg/sXIM4SoOmCiYfyFO/n1/3GSXZtSg=="
-		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js" integrity="sha512-kgjZw3xjgSUDy9lTU085y+UCVPz3lhxAtdOVkcO4O2dKl2VSBcNsQ9uMg/sXIM4SoOmCiYfyFO/n1/3GSXZtSg==" crossorigin="anonymous"></script>
 	<!-- <script src="assets/OrbitControls.js"></script> -->
 	<script type="text/javascript" src="scripts.js"></script>
-  <script src="<?php bloginfo('template_url'); ?>/js/threejs/OrbitControls.js"></script>
-  <script src="<?php bloginfo('template_url'); ?>/js/vanAbbeModel.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/threejs/OrbitControls.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/vanAbbeModel.js"></script>
 
 
 	<script type="x-shader/x-vertex" id="vertexShaderrr">
