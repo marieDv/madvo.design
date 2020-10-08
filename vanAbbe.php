@@ -155,16 +155,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"
 		integrity="sha512-kgjZw3xjgSUDy9lTU085y+UCVPz3lhxAtdOVkcO4O2dKl2VSBcNsQ9uMg/sXIM4SoOmCiYfyFO/n1/3GSXZtSg=="
 		crossorigin="anonymous"></script>
-	<!-- <script type="module" src="assets/MathUtils.js"></script> -->
-	<!-- <script src="assets/EffectComposer.js"></script>
-	<script src="assets/CopyShader.js"></script>
-	<script src="assets/ShaderPass.js"></script>
 
-	<script src="assets/RenderPass.js"></script>
-	<script src="assets/HighPassShader.js"></script>
-	<script src="assets/UnrealBloomPass.js"></script> -->
 
 	
+
 	<script src="<?php bloginfo('template_url'); ?>/js/threejs/OrbitControls.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/vanAbbeModel.js"></script>
 
