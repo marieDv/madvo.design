@@ -40,13 +40,22 @@ document.addEventListener('keydown', e => {
 function removeActive(){
 	let switchList = document.getElementById("switch");
 for(let i=0; i<switchList.children.length; i++){
-	console.log("child")
+	
 	switchList.children[i].classList.remove("active");
-	console.log(switchList.children[i].classList)
+	
 }
 }
+
+function onWindowResize() {
+	let w = window.innerWidth;
+	let h = window.innerHeight;
+	camera.aspect = w / h;
+	camera.updateProjectionMatrix();
+	renderer.setSize(w, h);
+}
+
+
 window.addEventListener('load', (event) => {
-	// let tillburg = document.getElementById("switschTillburg")
 
 	document.getElementById("switchTillburg").addEventListener('click', e => {
 		removeActive();
@@ -96,7 +105,14 @@ window.addEventListener('load', (event) => {
 });
 
 
-
+window.addEventListener('resize', function(event){
+	
+	let w = window.innerWidth;
+	let h = window.innerHeight;
+	camera.aspect = w / h;
+	camera.updateProjectionMatrix();
+	renderer.setSize(w, h);
+});
 
 
 
@@ -113,7 +129,7 @@ function init(city) {
 
 	//default is EINDHOVEN
 
-	console.log(city)
+	
 
 	if (city === "Tillburg") {
 		array = [73.8, 2.2, 1.2, 3.7, 2.8, 0.8, 1.5, 0.1, 1.0, 3.8, 1.1, 0.6, 1.9, 0.2, 0.5, 0.4, 0.7, 3.8];
@@ -396,9 +412,7 @@ var animate = function () {
 	shaderMaterial.uniforms['random'].value = (Math.random() * 10 - 1) + 1;
 	shaderMaterialSmall.uniforms['random'].value = (Math.random() * 10 - 1) + 1;
 
-	// console.log(shaderMaterial.uniforms['time'])
-	// group.rotation.y += 0.005;
-	// shadowGroup.rotation.y += 0.005;
+
 	controls.update();
 	mapTextLabels();
 	controls.update();

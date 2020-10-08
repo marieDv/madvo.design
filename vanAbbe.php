@@ -1,30 +1,35 @@
 <?php /* Template Name: vanAbbe */ ?>
-
 <html>
 
 <head>
-	<title>Three.js Boilerplate</title>
-	<ul class="labels">
-		<li></li>
-		<li>Indonesia</li>
-		<li>Belgium</li>
-		<li>Turkey</li>
-		<li>Morocco</li>
-		<li>Anglo-Saxon countries</li>
-		<li>German-speaking countries</li>
-		<li>Scandinavian countries</li>
-		<li>Mediterranean countries</li>
-		<li>Central and Eastern Europe</li>
-		<li>Arabic countries</li>
-		<li>Latin America</li>
-		<li>Sub-Saharan Africa</li>
-		<li>South Asia</li>
-		<li>Central Asia</li>
-		<li>Southeast Asia and the Pacific</li>
-		<li>East Asia</li>
-		<li>Former West Indian colonies</li>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, noarchive">
+	<meta name="format-detection" content="telephone=no">
+</head>
+<title>Three.js Boilerplate</title>
+<ul class="labels">
+	<li></li>
+	<li>Indonesia</li>
+	<li>Belgium</li>
+	<li>Turkey</li>
+	<li>Morocco</li>
+	<li>Anglo-Saxon countries</li>
+	<li>German-speaking countries</li>
+	<li>Scandinavian countries</li>
+	<li>Mediterranean countries</li>
+	<li>Central and Eastern Europe</li>
+	<li>Arabic countries</li>
+	<li>Latin America</li>
+	<li>Sub-Saharan Africa</li>
+	<li>South Asia</li>
+	<li>Central Asia</li>
+	<li>Southeast Asia and the Pacific</li>
+	<li>East Asia</li>
+	<li>Former West Indian colonies</li>
 
-		<!-- <li>01</li>
+	<!-- <li>01</li>
 		<li>02</li>
 		<li>03</li>
 		<li>04</li>
@@ -43,105 +48,125 @@
 		<li>17</li>
 		<li>18</li> -->
 
-	</ul>
-	<div id="switch">
-		<button id="switchEindhoven">Eindhoven</button>
-		<button id="switchTillburg">Tillburg</button>
-		<button id="switchBreda">Breda</button>
-		<button id="switchDenBosch">Den Bosch</button>
-		<button id="switchHelmond">Helmond</button>
-	</div>
-	<style>
-		body {
-			margin: 0;
-		}
+</ul>
+<div id="switch">
+	<button id="switchEindhoven" class="active">Eindhoven</button>
+	<button id="switchTillburg">Tillburg</button>
+	<button id="switchBreda">Breda</button>
+	<button id="switchDenBosch">Den Bosch</button>
+	<button id="switchHelmond">Helmond</button>
+</div>
+<style>
+	body {
+		margin: 0;
+	}
 
-		canvas {
-			width: 640px;
-			height: 360px
-		}
+	canvas {
+		width: 640px;
+		height: 360px
+	}
 
-		ul {
-			position: absolute;
-			width: 100%;
-			text-align: left;
-			padding: inherit;
-			pointer-events: none;
-		}
+	ul {
+		position: absolute;
+		width: 100%;
+		text-align: left;
+		padding: inherit;
+		pointer-events: none;
+	}
 
-		li {
-			font-size: 10px;
-			background: black;
-			font-family: "Agrandir", sans-serif;
-			text-transform: uppercase;
-			position: absolute;
-			position: absolute;
-			visibility: visible;
-			color: white;
-			list-style: none;
-		}
+	li {
+		font-size: 10px;
+		background: black;
+		font-family: "Agrandir", sans-serif;
+		text-transform: uppercase;
+		position: absolute;
+		position: absolute;
+		visibility: visible;
+		color: white;
+		list-style: none;
+	}
 
-		#switch {
-			position: absolute;
-			top: 12px;
-			left: 12px;
-		}
+	#switch {
+		position: absolute;
+		top: 12px;
+		left: 12px;
+	}
 
+	button {
+		background: transparent;
+		border: 1px solid white;
+		color: #ffffff;
+		border-radius: 99px;
+		font-family: "Agrandir", sans-serif;
+		padding-top: 3px;
+		font-size: 12px;
+		cursor: pointer;
+	}
+
+	@media screen and (max-width: 780px) {
 		button {
-			background: transparent;
-			border: 1px solid white;
-			color: #ffffff;
-			border-radius: 99px;
-			font-family: "Agrandir", sans-serif;
-			padding-top: 6px;
-    font-size: 24px;
-			cursor: pointer;
+			font-size: 22px;
+			padding: 3px 15px 0;
+			margin-bottom: 8px;
 		}
+	}
 
-		button:focus {
-			outline: 0;
-		}
+	button:focus {
+		outline: 0;
+	}
 
-		button:hover {
-			background: #ffffff;
-			color: #000000;
-		}
+	button:hover {
+		background: #ffffff;
+		color: #000000;
+	}
 
-		.active {
-			background: #ffffff;
-			color: #000000;
-		}
+	.active {
+		background: #ffffff;
+		color: #000000;
+	}
 
-		li {
-			font-size: 8px;
-			margin-top: -19px;
-			left: 7px;
+	li {
+		font-size: 8px;
+		margin-top: -19px;
+		left: 7px;
 
-			/* transform: rotate(-90deg) translateX(3px) translateY(13px) scale(-1, -1); */
-			/* background: black; */
-			font-family: "Agrandir", sans-serif;
-			font-weight: 900;
-			text-transform: uppercase;
-			position: absolute;
-			position: absolute;
-			letter-spacing: 1px;
-			visibility: visible;
-			opacity: 0.7;
-			color: white;
-			list-style: none;
-		}
-	</style>
+		/* transform: rotate(-90deg) translateX(3px) translateY(13px) scale(-1, -1); */
+		transform: translateX(-11px) translateY(15px);
+		/* background: black; */
+		font-family: "Agrandir", sans-serif;
+		font-weight: 900;
+		text-transform: uppercase;
+		position: absolute;
+		position: absolute;
+		letter-spacing: 1px;
+		visibility: visible;
+		opacity: 0.7;
+		color: white;
+		list-style: none;
+	}
+</style>
 </head>
 
 <body>
 
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js" integrity="sha512-kgjZw3xjgSUDy9lTU085y+UCVPz3lhxAtdOVkcO4O2dKl2VSBcNsQ9uMg/sXIM4SoOmCiYfyFO/n1/3GSXZtSg==" crossorigin="anonymous"></script>
-	<!-- <script src="assets/OrbitControls.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"
+		integrity="sha512-kgjZw3xjgSUDy9lTU085y+UCVPz3lhxAtdOVkcO4O2dKl2VSBcNsQ9uMg/sXIM4SoOmCiYfyFO/n1/3GSXZtSg=="
+		crossorigin="anonymous"></script>
+	<!-- <script type="module" src="assets/MathUtils.js"></script> -->
+	<!-- <script src="assets/EffectComposer.js"></script>
+	<script src="assets/CopyShader.js"></script>
+	<script src="assets/ShaderPass.js"></script>
+
+	<script src="assets/RenderPass.js"></script>
+	<script src="assets/HighPassShader.js"></script>
+	<script src="assets/UnrealBloomPass.js"></script> -->
+
+	<script src="assets/OrbitControls.js"></script>
 	<script type="text/javascript" src="scripts.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/threejs/OrbitControls.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/vanAbbeModel.js"></script>
+
+
 
 
 	<script type="x-shader/x-vertex" id="vertexShaderrr">
