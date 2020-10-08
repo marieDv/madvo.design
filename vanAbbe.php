@@ -164,8 +164,9 @@
 	<script src="assets/HighPassShader.js"></script>
 	<script src="assets/UnrealBloomPass.js"></script> -->
 
-	<script src="assets/OrbitControls.js"></script>
-	<script type="text/javascript" src="scripts.js"></script>
+	
+	<script src="<?php bloginfo('template_url'); ?>/js/threejs/OrbitControls.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/vanAbbeModel.js"></script>
 
 
 
