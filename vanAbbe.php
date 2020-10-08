@@ -8,6 +8,7 @@
 	<meta name="robots" content="noindex, noarchive">
 	<meta name="format-detection" content="telephone=no">
 </head>
+
 <title>Three.js Boilerplate</title>
 <ul class="labels">
 	<li></li>
