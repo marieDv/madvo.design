@@ -1,0 +1,70 @@
+* {
+  font-family: "Neue Machina", sans-serif;
+  color: #14131a;
+}
+body {
+  background-color: #f6f6f2;
+}
+img {
+  width: 100%;
+}
+p {
+  font-size: 13px;
+}
+p .quote {
+  text-indent: 8px;
+  font-style: italic;
+  display: block;
+  padding: 20px 20px;
+}
+h1 {
+  font-size: 72px;
+  line-height: 62px;
+}
+h3 {
+  font-weight: 800;
+  font-size: 18px;
+}
+h2 {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+section {
+  padding-top: 64px;
+}
+
+#navigation {
+  position: fixed;
+}
+ul {
+  padding-left: 8px;
+  margin-top: 61px;
+}
+ul li {
+  list-style: none;
+  font-size: 12px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.intro-image {
+  width: 100vw;
+}
+.to-change {
+  color: red;
+}
+#main-sources {
+  border: 3px solid;
+  background-color: aquamarine;
+}
+#main-sources ul a, #main-sources ul li {
+  text-transform: none;
+  text-decoration: none;
+}
+.img-row {
+  padding-top: 60px;
+}
+.img-row p {
+  font-size: 11px;
+}
